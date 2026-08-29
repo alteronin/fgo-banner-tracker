@@ -35,7 +35,7 @@ export function BannerDetail({ banner, onClose }: BannerDetailProps) {
   );
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4">
       <div
         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
         onClick={onClose}
@@ -43,7 +43,7 @@ export function BannerDetail({ banner, onClose }: BannerDetailProps) {
       <div className="relative bg-gray-900 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-gray-700">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white z-10"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-white z-10 p-1"
         >
           <svg
             className="w-6 h-6"
@@ -67,16 +67,18 @@ export function BannerDetail({ banner, onClose }: BannerDetailProps) {
             className="w-full h-full object-cover"
           />
           {active && (
-            <div className="absolute top-4 right-16 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded">
+            <div className="absolute top-3 right-12 sm:top-4 sm:right-16 bg-green-500 text-white text-xs sm:text-sm font-bold px-2 py-1 sm:px-3 sm:py-1 rounded">
               ACTIVE
             </div>
           )}
         </div>
 
-        <div className="p-6">
-          <h2 className="text-xl font-bold text-white mb-4">{banner.name}</h2>
+        <div className="p-4 sm:p-6">
+          <h2 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">
+            {banner.name}
+          </h2>
 
-          <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-sm text-gray-400 mb-4 sm:mb-6">
             <div>
               <span className="text-gray-500">Start:</span>{" "}
               {formatDate(banner.startDate)}
