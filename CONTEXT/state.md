@@ -1,10 +1,10 @@
 ---
 project_name: FGO JP Banner Tracker
-status: checkpoint
-current_bucket: 1
+status: complete
+current_bucket: 4
 current_feature: complete
-current_phase: checkpoint
-buckets_completed: 1
+current_phase: complete
+buckets_completed: 4
 total_buckets: 4
 features_completed:
   - seed-data
@@ -14,23 +14,19 @@ features_completed:
   - filter-bar
   - banner-detail
   - responsive-pass
-features_remaining:
   - search
   - dark-light-mode
   - import-export
   - rate-up-indicators
   - collection-stats
   - url-filtering
-  - multi-game-prep
-  - class-rarity-filter
   - sort-options
   - advanced-search
-  - pwa-manifest
+  - keyboard-navigation
   - loading-skeletons
-  - animations
-  - lazy-loading
   - seo-meta
   - about-help
+features_remaining: []
 issues_found: []
 issues_resolved: []
 tech_stack:
@@ -48,14 +44,27 @@ context_version: 1
 # Project State
 
 ## Active Context
-Bucket 1 (Core MVP) complete. Deployed to Vercel at https://fgo-banner-tracker.vercel.app
+Project complete. All 4 buckets built and deployed to Vercel.
+
+## Features Built
+- Bucket 1: Core MVP (banner list, servant toggle, indicators, filter, detail, responsive)
+- Bucket 2: Enhanced UX (search, dark/light mode, import/export, rate-up indicators, collection stats, URL filtering)
+- Bucket 3: Advanced (sort options, advanced search, keyboard navigation)
+- Bucket 4: Polish (loading skeletons, SEO meta, about/help)
+
+## Deploy Info
+- URL: https://fgo-banner-tracker.vercel.app
+- GitHub: https://github.com/alteronin/fgo-banner-tracker
+- Provider: Vercel (free tier)
 
 ## Recent Decisions
 1. Used Next.js with App Router for SSR/SSG support
-2. localStorage for persistence (no backend needed for MVP)
+2. localStorage for persistence (no backend needed)
 3. React Context for servant status management
 4. next/image for optimized image loading
 5. Modal for banner detail view
+6. URL-based filter state for shareable links
+7. JSON import/export for collection portability
 
 ## Blockers
-None currently.
+None.

@@ -8,28 +8,38 @@ fgo-banner-tracker/
 │   ├── buckets.md            # MVP milestone bucket plan
 │   ├── structure.md          # This file
 │   ├── decisions.md          # Architectural decisions
-│   ├── history.md            # Archived items
 │   └── prompts/
 │       ├── tech-specific.md  # Tech-specific replication prompt
 │       └── abstracted.md     # Abstracted replication prompt
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx        # Root layout with ServantProvider
+│   │   ├── layout.tsx        # Root layout with providers and SEO
 │   │   ├── page.tsx          # Main page with banner list
 │   │   └── globals.css       # Global styles
 │   ├── components/
+│   │   ├── AboutHelp.tsx     # About/help modal
+│   │   ├── AdvancedSearch.tsx # Advanced search panel
 │   │   ├── BannerCard.tsx    # Banner card component
 │   │   ├── BannerDetail.tsx  # Banner detail modal
 │   │   ├── BannerIndicators.tsx  # Owned/planning indicators
 │   │   ├── BannerList.tsx    # Banner list with filtering
+│   │   ├── CollectionStats.tsx # Collection statistics
 │   │   ├── FilterBar.tsx     # Filter bar component
-│   │   └── ServantChip.tsx   # Servant status chip
+│   │   ├── ImportExport.tsx  # JSON import/export
+│   │   ├── RateUpIndicator.tsx # Rate-up type badges
+│   │   ├── SearchBar.tsx     # Search bar component
+│   │   ├── ServantChip.tsx   # Servant status chip
+│   │   ├── Skeleton.tsx      # Loading skeletons
+│   │   ├── SortBar.tsx       # Sort dropdown
+│   │   └── ThemeToggle.tsx   # Dark/light mode toggle
 │   ├── contexts/
-│   │   └── ServantContext.tsx # Servant status context
+│   │   ├── ServantContext.tsx # Servant status context
+│   │   └── ThemeContext.tsx   # Theme context
 │   ├── data/
 │   │   └── banners.json      # Banner data (178 banners)
 │   ├── hooks/
-│   │   └── useBannerFilter.ts # Banner filtering hook
+│   │   ├── useBannerFilter.ts # Banner filtering hook
+│   │   └── useKeyboardNavigation.ts # Keyboard navigation hook
 │   ├── lib/
 │   │   ├── data.ts           # Data access utilities
 │   │   └── storage.ts        # localStorage utilities
@@ -45,5 +55,7 @@ fgo-banner-tracker/
 ## Key Files
 - `src/data/banners.json` - 178 banners scraped from GamePress
 - `src/contexts/ServantContext.tsx` - Global servant status management
+- `src/contexts/ThemeContext.tsx` - Dark/light mode management
 - `src/lib/storage.ts` - localStorage persistence
 - `src/components/BannerCard.tsx` - Main banner display component
+- `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic
