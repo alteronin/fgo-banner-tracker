@@ -5,6 +5,7 @@ import { BannerList } from "@/components/BannerList";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ImportExport } from "@/components/ImportExport";
 import { CollectionStats } from "@/components/CollectionStats";
+import { AboutHelp } from "@/components/AboutHelp";
 
 export default function Home() {
   const banners = getBanners();
@@ -24,6 +25,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <CollectionStats />
             <ImportExport />
+            <AboutHelp />
             <ThemeToggle />
           </div>
         </div>
