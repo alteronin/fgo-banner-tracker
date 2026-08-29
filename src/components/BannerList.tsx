@@ -5,6 +5,7 @@ import type { Banner } from "@/types/banner";
 import { BannerCard } from "./BannerCard";
 import { BannerDetail } from "./BannerDetail";
 import { FilterBar } from "./FilterBar";
+import { SearchBar } from "./SearchBar";
 import { useBannerFilter } from "@/hooks/useBannerFilter";
 
 interface BannerListProps {
@@ -12,12 +13,14 @@ interface BannerListProps {
 }
 
 export function BannerList({ banners }: BannerListProps) {
-  const { filter, setFilter, filteredBanners } = useBannerFilter(banners);
+  const { filter, setFilter, handleSearch, filteredBanners } =
+    useBannerFilter(banners);
   const [selectedBanner, setSelectedBanner] = useState<Banner | null>(null);
 
   return (
     <div>
-      <div className="mb-6">
+      <div className="mb-6 space-y-4">
+        <SearchBar onSearch={handleSearch} />
         <FilterBar activeFilter={filter} onFilterChange={setFilter} />
       </div>
       {filteredBanners.length === 0 ? (
