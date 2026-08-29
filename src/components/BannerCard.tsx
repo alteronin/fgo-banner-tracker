@@ -2,6 +2,7 @@
 
 import type { Banner } from "@/types/banner";
 import { ServantChip } from "./ServantChip";
+import { BannerIndicators } from "./BannerIndicators";
 
 interface BannerCardProps {
   banner: Banner;
@@ -39,6 +40,7 @@ export function BannerCard({ banner, onClick }: BannerCardProps) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
         />
+        <BannerIndicators banner={banner} />
         {active && (
           <div className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
             ACTIVE
