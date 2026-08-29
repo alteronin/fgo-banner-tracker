@@ -24933,7 +24933,7 @@
   {
     "id": "fgo-winter-festival-2018-2019-traveling-circus-summoning-campaign-2",
     "name": "FGO Winter Festival 2018-2019: Traveling Circus! Summoning Campaign 2",
-    "imageUrl": "https://static.mana.wiki/grandorder/top_banner[1]_21.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/top_banner%5B1%5D_21.png?width=480&height=173",
     "startDate": "2019-01-18",
     "endDate": "2019-02-01",
     "servants": [
@@ -25158,7 +25158,7 @@
   {
     "id": "new-year-2019-summoning-campaign",
     "name": "New Year 2019 Summoning Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/banner_20190109_h6jp7[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/banner_20190109_h6jp7%5B1%5D.png?width=480&height=173",
     "startDate": "2018-12-31",
     "endDate": "2019-01-09",
     "servants": [
@@ -25190,7 +25190,7 @@
   {
     "id": "fgo-winter-festival-2018-2019-traveling-circus-summoning-campaign",
     "name": "FGO Winter Festival 2018-2019: Traveling Circus! Summoning Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/top_banner[1]_17.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/top_banner%5B1%5D_17.png?width=480&height=173",
     "startDate": "2018-12-21",
     "endDate": "2018-12-31",
     "servants": [
@@ -25755,7 +25755,7 @@
   {
     "id": "singularity-pickup-summon-fall-2018-daily",
     "name": "Singularity Pickup Summon Fall 2018 (Daily)",
-    "imageUrl": "https://static.mana.wiki/grandorder/banner_20181003[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/banner_20181003%5B1%5D.png?width=480&height=173",
     "startDate": "2018-09-25",
     "endDate": "2018-10-03",
     "servants": [
@@ -26140,7 +26140,7 @@
   {
     "id": "class-pickup-summon-fall-2018-daily",
     "name": "Class Pickup Summon Fall 2018 (Daily)",
-    "imageUrl": "https://static.mana.wiki/grandorder/banner_20180911[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/banner_20180911%5B1%5D.png?width=480&height=173",
     "startDate": "2018-09-04",
     "endDate": "2018-09-11",
     "servants": []
@@ -26206,7 +26206,7 @@
   {
     "id": "fate-grand-order-memories-summoning-campaign",
     "name": "Fate/Grand Order Memories Summoning Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner[9].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner%5B9%5D.png?width=480&height=173",
     "startDate": "2018-08-19",
     "endDate": "2018-09-02",
     "servants": [
@@ -26691,7 +26691,7 @@
   {
     "id": "fgo-summer-festival-2018-1st-anniversary",
     "name": "FGO Summer Festival 2018 1st Anniversary",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_20180717[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_20180717%5B1%5D.png?width=480&height=173",
     "startDate": "2018-07-07",
     "endDate": "2018-07-17",
     "servants": [
@@ -26963,7 +26963,7 @@
   {
     "id": "camelot-pickup-summon",
     "name": "Camelot Pickup Summon",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_20180711[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_20180711%5B1%5D.png?width=480&height=173",
     "startDate": "2018-06-28",
     "endDate": "2018-07-06",
     "servants": [
@@ -27099,7 +27099,7 @@
   {
     "id": "fate-extella-link-release-summoning-campaign",
     "name": "Fate/EXTELLA LINK Release Summoning Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner[1]_23.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner%5B1%5D_23.png?width=480&height=173",
     "startDate": "2018-06-06",
     "endDate": "2018-06-20",
     "servants": [
@@ -27338,7 +27338,7 @@
   {
     "id": "murder-at-the-kogetsukan",
     "name": "Murder at the KOGETSUKAN",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner[1]_20.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner%5B1%5D_20.png?width=480&height=173",
     "startDate": "2018-05-11",
     "endDate": "2018-05-25",
     "servants": [
@@ -27397,7 +27397,7 @@
   {
     "id": "sakata-kintoki-pickup-summon",
     "name": "Sakata Kintoki Pickup Summon",
-    "imageUrl": "https://static.mana.wiki/grandorder/banner_20180523[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/banner_20180523%5B1%5D.png?width=480&height=173",
     "startDate": "2018-05-10",
     "endDate": "2018-05-23",
     "servants": [
@@ -27690,7 +27690,7 @@
   {
     "id": "revival-saber-wars-the-caliburn-awakens-pickup-summon-daily",
     "name": "Revival: SABER WARS - The Caliburn Awakens Pickup Summon (Daily)",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner[1]_16.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner%5B1%5D_16.png?width=480&height=173",
     "startDate": "2018-03-15",
     "endDate": "2018-03-29",
     "servants": [
@@ -27719,7 +27719,7 @@
   {
     "id": "e-pluribus-unum-pickup-summon",
     "name": "E Pluribus Unum Pickup Summon",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_20180329_exiz3[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_20180329_exiz3%5B1%5D.png?width=480&height=173",
     "startDate": "2018-03-15",
     "endDate": "2018-03-29",
     "servants": [
@@ -27753,7 +27753,7 @@
   {
     "id": "singularity-pickup-summon-spring-2018-daily",
     "name": "Singularity Pickup Summon Spring 2018 (Daily)",
-    "imageUrl": "https://static.mana.wiki/grandorder/banner_00006[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/banner_00006%5B1%5D.png?width=480&height=173",
     "startDate": "2018-03-08",
     "endDate": "2018-03-15",
     "servants": [
@@ -28112,7 +28112,7 @@
   {
     "id": "fgo-winter-festival-2017-2018-pharaoh-s-winter-thanksgiving-campaign",
     "name": "FGO Winter Festival 2017-2018: Pharaoh's Winter Thanksgiving Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner[1]_13.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner%5B1%5D_13.png?width=480&height=173",
     "startDate": "2018-02-21",
     "endDate": "2018-03-07",
     "servants": [
@@ -28302,7 +28302,7 @@
   {
     "id": "fate-extra-last-encore-anime-summoning-campaign",
     "name": "Fate/EXTRA Last Encore Anime Summoning Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner[1]_11.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner%5B1%5D_11.png?width=480&height=173",
     "startDate": "2018-01-28",
     "endDate": "2018-02-11",
     "servants": [
@@ -28526,7 +28526,7 @@
   {
     "id": "new-year-s-celebration-2020-summoning-campaign",
     "name": "New Year's Celebration 2020 Summoning Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/top_banner[1]_1.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/top_banner%5B1%5D_1.png?width=480&height=173",
     "startDate": "2018-01-01",
     "endDate": "2018-01-19",
     "servants": [
@@ -28570,7 +28570,7 @@
   {
     "id": "new-year-s-celebration-2020-guaranteed-summon-class-specific",
     "name": "New Year's Celebration 2020 Guaranteed Summon (Class Specific)",
-    "imageUrl": "https://static.mana.wiki/grandorder/top_banner[1]_0.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/top_banner%5B1%5D_0.png?width=480&height=173",
     "startDate": "2018-01-01",
     "endDate": "2018-01-19",
     "servants": []
@@ -28927,7 +28927,7 @@
   {
     "id": "fate-apocrypha-anime-summoning-campaign",
     "name": "Fate/Apocrypha Anime Summoning Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner[1]_4.png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_banner%5B1%5D_4.png?width=480&height=173",
     "startDate": "2017-11-08",
     "endDate": "2017-11-22",
     "servants": [
@@ -29039,7 +29039,7 @@
   {
     "id": "thanksgiving-guaranteed-summon",
     "name": "Thanksgiving Guaranteed Summon",
-    "imageUrl": "https://static.mana.wiki/grandorder/banner_100268842[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/banner_100268842%5B1%5D.png?width=480&height=173",
     "startDate": "2017-11-02",
     "endDate": "2017-12-01",
     "servants": []
@@ -29305,7 +29305,7 @@
   {
     "id": "okeanos-pickup-summon",
     "name": "Okeanos Pickup Summon",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_1[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_1%5B1%5D.png?width=480&height=173",
     "startDate": "2017-09-28",
     "endDate": "2017-10-12",
     "servants": [
@@ -29446,7 +29446,7 @@
   {
     "id": "kyomaf-2017-exhibit-summoning-campaign",
     "name": "KYOMAF 2017 Exhibit Summoning Campaign",
-    "imageUrl": "https://static.mana.wiki/grandorder/top_banner[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/top_banner%5B1%5D.png?width=480&height=173",
     "startDate": "2017-09-13",
     "endDate": "2017-09-27",
     "servants": [
@@ -29529,7 +29529,7 @@
   {
     "id": "orleans-pickup-summon",
     "name": "Orleans Pickup Summon",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_20170808[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_20170808%5B1%5D.png?width=480&height=173",
     "startDate": "2017-08-08",
     "endDate": "2017-08-17",
     "servants": [
@@ -29563,7 +29563,7 @@
   {
     "id": "66-666-likes-pickup-summon",
     "name": "66,666 Likes Pickup Summon",
-    "imageUrl": "https://static.mana.wiki/grandorder/summon_20150831[1].png?width=480&height=173",
+    "imageUrl": "https://static.mana.wiki/grandorder/summon_20150831%5B1%5D.png?width=480&height=173",
     "startDate": "2017-07-06",
     "endDate": "2017-07-20",
     "servants": [

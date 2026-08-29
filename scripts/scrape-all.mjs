@@ -22,7 +22,7 @@ async function main() {
     const $img = $row.find('img[src*="static.mana.wiki/grandorder/"]');
     if (!$img.length) return;
 
-    const imageUrl = $img.attr("src") || "";
+    const imageUrl = ($img.attr("src") || "").replace(/\[/g, "%5B").replace(/\]/g, "%5D");
 
     const bannerName = $row.find("span.font-semibold.text-xs").first().text().trim();
 
