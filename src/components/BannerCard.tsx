@@ -1,4 +1,7 @@
+"use client";
+
 import type { Banner } from "@/types/banner";
+import { ServantChip } from "./ServantChip";
 
 interface BannerCardProps {
   banner: Banner;
@@ -46,9 +49,18 @@ export function BannerCard({ banner, onClick }: BannerCardProps) {
         <h3 className="text-sm font-medium text-white line-clamp-2 mb-2">
           {banner.name}
         </h3>
-        <div className="flex items-center justify-between text-xs text-gray-400">
+        <div className="flex items-center justify-between text-xs text-gray-400 mb-3">
           <span>{formatDate(banner.startDate)}</span>
           <span>{banner.servants.length} servants</span>
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          {banner.servants.map((servant) => (
+            <ServantChip
+              key={servant.slug}
+              name={servant.name}
+              slug={servant.slug}
+            />
+          ))}
         </div>
       </div>
     </div>
