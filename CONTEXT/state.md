@@ -38,9 +38,9 @@ tech_stack:
   language: TypeScript
   styling: Tailwind CSS
   state: localStorage + React Context
-  hosting: Vercel (pending)
-deploy_provider: null
-deploy_url: null
+  hosting: Vercel
+deploy_provider: vercel
+deploy_url: https://fgo-banner-tracker.vercel.app
 last_checkpoint: 2026-08-30
 context_version: 1
 ---
@@ -48,7 +48,7 @@ context_version: 1
 # Project State
 
 ## Active Context
-Bucket 1 (Core MVP) complete. All features built, tested, and merged to main. Ready for deployment.
+Bucket 1 (Core MVP) complete. Deployed to Vercel at https://fgo-banner-tracker.vercel.app
 
 ## Recent Decisions
 1. Used Next.js with App Router for SSR/SSG support
