@@ -1,26 +1,26 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useMemo, useCallback } from "react";
 import type { Banner, FilterOption } from "@/types/banner";
 import { useServantStatus } from "@/contexts/ServantContext";
 
+function getInitialFilter(): FilterOption {
+  if (typeof window === "undefined") return "all";
+  const params = new URLSearchParams(window.location.search);
+  const urlFilter = params.get("filter") as FilterOption | null;
+  if (urlFilter && ["all", "owned", "planning", "either"].includes(urlFilter)) {
+    return urlFilter;
+  }
+  return "all";
+}
+
 export function useBannerFilter(banners: Banner[]) {
-  const [filter, setFilterState] = useState<FilterOption>("all");
+  const [filter, setFilterState] = useState<FilterOption>(getInitialFilter);
   const [searchQuery, setSearchQuery] = useState("");
   const { getStatus } = useServantStatus();
 
-  // Read initial filter from URL
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const urlFilter = params.get("filter") as FilterOption | null;
-    if (urlFilter && ["all", "owned", "planning", "either"].includes(urlFilter)) {
-      setFilterState(urlFilter);
-    }
-  }, []);
-
   const setFilter = useCallback((newFilter: FilterOption) => {
     setFilterState(newFilter);
-    // Update URL without reload
     const url = new URL(window.location.href);
     if (newFilter === "all") {
       url.searchParams.delete("filter");
@@ -37,7 +37,6 @@ export function useBannerFilter(banners: Banner[]) {
   const filteredBanners = useMemo(() => {
     let result = banners;
 
-    // Apply status filter
     if (filter !== "all") {
       result = result.filter((banner) => {
         return banner.servants.some((servant) => {
@@ -56,7 +55,6 @@ export function useBannerFilter(banners: Banner[]) {
       });
     }
 
-    // Apply search filter
     if (searchQuery) {
       result = result.filter((banner) => {
         return banner.servants.some((servant) =>

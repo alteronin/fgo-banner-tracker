@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 import type { ServantStatus } from "@/types/banner";
 import {
   getServantStatuses,
@@ -27,12 +21,9 @@ export function ServantProvider({ children }: { children: ReactNode }) {
     () => getServantStatuses()
   );
 
-  const getStatus = useCallback(
-    (slug: string): ServantStatus => statuses[slug] || "none",
-    [statuses]
-  );
+  const getStatus = (slug: string): ServantStatus => statuses[slug] || "none";
 
-  const setStatus = useCallback((slug: string, status: ServantStatus) => {
+  const setStatus = (slug: string, status: ServantStatus) => {
     setStatuses((prev) => {
       const next = { ...prev };
       if (status === "none") {
@@ -43,17 +34,14 @@ export function ServantProvider({ children }: { children: ReactNode }) {
       return next;
     });
     saveServantStatus(slug, status);
-  }, []);
+  };
 
-  const toggleStatus = useCallback(
-    (slug: string) => {
-      const current = statuses[slug] || "none";
-      const next: ServantStatus =
-        current === "none" ? "owned" : current === "owned" ? "planning" : "none";
-      setStatus(slug, next);
-    },
-    [statuses, setStatus]
-  );
+  const toggleStatus = (slug: string) => {
+    const current = statuses[slug] || "none";
+    const next: ServantStatus =
+      current === "none" ? "owned" : current === "owned" ? "planning" : "none";
+    setStatus(slug, next);
+  };
 
   return (
     <ServantContext.Provider
