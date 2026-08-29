@@ -6,6 +6,7 @@ import { BannerCard } from "./BannerCard";
 import { BannerDetail } from "./BannerDetail";
 import { FilterBar } from "./FilterBar";
 import { SearchBar } from "./SearchBar";
+import { SortBar } from "./SortBar";
 import { useBannerFilter } from "@/hooks/useBannerFilter";
 
 interface BannerListProps {
@@ -13,7 +14,7 @@ interface BannerListProps {
 }
 
 export function BannerList({ banners }: BannerListProps) {
-  const { filter, setFilter, handleSearch, filteredBanners } =
+  const { filter, setFilter, handleSearch, sort, setSort, filteredBanners } =
     useBannerFilter(banners);
   const [selectedBanner, setSelectedBanner] = useState<Banner | null>(null);
 
@@ -21,7 +22,10 @@ export function BannerList({ banners }: BannerListProps) {
     <div>
       <div className="mb-6 space-y-4">
         <SearchBar onSearch={handleSearch} />
-        <FilterBar activeFilter={filter} onFilterChange={setFilter} />
+        <div className="flex flex-wrap items-center gap-3">
+          <FilterBar activeFilter={filter} onFilterChange={setFilter} />
+          <SortBar activeSort={sort} onSortChange={setSort} />
+        </div>
       </div>
       {filteredBanners.length === 0 ? (
         <div className="text-center py-12 text-gray-500">
