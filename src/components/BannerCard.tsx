@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { Banner } from "@/types/banner";
 import { ServantChip } from "./ServantChip";
 import { BannerIndicators } from "./BannerIndicators";
+import { RateUpIndicator } from "./RateUpIndicator";
 
 interface BannerCardProps {
   banner: Banner;
@@ -43,6 +44,7 @@ export function BannerCard({ banner, onClick }: BannerCardProps) {
           loading="lazy"
         />
         <BannerIndicators banner={banner} />
+        <RateUpIndicator banner={banner} />
         {active && (
           <div className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
             ACTIVE
