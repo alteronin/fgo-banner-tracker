@@ -1,0 +1,2924 @@
+[
+  {
+    "slug": "abigail-williams",
+    "name": "Abigail Williams",
+    "iconUrl": "https://static.mana.wiki/grandorder/195_Abigail_Williams_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "abigail-williams-santa",
+    "name": "Abigail Williams (Santa)",
+    "iconUrl": "https://static.mana.wiki/grandorder/430_Abigail_Williams_Santa_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "abigail-williams-summer",
+    "name": "Abigail Williams (Summer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/289_Abigail_Williams_Summer_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "achilles",
+    "name": "Achilles",
+    "iconUrl": "https://static.mana.wiki/grandorder/206_Achilles_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "aesc-the-savior",
+    "name": "Aesc the Savior",
+    "iconUrl": "https://static.mana.wiki/grandorder/385_Savior_Aesc_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "alessandro-di-cagliostro",
+    "name": "Alessandro di Cagliostro",
+    "iconUrl": "https://static.mana.wiki/grandorder/410_Alessandro_di_Cagliostro_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "alexander",
+    "name": "Alexander",
+    "iconUrl": "https://static.mana.wiki/grandorder/028_Alexander_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "altera",
+    "name": "Altera",
+    "iconUrl": "https://static.mana.wiki/grandorder/008_Altera_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "altria-caster",
+    "name": "Altria Caster",
+    "iconUrl": "https://static.mana.wiki/grandorder/284_Altria_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "altria-caster-berserker",
+    "name": "Altria Caster (Berserker)",
+    "iconUrl": "https://static.mana.wiki/grandorder/386_Altria_Caster_Berserker_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "altria-pendragon",
+    "name": "Altria Pendragon",
+    "iconUrl": "https://static.mana.wiki/grandorder/002_Altria_Pendragon_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "altria-pendragon-alter",
+    "name": "Altria Pendragon (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/003_Altria_Pendragon_Alter_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "altria-pendragon-archer",
+    "name": "Altria Pendragon (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/129_Altria_Pendragon_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "altria-pendragon-lancer-alter",
+    "name": "Altria Pendragon (Lancer Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/078_Altria_Pendragon_Lancer_Alter_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "altria-pendragon-lancer",
+    "name": "Altria Pendragon (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/119_Altria_Pendragon_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "altria-pendragon-lily",
+    "name": "Altria Pendragon (Lily)",
+    "iconUrl": "https://static.mana.wiki/grandorder/004_Altria_Pendragon_Lily_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "altria-pendragon-rider-alter",
+    "name": "Altria Pendragon (Rider Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/179_Altria_Pendragon_Rider_Alter_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "altria-pendragon-ruler",
+    "name": "Altria Pendragon (Ruler)",
+    "iconUrl": "https://static.mana.wiki/grandorder/265_Altria_Pendragon_Ruler_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "altria-pendragon-santa-alter",
+    "name": "Altria Pendragon (Santa Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/073_Altria_Pendragon_Santa_Alter_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "amakusa-shirou",
+    "name": "Amakusa Shirou",
+    "iconUrl": "https://static.mana.wiki/grandorder/093_Amakusa_Shirou_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "amor-caren",
+    "name": "Amor (Caren)",
+    "iconUrl": "https://static.mana.wiki/grandorder/305_Amor_Caren_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "anastasia-viy-archer",
+    "name": "Anastasia & Viy (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/318_Anastasia_Viy_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "anastasia-nikolaevna-romanova",
+    "name": "Anastasia Nikolaevna Romanova",
+    "iconUrl": "https://static.mana.wiki/grandorder/201_Anastasia_Nikolaevna_Romanova_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "andromeda",
+    "name": "Andromeda",
+    "iconUrl": "https://static.mana.wiki/grandorder/406_Andromeda_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "anne-bonny-mary-read",
+    "name": "Anne Bonny & Mary Read",
+    "iconUrl": "https://static.mana.wiki/grandorder/066_Anne_Bonny_Mary_Read_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "anne-bonny-mary-read-archer",
+    "name": "Anne Bonny & Mary Read (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/131_Anne_Bonny_Mary_Read_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "anra-mainiiu",
+    "name": "Anra Mainiiu",
+    "iconUrl": "https://static.mana.wiki/grandorder/107_Anra_Mainiiu_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "antonio-salieri",
+    "name": "Antonio Salieri",
+    "iconUrl": "https://static.mana.wiki/grandorder/204_Antonio_Salieri_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "aozaki-aoko",
+    "name": "Aozaki Aoko",
+    "iconUrl": "https://static.mana.wiki/grandorder/413_Aoko_Aozaki_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "aozaki-aoko-super",
+    "name": "Aozaki Aoko (Super)",
+    "iconUrl": "https://static.mana.wiki/grandorder/413_Aoko_Aozaki_Super_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "arash",
+    "name": "Arash",
+    "iconUrl": "https://static.mana.wiki/grandorder/016_Arash_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "archer-of-inferno",
+    "name": "Archer of Inferno",
+    "iconUrl": "https://static.mana.wiki/grandorder/184_Archer_of_Inferno_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "archer-of-inferno-saber",
+    "name": "Archer of Inferno (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/290_Archer_of_Inferno_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "archer-of-shinjuku",
+    "name": "Archer of Shinjuku",
+    "iconUrl": "https://static.mana.wiki/grandorder/156_Archer_of_Shinjuku_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "archer-of-the-apocalpyse",
+    "name": "Archer of the Apocalypse",
+    "iconUrl": "https://static.mana.wiki/grandorder/470_Urd_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "archetype-earth",
+    "name": "Archetype Earth",
+    "iconUrl": "https://static.mana.wiki/grandorder/351_Archetype_Earth_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "arjuna",
+    "name": "Arjuna",
+    "iconUrl": "https://static.mana.wiki/grandorder/084_Arjuna_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "arjuna-alter",
+    "name": "Arjuna (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/247_Arjuna_Alter_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "arthur-pendragon-prototype",
+    "name": "Arthur Pendragon (Prototype)",
+    "iconUrl": "https://static.mana.wiki/grandorder/160_Arthur_Pendragon_Prototype_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "asagami-fujino",
+    "name": "Asagami Fujino",
+    "iconUrl": "https://static.mana.wiki/grandorder/200_Asagami_Fujino_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "ascalaphus",
+    "name": "Ascalaphus",
+    "iconUrl": "https://static.mana.wiki/grandorder/471_Ascalaphus_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "asclepius",
+    "name": "Asclepius",
+    "iconUrl": "https://static.mana.wiki/grandorder/249_Asclepius_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "ashiya-douman",
+    "name": "Ashiya Douman",
+    "iconUrl": "https://static.mana.wiki/grandorder/297_Ashiya_Douman_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "ashoka-the-great",
+    "name": "Ashoka the Great",
+    "iconUrl": "https://static.mana.wiki/grandorder/439_Ashoka_the_Great_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "assassin-of-paraiso",
+    "name": "Assassin of Paraiso",
+    "iconUrl": "https://static.mana.wiki/grandorder/185_Assassin_of_Paraiso_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "assassin-of-shinjuku",
+    "name": "Assassin of Shinjuku",
+    "iconUrl": "https://static.mana.wiki/grandorder/159_Assassin_of_Shinjuku_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "assassin-of-the-nightless-city",
+    "name": "Assassin of the Nightless City",
+    "iconUrl": "https://static.mana.wiki/grandorder/170_Assassin_of_the_Nightless_City_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "assassin-of-the-nightless-city-caster",
+    "name": "Assassin of the Nightless City (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/358_Assassin_of_the_Nightless_City_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "asterios",
+    "name": "Asterios",
+    "iconUrl": "https://static.mana.wiki/grandorder/053_Asterios_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "astolfo",
+    "name": "Astolfo",
+    "iconUrl": "https://static.mana.wiki/grandorder/094_Astolfo_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "astolfo-saber",
+    "name": "Astolfo (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/270_Astolfo_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "astraea",
+    "name": "Astraea",
+    "iconUrl": "https://static.mana.wiki/grandorder/242_Astraea_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "asvatthaman",
+    "name": "Asvatthaman",
+    "iconUrl": "https://static.mana.wiki/grandorder/248_Asvatthaman_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "atalante",
+    "name": "Atalante",
+    "iconUrl": "https://static.mana.wiki/grandorder/014_Atalante_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "atalante-alter",
+    "name": "Atalante (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/202_Atalante_Alter_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "attila-the-santa",
+    "name": "Attila the San(ta)",
+    "iconUrl": "https://static.mana.wiki/grandorder/197_Attila_the_San_ta_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "avenger-of-shinjuku",
+    "name": "Avenger of Shinjuku",
+    "iconUrl": "https://static.mana.wiki/grandorder/158_Avenger_of_Shinjuku_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "avicebron",
+    "name": "Avicebron",
+    "iconUrl": "https://static.mana.wiki/grandorder/203_Avicebron_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "azrael",
+    "name": "Azrael",
+    "iconUrl": "https://static.mana.wiki/grandorder/474_Azrael_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "baobhan-sith",
+    "name": "Baobhan Sith",
+    "iconUrl": "https://static.mana.wiki/grandorder/311_Baobhan_Sith_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "barghest",
+    "name": "Barghest",
+    "iconUrl": "https://static.mana.wiki/grandorder/310_Barghest_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "bartholomew-roberts",
+    "name": "Bartholomew Roberts",
+    "iconUrl": "https://static.mana.wiki/grandorder/257_Bartholomew_Roberts_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "bb",
+    "name": "BB",
+    "iconUrl": "https://static.mana.wiki/grandorder/166_BB_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "bb-dubai",
+    "name": "BB (Dubai)",
+    "iconUrl": "https://static.mana.wiki/grandorder/421_BB_Dubai_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "bb-summer",
+    "name": "BB (Summer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/220_BB_Summer_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "beast-iiil",
+    "name": "Beast III/L",
+    "iconUrl": "https://static.mana.wiki/grandorder/240_Beast_III_L_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "beast-iiir",
+    "name": "Beast III/R",
+    "iconUrl": "https://static.mana.wiki/grandorder/168_Beast_III_R_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "beast-iv",
+    "name": "Beast IV",
+    "iconUrl": "https://static.mana.wiki/grandorder/333_Beast_IV_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "bedivere",
+    "name": "Bedivere",
+    "iconUrl": "https://static.mana.wiki/grandorder/126_Bedivere_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "beni-enma",
+    "name": "Beni-Enma",
+    "iconUrl": "https://static.mana.wiki/grandorder/234_Beni_Enma_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "beni-enma-berserker",
+    "name": "Beni-Enma (Berserker)",
+    "iconUrl": "https://static.mana.wiki/grandorder/475_Beni_Enma_Berserker_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "beowulf",
+    "name": "Beowulf",
+    "iconUrl": "https://static.mana.wiki/grandorder/089_Beowulf_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "berserker-of-el-dorado",
+    "name": "Berserker of El Dorado",
+    "iconUrl": "https://static.mana.wiki/grandorder/171_Berserker_of_El_Dorado_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "bhima",
+    "name": "Bhima",
+    "iconUrl": "https://static.mana.wiki/grandorder/381_Bhima_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "billy-the-kid",
+    "name": "Billy the Kid",
+    "iconUrl": "https://static.mana.wiki/grandorder/105_Billy_the_Kid_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "biscione",
+    "name": "Biscione",
+    "iconUrl": "https://static.mana.wiki/grandorder/433_Biscione_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "biscione-caster",
+    "name": "Biscione (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/477_Biscione_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "boudica",
+    "name": "Boudica",
+    "iconUrl": "https://static.mana.wiki/grandorder/026_Boudica_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "bradamante",
+    "name": "Bradamante",
+    "iconUrl": "https://static.mana.wiki/grandorder/232_Bradamante_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "britomart",
+    "name": "Britomart",
+    "iconUrl": "https://static.mana.wiki/grandorder/368_Britomart_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "brynhild",
+    "name": "Brynhild",
+    "iconUrl": "https://static.mana.wiki/grandorder/088_Brynhild_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "brynhild-berserker",
+    "name": "Brynhild (Berserker)",
+    "iconUrl": "https://static.mana.wiki/grandorder/287_Brynhild_Berserker_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "caenis",
+    "name": "Caenis",
+    "iconUrl": "https://static.mana.wiki/grandorder/279_Caenis_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "caenis-rider",
+    "name": "Caenis (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/322_Caenis_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "cait-cu-mikocer",
+    "name": "Cait Cu MikoCer",
+    "iconUrl": "https://static.mana.wiki/grandorder/392_Cait_Cu_Cerpriestess_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "calamity-jane",
+    "name": "Calamity Jane",
+    "iconUrl": "https://static.mana.wiki/grandorder/269_Calamity_Jane_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "caligula",
+    "name": "Caligula",
+    "iconUrl": "https://static.mana.wiki/grandorder/054_Caligula_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "carmilla",
+    "name": "Carmilla",
+    "iconUrl": "https://static.mana.wiki/grandorder/046_Carmilla_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "carmilla-rider",
+    "name": "Carmilla (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/263_Carmilla_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "caster-of-midrash",
+    "name": "Caster of Midrash",
+    "iconUrl": "https://static.mana.wiki/grandorder/194_Caster_of_Midrash_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "caster-of-okeanos",
+    "name": "Caster of Okeanos",
+    "iconUrl": "https://static.mana.wiki/grandorder/192_Caster_of_Okeanos_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "caster-of-the-nightless-city",
+    "name": "Caster of the Nightless City",
+    "iconUrl": "https://static.mana.wiki/grandorder/169_Caster_of_the_Nightless_City_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "chacha",
+    "name": "Chacha",
+    "iconUrl": "https://static.mana.wiki/grandorder/162_Chacha_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "charlemagne",
+    "name": "Charlemagne",
+    "iconUrl": "https://static.mana.wiki/grandorder/343_Charlemagne_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "charles-babbage",
+    "name": "Charles Babbage",
+    "iconUrl": "https://static.mana.wiki/grandorder/080_Charles_Babbage_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "charles-henri-sanson",
+    "name": "Charles-Henri Sanson",
+    "iconUrl": "https://static.mana.wiki/grandorder/043_Charles_Henri_Sanson_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "charlotte-corday",
+    "name": "Charlotte Corday",
+    "iconUrl": "https://static.mana.wiki/grandorder/259_Charlotte_Corday_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "charlotte-corday-caster",
+    "name": "Charlotte Corday (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/319_Charlotte_Corday_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "chen-gong",
+    "name": "Chen Gong",
+    "iconUrl": "https://static.mana.wiki/grandorder/258_Chen_Gong_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "chevalier-deon",
+    "name": "Chevalier d'Eon",
+    "iconUrl": "https://static.mana.wiki/grandorder/010_Chevalier_d_Eon_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "chiron",
+    "name": "Chiron",
+    "iconUrl": "https://static.mana.wiki/grandorder/207_Chiron_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "chloe-von-einzbern",
+    "name": "Chloe von Einzbern",
+    "iconUrl": "https://static.mana.wiki/grandorder/137_Chloe_von_Einzbern_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "chloe-von-einzbern-avenger",
+    "name": "Chloe von Einzbern (Avenger)",
+    "iconUrl": "https://static.mana.wiki/grandorder/388_Chloe_von_Einzbern_Avenger_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "cleopatra",
+    "name": "Cleopatra",
+    "iconUrl": "https://static.mana.wiki/grandorder/139_Cleopatra_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "cnoc-na-riabh",
+    "name": "Cnoc na Riabh",
+    "iconUrl": "https://static.mana.wiki/grandorder/389_Cnoc_na_Riabh_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "cu-chulainn",
+    "name": "Cu Chulainn",
+    "iconUrl": "https://static.mana.wiki/grandorder/017_Cu_Chulainn_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "cu-chulainn-alter",
+    "name": "Cu Chulainn (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/098_Cu_Chulainn_Alter_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "cu-chulainn-caster",
+    "name": "Cu Chulainn (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/038_Cu_Chulainn_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "cu-chulainn-prototype",
+    "name": "Cu Chulainn (Prototype)",
+    "iconUrl": "https://static.mana.wiki/grandorder/020_Cu_Chulainn_Prototype_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "daikokuten",
+    "name": "Daikokuten",
+    "iconUrl": "https://static.mana.wiki/grandorder/340_Daikokuten_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "dante-alighieri",
+    "name": "Dante Alighieri",
+    "iconUrl": "https://static.mana.wiki/grandorder/437_Dante_Alighieri_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "darius-iii",
+    "name": "Darius III",
+    "iconUrl": "https://static.mana.wiki/grandorder/055_Darius_III_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "david",
+    "name": "David",
+    "iconUrl": "https://static.mana.wiki/grandorder/063_David_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "demeter",
+    "name": "Demeter",
+    "iconUrl": "https://static.mana.wiki/grandorder/465_Demeter_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "demon-king-nobunaga-oda-nobunaga",
+    "name": "Demon King Nobunaga (Oda Nobunaga)",
+    "iconUrl": "https://static.mana.wiki/grandorder/250_Demon_King_Nobunaga_Oda_Nobunaga_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "diarmuid-ua-duibhne",
+    "name": "Diarmuid ua Duibhne",
+    "iconUrl": "https://static.mana.wiki/grandorder/071_Diarmuid_ua_Duibhne_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "diarmuid-ua-duibhne-saber",
+    "name": "Diarmuid Ua Duibhne (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/223_Diarmuid_ua_Duibhne_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "dioscuri",
+    "name": "Dioscuri",
+    "iconUrl": "https://static.mana.wiki/grandorder/278_Dioscuri_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "dobrynya-nikitich",
+    "name": "Dobrynya Nikitich",
+    "iconUrl": "https://static.mana.wiki/grandorder/332_Dobrynya_Nikitich_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "dobrynya-nikitich-lancer",
+    "name": "Dobrynya Nikitich (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/419_Dobrynya_Nikitich_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "don-quixote",
+    "name": "Don Quixote",
+    "iconUrl": "https://static.mana.wiki/grandorder/347_Don_Quixote_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "durga",
+    "name": "Durga",
+    "iconUrl": "https://static.mana.wiki/grandorder/383_Durga_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "duryodhana",
+    "name": "Duryodhana",
+    "iconUrl": "https://static.mana.wiki/grandorder/382_Duryodhana_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "e-aqua-marie",
+    "name": "E-Aqua Marie",
+    "iconUrl": "https://static.mana.wiki/grandorder/412_E_Aqua_Marie_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "e-flare-marie",
+    "name": "E-Flare Marie",
+    "iconUrl": "https://static.mana.wiki/grandorder/411_E_Flare_Marie_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "e-grand-marie",
+    "name": "E-Grand Marie",
+    "iconUrl": "https://static.mana.wiki/grandorder/436_E_Grand_Marie_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "e-stellar-marie",
+    "name": "E-Stellar Marie",
+    "iconUrl": "https://static.mana.wiki/grandorder/443_E_Stellar_Marie_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "edmond-dantes",
+    "name": "Edmond Dantes",
+    "iconUrl": "https://static.mana.wiki/grandorder/096_Edmond_Dantes_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "edward-teach",
+    "name": "Edward Teach",
+    "iconUrl": "https://static.mana.wiki/grandorder/025_Edward_Teach_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "elisa-the-nine-tattooed-dragon",
+    "name": "Elisa the Nine-Tattooed Dragon",
+    "iconUrl": "https://static.mana.wiki/grandorder/367_Elisabeth_Bathory_Kumonryu_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "elisabeth-bathory",
+    "name": "Elisabeth Bathory",
+    "iconUrl": "https://static.mana.wiki/grandorder/018_Elisabeth_Bathory_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "elisabeth-bathory-brave",
+    "name": "Elisabeth Bathory (Brave)",
+    "iconUrl": "https://static.mana.wiki/grandorder/138_Elisabeth_Bathory_Brave_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "elisabeth-bathory-cinderella",
+    "name": "Elisabeth Bathory (Cinderella)",
+    "iconUrl": "https://static.mana.wiki/grandorder/326_Elisabeth_Bathory_Cinderella_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "elisabeth-bathory-halloween",
+    "name": "Elisabeth Bathory (Halloween)",
+    "iconUrl": "https://static.mana.wiki/grandorder/061_Elisabeth_Bathory_Halloween_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "elisabeth-bathory-ssr",
+    "name": "Elisabeth Bathory (SSR)",
+    "iconUrl": "https://static.mana.wiki/grandorder/457_Elisabeth_Bathory_SSR_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "elisabeth-of-the-end",
+    "name": "Elisabeth of the End",
+    "iconUrl": "https://static.mana.wiki/grandorder/458_Elisabeth_of_the_End_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "emiya",
+    "name": "EMIYA",
+    "iconUrl": "https://static.mana.wiki/grandorder/011_Emiya_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "emiya-alter",
+    "name": "EMIYA (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/157_EMIYA_Alter_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "emiya-assassin",
+    "name": "EMIYA (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/109_Emiya_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "enkidu",
+    "name": "Enkidu",
+    "iconUrl": "https://static.mana.wiki/grandorder/143_Enkidu_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "ereshkigal",
+    "name": "Ereshkigal",
+    "iconUrl": "https://static.mana.wiki/grandorder/196_Ereshkigal_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "eric-bloodaxe",
+    "name": "Eric Bloodaxe",
+    "iconUrl": "https://static.mana.wiki/grandorder/057_Eric_Bloodaxe_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "europa",
+    "name": "Europa",
+    "iconUrl": "https://static.mana.wiki/grandorder/274_Europa_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "euryale",
+    "name": "Euryale",
+    "iconUrl": "https://static.mana.wiki/grandorder/015_Euryale_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "fergus-mac-roich",
+    "name": "Fergus mac Roich",
+    "iconUrl": "https://static.mana.wiki/grandorder/072_Fergus_mac_Roich_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "fionn-mac-cumhaill",
+    "name": "Fionn mac Cumhaill",
+    "iconUrl": "https://static.mana.wiki/grandorder/087_Fionn_mac_Cumhaill_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "first-hassan",
+    "name": "First Hassan",
+    "iconUrl": "https://static.mana.wiki/grandorder/154_First_Hassan_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "flora",
+    "name": "Flora",
+    "iconUrl": "https://static.mana.wiki/grandorder/464_Flora_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "francis-drake",
+    "name": "Francis Drake",
+    "iconUrl": "https://static.mana.wiki/grandorder/065_Francis_Drake_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "francois-prelati",
+    "name": "Francois Prelati",
+    "iconUrl": "https://static.mana.wiki/grandorder/467_Prelati_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "frankenstein",
+    "name": "Frankenstein",
+    "iconUrl": "https://static.mana.wiki/grandorder/082_Frankenstein_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "frankenstein-saber",
+    "name": "Frankenstein (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/176_Frankenstein_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "fuuma-kotarou",
+    "name": "Fuuma Kotarou",
+    "iconUrl": "https://static.mana.wiki/grandorder/117_Fuuma_Kotarou_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "gaius-julius-caesar",
+    "name": "Gaius Julius Caesar",
+    "iconUrl": "https://static.mana.wiki/grandorder/007_Gaius_Julius_Caesar_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "galatea",
+    "name": "Galatea",
+    "iconUrl": "https://static.mana.wiki/grandorder/306_Galatea_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "ganesha-jinako",
+    "name": "Ganesha (Jinako)",
+    "iconUrl": "https://static.mana.wiki/grandorder/244_Ganesha_Jinako_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "gareth",
+    "name": "Gareth",
+    "iconUrl": "https://static.mana.wiki/grandorder/256_Gareth_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "gareth-saber",
+    "name": "Gareth (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/354_Gareth_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "gawain",
+    "name": "Gawain",
+    "iconUrl": "https://static.mana.wiki/grandorder/123_Gawain_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "georgios",
+    "name": "Georgios",
+    "iconUrl": "https://static.mana.wiki/grandorder/024_Georgios_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "geronimo",
+    "name": "Geronimo",
+    "iconUrl": "https://static.mana.wiki/grandorder/104_Geronimo_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "gilgamesh",
+    "name": "Gilgamesh",
+    "iconUrl": "https://static.mana.wiki/grandorder/012_Gilgamesh_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "gilgamesh-caster",
+    "name": "Gilgamesh (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/145_Gilgamesh_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "gilles-de-rais",
+    "name": "Gilles de Rais",
+    "iconUrl": "https://static.mana.wiki/grandorder/009_Gilles_de_Rais_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "gilles-de-rais-caster",
+    "name": "Gilles de Rais (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/032_Gilles_de_Rais_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "goetia",
+    "name": "Goetia",
+    "iconUrl": "https://static.mana.wiki/grandorder/151_Goetia_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "gorgon",
+    "name": "Gorgon",
+    "iconUrl": "https://static.mana.wiki/grandorder/147_Gorgon_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "gray",
+    "name": "Gray",
+    "iconUrl": "https://static.mana.wiki/grandorder/243_Gray_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "gray-lancer-lily",
+    "name": "Gray (Lancer Lily)",
+    "iconUrl": "https://static.mana.wiki/grandorder/473_Gray_Lancer_Lily_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "gray-saber-lily",
+    "name": "Gray (Saber Lily)",
+    "iconUrl": "https://static.mana.wiki/grandorder/472_Gray_Saber_Lily_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "grigori-rasputin",
+    "name": "Grigori Rasputin",
+    "iconUrl": "https://static.mana.wiki/grandorder/369_Grigori_Rasputin_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "habetrot",
+    "name": "Habetrot",
+    "iconUrl": "https://static.mana.wiki/grandorder/315_Habetrot_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "habetrot-pretender",
+    "name": "Habetrot (Pretender)",
+    "iconUrl": "https://static.mana.wiki/grandorder/481_Habetrot_Pretender_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "hai-ba-trung",
+    "name": "Hai Ba Trung",
+    "iconUrl": "https://static.mana.wiki/grandorder/337_Trung_Sisters_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "hanasaka-no-okina",
+    "name": "Hanasaka no Okina",
+    "iconUrl": "https://static.mana.wiki/grandorder/462_Hanasaka_no_Okina_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "hans-christian-andersen",
+    "name": "Hans Christian Andersen",
+    "iconUrl": "https://static.mana.wiki/grandorder/033_Hans_Christian_Andersen_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "harada-sanosuke",
+    "name": "Harada Sanosuke",
+    "iconUrl": "https://static.mana.wiki/grandorder/455_Harada_Sanosuke_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "hassan-of-the-cursed-arm",
+    "name": "Hassan of the Cursed Arm",
+    "iconUrl": "https://static.mana.wiki/grandorder/040_Hassan_of_the_Cursed_Arm_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "hassan-of-the-hundred-personas",
+    "name": "Hassan of the Hundred Personas",
+    "iconUrl": "https://static.mana.wiki/grandorder/110_Hassan_of_the_Hundred_Personas_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "hassan-of-the-serenity",
+    "name": "Hassan of the Serenity",
+    "iconUrl": "https://static.mana.wiki/grandorder/124_Hassan_of_the_Serenity_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "hassan-of-the-shining-star",
+    "name": "Hassan of the Shining Star",
+    "iconUrl": "https://static.mana.wiki/grandorder/408_Hassan_Shining_Star_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "hebi-nyobo",
+    "name": "Hebi Nyobo",
+    "iconUrl": "https://static.mana.wiki/grandorder/463_Hebi_Nyobo_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "hektor",
+    "name": "Hektor",
+    "iconUrl": "https://static.mana.wiki/grandorder/064_Hektor_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "helena-blavatsky",
+    "name": "Helena Blavatsky",
+    "iconUrl": "https://static.mana.wiki/grandorder/100_Helena_Blavatsky_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "helena-blavatsky-archer",
+    "name": "Helena Blavatsky (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/180_Helena_Blavatsky_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "henry-jekyll-hyde",
+    "name": "Henry Jekyll & Hyde",
+    "iconUrl": "https://static.mana.wiki/grandorder/081_Henry_Jekyll_Hyde_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "hephaistion",
+    "name": "Hephaistion",
+    "iconUrl": "https://static.mana.wiki/grandorder/335_Hephaestion_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "heracles",
+    "name": "Heracles",
+    "iconUrl": "https://static.mana.wiki/grandorder/047_Heracles_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "hibiki-chikagi",
+    "name": "Hibiki & Chikagi",
+    "iconUrl": "https://static.mana.wiki/grandorder/416_Hibiki_Senkagi_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "hijikata-toshizo",
+    "name": "Hijikata Toshizo",
+    "iconUrl": "https://static.mana.wiki/grandorder/161_Hijikata_Toshizo_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "hildr-assassin",
+    "name": "Hildr (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/360_Hildr_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "himiko",
+    "name": "Himiko",
+    "iconUrl": "https://static.mana.wiki/grandorder/292_Himiko_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "hippolyta",
+    "name": "Hippolyta",
+    "iconUrl": "https://static.mana.wiki/grandorder/468_Hippolyta_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "houzouin-inshun",
+    "name": "Houzouin Inshun",
+    "iconUrl": "https://static.mana.wiki/grandorder/186_Houzouin_Inshun_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "huang-feihu",
+    "name": "Huang Feihu",
+    "iconUrl": "https://static.mana.wiki/grandorder/366_Huang_Feihu_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "huyan-zhuo",
+    "name": "Huyan Zhuo",
+    "iconUrl": "https://static.mana.wiki/grandorder/365_Huyan_Zhuo_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "huyan-zhuo-berserker",
+    "name": "Huyan Zhuo (Berserker)",
+    "iconUrl": "https://static.mana.wiki/grandorder/447_Huyan_Zhuo_Berserker_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "ibaraki-douji",
+    "name": "Ibaraki-Douji",
+    "iconUrl": "https://static.mana.wiki/grandorder/116_Ibaraki_Douji_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "ibaraki-douji-lancer",
+    "name": "Ibaraki-Douji (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/217_Ibaraki_Douji_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "ibuki-douji",
+    "name": "Ibuki-Douji",
+    "iconUrl": "https://static.mana.wiki/grandorder/299_Ibuki_Douji_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "ibuki-douji-berserker",
+    "name": "Ibuki-Douji (Berserker)",
+    "iconUrl": "https://static.mana.wiki/grandorder/355_Ibuki_Douji_Berserker_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "illyasviel-von-einzbern",
+    "name": "Illyasviel von Einzbern",
+    "iconUrl": "https://static.mana.wiki/grandorder/136_Illyasviel_von_Einzbern_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "illyasviel-von-einzbern-archer",
+    "name": "Illyasviel von Einzbern (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/286_Illyasviel_von_Einzbern_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "indra",
+    "name": "Indra",
+    "iconUrl": "https://static.mana.wiki/grandorder/442_Indra_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "irisviel-holy-grail",
+    "name": "Irisviel (Holy Grail)",
+    "iconUrl": "https://static.mana.wiki/grandorder/111_Irisviel_Holy_Grail_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "ishtar",
+    "name": "Ishtar",
+    "iconUrl": "https://static.mana.wiki/grandorder/142_Ishtar_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "ishtar-rider",
+    "name": "Ishtar (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/182_Ishtar_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "iskandar",
+    "name": "Iskandar",
+    "iconUrl": "https://static.mana.wiki/grandorder/108_Iskandar_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "ivan-the-terrible",
+    "name": "Ivan the Terrible",
+    "iconUrl": "https://static.mana.wiki/grandorder/205_Ivan_the_Terrible_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "iyo",
+    "name": "Iyo",
+    "iconUrl": "https://static.mana.wiki/grandorder/364_Iyo_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "izumo-no-okuni",
+    "name": "Izumo-no-Okuni",
+    "iconUrl": "https://static.mana.wiki/grandorder/327_Izumo_no_Okuni_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "jack-the-ripper",
+    "name": "Jack the Ripper",
+    "iconUrl": "https://static.mana.wiki/grandorder/075_Jack_the_Ripper_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "jacques-de-molay",
+    "name": "Jacques de Molay",
+    "iconUrl": "https://static.mana.wiki/grandorder/324_Jacques_de_Molay_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "jacques-de-molay-saber",
+    "name": "Jacques de Molay (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/466_Jacques_de_Molay_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "jaguar-warrior",
+    "name": "Jaguar Warrior",
+    "iconUrl": "https://static.mana.wiki/grandorder/148_Jaguar_Warrior_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "james-moriarty-ruler",
+    "name": "James Moriarty (Ruler)",
+    "iconUrl": "https://static.mana.wiki/grandorder/346_James_Moriarty_Ruler_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "jason",
+    "name": "Jason",
+    "iconUrl": "https://static.mana.wiki/grandorder/254_Jason_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "jeanne-darc",
+    "name": "Jeanne d'Arc",
+    "iconUrl": "https://static.mana.wiki/grandorder/059_Jeanne_d_Arc_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "jeanne-darc-alter-santa-lily",
+    "name": "Jeanne d'Arc (Alter Santa Lily)",
+    "iconUrl": "https://static.mana.wiki/grandorder/141_Jeanne_d_Arc_Alter_Santa_Lily_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "jeanne-darc-alter",
+    "name": "Jeanne d'Arc (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/106_Jeanne_d_Arc_Alter_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "jeanne-darc-archer",
+    "name": "Jeanne d'Arc (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/216_Jeanne_d_Arc_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "jeanne-darc-berserker-alter",
+    "name": "Jeanne d'Arc (Berserker Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/219_Jeanne_d_Arc_Berserker_Alter_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "jeunesse-crane",
+    "name": "Jeunesse Crane",
+    "iconUrl": "https://static.mana.wiki/grandorder/451_Miss_Crane_Alter_Ego_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "jing-ke",
+    "name": "Jing Ke",
+    "iconUrl": "https://static.mana.wiki/grandorder/042_Jing_Ke_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "john-lackland",
+    "name": "John Lackland",
+    "iconUrl": "https://static.mana.wiki/grandorder/469_John_Lackland_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "kama",
+    "name": "Kama",
+    "iconUrl": "https://static.mana.wiki/grandorder/239_Kama_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "kama-avenger",
+    "name": "Kama (Avenger)",
+    "iconUrl": "https://static.mana.wiki/grandorder/321_Kama_Avenger_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "karna",
+    "name": "Karna",
+    "iconUrl": "https://static.mana.wiki/grandorder/085_Karna_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "karna-santa",
+    "name": "Karna (Santa)",
+    "iconUrl": "https://static.mana.wiki/grandorder/301_Karna_Santa_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "kashin-koji",
+    "name": "Kashin Koji",
+    "iconUrl": "https://static.mana.wiki/grandorder/380_Kashin_Koji_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "katou-danzo",
+    "name": "Katou Danzo",
+    "iconUrl": "https://static.mana.wiki/grandorder/188_Katou_Danzo_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "katsushika-hokusai",
+    "name": "Katsushika Hokusai",
+    "iconUrl": "https://static.mana.wiki/grandorder/198_Katsushika_Hokusai_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "katsushika-hokusai-saber",
+    "name": "Katsushika Hokusai (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/264_Katsushika_Hokusai_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "kawakami-gensai",
+    "name": "Kawakami Gensai",
+    "iconUrl": "https://static.mana.wiki/grandorder/453_Kawakami_Gensai_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "kazuradrop",
+    "name": "Kazuradrop",
+    "iconUrl": "https://static.mana.wiki/grandorder/426_Kazuradrop_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "kid-gilgamesh",
+    "name": "Kid Gilgamesh",
+    "iconUrl": "https://static.mana.wiki/grandorder/095_Kid_Gilgamesh_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "kiichi-hogen",
+    "name": "Kiichi Hogen",
+    "iconUrl": "https://static.mana.wiki/grandorder/304_Kiichi_Hogen_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "kijyo-koyo",
+    "name": "Kijyo Koyo",
+    "iconUrl": "https://static.mana.wiki/grandorder/282_Kijyo_Koyo_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "kingprotea",
+    "name": "Kingprotea",
+    "iconUrl": "https://static.mana.wiki/grandorder/238_Kingprotea_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "kingprotea-alter",
+    "name": "Kingprotea (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/479_Kingprotea_Alter_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "kingprotea-moon-cancer",
+    "name": "Kingprotea (Moon Cancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/476_Kingprotea_MoonCancer_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "kishinami-hakuno-female",
+    "name": "Kishinami Hakuno (Female)",
+    "iconUrl": "https://static.mana.wiki/grandorder/425_Hakuno_Kishinami_F_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "kishinami-hakuno-male",
+    "name": "Kishinami Hakuno (Male)",
+    "iconUrl": "https://static.mana.wiki/grandorder/424_Hakuno_Kishinami_M_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "kiyohime",
+    "name": "Kiyohime",
+    "iconUrl": "https://static.mana.wiki/grandorder/056_Kiyohime_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "kiyohime-lancer",
+    "name": "Kiyohime (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/134_Kiyohime_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "kondo-isami",
+    "name": "Kondo Isami",
+    "iconUrl": "https://static.mana.wiki/grandorder/456_Kondo_Isami_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "konstantinos-xi",
+    "name": "Konstantinos XI",
+    "iconUrl": "https://static.mana.wiki/grandorder/342_Constantine_XI_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "koyanskaya-of-dark",
+    "name": "Koyanskaya of Dark",
+    "iconUrl": "https://static.mana.wiki/grandorder/334_Koyanskaya_of_Darkness_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "koyanskaya-of-light",
+    "name": "Koyanskaya of Light",
+    "iconUrl": "https://static.mana.wiki/grandorder/314_Koyanskaya_of_Light_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "kriemhild",
+    "name": "Kriemhild",
+    "iconUrl": "https://static.mana.wiki/grandorder/345_Kriemhild_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "kriemhild-rider",
+    "name": "Kriemhild (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/446_Kriemhild_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "kukulcan",
+    "name": "Kukulcan",
+    "iconUrl": "https://static.mana.wiki/grandorder/373_Kukulkan_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "kuonji-alice",
+    "name": "Kuonji Alice",
+    "iconUrl": "https://static.mana.wiki/grandorder/415_Alice_Kuonji_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "kurohime",
+    "name": "Kurohime",
+    "iconUrl": "https://static.mana.wiki/grandorder/434_Kurohime_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "kyokutei-bakin",
+    "name": "Kyokutei Bakin",
+    "iconUrl": "https://static.mana.wiki/grandorder/349_Kyokutei_Bakin_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "lady-avalon",
+    "name": "Lady Avalon",
+    "iconUrl": "https://static.mana.wiki/grandorder/353_Lady_Avalon_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "lakshmi-bai",
+    "name": "Lakshmi Bai",
+    "iconUrl": "https://static.mana.wiki/grandorder/245_Lakshmi_Bai_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "lancelot",
+    "name": "Lancelot",
+    "iconUrl": "https://static.mana.wiki/grandorder/048_Lancelot_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "lancelot-saber",
+    "name": "Lancelot (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/121_Lancelot_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "larva-tiamat",
+    "name": "Larva / Tiamat",
+    "iconUrl": "https://static.mana.wiki/grandorder/376_Larva_Tiamat_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "larva-tiamat-archer",
+    "name": "Larva / Tiamat (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/450_Larva_Tiamat_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "leonardo-da-vinci",
+    "name": "Leonardo da Vinci",
+    "iconUrl": "https://static.mana.wiki/grandorder/127_Leonardo_da_Vinci_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "leonardo-da-vinci-rider",
+    "name": "Leonardo da Vinci (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/253_Leonardo_da_Vinci_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "leonardo-da-vinci-ruler",
+    "name": "Leonardo da Vinci (Ruler)",
+    "iconUrl": "https://static.mana.wiki/grandorder/320_Leonardo_da_Vinci_Ruler_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "leonidas",
+    "name": "Leonidas",
+    "iconUrl": "https://static.mana.wiki/grandorder/021_Leonidas_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "li-shuwen",
+    "name": "Li Shuwen",
+    "iconUrl": "https://static.mana.wiki/grandorder/102_Li_Shuwen_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "li-shuwen-assassin",
+    "name": "Li Shuwen (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/235_Li_Shuwen_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "lilith",
+    "name": "Lilith",
+    "iconUrl": "https://static.mana.wiki/grandorder/440_Lilith_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "lilith-rider",
+    "name": "Lilith (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/478_Lilith_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "locusta",
+    "name": "Locusta",
+    "iconUrl": "https://static.mana.wiki/grandorder/378_Locusta_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "lord-logres",
+    "name": "Lord Logres",
+    "iconUrl": "https://static.mana.wiki/grandorder/461_Lord_Logres_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "louhi",
+    "name": "Louhi",
+    "iconUrl": "https://static.mana.wiki/grandorder/429_Louhi_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "lu-bu-fengxian",
+    "name": "Lu Bu Fengxian",
+    "iconUrl": "https://static.mana.wiki/grandorder/049_Lu_Bu_Fengxian_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "manannan-mac-lir-bazett",
+    "name": "Manannan mac Lir (Bazett)",
+    "iconUrl": "https://static.mana.wiki/grandorder/336_Manannan_mac_Lir_Bazett_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "mandricardo",
+    "name": "Mandricardo",
+    "iconUrl": "https://static.mana.wiki/grandorder/273_Mandricardo_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "marie-antoinette",
+    "name": "Marie Antoinette",
+    "iconUrl": "https://static.mana.wiki/grandorder/029_Marie_Antoinette_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "marie-antoinette-alter",
+    "name": "Marie Antoinette (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/407_Marie_Antoinette_Alter_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "marie-antoinette-caster",
+    "name": "Marie Antoinette (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/130_Marie_Antoinette_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "maris-chaldeas",
+    "name": "Maris Chaldeas",
+    "iconUrl": "https://static.mana.wiki/grandorder/460_Maris_Chaldeas_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "mary-anning",
+    "name": "Mary Anning",
+    "iconUrl": "https://static.mana.wiki/grandorder/341_Mary_Anning_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "mash-ortinax",
+    "name": "Mash (Ortinax)",
+    "iconUrl": "https://static.mana.wiki/grandorder/001_Mash_Kyrielight_Ortinax_Icon.png?width=80",
+    "className": "Shielder"
+  },
+  {
+    "slug": "mash-kyrielight",
+    "name": "Mash Kyrielight",
+    "iconUrl": "https://static.mana.wiki/grandorder/001_Mash_Kyrielight_Icon.png?width=80",
+    "className": "Shielder"
+  },
+  {
+    "slug": "mata-hari",
+    "name": "Mata Hari",
+    "iconUrl": "https://static.mana.wiki/grandorder/045_Mata_Hari_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "mecha-eli-chan",
+    "name": "Mecha Eli-chan",
+    "iconUrl": "https://static.mana.wiki/grandorder/190_Mecha_Eli_chan_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "mecha-eli-chan-mk-ii",
+    "name": "Mecha Eli-chan Mk.II",
+    "iconUrl": "https://static.mana.wiki/grandorder/191_Mecha_Eli_chan_Mk_II_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "medea",
+    "name": "Medea",
+    "iconUrl": "https://static.mana.wiki/grandorder/031_Medea_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "medea-lily",
+    "name": "Medea (Lily)",
+    "iconUrl": "https://static.mana.wiki/grandorder/067_Medea_Lily_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "medusa",
+    "name": "Medusa",
+    "iconUrl": "https://static.mana.wiki/grandorder/023_Medusa_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "medusa-lancer",
+    "name": "Medusa (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/146_Medusa_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "medusa-saber",
+    "name": "Medusa (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/384_Medusa_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "meltryllis",
+    "name": "Meltryllis",
+    "iconUrl": "https://static.mana.wiki/grandorder/163_Meltryllis_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "melusine",
+    "name": "Melusine",
+    "iconUrl": "https://static.mana.wiki/grandorder/312_Melusine_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "melusine-ruler",
+    "name": "Melusine (Ruler)",
+    "iconUrl": "https://static.mana.wiki/grandorder/390_Melusine_Ruler_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "mephistopheles",
+    "name": "Mephistopheles",
+    "iconUrl": "https://static.mana.wiki/grandorder/035_Mephistopheles_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "merlin",
+    "name": "Merlin",
+    "iconUrl": "https://static.mana.wiki/grandorder/150_Merlin_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "metatron-jeanne",
+    "name": "Metatron Jeanne",
+    "iconUrl": "https://static.mana.wiki/grandorder/438_Metatron_Jeanne_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "minamoto-no-raikou",
+    "name": "Minamoto-no-Raikou",
+    "iconUrl": "https://static.mana.wiki/grandorder/114_Minamoto_no_Raikou_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "minamoto-no-raikou-lancer",
+    "name": "Minamoto-no-Raikou (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/181_Minamoto_no_Raikou_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "minamoto-no-raikou-ushi-gozen",
+    "name": "Minamoto-no-Raikou / Ushi Gozen",
+    "iconUrl": "https://static.mana.wiki/grandorder/403_Ushi_Gozen_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "minamoto-no-tametomo",
+    "name": "Minamoto-no-Tametomo",
+    "iconUrl": "https://static.mana.wiki/grandorder/350_Minamoto_no_Tametomo_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "miss-crane",
+    "name": "Miss Crane",
+    "iconUrl": "https://static.mana.wiki/grandorder/307_Miss_Crane_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "miyamoto-iori",
+    "name": "Miyamoto Iori",
+    "iconUrl": "https://static.mana.wiki/grandorder/405_Miyamoto_Iori_IconRe.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "miyamoto-musashi",
+    "name": "Miyamoto Musashi",
+    "iconUrl": "https://static.mana.wiki/grandorder/153_Miyamoto_Musashi_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "miyamoto-musashi-berserker",
+    "name": "Miyamoto Musashi (Berserker)",
+    "iconUrl": "https://static.mana.wiki/grandorder/261_Miyamoto_Musashi_Berserker_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "miyu-edelfelt",
+    "name": "Miyu Edelfelt",
+    "iconUrl": "https://static.mana.wiki/grandorder/236_Miyu_Edelfelt_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "miyu-edelfelt-lancer",
+    "name": "Miyu Edelfelt (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/449_Miyu_Edelfelt_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "monte-cristo",
+    "name": "Monte Cristo",
+    "iconUrl": "https://static.mana.wiki/grandorder/409_Count_Monte_Cristo_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "mordred",
+    "name": "Mordred",
+    "iconUrl": "https://static.mana.wiki/grandorder/076_Mordred_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "mordred-rider",
+    "name": "Mordred (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/132_Mordred_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "morgan",
+    "name": "Morgan",
+    "iconUrl": "https://static.mana.wiki/grandorder/309_Morgan_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "mori-nagayoshi",
+    "name": "Mori Nagayoshi",
+    "iconUrl": "https://static.mana.wiki/grandorder/251_Mori_Nagayoshi_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "mr-hyde",
+    "name": "Mr. Hyde",
+    "iconUrl": "https://static.mana.wiki/FGOPartyQuestIcon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "murasaki-shikibu",
+    "name": "Murasaki Shikibu",
+    "iconUrl": "https://static.mana.wiki/grandorder/237_Murasaki_Shikibu_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "murasaki-shikibu-rider",
+    "name": "Murasaki Shikibu (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/291_Murasaki_Shikibu_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "musashibou-benkei",
+    "name": "Musashibou Benkei",
+    "iconUrl": "https://static.mana.wiki/grandorder/019_Musashibou_Benkei_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "mysterious-alter-ego-l",
+    "name": "Mysterious Alter Ego Λ",
+    "iconUrl": "https://static.mana.wiki/grandorder/266_Mysterious_Alter_Ego_L_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "mysterious-executor-ciel",
+    "name": "Mysterious Executor C.I.E.L",
+    "iconUrl": "https://static.mana.wiki/grandorder/418_Mysterious_Agent_Ciel_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "mysterious-heroine-x",
+    "name": "Mysterious Heroine X",
+    "iconUrl": "https://static.mana.wiki/grandorder/086_Mysterious_Heroine_X_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "mysterious-heroine-x-alter",
+    "name": "Mysterious Heroine X (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/155_Mysterious_Heroine_X_Alter_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "mysterious-heroine-xx",
+    "name": "Mysterious Heroine XX",
+    "iconUrl": "https://static.mana.wiki/grandorder/222_Mysterious_Heroine_XX_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "mysterious-heroine-xx-alter",
+    "name": "Mysterious Heroine XX (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/423_Mysterious_Heroine_XX_Alter_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "mysterious-heroine-z",
+    "name": "Mysterious Heroine Z",
+    "iconUrl": "https://static.mana.wiki/grandorder/FGOServantExtra_10021.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "mysterious-idol-x-alter",
+    "name": "Mysterious Idol X (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/308_Mysterious_Idol_X_Alter_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "mysterious-ranmaru-x",
+    "name": "Mysterious Ranmaru X",
+    "iconUrl": "https://static.mana.wiki/grandorder/328_Mysterious_Ranmaru_X_Icon-1.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "nagakura-shinpachi",
+    "name": "Nagakura Shinpachi",
+    "iconUrl": "https://static.mana.wiki/grandorder/398_Nagakura_Shinpachi_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "nagao-kagetora",
+    "name": "Nagao Kagetora",
+    "iconUrl": "https://static.mana.wiki/grandorder/252_Nagao_Kagetora_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "napoleon",
+    "name": "Napoleon",
+    "iconUrl": "https://static.mana.wiki/grandorder/212_Napoleon_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "nemo",
+    "name": "Nemo",
+    "iconUrl": "https://static.mana.wiki/grandorder/296_Nemo_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "nemo-santa",
+    "name": "Nemo (Santa)",
+    "iconUrl": "https://static.mana.wiki/grandorder/401_Nemo_Santa_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "nemo-noah",
+    "name": "Nemo / Noah",
+    "iconUrl": "https://static.mana.wiki/grandorder/452_Nemo_Noah_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "nero-claudius",
+    "name": "Nero Claudius",
+    "iconUrl": "https://static.mana.wiki/grandorder/005_Nero_Claudius_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "nero-claudius-bride",
+    "name": "Nero Claudius (Bride)",
+    "iconUrl": "https://static.mana.wiki/grandorder/090_Nero_Claudius_Bride_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "nero-claudius-caster",
+    "name": "Nero Claudius (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/175_Nero_Claudius_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "nezha",
+    "name": "Nezha",
+    "iconUrl": "https://static.mana.wiki/grandorder/193_Nezha_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "nightingale",
+    "name": "Nightingale",
+    "iconUrl": "https://static.mana.wiki/grandorder/097_Nightingale_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "nightingale-santa",
+    "name": "Nightingale (Santa)",
+    "iconUrl": "https://static.mana.wiki/grandorder/271_Nightingale_Santa_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "nikola-tesla",
+    "name": "Nikola Tesla",
+    "iconUrl": "https://static.mana.wiki/grandorder/077_Nikola_Tesla_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "nitocris",
+    "name": "Nitocris",
+    "iconUrl": "https://static.mana.wiki/grandorder/120_Nitocris_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "nitocris-alter",
+    "name": "Nitocris (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/370_Nitocris_Alter_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "nitocris-assassin",
+    "name": "Nitocris (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/177_Nitocris_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "nursery-rhyme",
+    "name": "Nursery Rhyme",
+    "iconUrl": "https://static.mana.wiki/grandorder/074_Nursery_Rhyme_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "oberon",
+    "name": "Oberon",
+    "iconUrl": "https://static.mana.wiki/grandorder/316_Oberon_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "oda-nobukatsu",
+    "name": "Oda Nobukatsu",
+    "iconUrl": "https://static.mana.wiki/grandorder/294_Oda_Nobukatsu_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "oda-nobunaga",
+    "name": "Oda Nobunaga",
+    "iconUrl": "https://static.mana.wiki/grandorder/069_Oda_Nobunaga_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "oda-nobunaga-berserker",
+    "name": "Oda Nobunaga (Berserker)",
+    "iconUrl": "https://static.mana.wiki/grandorder/178_Oda_Nobunaga_Berserker_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "odysseus",
+    "name": "Odysseus",
+    "iconUrl": "https://static.mana.wiki/grandorder/277_Odysseus_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "okada-izo",
+    "name": "Okada Izo",
+    "iconUrl": "https://static.mana.wiki/grandorder/210_Okada_Izo_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "okita-j-souji",
+    "name": "Okita J Souji",
+    "iconUrl": "https://static.mana.wiki/grandorder/267_Okita_J_Souji_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "okita-souji",
+    "name": "Okita Souji",
+    "iconUrl": "https://static.mana.wiki/grandorder/068_Okita_Souji_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "okita-souji-alter",
+    "name": "Okita Souji (Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/209_Okita_Souji_Alter_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "okita-souji-saber-alter",
+    "name": "Okita Souji (Saber Alter)",
+    "iconUrl": "https://static.mana.wiki/grandorder/317_Okita_Souji_Saber_Alter_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "ono-no-komachi",
+    "name": "Ono no Komachi",
+    "iconUrl": "https://static.mana.wiki/grandorder/435_Ono_no_Komachi_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "ono-no-komachi-archer",
+    "name": "Ono no Komachi (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/480_Ono_no_Komachi_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "orion",
+    "name": "Orion",
+    "iconUrl": "https://static.mana.wiki/grandorder/060_Orion_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "ortlinde-assassin",
+    "name": "Ortlinde (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/361_Ortlinde_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "osakabehime",
+    "name": "Osakabehime",
+    "iconUrl": "https://static.mana.wiki/grandorder/189_Osakabehime_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "osakabehime-archer",
+    "name": "Osakabehime (Archer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/262_Osakabehime_Archer_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "ozymandias",
+    "name": "Ozymandias",
+    "iconUrl": "https://static.mana.wiki/grandorder/118_Ozymandias_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "paracelsus-von-hohenheim",
+    "name": "Paracelsus von Hohenheim",
+    "iconUrl": "https://static.mana.wiki/grandorder/079_Paracelsus_von_Hohenheim_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "paris",
+    "name": "Paris",
+    "iconUrl": "https://static.mana.wiki/grandorder/255_Paris_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "parvati",
+    "name": "Parvati",
+    "iconUrl": "https://static.mana.wiki/grandorder/183_Parvati_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "passionlip",
+    "name": "Passionlip",
+    "iconUrl": "https://static.mana.wiki/grandorder/164_Passionlip_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "passionlip-saber",
+    "name": "Passionlip (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/445_Passionlip_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "paul-bunyan",
+    "name": "Paul Bunyan",
+    "iconUrl": "https://static.mana.wiki/grandorder/174_Paul_Bunyan_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "percival",
+    "name": "Percival",
+    "iconUrl": "https://static.mana.wiki/grandorder/313_Percival_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "phantasmoon",
+    "name": "Phantasmoon",
+    "iconUrl": "https://static.mana.wiki/grandorder/431_Phantasmoon_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "phantom-of-the-opera",
+    "name": "Phantom of the Opera",
+    "iconUrl": "https://static.mana.wiki/grandorder/044_Phantom_of_the_Opera_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "pope-johanna",
+    "name": "Pope Johanna",
+    "iconUrl": "https://static.mana.wiki/grandorder/374_Pope_Johanna_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "prince-of-lan-ling",
+    "name": "Prince of Lan Ling",
+    "iconUrl": "https://static.mana.wiki/grandorder/227_Prince_of_Lan_Ling_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "ptolemaios",
+    "name": "Ptolemaios",
+    "iconUrl": "https://static.mana.wiki/grandorder/394_Ptolemy_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "qin-liangyu",
+    "name": "Qin Liangyu",
+    "iconUrl": "https://static.mana.wiki/grandorder/228_Qin_Liangyu_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "qin-shi-huang",
+    "name": "Qin Shi Huang",
+    "iconUrl": "https://static.mana.wiki/grandorder/229_Qin_Shi_Huang_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "queen-medb",
+    "name": "Queen Medb",
+    "iconUrl": "https://static.mana.wiki/grandorder/099_Queen_Medb_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "queen-medb-saber",
+    "name": "Queen Medb (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/221_Queen_Medb_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "quetzalcoatl",
+    "name": "Quetzalcoatl",
+    "iconUrl": "https://static.mana.wiki/grandorder/144_Quetzalcoatl_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "quetzalcoatl-sambasanta",
+    "name": "Quetzalcoatl (Samba/Santa)",
+    "iconUrl": "https://static.mana.wiki/grandorder/233_Quetzalcoatl_Samba_Santa_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "rama",
+    "name": "Rama",
+    "iconUrl": "https://static.mana.wiki/grandorder/101_Rama_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "red-hare",
+    "name": "Red Hare",
+    "iconUrl": "https://static.mana.wiki/grandorder/231_Red_Hare_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "richard-i",
+    "name": "Richard I",
+    "iconUrl": "https://static.mana.wiki/grandorder/432_Richard_I_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "rider-of-resistance",
+    "name": "Rider of Resistance",
+    "iconUrl": "https://static.mana.wiki/grandorder/172_Rider_of_Resistance_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "robin-hood",
+    "name": "Robin Hood",
+    "iconUrl": "https://static.mana.wiki/grandorder/013_Robin_Hood_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "roland",
+    "name": "Roland",
+    "iconUrl": "https://static.mana.wiki/grandorder/344_Roland_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "romulus",
+    "name": "Romulus",
+    "iconUrl": "https://static.mana.wiki/grandorder/022_Romulus_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "romulus-quirinus",
+    "name": "Romulus=Quirinus",
+    "iconUrl": "https://static.mana.wiki/grandorder/280_Romulus_Quirinus_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "ryougi-shiki-assassin",
+    "name": "Ryougi Shiki (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/092_Ryougi_Shiki_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "ryougi-shiki-moon-cancer",
+    "name": "Ryougi Shiki (Moon Cancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/448_Ryougi_Shiki_Moon_Cancer_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "ryougi-shiki-saber",
+    "name": "Ryougi Shiki (Saber)",
+    "iconUrl": "https://static.mana.wiki/grandorder/091_Ryougi_Shiki_Saber_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "saika-magoichi",
+    "name": "Saika Magoichi",
+    "iconUrl": "https://static.mana.wiki/grandorder/399_Saika_Magoichi_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "saint-martha",
+    "name": "Saint Martha",
+    "iconUrl": "https://static.mana.wiki/grandorder/030_Saint_Martha_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "saint-martha-ruler",
+    "name": "Saint Martha (Ruler)",
+    "iconUrl": "https://static.mana.wiki/grandorder/135_Saint_Martha_Ruler_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "saint-martha-santa",
+    "name": "Saint Martha (Santa)",
+    "iconUrl": "https://static.mana.wiki/grandorder/330_Saint_Martha_Santa_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "saito-hajime",
+    "name": "Saito Hajime",
+    "iconUrl": "https://static.mana.wiki/grandorder/293_Saito_Hajime_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "sakamoto-ryouma",
+    "name": "Sakamoto Ryouma",
+    "iconUrl": "https://static.mana.wiki/grandorder/211_Sakamoto_Ryouma_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "sakamoto-ryouma-lancer",
+    "name": "Sakamoto Ryouma (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/329_Sakamoto_Ryouma_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "sakata-kintoki",
+    "name": "Sakata Kintoki",
+    "iconUrl": "https://static.mana.wiki/grandorder/051_Sakata_Kintoki_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "sakata-kintoki-rider",
+    "name": "Sakata Kintoki (Rider)",
+    "iconUrl": "https://static.mana.wiki/grandorder/115_Sakata_Kintoki_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "salome",
+    "name": "Salome",
+    "iconUrl": "https://static.mana.wiki/grandorder/260_Salome_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "sasaki-kojirou",
+    "name": "Sasaki Kojirou",
+    "iconUrl": "https://static.mana.wiki/grandorder/039_Sasaki_Kojirou_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "scathach",
+    "name": "Scathach",
+    "iconUrl": "https://static.mana.wiki/grandorder/070_Scathach_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "scathach-assassin",
+    "name": "Scathach (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/133_Scathach_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "scathach-skadi",
+    "name": "Scathach-Skadi",
+    "iconUrl": "https://static.mana.wiki/grandorder/215_Scathach_Skadi_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "scathach-skadi-ruler",
+    "name": "Scathach-Skadi (Ruler)",
+    "iconUrl": "https://static.mana.wiki/grandorder/357_Scathach_Skadi_Ruler_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "sei-shounagon",
+    "name": "Sei Shounagon",
+    "iconUrl": "https://static.mana.wiki/grandorder/276_Sei_Shounagon_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "sei-shounagon-berserker",
+    "name": "Sei Shounagon (Berserker)",
+    "iconUrl": "https://static.mana.wiki/grandorder/323_Sei_Shounagon_Berserker_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "semiramis",
+    "name": "Semiramis",
+    "iconUrl": "https://static.mana.wiki/grandorder/199_Semiramis_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "sen-no-rikyu",
+    "name": "Sen-no-Rikyu",
+    "iconUrl": "https://static.mana.wiki/grandorder/362_Sen_no_Rikyu_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "senji-muramasa",
+    "name": "Senji Muramasa",
+    "iconUrl": "https://static.mana.wiki/grandorder/302_Senji_Muramasa_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "sessyoin-kiara",
+    "name": "Sessyoin Kiara",
+    "iconUrl": "https://static.mana.wiki/grandorder/167_Sessyoin_Kiara_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "sessyoin-kiara-moon-cancer",
+    "name": "Sessyoin Kiara (Moon Cancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/285_Sessyoin_Kiara_Moon_Cancer_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "setanta",
+    "name": "Setanta",
+    "iconUrl": "https://static.mana.wiki/grandorder/379_Setanta_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "sherlock-holmes",
+    "name": "Sherlock Holmes",
+    "iconUrl": "https://static.mana.wiki/grandorder/173_Sherlock_Holmes_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "shuten-douji",
+    "name": "Shuten-Douji",
+    "iconUrl": "https://static.mana.wiki/grandorder/112_Shuten_Douji_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "shuten-douji-caster",
+    "name": "Shuten-Douji (Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/225_Shuten_Douji_Caster_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "sieg",
+    "name": "Sieg",
+    "iconUrl": "https://static.mana.wiki/grandorder/208_Sieg_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "siegfried",
+    "name": "Siegfried",
+    "iconUrl": "https://static.mana.wiki/grandorder/006_Siegfried_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "sigurd",
+    "name": "Sigurd",
+    "iconUrl": "https://static.mana.wiki/grandorder/213_Sigurd_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "sima-yi-reines",
+    "name": "Sima Yi (Reines)",
+    "iconUrl": "https://static.mana.wiki/grandorder/241_Sima_Yi_Reines_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "sitonai",
+    "name": "Sitonai",
+    "iconUrl": "https://static.mana.wiki/grandorder/224_Sitonai_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "sizuki-soujyuro",
+    "name": "Sizuki Soujyuro",
+    "iconUrl": "https://static.mana.wiki/grandorder/414_Soujuurou_Shizuki_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "sodoms-beast-draco",
+    "name": "Sodom's Beast / Draco",
+    "iconUrl": "https://static.mana.wiki/grandorder/377_Sodom_s_Beast_Draco_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "solomon",
+    "name": "Solomon",
+    "iconUrl": "https://static.mana.wiki/grandorder/459_Solomon_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "solomon-grand-caster",
+    "name": "Solomon (Grand Caster)",
+    "iconUrl": "https://static.mana.wiki/grandorder/083_Solomon_Grand_Caster_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "solomon-true",
+    "name": "Solomon (True)",
+    "iconUrl": "https://static.mana.wiki/grandorder/152_Solomon_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "space-ereshkigal",
+    "name": "Space Ereshkigal",
+    "iconUrl": "https://static.mana.wiki/grandorder/417_Space_Ereshkigal_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "space-ishtar",
+    "name": "Space Ishtar",
+    "iconUrl": "https://static.mana.wiki/grandorder/268_Space_Ishtar_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "spartacus",
+    "name": "Spartacus",
+    "iconUrl": "https://static.mana.wiki/grandorder/050_Spartacus_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "stheno",
+    "name": "Stheno",
+    "iconUrl": "https://static.mana.wiki/grandorder/041_Stheno_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "sugitani-zenjubou",
+    "name": "Sugitani Zenjubou",
+    "iconUrl": "https://static.mana.wiki/grandorder/395_Sugitani_Zenjubou_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "super-bunyan",
+    "name": "Super Bunyan",
+    "iconUrl": "https://static.mana.wiki/grandorder/339_Super_Bunyan_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "super-orion",
+    "name": "Super Orion",
+    "iconUrl": "https://static.mana.wiki/grandorder/272_Super_Orion_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "suzuka-gozen",
+    "name": "Suzuka Gozen",
+    "iconUrl": "https://static.mana.wiki/grandorder/165_Suzuka_Gozen_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "suzuka-gozen-vacay",
+    "name": "Suzuka Gozen (Vacay)",
+    "iconUrl": "https://static.mana.wiki/grandorder/387_Suzuka_Gozen_Rider_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "taigong-wang",
+    "name": "Taigong Wang",
+    "iconUrl": "https://static.mana.wiki/grandorder/331_Jiang_Ziya_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "taira-no-kagekiyo",
+    "name": "Taira-no-Kagekiyo",
+    "iconUrl": "https://static.mana.wiki/grandorder/303_Taira_no_Kagekiyo_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "taisui-xingjun",
+    "name": "Taisui Xingjun",
+    "iconUrl": "https://static.mana.wiki/grandorder/338_Taisui_Xingjun_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "takasugi-shinsaku",
+    "name": "Takasugi Shinsaku",
+    "iconUrl": "https://static.mana.wiki/grandorder/375_Takasugi_Shinsaku_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "takeda-shingen-takeda-harunobu",
+    "name": "Takeda Shingen (Takeda Harunobu)",
+    "iconUrl": "https://static.mana.wiki/grandorder/397_Takeda_Shingen_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "tamamo-cat",
+    "name": "Tamamo Cat",
+    "iconUrl": "https://static.mana.wiki/grandorder/058_Tamamo_Cat_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "tamamo-no-mae",
+    "name": "Tamamo-no-Mae",
+    "iconUrl": "https://static.mana.wiki/grandorder/062_Tamamo_no_Mae_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "tamamo-no-mae-lancer",
+    "name": "Tamamo-no-Mae (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/128_Tamamo_no_Mae_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "tawara-touta",
+    "name": "Tawara Touta",
+    "iconUrl": "https://static.mana.wiki/grandorder/125_Tawara_Touta_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "tenochtitlan-moon-cancer",
+    "name": "Tenochtitlan (Moon Cancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/422_Tenochtitlan_Moon_Cancer_Icon.png?width=80",
+    "className": "Moon Cancer"
+  },
+  {
+    "slug": "tezcatlipoca",
+    "name": "Tezcatlipoca",
+    "iconUrl": "https://static.mana.wiki/grandorder/371_Tezcatlipoca_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "the-black-grail-enemy",
+    "name": "The Black Grail (Enemy)",
+    "iconUrl": "https://static.mana.wiki/FGOPartyQuestIcon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "theseus",
+    "name": "Theseus",
+    "iconUrl": "https://static.mana.wiki/grandorder/396_Theseus_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "thomas-edison",
+    "name": "Thomas Edison",
+    "iconUrl": "https://static.mana.wiki/grandorder/103_Thomas_Edison_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "thrud-assassin",
+    "name": "Thrud (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/359_Thrud_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "tiamat",
+    "name": "Tiamat",
+    "iconUrl": "https://static.mana.wiki/grandorder/149_Tiamat_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "tlaloc",
+    "name": "Tlaloc",
+    "iconUrl": "https://static.mana.wiki/grandorder/372_Tlaloc_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "todo-heisuke",
+    "name": "Todo Heisuke",
+    "iconUrl": "https://static.mana.wiki/grandorder/454_Todo_Heisuke_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "tristan",
+    "name": "Tristan",
+    "iconUrl": "https://static.mana.wiki/grandorder/122_Tristan_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "tutankhamun",
+    "name": "Tutankhamun",
+    "iconUrl": "https://static.mana.wiki/grandorder/427_Tutankhamun_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "typhon-ephemeros",
+    "name": "Typhon Ephemeros",
+    "iconUrl": "https://static.mana.wiki/grandorder/441_Typhon_Ephemeros_Icon.png?width=80",
+    "className": "Pretender"
+  },
+  {
+    "slug": "u-olga-marie",
+    "name": "U-Olga Marie",
+    "iconUrl": "https://static.mana.wiki/grandorder/444_U_Olga_Marie_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "u-olga-marie-npc-version",
+    "name": "U-Olga Marie (NPC Version)",
+    "iconUrl": "https://static.mana.wiki/grandorder/99441400_U_Olga_Marie_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "udk-barghest",
+    "name": "UDK Barghest",
+    "iconUrl": "https://static.mana.wiki/grandorder/391_UDK_Barghest_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "uesugi-kenshin",
+    "name": "Uesugi Kenshin",
+    "iconUrl": "https://static.mana.wiki/grandorder/400_Uesugi_Kenshin_Icon.png?width=80",
+    "className": "Ruler"
+  },
+  {
+    "slug": "ushiwakamaru",
+    "name": "Ushiwakamaru",
+    "iconUrl": "https://static.mana.wiki/grandorder/027_Ushiwakamaru_Icon.png?width=80",
+    "className": "Rider"
+  },
+  {
+    "slug": "ushiwakamaru-assassin",
+    "name": "Ushiwakamaru (Assassin)",
+    "iconUrl": "https://static.mana.wiki/grandorder/218_Ushiwakamaru_Assassin_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "utsumi-erice",
+    "name": "Utsumi Erice",
+    "iconUrl": "https://static.mana.wiki/grandorder/283_Utsumi_Erice_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "utsumi-erice-avenger",
+    "name": "Utsumi Erice (Avenger)",
+    "iconUrl": "https://static.mana.wiki/grandorder/356_Utsumi_Erice_Avenger_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "valkyrie",
+    "name": "Valkyrie",
+    "iconUrl": "https://static.mana.wiki/grandorder/214_Valkyrie_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "van-gogh",
+    "name": "Van Gogh",
+    "iconUrl": "https://static.mana.wiki/grandorder/295_Van_Gogh_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "van-gogh-miner",
+    "name": "Van Gogh (Miner)",
+    "iconUrl": "https://static.mana.wiki/grandorder/428_Van_Gogh_Miner_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "vlad-iii",
+    "name": "Vlad III",
+    "iconUrl": "https://static.mana.wiki/grandorder/052_Vlad_III_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "vlad-iii-extra",
+    "name": "Vlad III (EXTRA)",
+    "iconUrl": "https://static.mana.wiki/grandorder/140_Vlad_III_EXTRA_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "voyager",
+    "name": "Voyager",
+    "iconUrl": "https://static.mana.wiki/grandorder/281_Voyager_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "vritra",
+    "name": "Vritra",
+    "iconUrl": "https://static.mana.wiki/grandorder/300_Vritra_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "wandjina",
+    "name": "Wandjina",
+    "iconUrl": "https://static.mana.wiki/grandorder/393_Wandjina_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "watanabe-no-tsuna",
+    "name": "Watanabe-no-Tsuna",
+    "iconUrl": "https://static.mana.wiki/grandorder/298_Watanabe_no_Tsuna_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "william-shakespeare",
+    "name": "William Shakespeare",
+    "iconUrl": "https://static.mana.wiki/grandorder/034_William_Shakespeare_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "william-tell",
+    "name": "William Tell",
+    "iconUrl": "https://static.mana.wiki/grandorder/246_William_Tell_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "wolfgang-amadeus-mozart",
+    "name": "Wolfgang Amadeus Mozart",
+    "iconUrl": "https://static.mana.wiki/grandorder/036_Wolfgang_Amadeus_Mozart_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "xiang-yu",
+    "name": "Xiang Yu",
+    "iconUrl": "https://static.mana.wiki/grandorder/226_Xiang_Yu_Icon.png?width=80",
+    "className": "Berserker"
+  },
+  {
+    "slug": "xu-fu",
+    "name": "Xu Fu",
+    "iconUrl": "https://static.mana.wiki/grandorder/352_Xu_Fu_Icon.png?width=80",
+    "className": "Alter Ego"
+  },
+  {
+    "slug": "xu-fu-avenger",
+    "name": "Xu Fu (Avenger)",
+    "iconUrl": "https://static.mana.wiki/grandorder/420_Xu_Fu_Avenger_Icon.png?width=80",
+    "className": ""
+  },
+  {
+    "slug": "xuanzang-sanzang",
+    "name": "Xuanzang Sanzang",
+    "iconUrl": "https://static.mana.wiki/grandorder/113_Xuanzang_Sanzang_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "yagyu-munenori",
+    "name": "Yagyu Munenori",
+    "iconUrl": "https://static.mana.wiki/grandorder/187_Yagyu_Munenori_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "yamanami-keisuke",
+    "name": "Yamanami Keisuke",
+    "iconUrl": "https://static.mana.wiki/grandorder/363_Yamanami_Keisuke_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "yamato-takeru",
+    "name": "Yamato Takeru",
+    "iconUrl": "https://static.mana.wiki/grandorder/402_Yamato_Takeru_Icon.png?width=80",
+    "className": "Saber"
+  },
+  {
+    "slug": "yang-guifei",
+    "name": "Yang Guifei",
+    "iconUrl": "https://static.mana.wiki/grandorder/275_Yang_Guifei_Icon.png?width=80",
+    "className": "Foreigner"
+  },
+  {
+    "slug": "yu-mei-ren",
+    "name": "Yu Mei-ren",
+    "iconUrl": "https://static.mana.wiki/grandorder/230_Yu_Mei_ren_Icon.png?width=80",
+    "className": "Assassin"
+  },
+  {
+    "slug": "yu-mei-ren-lancer",
+    "name": "Yu Mei-ren (Lancer)",
+    "iconUrl": "https://static.mana.wiki/grandorder/288_Yu_Mei_ren_Lancer_Icon.png?width=80",
+    "className": "Lancer"
+  },
+  {
+    "slug": "yui-shousetsu",
+    "name": "Yui Shousetsu",
+    "iconUrl": "https://static.mana.wiki/grandorder/404_Yui_Shousetsu_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "zenobia",
+    "name": "Zenobia",
+    "iconUrl": "https://static.mana.wiki/grandorder/325_Zenobia_Icon.png?width=80",
+    "className": "Archer"
+  },
+  {
+    "slug": "zhang-jue",
+    "name": "Zhang Jue",
+    "iconUrl": "https://static.mana.wiki/grandorder/348_Zhang_Jiao_Icon.png?width=80",
+    "className": "Caster"
+  },
+  {
+    "slug": "zhuge-liang-el-melloi-ii",
+    "name": "Zhuge Liang (El-Melloi II)",
+    "iconUrl": "https://static.mana.wiki/grandorder/037_Zhuge_Liang_El_Melloi_II_Icon.png?width=80",
+    "className": "Caster"
+  }
+]

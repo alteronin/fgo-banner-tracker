@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import type { Banner } from "@/types/banner";
+import { ImageWithFallback } from "./ImageWithFallback";
 import { ServantChip } from "./ServantChip";
 import { BannerIndicators } from "./BannerIndicators";
 import { RateUpIndicator } from "./RateUpIndicator";
@@ -36,7 +36,7 @@ export function BannerCard({ banner, onClick }: BannerCardProps) {
       onClick={onClick}
     >
       <div className="aspect-[480/173] relative overflow-hidden">
-        <Image
+        <ImageWithFallback
           src={banner.imageUrl}
           alt={banner.name}
           fill

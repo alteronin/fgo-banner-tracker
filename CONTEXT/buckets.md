@@ -44,3 +44,17 @@
 - [x] **loading-skeletons**: Loading skeletons
 - [x] **seo-meta**: SEO meta tags and Open Graph
 - [x] **about-help**: About/help page
+
+---
+
+## Bucket 5: Post-Launch (Complete)
+**Status**: Completed
+
+### Features
+- [x] **year-filter**: Year filter dropdown for banners
+- [x] **full-scraper**: Re-scrape all banners (742 total, 2017-2026) with cheerio
+- [x] **image-fallback**: ImageWithFallback component for broken image graceful degradation
+- [x] **image-fix**: Bracket-encoding fix for 24 broken image URLs
+- [x] **servants-page**: Servant collection page with 487 servants, thumbnails, status tracking
+- [x] **servant-scraper**: Scrape servant data from GamePress sitemap + pages
+- [x] **unit-tests**: 39 unit tests (Vitest + Testing Library) for data, storage, context, hooks

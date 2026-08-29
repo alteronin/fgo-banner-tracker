@@ -18,20 +18,31 @@ A web application that helps Fate/Grand Order JP server players track their serv
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: localStorage + React Context
+- **Testing**: Vitest + Testing Library
 - **Hosting**: Vercel (free tier)
 
 ## Key Features
-1. Browse all FGO JP summoning banners
+1. Browse all 742 FGO JP summoning banners (2017-2026)
 2. Toggle servant status (owned/planning/none)
-3. Filter banners by servant status
+3. Filter banners by servant status, year, search
 4. View banner details with rate-up information
-5. Responsive design for mobile and desktop
+5. Servant collection page with 487 servants + thumbnails
+6. Responsive design for mobile and desktop
+7. Dark/light mode
+8. Import/export collection data
+9. Keyboard navigation
+10. Image fallback for broken thumbnails
 
-## Data Source
-Banner data scraped from GamePress FGO Wiki (https://grandorder.gamepress.gg/summon-banner-list)
+## Data Sources
+- Banner data: Scraped from GamePress FGO Wiki (https://grandorder.gamepress.gg/summon-banner-list)
+- Servant data: Scraped from GamePress sitemap + individual pages (https://grandorder.gamepress.gg/c/servants)
+- Images: Hosted on static.mana.wiki with fallback placeholders
+
+## Testing
+- 39 unit tests covering data, storage, context, and hooks
+- Run with `npm run test`
 
 ## Future Expansion
 - Support for multiple gacha games (Genshin, HSR, HI3, ZZZ, WuWa)
 - Cloud sync with user accounts
-- Advanced filtering and search
-- Import/export collection data
+- E2E browser tests (Playwright/Cypress)

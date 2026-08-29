@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { getBanners } from "@/lib/data";
 import { BannerList } from "@/components/BannerList";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -24,6 +25,12 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-3">
             <CollectionStats />
+            <Link
+              href="/servants"
+              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
+            >
+              Servants
+            </Link>
             <ImportExport />
             <AboutHelp />
             <ThemeToggle />

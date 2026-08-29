@@ -16,18 +16,20 @@
 - Easy to migrate to backend later if needed
 
 ## 3. Data Storage
-**Decision**: Static JSON file with 178 banners
+**Decision**: Static JSON files (banners.json + servants.json)
 **Reasoning**:
 - Banner data changes infrequently
+- Servant data is stable between game updates
 - No need for real-time updates
-- Can be updated via JSON seed tool later
+- Scrapers regenerate data on demand
 
 ## 4. Image Handling
-**Decision**: next/image for optimized loading
+**Decision**: next/image with ImageWithFallback wrapper
 **Reasoning**:
-- Automatic image optimization
+- Automatic image optimization via Vercel CDN
 - Lazy loading by default
-- Better Core Web Vitals
+- Graceful degradation when external images break
+- External URLs from static.mana.wiki (no self-hosting overhead)
 
 ## 5. Component Architecture
 **Decision**: Client components with Context
@@ -37,15 +39,37 @@
 - Components are self-contained and reusable
 
 ## 6. Modal vs Page for Detail View
-**Decision**: Modal overlay
+**Decision**: Modal overlay for banner details, separate page for servants
 **Reasoning**:
-- Keeps user in context
-- Faster navigation
-- Better mobile experience
+- Banner details are quick views — modal keeps user in context
+- Servants page is a dedicated browsing experience — separate route makes sense
 
 ## 7. Filtering Strategy
 **Decision**: Client-side filtering with useMemo
 **Reasoning**:
-- 178 banners is small enough for client-side
+- 742 banners and 487 servants are small enough for client-side
 - No API calls needed
 - Instant filter response
+
+## 8. Image Fallback Strategy
+**Decision**: ImageWithFallback component with error handler
+**Reasoning**:
+- External images from mana.wiki may break (as seen with bracket issue)
+- Better UX to show placeholder than broken image icon
+- Chosen over self-hosting to avoid repo bloat (~80MB of images)
+
+## 9. Data Scraping Approach
+**Decision**: Cheerio-based HTML scraping for banners, sitemap + page scraping for servants
+**Reasoning**:
+- GamePress is a Remix app with client-side rendering — no public API
+- Cheerio parses server-rendered HTML reliably
+- Sitemap provides complete servant URL list (487 entries)
+- Individual page fetches extract icon URLs from og:image meta tags
+
+## 10. Testing Framework
+**Decision**: Vitest + Testing Library
+**Reasoning**:
+- Fast test execution (Vite-based)
+- Compatible with Next.js and TypeScript
+- Testing Library provides realistic component testing
+- 39 tests covering data, storage, context, and hooks
