@@ -15,9 +15,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FGO JP Banner Tracker",
+  title: {
+    default: "FGO JP Banner Tracker",
+    template: "%s | FGO JP Banner Tracker",
+  },
   description:
-    "Track your Fate/Grand Order JP pulls and plan your quartz spending",
+    "Track your Fate/Grand Order JP pulls and plan your quartz spending. Browse summoning banners, mark owned servants, and plan future pulls.",
+  keywords: [
+    "FGO",
+    "Fate Grand Order",
+    "banner tracker",
+    "summon banner",
+    "servant tracker",
+    "quartz planner",
+    "JP server",
+  ],
+  authors: [{ name: "FGO Banner Tracker" }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://fgo-banner-tracker.vercel.app",
+    siteName: "FGO JP Banner Tracker",
+    title: "FGO JP Banner Tracker",
+    description:
+      "Track your Fate/Grand Order JP pulls and plan your quartz spending.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FGO JP Banner Tracker",
+    description:
+      "Track your Fate/Grand Order JP pulls and plan your quartz spending.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -27,6 +59,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className="min-h-full flex flex-col bg-gray-950 text-white dark:bg-gray-950 dark:text-white light:bg-gray-50 light:text-gray-900">
         <ThemeProvider>
           <ServantProvider>{children}</ServantProvider>
