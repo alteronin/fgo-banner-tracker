@@ -3,6 +3,7 @@
 import Image from "next/image";
 import type { Banner } from "@/types/banner";
 import { ServantChip } from "./ServantChip";
+import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
 interface BannerDetailProps {
   banner: Banner;
@@ -10,6 +11,10 @@ interface BannerDetailProps {
 }
 
 export function BannerDetail({ banner, onClose }: BannerDetailProps) {
+  useKeyboardNavigation({
+    onEscape: onClose,
+    enabled: true,
+  });
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr + "T00:00:00");
     return date.toLocaleDateString("en-US", {
