@@ -3,6 +3,7 @@
 import { getBanners } from "@/lib/data";
 import { BannerList } from "@/components/BannerList";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { ImportExport } from "@/components/ImportExport";
 
 export default function Home() {
   const banners = getBanners();
@@ -19,7 +20,10 @@ export default function Home() {
               Track your pulls and plan your quartz
             </p>
           </div>
-          <ThemeToggle />
+          <div className="flex items-center gap-3">
+            <ImportExport />
+            <ThemeToggle />
+          </div>
         </div>
       </header>
       <main className="max-w-7xl mx-auto px-4 py-6">
