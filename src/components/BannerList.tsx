@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import type { Banner } from "@/types/banner";
 import { BannerCard } from "./BannerCard";
+import { BannerDetail } from "./BannerDetail";
 import { FilterBar } from "./FilterBar";
 import { useBannerFilter } from "@/hooks/useBannerFilter";
 
@@ -11,6 +13,7 @@ interface BannerListProps {
 
 export function BannerList({ banners }: BannerListProps) {
   const { filter, setFilter, filteredBanners } = useBannerFilter(banners);
+  const [selectedBanner, setSelectedBanner] = useState<Banner | null>(null);
 
   return (
     <div>
@@ -24,9 +27,19 @@ export function BannerList({ banners }: BannerListProps) {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {filteredBanners.map((banner) => (
-            <BannerCard key={banner.id} banner={banner} />
+            <BannerCard
+              key={banner.id}
+              banner={banner}
+              onClick={() => setSelectedBanner(banner)}
+            />
           ))}
         </div>
+      )}
+      {selectedBanner && (
+        <BannerDetail
+          banner={selectedBanner}
+          onClose={() => setSelectedBanner(null)}
+        />
       )}
     </div>
   );
