@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { Banner } from "@/types/banner";
 import { ServantChip } from "./ServantChip";
 
@@ -61,10 +62,11 @@ export function BannerDetail({ banner, onClose }: BannerDetailProps) {
         </button>
 
         <div className="aspect-[480/173] relative overflow-hidden rounded-t-xl">
-          <img
+          <Image
             src={banner.imageUrl}
             alt={banner.name}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
           {active && (
             <div className="absolute top-3 right-12 sm:top-4 sm:right-16 bg-green-500 text-white text-xs sm:text-sm font-bold px-2 py-1 sm:px-3 sm:py-1 rounded">

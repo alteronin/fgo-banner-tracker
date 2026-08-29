@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { Banner } from "@/types/banner";
 import { ServantChip } from "./ServantChip";
 import { BannerIndicators } from "./BannerIndicators";
@@ -34,10 +35,11 @@ export function BannerCard({ banner, onClick }: BannerCardProps) {
       onClick={onClick}
     >
       <div className="aspect-[480/173] relative overflow-hidden">
-        <img
+        <Image
           src={banner.imageUrl}
           alt={banner.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
         />
         <BannerIndicators banner={banner} />
