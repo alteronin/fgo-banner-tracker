@@ -1,5 +1,5 @@
 import { getBanners } from "@/lib/data";
-import { BannerCard } from "@/components/BannerCard";
+import { BannerList } from "@/components/BannerList";
 
 export default function Home() {
   const banners = getBanners();
@@ -17,11 +17,7 @@ export default function Home() {
         </div>
       </header>
       <main className="max-w-7xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {banners.map((banner) => (
-            <BannerCard key={banner.id} banner={banner} />
-          ))}
-        </div>
+        <BannerList banners={banners} />
       </main>
     </div>
   );
