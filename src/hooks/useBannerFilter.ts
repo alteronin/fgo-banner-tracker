@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import type { Banner, FilterOption } from "@/types/banner";
 import type { SortOption } from "@/components/SortBar";
 import { useServantStatus } from "@/contexts/ServantContext";
@@ -15,11 +15,23 @@ function getInitialFilter(): FilterOption {
   return "all";
 }
 
+function getInitialYear(): string {
+  if (typeof window === "undefined") return "all";
+  const params = new URLSearchParams(window.location.search);
+  return params.get("year") || "all";
+}
+
 export function useBannerFilter(banners: Banner[]) {
   const [filter, setFilterState] = useState<FilterOption>(getInitialFilter);
   const [searchQuery, setSearchQuery] = useState("");
   const [sort, setSort] = useState<SortOption>("date-desc");
+  const [year, setYearState] = useState<string>(getInitialYear);
   const { getStatus } = useServantStatus();
+
+  const availableYears = useMemo(() => {
+    const years = [...new Set(banners.map((b) => b.startDate.slice(0, 4)))].sort();
+    return years;
+  }, [banners]);
 
   const setFilter = useCallback((newFilter: FilterOption) => {
     setFilterState(newFilter);
@@ -32,6 +44,17 @@ export function useBannerFilter(banners: Banner[]) {
     window.history.replaceState({}, "", url.toString());
   }, []);
 
+  const setYear = useCallback((newYear: string) => {
+    setYearState(newYear);
+    const url = new URL(window.location.href);
+    if (newYear === "all") {
+      url.searchParams.delete("year");
+    } else {
+      url.searchParams.set("year", newYear);
+    }
+    window.history.replaceState({}, "", url.toString());
+  }, []);
+
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query.toLowerCase());
   }, []);
@@ -39,6 +62,12 @@ export function useBannerFilter(banners: Banner[]) {
   const filteredBanners = useMemo(() => {
     let result = banners;
 
+    // Year filter
+    if (year !== "all") {
+      result = result.filter((banner) => banner.startDate.startsWith(year));
+    }
+
+    // Status filter
     if (filter !== "all") {
       result = result.filter((banner) => {
         return banner.servants.some((servant) => {
@@ -57,6 +86,7 @@ export function useBannerFilter(banners: Banner[]) {
       });
     }
 
+    // Search filter
     if (searchQuery) {
       result = result.filter((banner) => {
         return banner.servants.some((servant) =>
@@ -86,7 +116,18 @@ export function useBannerFilter(banners: Banner[]) {
     });
 
     return result;
-  }, [banners, filter, searchQuery, sort, getStatus]);
+  }, [banners, filter, searchQuery, sort, year, getStatus]);
 
-  return { filter, setFilter, searchQuery, handleSearch, sort, setSort, filteredBanners };
+  return {
+    filter,
+    setFilter,
+    searchQuery,
+    handleSearch,
+    sort,
+    setSort,
+    year,
+    setYear,
+    availableYears,
+    filteredBanners,
+  };
 }
