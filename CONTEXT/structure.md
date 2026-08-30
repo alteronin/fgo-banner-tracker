@@ -8,6 +8,12 @@ fgo-banner-tracker/
 │   ├── buckets.md            # MVP milestone bucket plan
 │   ├── structure.md          # This file
 │   ├── decisions.md          # Architectural decisions
+│   ├── skills/               # Extracted reusable skills
+│   │   ├── scrape-remix-app.md
+│   │   ├── create-filter-sort-page.md
+│   │   ├── image-fallback-pattern.md
+│   │   ├── vitest-setup.md
+│   │   └── banner-data-model.md
 │   └── prompts/
 │       ├── tech-specific.md  # Tech-specific replication prompt
 │       └── abstracted.md     # Abstracted replication prompt
