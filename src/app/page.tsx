@@ -31,6 +31,12 @@ export default function Home() {
             >
               Servants
             </Link>
+            <Link
+              href="/grands"
+              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
+            >
+              Grands
+            </Link>
             <ImportExport />
             <AboutHelp />
             <ThemeToggle />

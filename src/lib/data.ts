@@ -52,3 +52,12 @@ export function getUniqueServantsWithName(
 
   return result.sort((a, b) => a.name.localeCompare(b.name));
 }
+
+export function getServantsByClassName(
+  classNames: string | string[]
+): ServantData[] {
+  const names = Array.isArray(classNames) ? classNames : [classNames];
+  return (servants as ServantData[]).filter((s) =>
+    names.includes(s.className)
+  );
+}
