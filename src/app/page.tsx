@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { getBanners } from "@/lib/data";
 import { BannerList } from "@/components/BannerList";
+import { AppSwitcher } from "@/components/AppSwitcher";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ImportExport } from "@/components/ImportExport";
 import { CollectionStats } from "@/components/CollectionStats";
@@ -15,14 +16,10 @@ export default function Home() {
     <div className="min-h-screen bg-gray-950 dark:bg-gray-950 light:bg-gray-50">
       <header className="border-b border-gray-800 dark:border-gray-800 light:border-gray-200 bg-gray-900/80 dark:bg-gray-900/80 light:bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <h1 className="text-xl font-bold text-white dark:text-white light:text-gray-900">
-              FGO JP Banner Tracker
-            </h1>
-            <p className="text-sm text-gray-400 dark:text-gray-400 light:text-gray-600 mt-1">
-              Track your pulls and plan your quartz
-            </p>
-          </div>
+          <AppSwitcher
+            title="FGO JP Banner Tracker"
+            subtitle="Track your pulls and plan your quartz"
+          />
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <CollectionStats />
             <Link

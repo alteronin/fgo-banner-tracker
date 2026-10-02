@@ -12,6 +12,7 @@ import {
   notifyGrandsChange,
 } from "@/lib/storage";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
+import { AppSwitcher } from "@/components/AppSwitcher";
 
 interface GrandSlot {
   id: string;
@@ -75,15 +76,11 @@ export default function GrandsPage() {
   return (
     <div className="min-h-screen bg-gray-950 dark:bg-gray-950 light:bg-gray-50">
       <header className="border-b border-gray-800 dark:border-gray-800 light:border-gray-200 bg-gray-900/80 dark:bg-gray-900/80 light:bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-bold text-white dark:text-white light:text-gray-900">
-              Grand Servant Lineup
-            </h1>
-            <p className="text-sm text-gray-400 dark:text-gray-400 light:text-gray-600 mt-1">
-              {selectedCount} of {GRAND_SLOTS.length} selected
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
+          <AppSwitcher
+            title="Grand Servant Lineup"
+            subtitle={`${selectedCount} of ${GRAND_SLOTS.length} selected`}
+          />
           <Link
             href="/"
             className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
