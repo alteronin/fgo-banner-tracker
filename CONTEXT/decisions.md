@@ -89,3 +89,19 @@
 - `prefers-color-scheme` media queries can't be overridden by a user toggle
 - The inline script applies the stored theme before first paint (no flash of wrong theme) and only touches class attributes, so `suppressHydrationWarning` on `<html>` covers it
 - ThemeContext reads/writes the DOM classes via `useSyncExternalStore` — single source of truth is the DOM
+
+## 13. Multi-Game Routing
+**Decision**: App registry (`src/lib/apps.ts`) + AppSwitcher dropdown; static routes override a `[game]` dynamic route with `dynamicParams=false`
+**Reasoning**:
+- One registry feeds the switcher, metadata, and static-params generation — no drift between UI and routes
+- `dynamicParams=false` is required: without it unknown slugs (`/banana`) render the page with HTTP 200, breaking 404 semantics
+- Static routes (like `/genshin`) must be excluded from `generateStaticParams`, since Next.js lets static routes win over dynamic ones but the param list should reflect only real placeholder pages
+- `getActiveAppId(pathname)` derives the current app from the URL segment — no context needed
+
+## 14. Genshin Data Scraping (Game8)
+**Decision**: One-off cheerio scraper `scripts/scrape-genshin.mjs` over Game8's SSR banner tables with strict output validation
+**Reasoning**:
+- Game8 renders three table shapes (character `version|banner|rate-up`, chronicled `version|banner|date`, weapon `version|banners|information`) distinguished by header text; version cells use `th[rowspan=2]` spanning two phase rows
+- Featured-unit names live only in `img.alt` (`Genshin - X Image`) — anchors can have no text; featured lists can be nested inside `div.align` so extraction walks `b, a[href]` in document order, not top-level siblings
+- Dates are parsed with an explicit month map to ISO strings — `new Date()` round-trips shift a day across timezones; source has year typos (`2206`, start year 1 behind) clamped by rule (end−start > 1y → same year; cross-year span > 60d → start = end year)
+- Validation throws before writing: missing images, bad ranges, spans > 60d — plus test-suite locks on counts, uniqueness, and absolute URLs

@@ -49,6 +49,8 @@ src/
 - Responsive grid: 1 col mobile, 4 col desktop
 - localStorage state exposed via useSyncExternalStore (hydration-safe)
 - Dark/light theme via .light/.dark html classes + pre-paint inline script
+- Multi-game: app registry `src/lib/apps.ts` + AppSwitcher dropdown; static routes override `[game]` dynamic route (`dynamicParams=false` for true 404s)
+- Genshin tracker at `/genshin`: 216 banners from Game8 via cheerio scraper (`scripts/scrape-genshin.mjs`), type/year/search filters, detail modal with featured chips
 
 ## Build & Run
 ```bash

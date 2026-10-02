@@ -82,3 +82,14 @@
 - [x] **banner-data-cleanup**: 4 duplicate servant entries removed; 6 banner names whitespace-normalized; zero-servant banner modal shows explanatory note
 - [x] **escape-about-modal**: AboutHelp closes on Escape; duplicate heading removed
 - [x] **unit-tests**: 54 tests (added ThemeContext, AboutHelp, URL-state suites)
+
+---
+
+## Bucket 8: Multi-Game Expansion (Complete)
+**Status**: Completed (2026-10-03)
+
+### Features
+- [x] **app-switcher**: App registry (`src/lib/apps.ts`) + AppSwitcher dropdown (Escape/outside-click close, `role=menu`, `aria-current`) wired into all route headers; static `[game]` route with `generateStaticParams` + `dynamicParams=false` (unknown slugs 404, not 200); ComingSoonApp placeholder shell
+- [x] **genshin-scraper**: `scripts/scrape-genshin.mjs` — cheerio scrape of Game8 banner tables → `src/data/genshin-banners.json` (216 entries: 105 character, 104 weapon, 7 chronicled; versions 1.0-7.0); rowspan version tracking, `img.alt` featured names, manual date parsing with source-typo clamps, span≤60d validation
+- [x] **genshin-tracker**: Static `/genshin` route (excluded from `[game]` params) — type/year/search filters, banner card grid (type badges, ACTIVE indicator, version overlay, featured 5★ chips), detail modal (featured 5★/4★ Game8 links, Escape close), empty state
+- [x] **genshin-tests**: 20 data-integrity + helper tests (counts, dates, URL/image presence, date-range formatting, active-window checks) → 81 total

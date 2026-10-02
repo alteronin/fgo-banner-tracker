@@ -3,16 +3,17 @@
 interface SearchBarProps {
   value: string;
   onSearch: (query: string) => void;
+  placeholder?: string;
 }
 
-export function SearchBar({ value, onSearch }: SearchBarProps) {
+export function SearchBar({ value, onSearch, placeholder = "Search servants..." }: SearchBarProps) {
   return (
     <div className="relative">
       <input
         type="text"
         value={value}
         onChange={(e) => onSearch(e.target.value)}
-        placeholder="Search servants..."
+        placeholder={placeholder}
         className="w-full px-4 py-2 pl-10 pr-10 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-500"
       />
       <svg
