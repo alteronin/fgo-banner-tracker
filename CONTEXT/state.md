@@ -1,10 +1,10 @@
 ---
 project_name: Multi-Game Gacha Banner Tracker
 status: active
-current_bucket: 10
-current_feature: remaining-game-trackers
-current_phase: qa
-buckets_completed: 9
+current_bucket: 11
+current_feature: events-tab
+current_phase: planning
+buckets_completed: 10
 total_buckets: 13
 features_completed:
   - seed-data
@@ -71,13 +71,13 @@ tech_stack:
 deploy_provider: vercel
 deploy_url: https://fgo-banner-tracker.vercel.app
 last_checkpoint: 2026-10-03
-context_version: 8
+context_version: 9
 ---
 
 # Project State
 
 ## Active Context
-Buckets 1-9 complete. Bucket 10 (four remaining trackers) implemented and locally QA-green: ZZZ `/zzz` (134 banners: 67 agent + 67 W-Engine, Game8), WuWa `/wuwa` (46: 45 resonator + Special Reverbs selector, Game8), HI3 `/hi3` (73 GLB versions v1.8-v9.0, fandom `Category:Versions`), Shadowverse `/shadowverse` (10: 9 card sets + Frieren collab, official site). All four replaced their `[game]` placeholders (generateStaticParams now excludes only slugs with own pages). Local QA: qa-zzz 47/47, qa-wuwa 51/51, qa-hi3 44/44, qa-shadowverse 47/47, qa-switcher 24/24, qa-hsr 46/46, qa-genshin 42/42, qa-mobile/theme/sort clean, 185 unit tests, tsc/eslint/build clean. **Remaining for Bucket 10: delete `research/` + `server*.log`, CONTEXT update (this checkpoint), commit + push, `npx vercel --prod`, live QA (BASE=production), `npm prune`.** Then Buckets 11-13 (see Roadmap).
+**Bucket 10 COMPLETE — committed `95771ca`, pushed, deployed, live QA green.** All 7 games now have static trackers: FGO `/`, Genshin `/genshin` (216), HSR `/hsr` (131), ZZZ `/zzz` (134), WuWa `/wuwa` (46), HI3 `/hi3` (73), Shadowverse `/shadowverse` (10). Production QA (BASE=https://fgo-banner-tracker.vercel.app): qa-zzz 47/47, qa-wuwa 51/51, qa-hi3 44/44, qa-shadowverse 47/47, qa-switcher 24/24, qa-hsr 46/46, qa-genshin 42/42, qa-live 76/76, no console/page errors. Local gates: 185 unit tests, tsc/eslint/build clean. `npm prune` run (playwright removed until next cycle). Now planning Bucket 11 (Events tab) — see Roadmap. QA scripts live in `%TEMP%\opencode\qa-*.js` (BASE env for production, NODE_PATH to repo node_modules).
 
 ## Features Built
 - Bucket 1: Core MVP (banner list, servant toggle, indicators, filter, detail, responsive)
@@ -89,10 +89,10 @@ Buckets 1-9 complete. Bucket 10 (four remaining trackers) implemented and locall
 - Bucket 7: QA Remediation (hydration-safe external stores, live theme toggle, AdvancedSearch wiring, class data backfill, mobile overflow, 54 tests)
 - Bucket 8: Multi-Game Expansion (app switcher dropdown on all routes + static `[game]` placeholder routes with `dynamicParams=false` 404s; Genshin Impact tracker at `/genshin` — 216 banners, type/year/search filters, detail modal with featured 5★/4★ chips)
 - Bucket 9: HSR Tracker (static `/hsr` route — 131 banners from Game8: 66 character + 65 light cone warps, 32 versions 1.0-4.7, collab banners with nullable version/end, type/year/search filters)
-- Bucket 10: Remaining game trackers (implemented 2026-10-03, local QA green — `/zzz` 134 banners, `/wuwa` 46, `/hi3` 73, `/shadowverse` 10; per-game active rules and type filters as in Recent Decisions; commit/deploy/live-QA pending)
+- Bucket 10: Remaining game trackers (Complete 2026-10-03 — `/zzz` 134 banners, `/wuwa` 46, `/hi3` 73, `/shadowverse` 10; committed `95771ca`, deployed, live QA green)
 
-## Roadmap (Upcoming Buckets 10-13)
-- Bucket 10: Remaining game trackers — implementation + local QA done (2026-10-03); pending: cleanup + commit + deploy + live QA
+## Roadmap (Upcoming Buckets 11-13)
+- Bucket 10: Remaining game trackers — **COMPLETE (2026-10-03)**: committed `95771ca`, deployed, live QA green
 - Bucket 11: Events tab — `/events` route + nav tab; unified event feed (now/upcoming/past) with game + year filters, sources TBD
 - Bucket 12: Cross-game Units & Faves — per-game roster pages (analog of `/servants`) and favorites/lineup pages (analog of `/grands`), per-game status storage, per-game tab nav
 - Bucket 13: Class/element button filters — pill-button multi-select filter groups on the servants/units tab (FGO classes, Genshin elements, HSR elements/paths), needs unit taxonomy data backfill

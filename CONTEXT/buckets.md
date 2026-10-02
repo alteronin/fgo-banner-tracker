@@ -106,8 +106,8 @@
 
 ---
 
-## Bucket 10: Remaining Game Trackers (In Progress)
-**Status**: Implementation + local QA complete (2026-10-03) — pending cleanup, commit, deploy, live QA
+## Bucket 10: Remaining Game Trackers (Complete)
+**Status**: Completed (2026-10-03) — committed `95771ca`, pushed, deployed to production, live QA green (qa-zzz 47/47, qa-wuwa 51/51, qa-hi3 44/44, qa-shadowverse 47/47, qa-switcher 24/24, qa-hsr 46/46, qa-genshin 42/42, qa-live 76/76)
 
 ### Source Decisions (verified)
 - **ZZZ**: https://game8.co/games/Zenless-Zone-Zero/archives/435687 — table 5 ("Ver. / All Agent and W-Engine Banners"), 68 rows. All data rows = 2 `td` cells (c0 = agent banner, c1 = W-Engine banner); version carried by `th` cell on block-start rows, continuation rows inherit last version. Cell text: `Name Banner MM/DD - MM/DD/YYYY (Phase N)` (start year sometimes omitted/present, single-digit days, missing spaces before date/`(Phase)`, phase sometimes absent). Per-cell image (img.game8.co `data-src`) + banner page link (absolutize).
@@ -133,8 +133,11 @@
 - [x] **image-domains**: `static.wikia.nocookie.net` added to next.config remotePatterns; `ImageWithFallback` renders `unoptimized` for wikia (Fandom 403s optimizer) and skips empty-src requests entirely (imageless SV data)
 - [x] **local-qa**: qa-zzz 47/47, qa-wuwa 51/51, qa-hi3 44/44, qa-shadowverse 47/47, qa-switcher 24/24 (all 4 live), qa-hsr 46/46, qa-genshin 42/42 (regressions updated from placeholder to live /hi3), qa-mobile/theme/sort clean; tsc/eslint/`npm test`/`npm run build` clean
 
-### Remaining
-- [ ] delete `research/` + `server.log` + `server-err.log`, commit + push, `npx vercel --prod`, live QA with `BASE=https://fgo-banner-tracker.vercel.app`, `npm prune` (remove playwright)
+### Completion Checklist
+- [x] delete `research/` + `server.log` + `server-err.log`
+- [x] commit + push (`95771ca`), `npx vercel --prod`
+- [x] live QA with `BASE=https://fgo-banner-tracker.vercel.app` (all suites green)
+- [x] `npm prune` (playwright removed; reinstall with `npm i --no-save playwright` next cycle)
 
 ### Notes
 - Follow Genshin/HSR conventions exactly: static route, `[game]` exclusion, shared RateUpChip/SearchBar/YearFilter/ImageWithFallback, no comments, span≤60d validation, absolute URL normalization
