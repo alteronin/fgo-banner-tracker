@@ -51,6 +51,7 @@ src/
 - Dark/light theme via .light/.dark html classes + pre-paint inline script
 - Multi-game: app registry `src/lib/apps.ts` + AppSwitcher dropdown; static routes override `[game]` dynamic route (`dynamicParams=false` for true 404s)
 - Genshin tracker at `/genshin`: 216 banners from Game8 via cheerio scraper (`scripts/scrape-genshin.mjs`), type/year/search filters, detail modal with featured chips
+- HSR tracker at `/hsr`: 131 banners from Game8 (`scripts/scrape-hsr.mjs`), character/light-cone filters, nullable end dates (TBA collab banners)
 
 ## Build & Run
 ```bash

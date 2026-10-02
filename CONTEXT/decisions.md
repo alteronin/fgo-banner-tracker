@@ -105,3 +105,12 @@
 - Featured-unit names live only in `img.alt` (`Genshin - X Image`) â€” anchors can have no text; featured lists can be nested inside `div.align` so extraction walks `b, a[href]` in document order, not top-level siblings
 - Dates are parsed with an explicit month map to ISO strings â€” `new Date()` round-trips shift a day across timezones; source has year typos (`2206`, start year 1 behind) clamped by rule (endâˆ’start > 1y â†’ same year; cross-year span > 60d â†’ start = end year)
 - Validation throws before writing: missing images, bad ranges, spans > 60d â€” plus test-suite locks on counts, uniqueness, and absolute URLs
+
+## 15. HSR Data Scraping (Game8)
+**Decision**: Cheerio scraper over Game8 HSR "Banner History" tables with section-header parsing and nullable end dates
+**Reasoning**:
+- Tables are grouped by version with in-table header rows (`HSR X.Y Phase Z Banner History`) that set version/phase for subsequent rows; special sections (`Fate Collaboration`) leave version/phase null
+- Each phase section holds paired data rows — odd row = character warps, even row = light cone warps — so type is classified by row parity (upcoming sections may have only the character row; collab sections stack multiple rounds)
+- Dates often omit the start year (`May. 17 - Jun. 07, 2023`) — start year derived from month order; `TBA` ends map to `endDate: string | null` (never active, displayed as "TBA")
+- Fate-collab sections repeat across many version tables — content-key dedupe (`type|version|phase|dates|names`) before id assignment
+- Featured 5?/4? lists are phase-row level (shared by the character and light-cone rows get their own); imageless featured anchors (path/element links like "Elation") are dropped — only portrait-bearing entries are real rate-ups

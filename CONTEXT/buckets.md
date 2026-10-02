@@ -93,3 +93,13 @@
 - [x] **genshin-scraper**: `scripts/scrape-genshin.mjs` — cheerio scrape of Game8 banner tables → `src/data/genshin-banners.json` (216 entries: 105 character, 104 weapon, 7 chronicled; versions 1.0-7.0); rowspan version tracking, `img.alt` featured names, manual date parsing with source-typo clamps, span≤60d validation
 - [x] **genshin-tracker**: Static `/genshin` route (excluded from `[game]` params) — type/year/search filters, banner card grid (type badges, ACTIVE indicator, version overlay, featured 5★ chips), detail modal (featured 5★/4★ Game8 links, Escape close), empty state
 - [x] **genshin-tests**: 20 data-integrity + helper tests (counts, dates, URL/image presence, date-range formatting, active-window checks) → 81 total
+
+---
+
+## Bucket 9: HSR Tracker (Complete)
+**Status**: Completed (2026-10-03)
+
+### Features
+- [x] **hsr-scraper**: `scripts/scrape-hsr.mjs` — cheerio scrape of Game8 HSR banner-history tables → `src/data/hsr-banners.json` (131 entries: 66 character, 65 light cone; 32 versions 1.0-4.7); in-table phase headers, row-parity type classification, start-year derivation, TBA end handling, collab dedupe, span≤60d validation
+- [x] **hsr-tracker**: Static `/hsr` route (excluded from `[game]` params) — character/light-cone type filter, year/search filters, banner cards (type badges, ACTIVE indicator, version overlay omitted for collab), detail modal with nullable end ("TBA") and version-optional rows
+- [x] **hsr-tests**: 23 data-integrity + helper tests (nullable version/end, active-window incl. TBA, date-range formatting) → 104 total

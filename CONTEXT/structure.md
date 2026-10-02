@@ -27,6 +27,8 @@ fgo-banner-tracker/
 │   │   │   └── page.tsx      # Placeholder routes (dynamicParams=false, 404s unknown)
 │   │   ├── genshin/
 │   │   │   └── page.tsx      # Genshin tracker (static, metadata + GenshinTracker)
+│   │   ├── hsr/
+│   │   │   └── page.tsx      # HSR tracker (static, metadata + HsrTracker)
 │   │   ├── servants/
 │   │   │   └── page.tsx      # Servants summary page
 │   │   └── grands/
@@ -47,6 +49,10 @@ fgo-banner-tracker/
 │   │   ├── GenshinRateUpChip.tsx # Genshin rate-up chip (link mode)
 │   │   ├── GenshinTracker.tsx # Genshin page (filters + grid + modal)
 │   │   ├── GenshinTypeFilter.tsx # Character/Weapon/Chronicled pills
+│   │   ├── HsrBannerCard.tsx   # HSR banner card
+│   │   ├── HsrBannerDetail.tsx # HSR detail modal
+│   │   ├── HsrTracker.tsx     # HSR page (filters + grid + modal)
+│   │   ├── HsrTypeFilter.tsx  # Character/Light Cone pills
 │   │   ├── ImageWithFallback.tsx # Image with error fallback
 │   │   ├── ImportExport.tsx  # JSON import/export
 │   │   ├── RateUpIndicator.tsx # Rate-up type badges
@@ -62,6 +68,7 @@ fgo-banner-tracker/
 │   ├── data/
 │   │   ├── banners.json      # Banner data (742 banners)
 │   │   ├── genshin-banners.json # Genshin banner data (216 banners, Game8)
+│   │   ├── hsr-banners.json    # HSR banner data (131 banners, Game8)
 │   │   └── servants.json     # Servant data (487 servants)
 │   ├── hooks/
 │   │   ├── useBannerFilter.ts # Banner filtering hook
@@ -70,10 +77,12 @@ fgo-banner-tracker/
 │   │   ├── apps.ts           # Multi-game app registry
 │   │   ├── data.ts           # Data access utilities
 │   │   ├── genshin-data.ts   # Genshin data access + date helpers
+│   │   ├── hsr-data.ts       # HSR data access + date helpers (nullable end)
 │   │   └── storage.ts        # localStorage utilities
 │   ├── types/
 │   │   ├── banner.ts         # TypeScript types
-│   │   └── genshin.ts        # Genshin TypeScript types
+│   │   ├── genshin.ts        # Genshin TypeScript types
+│   │   └── hsr.ts            # HSR TypeScript types (nullable version/end)
 │   └── __tests__/
 │       ├── setup.ts          # Test setup (jest-dom + RTL cleanup)
 │       ├── data.test.ts      # Data utility tests
@@ -83,10 +92,12 @@ fgo-banner-tracker/
 │       ├── AboutHelp.test.tsx # Help modal tests (Escape close)
 │       ├── AppSwitcher.test.tsx # App switcher tests
 │       ├── genshinData.test.ts # Genshin data integrity tests
+│       ├── hsrData.test.ts   # HSR data integrity tests
 │       └── useBannerFilter.test.tsx # Filter hook + URL state tests
 ├── scripts/
 │   ├── scrape-all.mjs        # Banner scraper (cheerio)
 │   ├── scrape-genshin.mjs    # Genshin banner scraper (Game8, cheerio)
+│   ├── scrape-hsr.mjs        # HSR banner scraper (Game8, cheerio)
 │   ├── scrape-servants.mjs   # Servant scraper (sitemap + pages)
 │   └── extract-banners.mjs   # Banner list extraction (dedupes servants)
 ├── public/                   # Static assets
@@ -100,6 +111,7 @@ fgo-banner-tracker/
 ## Key Files
 - `src/data/banners.json` - 742 banners scraped from GamePress (2017-2026)
 - `src/data/genshin-banners.json` - 216 Genshin banners scraped from Game8 (1.0-7.0)
+- `src/data/hsr-banners.json` - 131 HSR banners scraped from Game8 (1.0-4.7)
 - `src/data/servants.json` - 487 servants with thumbnail icons
 - `src/lib/apps.ts` - Multi-game app registry (7 apps, slugs, paths)
 - `src/contexts/ServantContext.tsx` - Global servant status management

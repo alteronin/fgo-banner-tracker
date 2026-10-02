@@ -6,11 +6,11 @@ import { TRACKED_APPS, getAppBySlug } from "@/lib/apps";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return TRACKED_APPS.filter((app) => app.slug !== "" && app.slug !== "genshin").map(
-    (app) => ({
-      game: app.slug,
-    })
-  );
+  return TRACKED_APPS.filter(
+    (app) => app.slug !== "" && app.slug !== "genshin" && app.slug !== "hsr"
+  ).map((app) => ({
+    game: app.slug,
+  }));
 }
 
 export async function generateMetadata({
