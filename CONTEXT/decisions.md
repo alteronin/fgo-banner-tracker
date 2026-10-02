@@ -72,4 +72,20 @@
 - Fast test execution (Vite-based)
 - Compatible with Next.js and TypeScript
 - Testing Library provides realistic component testing
-- 39 tests covering data, storage, context, and hooks
+- 54 tests covering data, storage, contexts, hooks, and modals
+
+## 11. Hydration-Safe Client State
+**Decision**: Expose all localStorage-backed state via `useSyncExternalStore` with a raw-string-keyed module cache
+**Reasoning**:
+- `useState(() => localStorage...)` initializers mismatch the server HTML and trigger React #418 hydration errors (server renders `{}`/`0`, client renders stored data)
+- `getServerSnapshot` guarantees the first client render matches the server; React swaps to `getSnapshot` after hydration — the sanctioned pattern (no error)
+- Comparing the raw storage string auto-invalidates the cache when anything writes to localStorage (even outside the store), while returning a stable object reference avoids re-render loops
+- Same pattern used for servant statuses, theme, URL search params, and grands selections
+
+## 12. Light Mode Styling
+**Decision**: Tailwind v4 `@custom-variant light` bound to `.light` class + `dark` class on `<html>`, with a pre-paint inline script in `<head>`
+**Reasoning**:
+- Tailwind v4 no longer generates a `light:` variant by default (`light:` was silently producing zero CSS)
+- `prefers-color-scheme` media queries can't be overridden by a user toggle
+- The inline script applies the stored theme before first paint (no flash of wrong theme) and only touches class attributes, so `suppressHydrationWarning` on `<html>` covers it
+- ThemeContext reads/writes the DOM classes via `useSyncExternalStore` — single source of truth is the DOM

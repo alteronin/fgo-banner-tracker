@@ -1,15 +1,17 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { getServantsByClassName } from "@/lib/data";
 import { useServantStatus } from "@/contexts/ServantContext";
 import {
-  getGrandServants,
   setGrandServant,
+  subscribeGrands,
+  getGrandsSnapshot,
+  getGrandsServerSnapshot,
+  notifyGrandsChange,
 } from "@/lib/storage";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
-import type { ServantData } from "@/lib/data";
 
 interface GrandSlot {
   id: string;
@@ -39,8 +41,10 @@ const GRAND_SLOTS: GrandSlot[] = [
 
 export default function GrandsPage() {
   const { getStatus } = useServantStatus();
-  const [selections, setSelections] = useState<Record<string, string>>(
-    () => getGrandServants()
+  const selections = useSyncExternalStore(
+    subscribeGrands,
+    getGrandsSnapshot,
+    getGrandsServerSnapshot
   );
 
   const slotsWithServants = useMemo(() => {
@@ -54,16 +58,14 @@ export default function GrandsPage() {
   }, [getStatus]);
 
   const handleSelect = (slotId: string, slug: string) => {
-    setSelections((prev) => {
-      const next = { ...prev };
-      if (next[slotId] === slug) {
-        delete next[slotId];
-      } else {
-        next[slotId] = slug;
-      }
-      setGrandServant(slotId, next[slotId] || "");
-      return next;
-    });
+    const next = { ...selections };
+    if (next[slotId] === slug) {
+      delete next[slotId];
+    } else {
+      next[slotId] = slug;
+    }
+    setGrandServant(slotId, next[slotId] || "");
+    notifyGrandsChange();
   };
 
   const selectedCount = Object.keys(selections).filter(

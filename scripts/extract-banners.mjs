@@ -36,7 +36,7 @@ async function main() {
     }
 
     // Banner name is in the span after the img, inside the same parent div
-    const bannerName = $row.find('span.font-semibold.text-xs').first().text().trim();
+    const bannerName = $row.find('span.font-semibold.text-xs').first().text().replace(/\s+/g, ' ').trim();
 
     // Region and dates - each banner can have multiple regions
     // Structure: <ul><li><div class="text-xs flex ..."><div class="font-bold">Japan:</div><div>2024-09-20</div><span>to</span><div>2024-09-29</div></div></li>...</ul>
@@ -76,7 +76,9 @@ async function main() {
           $ul.find('a[href*="/c/servants/"]').each((_, a) => {
             const name = $(a).text().trim();
             const slug = $(a).attr('href')?.replace('/c/servants/', '') || '';
-            if (name) servantList.push({ name, slug });
+            if (name && !servantList.some((s) => s.slug === slug)) {
+              servantList.push({ name, slug });
+            }
           });
           if (servantList.length > 0) {
             servants[badgeText] = servantList;

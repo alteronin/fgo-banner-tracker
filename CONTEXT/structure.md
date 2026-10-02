@@ -19,11 +19,14 @@ fgo-banner-tracker/
 │       └── abstracted.md     # Abstracted replication prompt
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx        # Root layout with providers and SEO
+│   │   ├── layout.tsx        # Root layout with providers, SEO, pre-paint theme script
 │   │   ├── page.tsx          # Main page with banner list
-│   │   ├── globals.css       # Global styles
-│   │   └── servants/
-│   │       └── page.tsx      # Servants summary page
+│   │   ├── loading.tsx       # Route-level loading skeleton
+│   │   ├── globals.css       # Global styles + light:/dark: custom variants
+│   │   ├── servants/
+│   │   │   └── page.tsx      # Servants summary page
+│   │   └── grands/
+│   │       └── page.tsx      # Grand servant lineup page (9 slots)
 │   ├── components/
 │   │   ├── AboutHelp.tsx     # About/help modal
 │   │   ├── AdvancedSearch.tsx # Advanced search panel
@@ -57,14 +60,17 @@ fgo-banner-tracker/
 │   ├── types/
 │   │   └── banner.ts         # TypeScript types
 │   └── __tests__/
-│       ├── setup.ts          # Test setup
+│       ├── setup.ts          # Test setup (jest-dom + RTL cleanup)
 │       ├── data.test.ts      # Data utility tests
 │       ├── storage.test.ts   # Storage tests
 │       ├── ServantContext.test.tsx # Context tests
-│       └── useBannerFilter.test.tsx # Filter hook tests
+│       ├── ThemeContext.test.tsx # Theme toggle tests
+│       ├── AboutHelp.test.tsx # Help modal tests (Escape close)
+│       └── useBannerFilter.test.tsx # Filter hook + URL state tests
 ├── scripts/
 │   ├── scrape-all.mjs        # Banner scraper (cheerio)
-│   └── scrape-servants.mjs   # Servant scraper (sitemap + pages)
+│   ├── scrape-servants.mjs   # Servant scraper (sitemap + pages)
+│   └── extract-banners.mjs   # Banner list extraction (dedupes servants)
 ├── public/                   # Static assets
 ├── vitest.config.ts          # Vitest configuration
 ├── package.json              # Dependencies
@@ -81,6 +87,7 @@ fgo-banner-tracker/
 - `src/lib/storage.ts` - localStorage persistence
 - `src/lib/data.ts` - Data access (banners, servants, helpers)
 - `src/components/BannerCard.tsx` - Main banner display component
-- `src/components/ImageWithFallback.tsx` - Image with error fallback
-- `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic
+- `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback
+- `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore)
 - `src/app/servants/page.tsx` - Servants summary page
+- `src/app/grands/page.tsx` - Grand servant lineup page

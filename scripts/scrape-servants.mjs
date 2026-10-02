@@ -105,13 +105,14 @@ async function fetchServant(slug) {
   let className = "";
   let rarity = "";
 
-  // Look for class info
+  // Look for class info (including compound labels like "Caster (Grand)")
+  const CLASS_PATTERN =
+    /^(Saber|Archer|Lancer|Rider|Caster|Assassin|Berserker|Ruler|Moon Cancer|Alter Ego|Foreigner|Shielder|Pretender|Avenger|Beast)(\s*\([^)]*\))?$/;
   $("span, div").each((_, el) => {
     const text = $(el).text().trim();
-    if (
-      ["Saber", "Archer", "Lancer", "Rider", "Caster", "Assassin", "Berserker", "Ruler", "Moon Cancer", "Alter Ego", "Foreigner", "Shielder", "Pretender"].includes(text)
-    ) {
-      if (!className) className = text;
+    const match = text.match(CLASS_PATTERN);
+    if (match) {
+      if (!className) className = match[1];
     }
   });
 

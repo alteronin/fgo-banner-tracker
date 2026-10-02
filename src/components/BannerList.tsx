@@ -8,6 +8,7 @@ import { FilterBar } from "./FilterBar";
 import { SearchBar } from "./SearchBar";
 import { SortBar } from "./SortBar";
 import { YearFilter } from "./YearFilter";
+import { AdvancedSearch } from "./AdvancedSearch";
 import { useBannerFilter } from "@/hooks/useBannerFilter";
 
 interface BannerListProps {
@@ -18,6 +19,7 @@ export function BannerList({ banners }: BannerListProps) {
   const {
     filter,
     setFilter,
+    searchQuery,
     handleSearch,
     sort,
     setSort,
@@ -31,7 +33,7 @@ export function BannerList({ banners }: BannerListProps) {
   return (
     <div>
       <div className="mb-6 space-y-4">
-        <SearchBar onSearch={handleSearch} />
+        <SearchBar value={searchQuery} onSearch={handleSearch} />
         <div className="flex flex-wrap items-center gap-3">
           <FilterBar activeFilter={filter} onFilterChange={setFilter} />
           <YearFilter
@@ -40,6 +42,14 @@ export function BannerList({ banners }: BannerListProps) {
             onYearChange={setYear}
           />
           <SortBar activeSort={sort} onSortChange={setSort} />
+          <AdvancedSearch
+            filter={filter}
+            onFilterChange={setFilter}
+            sort={sort}
+            onSortChange={setSort}
+            searchQuery={searchQuery}
+            onSearch={handleSearch}
+          />
         </div>
       </div>
       {filteredBanners.length === 0 ? (

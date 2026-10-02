@@ -24,7 +24,14 @@ const CLASS_ORDER = [
   "Alter Ego",
   "Foreigner",
   "Pretender",
+  "Avenger",
+  "Beast",
 ];
+
+function classRank(className: string): number {
+  const index = CLASS_ORDER.indexOf(className);
+  return index === -1 ? CLASS_ORDER.length : index;
+}
 
 const STATUS_LABELS: Record<ServantStatus, string> = {
   none: "Not owned",
@@ -69,7 +76,7 @@ export default function ServantsPage() {
       result = [...result].sort((a, b) => a.name.localeCompare(b.name));
     } else if (sort === "class-asc") {
       result = [...result].sort((a, b) => {
-        const ci = CLASS_ORDER.indexOf(a.className) - CLASS_ORDER.indexOf(b.className);
+        const ci = classRank(a.className) - classRank(b.className);
         return ci !== 0 ? ci : a.name.localeCompare(b.name);
       });
     } else if (sort === "status") {

@@ -13,6 +13,15 @@ export function getServantStatuses(): Record<string, ServantStatus> {
   }
 }
 
+export function getServantStatusesRaw(): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    return localStorage.getItem(STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
 export function setServantStatus(
   servantSlug: string,
   status: ServantStatus
@@ -57,4 +66,42 @@ export function setGrandServant(
 export function getGrandServant(slotId: string): string {
   const grands = getGrandServants();
   return grands[slotId] || "";
+}
+
+const grandsListeners = new Set<() => void>();
+let grandsCacheRaw: string | null | undefined;
+let grandsCache: Record<string, string> = {};
+const EMPTY_GRANDS: Record<string, string> = {};
+
+function readGrandsRaw(): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    return localStorage.getItem(GRANDS_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function subscribeGrands(onChange: () => void): () => void {
+  grandsListeners.add(onChange);
+  return () => {
+    grandsListeners.delete(onChange);
+  };
+}
+
+export function getGrandsSnapshot(): Record<string, string> {
+  const raw = readGrandsRaw();
+  if (raw !== grandsCacheRaw) {
+    grandsCacheRaw = raw;
+    grandsCache = getGrandServants();
+  }
+  return grandsCache;
+}
+
+export function getGrandsServerSnapshot(): Record<string, string> {
+  return EMPTY_GRANDS;
+}
+
+export function notifyGrandsChange(): void {
+  grandsListeners.forEach((listener) => listener());
 }

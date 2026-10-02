@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import type { Banner } from "@/types/banner";
 import { ServantChip } from "./ServantChip";
+import { ImageWithFallback } from "./ImageWithFallback";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
 interface BannerDetailProps {
@@ -67,10 +67,11 @@ export function BannerDetail({ banner, onClose }: BannerDetailProps) {
         </button>
 
         <div className="aspect-[480/173] relative overflow-hidden rounded-t-xl">
-          <Image
+          <ImageWithFallback
             src={banner.imageUrl}
             alt={banner.name}
             fill
+            sizes="(max-width: 768px) 100vw, 672px"
             className="object-cover"
           />
           {active && (
@@ -95,6 +96,16 @@ export function BannerDetail({ banner, onClose }: BannerDetailProps) {
               {formatDate(banner.endDate)}
             </div>
           </div>
+
+          {banner.servants.length === 0 && (
+            <div className="mb-6 rounded-lg border border-gray-800 bg-gray-900/50 px-4 py-3">
+              <p className="text-sm text-gray-500">
+                No rate-up servants listed for this banner. Guaranteed gachas,
+                craft essence pick-ups, and daily rotations have no specific
+                rate-up servants in the source data.
+              </p>
+            </div>
+          )}
 
           {singleRateUp.length > 0 && (
             <div className="mb-6">
@@ -130,9 +141,11 @@ export function BannerDetail({ banner, onClose }: BannerDetailProps) {
             </div>
           )}
 
-          <div className="text-xs text-gray-500 mt-4">
-            Click any servant to toggle status: None → Owned → Planning → None
-          </div>
+          {banner.servants.length > 0 && (
+            <div className="text-xs text-gray-500 mt-4">
+              Click any servant to toggle status: None → Owned → Planning → None
+            </div>
+          )}
         </div>
       </div>
     </div>

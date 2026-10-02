@@ -58,3 +58,27 @@
 - [x] **servants-page**: Servant collection page with 487 servants, thumbnails, status tracking
 - [x] **servant-scraper**: Scrape servant data from GamePress sitemap + pages
 - [x] **unit-tests**: 39 unit tests (Vitest + Testing Library) for data, storage, context, hooks
+
+---
+
+## Bucket 6: Grand Servants (Complete)
+**Status**: Completed
+
+### Features
+- [x] **grand-servants**: Grand servant lineup page — 9 slots (7 main + Extra I + Extra II), click-to-select, localStorage persistence
+
+---
+
+## Bucket 7: QA Remediation (Complete)
+**Status**: Completed (2026-10-03)
+
+### Features
+- [x] **hydration-safe-state**: ServantContext, ThemeContext, useBannerFilter URL state, and grands selections converted to `useSyncExternalStore` — eliminated all React #418 hydration errors
+- [x] **theme-dom-toggle**: Tailwind `light:` custom variant + DOM class switching + pre-paint inline script — dark/light toggle now actually changes the UI and persists
+- [x] **advanced-search-wired**: AdvancedSearch panel imported into BannerList with controlled search input
+- [x] **loading-skeletons-live**: ImageWithFallback shows pulse skeleton while loading; route-level `src/app/loading.tsx`
+- [x] **mobile-overflow-fix**: Header wraps at 375px (0px overflow on all routes)
+- [x] **class-data-backfill**: 39 servants with empty `className` backfilled from GamePress (23 Avenger, 14 Beast, 0 empty); scraper class regex fixed to include Avenger/Beast + compound labels
+- [x] **banner-data-cleanup**: 4 duplicate servant entries removed; 6 banner names whitespace-normalized; zero-servant banner modal shows explanatory note
+- [x] **escape-about-modal**: AboutHelp closes on Escape; duplicate heading removed
+- [x] **unit-tests**: 54 tests (added ThemeContext, AboutHelp, URL-state suites)

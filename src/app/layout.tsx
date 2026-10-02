@@ -61,6 +61,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function(){try{var t=localStorage.getItem("fgo-theme");var l=t==="light";document.documentElement.classList.toggle("light",l);document.documentElement.classList.toggle("dark",!l);}catch(e){}})();',
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-gray-950 text-white dark:bg-gray-950 dark:text-white light:bg-gray-50 light:text-gray-900">
         <ThemeProvider>

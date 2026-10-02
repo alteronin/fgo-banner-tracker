@@ -42,11 +42,13 @@ src/
 - localStorage for persistence
 
 ## Key Implementation Details
-- Banner data in static JSON (178 banners)
+- Banner data in static JSON (742 banners, 2017-2026)
 - Servant status: none | owned | planning
 - Filter: all | owned | planning | either
 - Modal for banner detail view
 - Responsive grid: 1 col mobile, 4 col desktop
+- localStorage state exposed via useSyncExternalStore (hydration-safe)
+- Dark/light theme via .light/.dark html classes + pre-paint inline script
 
 ## Build & Run
 ```bash

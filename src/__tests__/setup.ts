@@ -1,7 +1,10 @@
-import { expect, beforeEach } from "vitest";
-import * as matchers from "@testing-library/jest-dom/matchers";
+import { beforeEach, afterEach } from "vitest";
+import "@testing-library/jest-dom/vitest";
+import { cleanup } from "@testing-library/react";
 
-expect.extend(matchers);
+afterEach(() => {
+  cleanup();
+});
 
 // Mock localStorage
 const localStorageMock = (() => {

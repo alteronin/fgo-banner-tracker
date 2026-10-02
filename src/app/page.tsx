@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-950 dark:bg-gray-950 light:bg-gray-50">
       <header className="border-b border-gray-800 dark:border-gray-800 light:border-gray-200 bg-gray-900/80 dark:bg-gray-900/80 light:bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-xl font-bold text-white dark:text-white light:text-gray-900">
               FGO JP Banner Tracker
@@ -23,7 +23,7 @@ export default function Home() {
               Track your pulls and plan your quartz
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <CollectionStats />
             <Link
               href="/servants"

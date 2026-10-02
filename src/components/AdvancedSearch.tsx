@@ -9,6 +9,7 @@ interface AdvancedSearchProps {
   onFilterChange: (filter: FilterOption) => void;
   sort: SortOption;
   onSortChange: (sort: SortOption) => void;
+  searchQuery: string;
   onSearch: (query: string) => void;
 }
 
@@ -17,6 +18,7 @@ export function AdvancedSearch({
   onFilterChange,
   sort,
   onSortChange,
+  searchQuery,
   onSearch,
 }: AdvancedSearchProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,6 +89,7 @@ export function AdvancedSearch({
               <input
                 type="text"
                 placeholder="Search servants..."
+                value={searchQuery}
                 onChange={(e) => onSearch(e.target.value)}
                 className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-500"
               />

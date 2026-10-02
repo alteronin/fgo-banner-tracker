@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useSyncExternalStore, type ReactNode } from "react";
 
 type Theme = "dark" | "light";
 
@@ -13,21 +13,45 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 
 const THEME_KEY = "fgo-theme";
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "dark";
-  const stored = localStorage.getItem(THEME_KEY) as Theme | null;
-  return stored || "dark";
+const themeListeners = new Set<() => void>();
+
+function notifyThemeChange(): void {
+  themeListeners.forEach((listener) => listener());
+}
+
+function subscribeTheme(onChange: () => void): () => void {
+  themeListeners.add(onChange);
+  return () => {
+    themeListeners.delete(onChange);
+  };
+}
+
+function getThemeSnapshot(): Theme {
+  return document.documentElement.classList.contains("light") ? "light" : "dark";
+}
+
+function getServerThemeSnapshot(): Theme {
+  return "dark";
+}
+
+function applyTheme(theme: Theme): void {
+  const root = document.documentElement;
+  root.classList.toggle("dark", theme === "dark");
+  root.classList.toggle("light", theme === "light");
+  localStorage.setItem(THEME_KEY, theme);
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const theme = useSyncExternalStore(
+    subscribeTheme,
+    getThemeSnapshot,
+    getServerThemeSnapshot
+  );
 
   const toggleTheme = () => {
-    setTheme((prev) => {
-      const next = prev === "dark" ? "light" : "dark";
-      localStorage.setItem(THEME_KEY, next);
-      return next;
-    });
+    const next: Theme = theme === "dark" ? "light" : "dark";
+    applyTheme(next);
+    notifyThemeChange();
   };
 
   return (

@@ -1,31 +1,54 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useMemo, useCallback, useSyncExternalStore } from "react";
 import type { Banner, FilterOption } from "@/types/banner";
 import type { SortOption } from "@/components/SortBar";
 import { useServantStatus } from "@/contexts/ServantContext";
 
-function getInitialFilter(): FilterOption {
-  if (typeof window === "undefined") return "all";
-  const params = new URLSearchParams(window.location.search);
-  const urlFilter = params.get("filter") as FilterOption | null;
-  if (urlFilter && ["all", "owned", "planning", "either"].includes(urlFilter)) {
-    return urlFilter;
-  }
-  return "all";
+const urlListeners = new Set<() => void>();
+
+function notifyUrlChange(): void {
+  urlListeners.forEach((listener) => listener());
 }
 
-function getInitialYear(): string {
-  if (typeof window === "undefined") return "all";
-  const params = new URLSearchParams(window.location.search);
-  return params.get("year") || "all";
+function subscribeUrl(onChange: () => void): () => void {
+  urlListeners.add(onChange);
+  window.addEventListener("popstate", onChange);
+  return () => {
+    urlListeners.delete(onChange);
+    window.removeEventListener("popstate", onChange);
+  };
+}
+
+function getUrlSearch(): string {
+  return window.location.search;
+}
+
+function getServerUrlSearch(): string {
+  return "";
+}
+
+function parseUrlState(search: string): { filter: FilterOption; year: string } {
+  const params = new URLSearchParams(search);
+  const rawFilter = params.get("filter");
+  const filter =
+    rawFilter && ["all", "owned", "planning", "either"].includes(rawFilter)
+      ? (rawFilter as FilterOption)
+      : "all";
+  const rawYear = params.get("year");
+  const year = rawYear && /^\d{4}$/.test(rawYear) ? rawYear : "all";
+  return { filter, year };
 }
 
 export function useBannerFilter(banners: Banner[]) {
-  const [filter, setFilterState] = useState<FilterOption>(getInitialFilter);
   const [searchQuery, setSearchQuery] = useState("");
   const [sort, setSort] = useState<SortOption>("date-desc");
-  const [year, setYearState] = useState<string>(getInitialYear);
+  const urlSearch = useSyncExternalStore(
+    subscribeUrl,
+    getUrlSearch,
+    getServerUrlSearch
+  );
+  const { filter, year } = parseUrlState(urlSearch);
   const { getStatus } = useServantStatus();
 
   const availableYears = useMemo(() => {
@@ -34,7 +57,6 @@ export function useBannerFilter(banners: Banner[]) {
   }, [banners]);
 
   const setFilter = useCallback((newFilter: FilterOption) => {
-    setFilterState(newFilter);
     const url = new URL(window.location.href);
     if (newFilter === "all") {
       url.searchParams.delete("filter");
@@ -42,10 +64,10 @@ export function useBannerFilter(banners: Banner[]) {
       url.searchParams.set("filter", newFilter);
     }
     window.history.replaceState({}, "", url.toString());
+    notifyUrlChange();
   }, []);
 
   const setYear = useCallback((newYear: string) => {
-    setYearState(newYear);
     const url = new URL(window.location.href);
     if (newYear === "all") {
       url.searchParams.delete("year");
@@ -53,10 +75,11 @@ export function useBannerFilter(banners: Banner[]) {
       url.searchParams.set("year", newYear);
     }
     window.history.replaceState({}, "", url.toString());
+    notifyUrlChange();
   }, []);
 
   const handleSearch = useCallback((query: string) => {
-    setSearchQuery(query.toLowerCase());
+    setSearchQuery(query);
   }, []);
 
   const filteredBanners = useMemo(() => {
@@ -88,9 +111,10 @@ export function useBannerFilter(banners: Banner[]) {
 
     // Search filter
     if (searchQuery) {
+      const query = searchQuery.toLowerCase();
       result = result.filter((banner) => {
         return banner.servants.some((servant) =>
-          servant.name.toLowerCase().includes(searchQuery)
+          servant.name.toLowerCase().includes(query)
         );
       });
     }

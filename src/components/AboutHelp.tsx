@@ -1,9 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
 export function AboutHelp() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useKeyboardNavigation({
+    onEscape: () => setIsOpen(false),
+    enabled: isOpen,
+  });
 
   return (
     <>
@@ -101,7 +107,7 @@ export function AboutHelp() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-white mb-2">Keyboard</h3>
+                <h3 className="font-semibold text-white mb-2">About</h3>
                 <p>
                   Built with Next.js, TypeScript, and Tailwind CSS. Data from
                   GamePress FGO Wiki.

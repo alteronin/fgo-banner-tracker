@@ -187,3 +187,96 @@ describe("useBannerFilter", () => {
     expect(result.current.filter).toBe("owned");
   });
 });
+
+describe("useBannerFilter URL state", () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+    window.history.replaceState({}, "", "/");
+  });
+
+  it("reads filter and year from the initial URL", () => {
+    window.localStorage.setItem(
+      "fgo-servant-status",
+      JSON.stringify({ jeanne: "owned" })
+    );
+    window.history.replaceState({}, "", "/?filter=owned&year=2025");
+
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    expect(result.current.filter).toBe("owned");
+    expect(result.current.year).toBe("2025");
+    expect(result.current.filteredBanners).toHaveLength(1);
+  });
+
+  it("falls back to defaults for invalid URL params", () => {
+    window.history.replaceState({}, "", "/?filter=bogus&year=not-a-year");
+
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    expect(result.current.filter).toBe("all");
+    expect(result.current.year).toBe("all");
+    expect(result.current.filteredBanners).toHaveLength(3);
+  });
+
+  it("setFilter writes filter to the URL", () => {
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    act(() => {
+      result.current.setFilter("planning");
+    });
+
+    expect(window.location.search).toContain("filter=planning");
+    expect(result.current.filter).toBe("planning");
+  });
+
+  it("setFilter('all') removes the filter param", () => {
+    window.history.replaceState({}, "", "/?filter=owned&year=2025");
+
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    act(() => {
+      result.current.setFilter("all");
+    });
+
+    expect(window.location.search).not.toContain("filter=");
+    expect(window.location.search).toContain("year=2025");
+    expect(result.current.filter).toBe("all");
+  });
+
+  it("setYear writes year to the URL and clears other filters stay intact", () => {
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    act(() => {
+      result.current.setYear("2026");
+    });
+
+    expect(window.location.search).toContain("year=2026");
+    expect(result.current.year).toBe("2026");
+    expect(result.current.filteredBanners).toHaveLength(2);
+  });
+
+  it("setYear('all') removes the year param", () => {
+    window.history.replaceState({}, "", "/?year=2025");
+
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    act(() => {
+      result.current.setYear("all");
+    });
+
+    expect(window.location.search).not.toContain("year=");
+    expect(result.current.year).toBe("all");
+  });
+});

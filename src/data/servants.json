@@ -159,13 +159,13 @@
     "slug": "anra-mainiiu",
     "name": "Anra Mainiiu",
     "iconUrl": "https://static.mana.wiki/grandorder/107_Anra_Mainiiu_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "antonio-salieri",
     "name": "Antonio Salieri",
     "iconUrl": "https://static.mana.wiki/grandorder/204_Antonio_Salieri_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "aozaki-aoko",
@@ -339,7 +339,7 @@
     "slug": "avenger-of-shinjuku",
     "name": "Avenger of Shinjuku",
     "iconUrl": "https://static.mana.wiki/grandorder/158_Avenger_of_Shinjuku_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "avicebron",
@@ -393,19 +393,19 @@
     "slug": "beast-iiil",
     "name": "Beast III/L",
     "iconUrl": "https://static.mana.wiki/grandorder/240_Beast_III_L_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "beast-iiir",
     "name": "Beast III/R",
     "iconUrl": "https://static.mana.wiki/grandorder/168_Beast_III_R_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "beast-iv",
     "name": "Beast IV",
     "iconUrl": "https://static.mana.wiki/grandorder/333_Beast_IV_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "bedivere",
@@ -615,7 +615,7 @@
     "slug": "chloe-von-einzbern-avenger",
     "name": "Chloe von Einzbern (Avenger)",
     "iconUrl": "https://static.mana.wiki/grandorder/388_Chloe_von_Einzbern_Avenger_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "cleopatra",
@@ -687,7 +687,7 @@
     "slug": "demon-king-nobunaga-oda-nobunaga",
     "name": "Demon King Nobunaga (Oda Nobunaga)",
     "iconUrl": "https://static.mana.wiki/grandorder/250_Demon_King_Nobunaga_Oda_Nobunaga_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "diarmuid-ua-duibhne",
@@ -741,31 +741,31 @@
     "slug": "e-aqua-marie",
     "name": "E-Aqua Marie",
     "iconUrl": "https://static.mana.wiki/grandorder/412_E_Aqua_Marie_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "e-flare-marie",
     "name": "E-Flare Marie",
     "iconUrl": "https://static.mana.wiki/grandorder/411_E_Flare_Marie_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "e-grand-marie",
     "name": "E-Grand Marie",
     "iconUrl": "https://static.mana.wiki/grandorder/436_E_Grand_Marie_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "e-stellar-marie",
     "name": "E-Stellar Marie",
     "iconUrl": "https://static.mana.wiki/grandorder/443_E_Stellar_Marie_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "edmond-dantes",
     "name": "Edmond Dantes",
     "iconUrl": "https://static.mana.wiki/grandorder/096_Edmond_Dantes_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "edward-teach",
@@ -813,7 +813,7 @@
     "slug": "elisabeth-of-the-end",
     "name": "Elisabeth of the End",
     "iconUrl": "https://static.mana.wiki/grandorder/458_Elisabeth_of_the_End_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "emiya",
@@ -993,13 +993,13 @@
     "slug": "goetia",
     "name": "Goetia",
     "iconUrl": "https://static.mana.wiki/grandorder/151_Goetia_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "gorgon",
     "name": "Gorgon",
     "iconUrl": "https://static.mana.wiki/grandorder/147_Gorgon_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "gray",
@@ -1317,7 +1317,7 @@
     "slug": "jeanne-darc-alter",
     "name": "Jeanne d'Arc (Alter)",
     "iconUrl": "https://static.mana.wiki/grandorder/106_Jeanne_d_Arc_Alter_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "jeanne-darc-archer",
@@ -1347,7 +1347,7 @@
     "slug": "john-lackland",
     "name": "John Lackland",
     "iconUrl": "https://static.mana.wiki/grandorder/469_John_Lackland_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "kama",
@@ -1359,7 +1359,7 @@
     "slug": "kama-avenger",
     "name": "Kama (Avenger)",
     "iconUrl": "https://static.mana.wiki/grandorder/321_Kama_Avenger_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "karna",
@@ -1437,7 +1437,7 @@
     "slug": "kingprotea-alter",
     "name": "Kingprotea (Alter)",
     "iconUrl": "https://static.mana.wiki/grandorder/479_Kingprotea_Alter_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "kingprotea-moon-cancer",
@@ -1659,7 +1659,7 @@
     "slug": "marie-antoinette-alter",
     "name": "Marie Antoinette (Alter)",
     "iconUrl": "https://static.mana.wiki/grandorder/407_Marie_Antoinette_Alter_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "marie-antoinette-caster",
@@ -1671,7 +1671,7 @@
     "slug": "maris-chaldeas",
     "name": "Maris Chaldeas",
     "iconUrl": "https://static.mana.wiki/grandorder/460_Maris_Chaldeas_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "mary-anning",
@@ -1791,7 +1791,7 @@
     "slug": "minamoto-no-raikou-ushi-gozen",
     "name": "Minamoto-no-Raikou / Ushi Gozen",
     "iconUrl": "https://static.mana.wiki/grandorder/403_Ushi_Gozen_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "minamoto-no-tametomo",
@@ -1839,7 +1839,7 @@
     "slug": "monte-cristo",
     "name": "Monte Cristo",
     "iconUrl": "https://static.mana.wiki/grandorder/409_Count_Monte_Cristo_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "mordred",
@@ -1941,7 +1941,7 @@
     "slug": "mysterious-ranmaru-x",
     "name": "Mysterious Ranmaru X",
     "iconUrl": "https://static.mana.wiki/grandorder/328_Mysterious_Ranmaru_X_Icon-1.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "nagakura-shinpachi",
@@ -2031,7 +2031,7 @@
     "slug": "nitocris-alter",
     "name": "Nitocris (Alter)",
     "iconUrl": "https://static.mana.wiki/grandorder/370_Nitocris_Alter_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "nitocris-assassin",
@@ -2517,7 +2517,7 @@
     "slug": "sodoms-beast-draco",
     "name": "Sodom's Beast / Draco",
     "iconUrl": "https://static.mana.wiki/grandorder/377_Sodom_s_Beast_Draco_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "solomon",
@@ -2529,25 +2529,25 @@
     "slug": "solomon-grand-caster",
     "name": "Solomon (Grand Caster)",
     "iconUrl": "https://static.mana.wiki/grandorder/083_Solomon_Grand_Caster_Icon.png?width=80",
-    "className": ""
+    "className": "Caster"
   },
   {
     "slug": "solomon-true",
     "name": "Solomon (True)",
     "iconUrl": "https://static.mana.wiki/grandorder/152_Solomon_Icon.png?width=80",
-    "className": ""
+    "className": "Caster"
   },
   {
     "slug": "space-ereshkigal",
     "name": "Space Ereshkigal",
     "iconUrl": "https://static.mana.wiki/grandorder/417_Space_Ereshkigal_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "space-ishtar",
     "name": "Space Ishtar",
     "iconUrl": "https://static.mana.wiki/grandorder/268_Space_Ishtar_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "spartacus",
@@ -2601,7 +2601,7 @@
     "slug": "taira-no-kagekiyo",
     "name": "Taira-no-Kagekiyo",
     "iconUrl": "https://static.mana.wiki/grandorder/303_Taira_no_Kagekiyo_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "taisui-xingjun",
@@ -2661,7 +2661,7 @@
     "slug": "the-black-grail-enemy",
     "name": "The Black Grail (Enemy)",
     "iconUrl": "https://static.mana.wiki/FGOPartyQuestIcon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "theseus",
@@ -2685,7 +2685,7 @@
     "slug": "tiamat",
     "name": "Tiamat",
     "iconUrl": "https://static.mana.wiki/grandorder/149_Tiamat_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "tlaloc",
@@ -2697,7 +2697,7 @@
     "slug": "todo-heisuke",
     "name": "Todo Heisuke",
     "iconUrl": "https://static.mana.wiki/grandorder/454_Todo_Heisuke_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "tristan",
@@ -2721,13 +2721,13 @@
     "slug": "u-olga-marie",
     "name": "U-Olga Marie",
     "iconUrl": "https://static.mana.wiki/grandorder/444_U_Olga_Marie_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "u-olga-marie-npc-version",
     "name": "U-Olga Marie (NPC Version)",
     "iconUrl": "https://static.mana.wiki/grandorder/99441400_U_Olga_Marie_Icon.png?width=80",
-    "className": ""
+    "className": "Beast"
   },
   {
     "slug": "udk-barghest",
@@ -2763,7 +2763,7 @@
     "slug": "utsumi-erice-avenger",
     "name": "Utsumi Erice (Avenger)",
     "iconUrl": "https://static.mana.wiki/grandorder/356_Utsumi_Erice_Avenger_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "valkyrie",
@@ -2853,7 +2853,7 @@
     "slug": "xu-fu-avenger",
     "name": "Xu Fu (Avenger)",
     "iconUrl": "https://static.mana.wiki/grandorder/420_Xu_Fu_Avenger_Icon.png?width=80",
-    "className": ""
+    "className": "Avenger"
   },
   {
     "slug": "xuanzang-sanzang",
