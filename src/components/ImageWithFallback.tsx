@@ -22,7 +22,7 @@ export function ImageWithFallback({
     }
   }, []);
 
-  if (status === "error") {
+  if (status === "error" || !props.src) {
     return (
       <>
         {fallback ?? (
@@ -36,6 +36,10 @@ export function ImageWithFallback({
     );
   }
 
+  const unoptimized =
+    typeof props.src === "string" &&
+    props.src.startsWith("https://static.wikia.nocookie.net/");
+
   return (
     <>
       {props.fill && status === "loading" && (
@@ -46,6 +50,7 @@ export function ImageWithFallback({
       )}
       <Image
         {...props}
+        unoptimized={unoptimized}
         ref={handleImgRef}
         alt={props.alt}
         onLoad={() => setStatus("loaded")}

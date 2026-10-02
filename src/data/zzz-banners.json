@@ -1,0 +1,2670 @@
+[
+  {
+    "id": "agent-2026-09-09-claret-banner",
+    "type": "agent",
+    "version": "3.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Claret Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/618023",
+        "image": "https://img.game8.co/4611261/21ef76a4be89029ef2d8bf1175f2a0ad.png/show"
+      }
+    ],
+    "startDate": "2026-09-09",
+    "endDate": "2026-09-30",
+    "featured5": [
+      {
+        "name": "Claret",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-09-09-nangong-yu-rerun-banner",
+    "type": "agent",
+    "version": "3.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Nangong Yu Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/586517",
+        "image": "https://img.game8.co/4611262/5f7061bb60aeea1e78b56a8c44aab8d5.png/show"
+      }
+    ],
+    "startDate": "2026-09-09",
+    "endDate": "2026-09-30",
+    "featured5": [
+      {
+        "name": "Nangong Yu",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-09-09-crimson-thirst-banner",
+    "type": "wengine",
+    "version": "3.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Crimson Thirst Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4611263/61ff14695352997a8486ebc89395dbe9.png/show"
+      }
+    ],
+    "startDate": "2026-09-09",
+    "endDate": "2026-09-30",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-09-09-neon-fantasies-banner",
+    "type": "wengine",
+    "version": "3.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Neon Fantasies Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4452041/053d1d869d75d58ee06bf2c80cee0ec0.png/show"
+      }
+    ],
+    "startDate": "2026-09-09",
+    "endDate": "2026-09-30",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-08-19-sigrid-banner",
+    "type": "agent",
+    "version": "3.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Sigrid Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/611635",
+        "image": "https://img.game8.co/4591322/454f28ab8d9c842b486d7c49f5641546.png/show"
+      }
+    ],
+    "startDate": "2026-08-19",
+    "endDate": "2026-09-08",
+    "featured5": [
+      {
+        "name": "Sigrid",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-08-19-exclusive-rescreening-banner",
+    "type": "agent",
+    "version": "3.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Exclusive Rescreening Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572097",
+        "image": "https://img.game8.co/4591323/b45493cf805f50d97f5aaee052c3c3d8.png/show"
+      }
+    ],
+    "startDate": "2026-08-19",
+    "endDate": "2026-09-08",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-08-19-knight-s-extolment-banner",
+    "type": "wengine",
+    "version": "3.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Knight’s Extolment Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4549129/f4a89b94b12df735e059a2ecd84b72c9.png/show"
+      }
+    ],
+    "startDate": "2026-08-19",
+    "endDate": "2026-09-08",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-08-19-w-engine-reverberation-banner",
+    "type": "wengine",
+    "version": "3.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "W-Engine Reverberation Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572099",
+        "image": "https://img.game8.co/4591324/ec6b1f9d884d9bc8adc84bbf63ba3655.png/show"
+      }
+    ],
+    "startDate": "2026-08-19",
+    "endDate": "2026-09-08",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-07-29-remielle-banner",
+    "type": "agent",
+    "version": "3.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Remielle Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/611633",
+        "image": "https://img.game8.co/4569765/41bf60f54ddc3a508c652b3d44df4d53.png/show"
+      }
+    ],
+    "startDate": "2026-07-29",
+    "endDate": "2026-09-08",
+    "featured5": [
+      {
+        "name": "Remielle",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-07-29-ode-of-resurrected-wings-banner",
+    "type": "wengine",
+    "version": "3.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Ode of Resurrected Wings Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4569766/7b89c625ce1361e7c2ad5fa50a829611.png/show"
+      }
+    ],
+    "startDate": "2026-07-29",
+    "endDate": "2026-09-08",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-07-29-aria-rerun-banner",
+    "type": "agent",
+    "version": "3.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Aria Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/577389",
+        "image": "https://img.game8.co/4569763/c5a417c2d9cdaba5ceb8c0616f94ef6f.png/show"
+      }
+    ],
+    "startDate": "2026-07-29",
+    "endDate": "2026-08-19",
+    "featured5": [
+      {
+        "name": "Aria",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-07-29-angel-in-the-shell-banner",
+    "type": "wengine",
+    "version": "3.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Angel in the Shell Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4569764/66be6c1e8529621c4c14e3da0a15800e.png/show"
+      }
+    ],
+    "startDate": "2026-07-29",
+    "endDate": "2026-08-19",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-07-08-norma-banner",
+    "type": "agent",
+    "version": "3.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Norma Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/604533",
+        "image": "https://img.game8.co/4549131/449141ccfeb82e1c4ea76d1f53615995.png/show"
+      }
+    ],
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-28",
+    "featured5": [
+      {
+        "name": "Norma",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-07-08-sunna-rerun-banner",
+    "type": "agent",
+    "version": "3.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Sunna Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/577388",
+        "image": "https://img.game8.co/4549130/b6a7fef80278f5776f5f927cd447be3d.png/show"
+      }
+    ],
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-28",
+    "featured5": [
+      {
+        "name": "Sunna",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-07-08-chief-sidekick-banner",
+    "type": "wengine",
+    "version": "3.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Chief Sidekick Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4549129/f4a89b94b12df735e059a2ecd84b72c9.png/show"
+      }
+    ],
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-28",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-07-08-thoughtbop-banner",
+    "type": "wengine",
+    "version": "3.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Thoughtbop Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4549128/4262a92b853ffadc0808adc6548eb4ba.png/show"
+      }
+    ],
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-28",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-06-17-velina-banner",
+    "type": "agent",
+    "version": "3.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Velina Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/604532",
+        "image": "https://img.game8.co/4533380/58980fedb494f51be847f1d0c155f708.png/show"
+      }
+    ],
+    "startDate": "2026-06-17",
+    "endDate": "2026-07-08",
+    "featured5": [
+      {
+        "name": "Velina",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-06-17-ye-shunguang-rerun-banner",
+    "type": "agent",
+    "version": "3.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Ye Shunguang Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572089",
+        "image": "https://img.game8.co/4533382/3be343b7ed58fea42a30ed084e34385b.png/show"
+      }
+    ],
+    "startDate": "2026-06-17",
+    "endDate": "2026-07-08",
+    "featured5": [
+      {
+        "name": "Ye Shunguang",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-06-17-joyau-dore-banner",
+    "type": "wengine",
+    "version": "3.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Joyau Dore Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4533379/79b0e7ed0d5d76f1f25b233340be11cd.png/show"
+      }
+    ],
+    "startDate": "2026-06-17",
+    "endDate": "2026-07-08",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-06-17-cloudcleave-radiance-banner",
+    "type": "wengine",
+    "version": "3.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Cloudcleave Radiance Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4533381/ab1088d19be49b9f0f76fd0a383b9644.png/show"
+      }
+    ],
+    "startDate": "2026-06-17",
+    "endDate": "2026-07-08",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-05-27-starlight-billy-banner",
+    "type": "agent",
+    "version": "2.8",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Starlight Billy Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/596535",
+        "image": "https://img.game8.co/4514321/8a4d9a1b4700206dad31e99f1c0987cb.png/show"
+      }
+    ],
+    "startDate": "2026-05-27",
+    "endDate": "2026-06-16",
+    "featured5": [
+      {
+        "name": "Starlight Billy",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-05-27-orphie-and-magus-rerun-banner",
+    "type": "agent",
+    "version": "2.8",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Orphie and Magus Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/545800",
+        "image": "https://img.game8.co/4514322/805b750dac2b1f3d17104db7d0def398.png/show"
+      }
+    ],
+    "startDate": "2026-05-27",
+    "endDate": "2026-06-16",
+    "featured5": [
+      {
+        "name": "Orphie and Magus",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-05-27-starlight-rider-faceplate-banner",
+    "type": "wengine",
+    "version": "2.8",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Starlight Rider Faceplate Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4514319/7d386518ff74a818ddc4c7c370a59ec4.png/show"
+      }
+    ],
+    "startDate": "2026-05-27",
+    "endDate": "2026-06-16",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-05-27-bellicose-blaze-banner",
+    "type": "wengine",
+    "version": "2.8",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Bellicose Blaze Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4514320/ea192f3a1dd7d6aeeb699c9204b9d759.png/show"
+      }
+    ],
+    "startDate": "2026-05-27",
+    "endDate": "2026-06-16",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-05-06-promeia-banner",
+    "type": "agent",
+    "version": "2.8",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Promeia Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/596534",
+        "image": "https://img.game8.co/4494034/ecbf0626641d0fa6abf26834489d62c8.png/show"
+      }
+    ],
+    "startDate": "2026-05-06",
+    "endDate": "2026-05-27",
+    "featured5": [
+      {
+        "name": "Promeia",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-05-06-lucia-rerun-banner",
+    "type": "agent",
+    "version": "2.8",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Lucia Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/553777",
+        "image": "https://img.game8.co/4494031/c3bce806049f96e6c08493b41f1a8ce7.png/show"
+      }
+    ],
+    "startDate": "2026-05-06",
+    "endDate": "2026-05-27",
+    "featured5": [
+      {
+        "name": "Lucia",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-05-06-frostfall-sickle-banner",
+    "type": "wengine",
+    "version": "2.8",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Frostfall Sickle Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4494033/ed78696ae21740a54b2234bcfba152c0.png/show"
+      }
+    ],
+    "startDate": "2026-05-06",
+    "endDate": "2026-05-27",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-05-06-dreamlit-hearth-banner",
+    "type": "wengine",
+    "version": "2.8",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dreamlit Hearth Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4494032/2b534367d1c8f8fb1c11b8dc61f1e1d5.png/show"
+      }
+    ],
+    "startDate": "2026-05-06",
+    "endDate": "2026-05-27",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-04-15-cissia-banner",
+    "type": "agent",
+    "version": "2.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Cissia Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/586518",
+        "image": "https://img.game8.co/4467820/6b001ba30d5a2057985684c8ee3d766d.png/show"
+      }
+    ],
+    "startDate": "2026-04-15",
+    "endDate": "2026-05-05",
+    "featured5": [
+      {
+        "name": "Cissia",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-04-15-seed-rerun-banner",
+    "type": "agent",
+    "version": "2.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Seed Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/545799",
+        "image": "https://img.game8.co/4467817/8bde291eddf682a8ad4658f1f5eb75f3.png/show"
+      }
+    ],
+    "startDate": "2026-04-15",
+    "endDate": "2026-05-05",
+    "featured5": [
+      {
+        "name": "Seed",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-04-15-serpentine-seeker-banner",
+    "type": "wengine",
+    "version": "2.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Serpentine Seeker Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4467819/106e67e0068d92c0b181adc5d3a930d4.png/show"
+      }
+    ],
+    "startDate": "2026-04-15",
+    "endDate": "2026-05-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-04-15-cordis-germina-banner",
+    "type": "wengine",
+    "version": "2.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Cordis Germina Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4467818/4526c995e44e7aed97299724d03915f6.png/show"
+      }
+    ],
+    "startDate": "2026-04-15",
+    "endDate": "2026-05-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-03-24-nangong-yu-banner",
+    "type": "agent",
+    "version": "2.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Nangong Yu Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/586517",
+        "image": "https://img.game8.co/4452042/3d0ed31103170937e1c780584d190110.png/show"
+      }
+    ],
+    "startDate": "2026-03-24",
+    "endDate": "2026-04-15",
+    "featured5": [
+      {
+        "name": "Nangong Yu",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-03-24-yidhari-rerun-banner",
+    "type": "agent",
+    "version": "2.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Yidhari Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/553777",
+        "image": "https://img.game8.co/4452040/5c18335d3f81f7abbb624a724f93f95c.png/show"
+      }
+    ],
+    "startDate": "2026-03-24",
+    "endDate": "2026-04-15",
+    "featured5": [
+      {
+        "name": "Yidhari",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-03-24-neon-fantasies-banner",
+    "type": "wengine",
+    "version": "2.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Neon Fantasies Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4452041/053d1d869d75d58ee06bf2c80cee0ec0.png/show"
+      }
+    ],
+    "startDate": "2026-03-24",
+    "endDate": "2026-04-15",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-03-24-kraken-s-cradle-banner",
+    "type": "wengine",
+    "version": "2.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Kraken's Cradle Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588565",
+        "image": "https://img.game8.co/4452043/6073bcf13621026c3f16438f440208ad.png/show"
+      }
+    ],
+    "startDate": "2026-03-24",
+    "endDate": "2026-04-15",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-03-04-aria-banner",
+    "type": "agent",
+    "version": "2.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Aria Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/577389",
+        "image": "https://img.game8.co/4428934/77692d732d74ef4434595bd3d42a9540.png/show"
+      }
+    ],
+    "startDate": "2026-03-04",
+    "endDate": "2026-03-24",
+    "featured5": [
+      {
+        "name": "Aria",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-03-04-yuzuha-rerun-banner",
+    "type": "agent",
+    "version": "2.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Yuzuha Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/533768",
+        "image": "https://img.game8.co/4428932/74e602d5be48bd18d05eb3bb7dde814a.png/show"
+      }
+    ],
+    "startDate": "2026-03-04",
+    "endDate": "2026-03-24",
+    "featured5": [
+      {
+        "name": "Yuzuha",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-03-04-dazzling-choir-sonata",
+    "type": "wengine",
+    "version": "2.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4428935/07036935d18ca87b1d17e0a51083a2be.png/show"
+      }
+    ],
+    "startDate": "2026-03-04",
+    "endDate": "2026-03-24",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-03-04-dazzling-melody",
+    "type": "wengine",
+    "version": "2.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Melody",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4428933/c5a4af08964c8c30d800bee247377405.png/show"
+      }
+    ],
+    "startDate": "2026-03-04",
+    "endDate": "2026-03-24",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-02-06-sunna-banner",
+    "type": "agent",
+    "version": "2.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Sunna Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/577388",
+        "image": "https://img.game8.co/4404626/dff2443c2094242ae1230b7d02695e07.png/show"
+      }
+    ],
+    "startDate": "2026-02-06",
+    "endDate": "2026-03-04",
+    "featured5": [
+      {
+        "name": "Sunna",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-02-06-yixuan-rerun-banner",
+    "type": "agent",
+    "version": "2.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Yixuan Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/523305",
+        "image": "https://img.game8.co/4404628/bb32a8956b448d95ee0d23f45dc276a4.png/show"
+      }
+    ],
+    "startDate": "2026-02-06",
+    "endDate": "2026-03-04",
+    "featured5": [
+      {
+        "name": "Yixuan",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-02-06-dissonant-sonata",
+    "type": "wengine",
+    "version": "2.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4404627/67ef1e47585a63734bca3891ef7646d7.png/show"
+      }
+    ],
+    "startDate": "2026-02-06",
+    "endDate": "2026-03-04",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-02-06-vibrant-resonance",
+    "type": "wengine",
+    "version": "2.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vibrant Resonance",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4404625/27aa35c6cfaad0ec59b766b4b3a869c0.png/show"
+      }
+    ],
+    "startDate": "2026-02-06",
+    "endDate": "2026-03-04",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2026-01-21-exclusive-rescreening",
+    "type": "agent",
+    "version": "2.5",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Exclusive Rescreening",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572097",
+        "image": "https://img.game8.co/4389640/ef7e8c9ec00b701b810dbbf36ba413d9.png/show"
+      }
+    ],
+    "startDate": "2026-01-21",
+    "endDate": "2026-02-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2026-01-21-w-engine-reverberation",
+    "type": "wengine",
+    "version": "2.5",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "W-Engine Reverberation",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572099",
+        "image": "https://img.game8.co/4389639/488012ff5c2516239c4bc4d1ed3dafe8.png/show"
+      }
+    ],
+    "startDate": "2026-01-21",
+    "endDate": "2026-02-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-12-30-ye-shunguang-banner",
+    "type": "agent",
+    "version": "2.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Ye Shunguang Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572089",
+        "image": "https://img.game8.co/4376181/8f28da4a63fec223415162b3947c1601.png/show"
+      }
+    ],
+    "startDate": "2025-12-30",
+    "endDate": "2026-02-05",
+    "featured5": [
+      {
+        "name": "Ye Shunguang",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-12-30-zhao-banner",
+    "type": "agent",
+    "version": "2.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Zhao Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572088",
+        "image": "https://img.game8.co/4376180/91b56715b60730724bdbf6aa73a727b5.png/show"
+      }
+    ],
+    "startDate": "2025-12-30",
+    "endDate": "2026-02-05",
+    "featured5": [
+      {
+        "name": "Zhao",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-12-30-dissonant-sonata",
+    "type": "wengine",
+    "version": "2.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4376354/3827833e5afb593ae4d9a7da287adf76.png/show"
+      }
+    ],
+    "startDate": "2025-12-30",
+    "endDate": "2026-02-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-12-30-dazzling-choir",
+    "type": "wengine",
+    "version": "2.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4376359/f3ce7f70bee0fe55ebe0c9d69eb1f297.png/show"
+      }
+    ],
+    "startDate": "2025-12-30",
+    "endDate": "2026-02-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-12-17-banyue-banner",
+    "type": "agent",
+    "version": "2.4",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Banyue Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/565536",
+        "image": "https://img.game8.co/4367207/87929e57b0e9cf10cd1dfd34fabff17d.png/show"
+      }
+    ],
+    "startDate": "2025-12-17",
+    "endDate": "2025-12-29",
+    "featured5": [
+      {
+        "name": "Banyue",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-12-17-ellen-rerun-banner",
+    "type": "agent",
+    "version": "2.4",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Ellen Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/451471",
+        "image": "https://img.game8.co/4367210/25c434a8f6b95ba933d515a803294a7c.png/show"
+      }
+    ],
+    "startDate": "2025-12-17",
+    "endDate": "2025-12-29",
+    "featured5": [
+      {
+        "name": "Ellen",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-12-17-dazzling-choir",
+    "type": "wengine",
+    "version": "2.4",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4367209/9950f014ac32140fe1b56f7a771f8806.png/show"
+      }
+    ],
+    "startDate": "2025-12-17",
+    "endDate": "2025-12-29",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-12-17-dazzling-melody",
+    "type": "wengine",
+    "version": "2.4",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Melody",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/506650",
+        "image": "https://img.game8.co/4367208/51800b3a514e1503f3dd068cd6678722.png/show"
+      }
+    ],
+    "startDate": "2025-12-17",
+    "endDate": "2025-12-29",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-11-26-dialyn-banner",
+    "type": "agent",
+    "version": "2.4",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dialyn Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/565534",
+        "image": "https://img.game8.co/4346703/be922f9caf6bdb114cb453549a25a22a.png/show"
+      }
+    ],
+    "startDate": "2025-11-26",
+    "endDate": "2025-12-17",
+    "featured5": [
+      {
+        "name": "Dialyn",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-11-26-hugo-rerun-banner",
+    "type": "agent",
+    "version": "2.4",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Hugo Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/513710",
+        "image": "https://img.game8.co/4346702/e45c72d12b7ef28c003a297363382337.png/show"
+      }
+    ],
+    "startDate": "2025-11-26",
+    "endDate": "2025-12-17",
+    "featured5": [
+      {
+        "name": "Hugo",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-11-26-dissonant-sonata",
+    "type": "wengine",
+    "version": "2.4",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4346705/adff4e293b020ea8724152f8e51d5f8e.png/show"
+      }
+    ],
+    "startDate": "2025-11-26",
+    "endDate": "2025-12-17",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-11-26-vibrant-resonance",
+    "type": "wengine",
+    "version": "2.4",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vibrant Resonance",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4346704/4a67407f233f2a53046963b0cb53b32b.png/show"
+      }
+    ],
+    "startDate": "2025-11-26",
+    "endDate": "2025-12-17",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-11-05-yidhari-banner",
+    "type": "agent",
+    "version": "2.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Yidhari Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/553777",
+        "image": "https://img.game8.co/4322927/ece2c45ee3b156782656e90dca66e64b.png/show"
+      }
+    ],
+    "startDate": "2025-11-05",
+    "endDate": "2025-11-26",
+    "featured5": [
+      {
+        "name": "Yidhari",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-11-05-ju-fufu-rerun-banner",
+    "type": "agent",
+    "version": "2.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Ju Fufu Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/523308",
+        "image": "https://img.game8.co/4322924/3f3d5ac33ce0908f0f76762fa9243849.png/show"
+      }
+    ],
+    "startDate": "2025-11-05",
+    "endDate": "2025-11-26",
+    "featured5": [
+      {
+        "name": "Ju Fufu",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-11-05-dazzling-choir",
+    "type": "wengine",
+    "version": "2.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4322926/cfa01e30e2e5a842069ca6fb4a1c77eb.png/show"
+      }
+    ],
+    "startDate": "2025-11-05",
+    "endDate": "2025-11-25",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-11-05-dazzling-melody",
+    "type": "wengine",
+    "version": "2.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Melody",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/506650",
+        "image": "https://img.game8.co/4322925/88566399ad75997913c192a02c9e48b1.png/show"
+      }
+    ],
+    "startDate": "2025-11-05",
+    "endDate": "2025-11-25",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-10-15-lucia-banner",
+    "type": "agent",
+    "version": "2.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Lucia Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/553776",
+        "image": "https://img.game8.co/4302464/01fc43f73f0a7fe96d6a1575c77649a2.png/show"
+      }
+    ],
+    "startDate": "2025-10-15",
+    "endDate": "2025-11-05",
+    "featured5": [
+      {
+        "name": "Lucia",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-10-15-vivian-rerun-banner",
+    "type": "agent",
+    "version": "2.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vivian Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/513708",
+        "image": "https://img.game8.co/4302465/71027e0a66d9c9bbbc1ee8887dc531fc.png/show"
+      }
+    ],
+    "startDate": "2025-10-15",
+    "endDate": "2025-11-05",
+    "featured5": [
+      {
+        "name": "Vivian",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-10-15-dissonant-sonata",
+    "type": "wengine",
+    "version": "2.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4302467/48213520b07fb5720bfd9e4a72f945b2.png/show"
+      }
+    ],
+    "startDate": "2025-10-15",
+    "endDate": "2025-11-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-10-15-vibrant-resonance",
+    "type": "wengine",
+    "version": "2.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vibrant Resonance",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4302466/1144ad95b19a1498b8c892480f64b2b0.png/show"
+      }
+    ],
+    "startDate": "2025-10-15",
+    "endDate": "2025-11-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-09-24-orphie-banner",
+    "type": "agent",
+    "version": "2.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Orphie Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/545800",
+        "image": "https://img.game8.co/4284591/91c67f75754a27fdc545eb6359d7c769.png/show"
+      }
+    ],
+    "startDate": "2025-09-24",
+    "endDate": "2025-10-14",
+    "featured5": [
+      {
+        "name": "Orphie",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-09-24-evelyn-rerun-banner",
+    "type": "agent",
+    "version": "2.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Evelyn Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/493437",
+        "image": "https://img.game8.co/4284588/cc00cc62d78329f67cd0f2b5d07367ec.png/show"
+      }
+    ],
+    "startDate": "2025-09-24",
+    "endDate": "2025-10-14",
+    "featured5": [
+      {
+        "name": "Evelyn",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-09-24-dazzling-choir",
+    "type": "wengine",
+    "version": "2.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4284590/64e3681ef04e1455396e2af93d6c5353.png/show"
+      }
+    ],
+    "startDate": "2025-09-24",
+    "endDate": "2025-10-14",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-09-24-dazzling-melody",
+    "type": "wengine",
+    "version": "2.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Melody",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/506650",
+        "image": "https://img.game8.co/4284589/0b3a8016aa6076c517032d72983fb9f0.png/show"
+      }
+    ],
+    "startDate": "2025-09-24",
+    "endDate": "2025-10-14",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-09-04-seed-banner",
+    "type": "agent",
+    "version": "2.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Seed Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/545799",
+        "image": "https://img.game8.co/4265188/dbc26993ce8691bcbbb633eadfc81f45.png/show"
+      }
+    ],
+    "startDate": "2025-09-04",
+    "endDate": "2025-09-24",
+    "featured5": [
+      {
+        "name": "Seed",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-09-04-trigger-rerun-banner",
+    "type": "agent",
+    "version": "2.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Trigger Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/503397",
+        "image": "https://img.game8.co/4265186/deeec7fe6f2a315f3c7ddf8e957c3d16.png/show"
+      }
+    ],
+    "startDate": "2025-09-04",
+    "endDate": "2025-09-24",
+    "featured5": [
+      {
+        "name": "Trigger",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-09-04-dissonant-sonata",
+    "type": "wengine",
+    "version": "2.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4265187/83a9a2d1a7a0168f1b0a456d63dc2da1.png/show"
+      }
+    ],
+    "startDate": "2025-09-04",
+    "endDate": "2025-09-24",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-09-04-vibrant-resonance",
+    "type": "wengine",
+    "version": "2.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vibrant Resonance",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4265185/4137027563cb59db36c5c0362c9dfa92.png/show"
+      }
+    ],
+    "startDate": "2025-09-04",
+    "endDate": "2025-09-24",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-08-06-alice-banner",
+    "type": "agent",
+    "version": "2.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Alice Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/533771",
+        "image": "https://img.game8.co/4241062/8def3174f241ba2ec5489a552209f7f0.png/show"
+      }
+    ],
+    "startDate": "2025-08-06",
+    "endDate": "2025-09-03",
+    "featured5": [
+      {
+        "name": "Alice",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-08-06-yanagi-rerun-banner",
+    "type": "agent",
+    "version": "2.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Yanagi Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/481307",
+        "image": "https://img.game8.co/4241069/fc9d0aece07421bf78daa73bf2fb0289.png/show"
+      }
+    ],
+    "startDate": "2025-08-06",
+    "endDate": "2025-09-03",
+    "featured5": [
+      {
+        "name": "Yanagi",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-08-06-dazzling-choir",
+    "type": "wengine",
+    "version": "2.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4241063/dbd2025ee54b6793b5aa8254371926f3.png/show"
+      }
+    ],
+    "startDate": "2025-08-06",
+    "endDate": "2025-09-03",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-08-06-dazzling-melody",
+    "type": "wengine",
+    "version": "2.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Melody",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/506650",
+        "image": "https://img.game8.co/4241087/c01e1da1673b98482a6a70c3a6cdd665.png/show"
+      }
+    ],
+    "startDate": "2025-08-06",
+    "endDate": "2025-09-03",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-07-16-yuzuha-banner",
+    "type": "agent",
+    "version": "2.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Yuzuha Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/533768",
+        "image": "https://img.game8.co/4217964/323a65ff3d0fcbb5cc8d832719b85556.png/show"
+      }
+    ],
+    "startDate": "2025-07-16",
+    "endDate": "2025-08-06",
+    "featured5": [
+      {
+        "name": "Yuzuha",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-07-16-miyabi-rerun-banner",
+    "type": "agent",
+    "version": "2.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Miyabi Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488244",
+        "image": "https://img.game8.co/4069836/0f5fa9e31622a90c1cbab4d4675fcb6b.png/show"
+      }
+    ],
+    "startDate": "2025-07-16",
+    "endDate": "2025-08-06",
+    "featured5": [
+      {
+        "name": "Miyabi",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-07-16-dissonant-sonata",
+    "type": "wengine",
+    "version": "2.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4217965/ad2d9912c869557e18cd5daa6887ddf6.png/show"
+      }
+    ],
+    "startDate": "2025-07-16",
+    "endDate": "2025-08-06",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-07-16-vibrant-resonance",
+    "type": "wengine",
+    "version": "2.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vibrant Resonance",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4217967/b034faa4430e4ee03cd5a806b578e496.png/show"
+      }
+    ],
+    "startDate": "2025-07-16",
+    "endDate": "2025-08-06",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-06-25-ju-fufu-banner",
+    "type": "agent",
+    "version": "2.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Ju Fufu Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/523308",
+        "image": "https://img.game8.co/4201915/6fc83fa976671d08082035a48da22100.png/show"
+      }
+    ],
+    "startDate": "2025-06-25",
+    "endDate": "2025-07-15",
+    "featured5": [
+      {
+        "name": "Ju Fufu",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-06-25-caesar-rerun-banner",
+    "type": "agent",
+    "version": "2.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Caesar Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/473493",
+        "image": "https://img.game8.co/4201914/95a228dd4edbc866251151a6ed1b145e.png/show"
+      }
+    ],
+    "startDate": "2025-06-25",
+    "endDate": "2025-07-15",
+    "featured5": [
+      {
+        "name": "Caesar",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-06-25-dazzling-choir",
+    "type": "wengine",
+    "version": "2.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4201912/cc2196b32983ecbece50e19eb10a98b7.png/show"
+      }
+    ],
+    "startDate": "2025-06-25",
+    "endDate": "2025-07-15",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-06-25-dazzling-melody",
+    "type": "wengine",
+    "version": "2.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Melody",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/506650",
+        "image": "https://img.game8.co/4201913/ba7abf6775996edf0b8c678423bebfd9.png/show"
+      }
+    ],
+    "startDate": "2025-06-25",
+    "endDate": "2025-07-15",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-06-06-yixuan-banner",
+    "type": "agent",
+    "version": "2.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Yixuan Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/523305",
+        "image": "https://img.game8.co/4185559/a240f31325939630117de2b7bb183699.png/show"
+      }
+    ],
+    "startDate": "2025-06-06",
+    "endDate": "2025-06-25",
+    "featured5": [
+      {
+        "name": "Yixuan",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-06-06-astra-yao-rerun-banner",
+    "type": "agent",
+    "version": "2.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Astra Yao Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/493436",
+        "image": "https://img.game8.co/4185558/ffbdea508841b59fdbd0997a1499a911.png/show"
+      }
+    ],
+    "startDate": "2025-06-06",
+    "endDate": "2025-06-25",
+    "featured5": [
+      {
+        "name": "Astra Yao",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-06-06-dissonant-sonata",
+    "type": "wengine",
+    "version": "2.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4185560/8d0b750b0057afacdb38807a1a4fa02a.png/show"
+      }
+    ],
+    "startDate": "2025-06-06",
+    "endDate": "2025-06-25",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-06-06-vibrant-resonance",
+    "type": "wengine",
+    "version": "2.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vibrant Resonance",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4185561/9be68b6c16c561a5e53a6850bc717950.png/show"
+      }
+    ],
+    "startDate": "2025-06-06",
+    "endDate": "2025-06-25",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-05-14-hugo-banner",
+    "type": "agent",
+    "version": "1.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Hugo Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/513710",
+        "image": "https://img.game8.co/4169281/e25c71e0ceab76a2b675c48579b8a8fa.png/show"
+      }
+    ],
+    "startDate": "2025-05-14",
+    "endDate": "2025-06-05",
+    "featured5": [
+      {
+        "name": "Hugo",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-05-14-lighter-rerun-banner",
+    "type": "agent",
+    "version": "1.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Lighter Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/481889",
+        "image": "https://img.game8.co/4050183/c288c9810305fd4d340370d99f608e2e.png/show"
+      }
+    ],
+    "startDate": "2025-05-14",
+    "endDate": "2025-06-05",
+    "featured5": [
+      {
+        "name": "Lighter",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-05-14-dazzling-choir",
+    "type": "wengine",
+    "version": "1.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4169239/afedd35fdacccb2e350725441f6e9374.png/show"
+      }
+    ],
+    "startDate": "2025-05-14",
+    "endDate": "2025-06-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-05-14-dazzling-melody",
+    "type": "wengine",
+    "version": "1.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Melody",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/506650",
+        "image": "https://img.game8.co/4154736/7965f0b0215ba87bf81cde0cbaa14db6.png/show"
+      }
+    ],
+    "startDate": "2025-05-14",
+    "endDate": "2025-06-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-04-23-vivian-banner",
+    "type": "agent",
+    "version": "1.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vivian Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/513708",
+        "image": "https://img.game8.co/4154548/989078294a616e5fd2f3add1461cd105.png/show"
+      }
+    ],
+    "startDate": "2025-04-23",
+    "endDate": "2025-05-14",
+    "featured5": [
+      {
+        "name": "Vivian",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-04-23-jane-doe-rerun-banner",
+    "type": "agent",
+    "version": "1.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Jane Doe Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/463659",
+        "image": "https://img.game8.co/4154679/987b235bafdd06efe927f5d42801deb6.png/show"
+      }
+    ],
+    "startDate": "2025-04-23",
+    "endDate": "2025-05-14",
+    "featured5": [
+      {
+        "name": "Jane Doe",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-04-23-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4154554/27cd6e530a30b479938710d2ef45603c.png/show"
+      }
+    ],
+    "startDate": "2025-04-23",
+    "endDate": "2025-05-14",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-04-23-vibrant-resonance",
+    "type": "wengine",
+    "version": "1.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vibrant Resonance",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4154736/7965f0b0215ba87bf81cde0cbaa14db6.png/show"
+      }
+    ],
+    "startDate": "2025-04-23",
+    "endDate": "2025-05-14",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-04-02-trigger-banner",
+    "type": "agent",
+    "version": "1.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Trigger Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/503397",
+        "image": "https://img.game8.co/4142867/bfb09b3bb2354b42f35e4efc8faf52e8.png/show"
+      }
+    ],
+    "startDate": "2025-04-02",
+    "endDate": "2025-04-22",
+    "featured5": [
+      {
+        "name": "Trigger",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-04-02-zhu-yuan-rerun-banner",
+    "type": "agent",
+    "version": "1.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Zhu Yuan Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/457194",
+        "image": "https://img.game8.co/4142870/a766c7104ea1191404be4f9e44a082da.png/show"
+      }
+    ],
+    "startDate": "2025-04-02",
+    "endDate": "2025-04-22",
+    "featured5": [
+      {
+        "name": "Zhu Yuan",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-04-02-dazzling-choir",
+    "type": "wengine",
+    "version": "1.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4142869/c3e6ed0d1639c2311164f18bfebf86d7.png/show"
+      }
+    ],
+    "startDate": "2025-04-02",
+    "endDate": "2025-04-22",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-04-02-dazzling-melody",
+    "type": "wengine",
+    "version": "1.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Melody",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4142868/327da887d586167106247fdd8e4daf1c.png/show"
+      }
+    ],
+    "startDate": "2025-04-02",
+    "endDate": "2025-04-22",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-03-12-soldier-0-anby-banner",
+    "type": "agent",
+    "version": "1.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Soldier 0 - Anby Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/503389",
+        "image": "https://img.game8.co/4129188/aa46ee8394a14ea4872b8d89d8aef6c1.png/show"
+      }
+    ],
+    "startDate": "2025-03-12",
+    "endDate": "2025-04-02",
+    "featured5": [
+      {
+        "name": "Soldier 0 - Anby",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-03-12-burnice-rerun-banner",
+    "type": "agent",
+    "version": "1.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Burnice Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/473490",
+        "image": "https://img.game8.co/4143691/07282dca945f6c434b77109b28cbd4fa.png/show"
+      }
+    ],
+    "startDate": "2025-03-12",
+    "endDate": "2025-04-02",
+    "featured5": [
+      {
+        "name": "Burnice",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-03-12-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4129189/97d47c15475ce61e84eb768aed388e5a.png/show"
+      }
+    ],
+    "startDate": "2025-03-12",
+    "endDate": "2025-04-02",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-03-12-vibrant-resonance",
+    "type": "wengine",
+    "version": "1.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Vibrant Resonance",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504560",
+        "image": "https://img.game8.co/4129140/9453d5ae7999671a0b0e53593f4f85e7.png/show"
+      }
+    ],
+    "startDate": "2025-03-12",
+    "endDate": "2025-04-02",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-02-12-evelyn-banner",
+    "type": "agent",
+    "version": "1.5",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Evelyn Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/493437",
+        "image": "https://img.game8.co/4105785/6b489c0e33c5732a7f04a7303d8d3178.png/show"
+      }
+    ],
+    "startDate": "2025-02-12",
+    "endDate": "2025-03-11",
+    "featured5": [
+      {
+        "name": "Evelyn",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-02-12-qingyi-rerun-banner",
+    "type": "agent",
+    "version": "1.5",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Qingyi Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/463658",
+        "image": "https://img.game8.co/4105786/0e2d2098336fe565950409c7910b5acd.png/show"
+      }
+    ],
+    "startDate": "2025-02-12",
+    "endDate": "2025-03-11",
+    "featured5": [
+      {
+        "name": "Qingyi",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-02-12-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.5",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4105783/9be8e2b114200d991f717dcd8ef2eb0f.png/show"
+      }
+    ],
+    "startDate": "2025-02-12",
+    "endDate": "2025-03-11",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-02-12-dazzling-choir",
+    "type": "wengine",
+    "version": "1.5",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4105784/e96a2bd6ebc5876228534d150b63e2b0.png/show"
+      }
+    ],
+    "startDate": "2025-02-12",
+    "endDate": "2025-03-11",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-01-22-astra-yao-banner",
+    "type": "agent",
+    "version": "1.5",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Astra Yao Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/493436",
+        "image": "https://img.game8.co/4086061/7013341b023d0799003a0c1cd2ca7a66.png/show"
+      }
+    ],
+    "startDate": "2025-01-22",
+    "endDate": "2025-02-12",
+    "featured5": [
+      {
+        "name": "Astra Yao",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2025-01-22-ellen-rerun-banner",
+    "type": "agent",
+    "version": "1.5",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Ellen Rerun Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/451471",
+        "image": "https://img.game8.co/4086062/77b717634a3b35ab660755aca04f0d1c.png/show"
+      }
+    ],
+    "startDate": "2025-01-22",
+    "endDate": "2025-02-12",
+    "featured5": [
+      {
+        "name": "Ellen",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-01-22-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.5",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4086059/8afae0dee47fdcc3ac0c046e12535449.png/show"
+      }
+    ],
+    "startDate": "2025-01-22",
+    "endDate": "2025-02-12",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2025-01-22-dazzling-choir",
+    "type": "wengine",
+    "version": "1.5",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4086060/d26357c5d49eed5f5ac39f6b746755db.png/show"
+      }
+    ],
+    "startDate": "2025-01-22",
+    "endDate": "2025-02-12",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-12-18-miyabi-banner",
+    "type": "agent",
+    "version": "1.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Miyabi Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488244",
+        "image": "https://img.game8.co/4069836/0f5fa9e31622a90c1cbab4d4675fcb6b.png/show"
+      }
+    ],
+    "startDate": "2024-12-18",
+    "endDate": "2025-01-21",
+    "featured5": [
+      {
+        "name": "Miyabi",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-12-18-harumasa-banner",
+    "type": "agent",
+    "version": "1.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Harumasa Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488246",
+        "image": "https://img.game8.co/4069835/e24997319993c0da6d78e64ad3466456.png/show"
+      }
+    ],
+    "startDate": "2024-12-18",
+    "endDate": "2025-01-21",
+    "featured5": [
+      {
+        "name": "Harumasa",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-12-18-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4069834/817bf0635360e1cd032949d9e174f563.png/show"
+      }
+    ],
+    "startDate": "2024-12-18",
+    "endDate": "2025-01-21",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-12-18-dazzling-choir",
+    "type": "wengine",
+    "version": "1.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Dazzling Choir",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/488285",
+        "image": "https://img.game8.co/4069837/edadb1f131eb9866c4756677a396de18.png/show"
+      }
+    ],
+    "startDate": "2024-12-18",
+    "endDate": "2025-01-21",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-11-27-lighter-banner",
+    "type": "agent",
+    "version": "1.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Lighter Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/473490",
+        "image": "https://img.game8.co/4050183/c288c9810305fd4d340370d99f608e2e.png/show"
+      }
+    ],
+    "startDate": "2024-11-27",
+    "endDate": "2024-12-17",
+    "featured5": [
+      {
+        "name": "Lighter",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-11-06-yanagi-banner",
+    "type": "agent",
+    "version": "1.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Yanagi Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/481307",
+        "image": "https://img.game8.co/4034100/6e004e65f8fba059719adc315a9965b1.png/show"
+      }
+    ],
+    "startDate": "2024-11-06",
+    "endDate": "2024-11-27",
+    "featured5": [
+      {
+        "name": "Yanagi",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-11-06-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4034099/f651502c15481e90b64418f4140c7284.png/show"
+      }
+    ],
+    "startDate": "2024-11-06",
+    "endDate": "2024-11-27",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-10-16-burnice-banner",
+    "type": "agent",
+    "version": "1.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Burnice Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/473490",
+        "image": "https://img.game8.co/4017229/1eaa44bb9b5fea90bec9e3232fdd71d2.png/show"
+      }
+    ],
+    "startDate": "2024-10-16",
+    "endDate": "2024-11-05",
+    "featured5": [
+      {
+        "name": "Burnice",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-10-16-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4050182/4c6f2980d1aea46e824875adcbe9ff15.png/show"
+      }
+    ],
+    "startDate": "2024-10-16",
+    "endDate": "2024-11-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-10-16-dissonant-sonata-2",
+    "type": "wengine",
+    "version": "1.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/4017558/6d3b5b4d122f8d32aeb68a76b78b57f6.png/show"
+      }
+    ],
+    "startDate": "2024-10-16",
+    "endDate": "2024-11-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-09-25-caesar-banner",
+    "type": "agent",
+    "version": "1.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Caesar Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/473493",
+        "image": "https://img.game8.co/3995800/962f342035ed23f5fd2e3cd606732949.png/show"
+      }
+    ],
+    "startDate": "2024-09-25",
+    "endDate": "2024-10-16",
+    "featured5": [
+      {
+        "name": "Caesar",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-09-25-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/3995801/91cf5891f76b3586f2c40865c503be90.png/show"
+      }
+    ],
+    "startDate": "2024-09-25",
+    "endDate": "2024-10-16",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-09-04-jane-doe-banner",
+    "type": "agent",
+    "version": "1.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Jane Doe Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/463659",
+        "image": "https://img.game8.co/3978478/e91238cbb0dd69057541c3b9c70db6a3.png/show"
+      }
+    ],
+    "startDate": "2024-09-04",
+    "endDate": "2024-09-25",
+    "featured5": [
+      {
+        "name": "Jane Doe",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-09-04-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/3978477/28ea582b5ecfe9850609e763f6251ecc.png/show"
+      }
+    ],
+    "startDate": "2024-09-04",
+    "endDate": "2024-09-25",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-08-14-qingyi-banner",
+    "type": "agent",
+    "version": "1.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Qingyi Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/463658",
+        "image": "https://img.game8.co/3952648/d9a4641f5493df8a3124c56e2b13cf8b.png/show"
+      }
+    ],
+    "startDate": "2024-08-14",
+    "endDate": "2024-09-04",
+    "featured5": [
+      {
+        "name": "Qingyi",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-08-14-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/3952647/40941c04a98cf3210f2202a0ac4d529a.png/show"
+      }
+    ],
+    "startDate": "2024-08-14",
+    "endDate": "2024-09-04",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-07-24-zhu-yuan-banner",
+    "type": "agent",
+    "version": "1.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Zhu Yuan Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/457194",
+        "image": "https://img.game8.co/3919542/26f29e98b6905c2fc65bc54a0dcc6292.png/show"
+      }
+    ],
+    "startDate": "2024-07-24",
+    "endDate": "2024-08-13",
+    "featured5": [
+      {
+        "name": "Zhu Yuan",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-07-24-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/3938793/2b7ef15d91e6e599ab6145607e47fd1a.png/show"
+      }
+    ],
+    "startDate": "2024-07-24",
+    "endDate": "2024-08-13",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "agent-2024-07-04-ellen-banner",
+    "type": "agent",
+    "version": "1.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Ellen Banner",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/451471",
+        "image": "https://img.game8.co/3919541/acc6cfdc308a19b579b2edea1a1a8c4d.png/show"
+      }
+    ],
+    "startDate": "2024-07-04",
+    "endDate": "2024-07-24",
+    "featured5": [
+      {
+        "name": "Ellen",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "wengine-2024-07-04-dissonant-sonata",
+    "type": "wengine",
+    "version": "1.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dissonant Sonata",
+        "url": "https://game8.co/games/Zenless-Zone-Zero/archives/455456",
+        "image": "https://img.game8.co/3919518/d63ca6f36d66cd26f9c288b6e3d1721e.png/show"
+      }
+    ],
+    "startDate": "2024-07-04",
+    "endDate": "2024-07-24",
+    "featured5": [],
+    "featured4": []
+  }
+]

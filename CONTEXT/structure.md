@@ -24,11 +24,19 @@ fgo-banner-tracker/
 │   │   ├── loading.tsx       # Route-level loading skeleton
 │   │   ├── globals.css       # Global styles + light:/dark: custom variants
 │   │   ├── [game]/
-│   │   │   └── page.tsx      # Placeholder routes (dynamicParams=false, 404s unknown)
+│   │   │   └── page.tsx      # Dynamic route: empty generateStaticParams (all slugs own pages; unknown 404)
 │   │   ├── genshin/
 │   │   │   └── page.tsx      # Genshin tracker (static, metadata + GenshinTracker)
 │   │   ├── hsr/
 │   │   │   └── page.tsx      # HSR tracker (static, metadata + HsrTracker)
+│   │   ├── zzz/
+│   │   │   └── page.tsx      # ZZZ tracker (static, metadata + ZzzTracker)
+│   │   ├── wuwa/
+│   │   │   └── page.tsx      # WuWa tracker (static, metadata + WuwaTracker)
+│   │   ├── hi3/
+│   │   │   └── page.tsx      # HI3 tracker (static, metadata + Hi3Tracker)
+│   │   ├── shadowverse/
+│   │   │   └── page.tsx      # Shadowverse WB tracker (static, metadata + SvwbTracker)
 │   │   ├── servants/
 │   │   │   └── page.tsx      # Servants summary page
 │   │   └── grands/
@@ -46,22 +54,37 @@ fgo-banner-tracker/
 │   │   ├── FilterBar.tsx     # Filter bar component
 │   │   ├── GenshinBannerCard.tsx  # Genshin banner card
 │   │   ├── GenshinBannerDetail.tsx # Genshin detail modal
-│   │   ├── GenshinRateUpChip.tsx # Genshin rate-up chip (link mode)
+│   │   ├── GenshinRateUpChip.tsx # Genshin rate-up chip (link mode; aliased as RateUpChip everywhere)
 │   │   ├── GenshinTracker.tsx # Genshin page (filters + grid + modal)
-│   │   ├── GenshinTypeFilter.tsx # Character/Weapon/Chronicled pills
+│   │   ├── GenshinTypeFilter.tsx # Character/Weapon/Chronicle pills
+│   │   ├── Hi3BannerCard.tsx  # HI3 version card (Battlesuit badge, no phase)
+│   │   ├── Hi3BannerDetail.tsx # HI3 detail modal (Debut Battlesuits, Ongoing end, Fandom source)
+│   │   ├── Hi3Tracker.tsx     # HI3 page (search + year, no type filter)
 │   │   ├── HsrBannerCard.tsx   # HSR banner card
 │   │   ├── HsrBannerDetail.tsx # HSR detail modal
 │   │   ├── HsrTracker.tsx     # HSR page (filters + grid + modal)
 │   │   ├── HsrTypeFilter.tsx  # Character/Light Cone pills
-│   │   ├── ImageWithFallback.tsx # Image with error fallback
+│   │   ├── ImageWithFallback.tsx # Image with error fallback; empty src → fallback UI, wikia → unoptimized
 │   │   ├── ImportExport.tsx  # JSON import/export
 │   │   ├── RateUpIndicator.tsx # Rate-up type badges
 │   │   ├── SearchBar.tsx     # Search bar component (optional placeholder)
 │   │   ├── ServantChip.tsx   # Servant status chip
 │   │   ├── Skeleton.tsx      # Loading skeletons
 │   │   ├── SortBar.tsx       # Sort dropdown
+│   │   ├── SvwbBannerCard.tsx # Shadowverse set/collab card (Permanent range, no version overlay)
+│   │   ├── SvwbBannerDetail.tsx # Shadowverse detail (Exchange/Collab Leaders, Official Site source)
+│   │   ├── SvwbTracker.tsx    # Shadowverse page (filters + grid + modal)
+│   │   ├── SvwbTypeFilter.tsx # Card Set/Collab pills
 │   │   ├── ThemeToggle.tsx   # Dark/light mode toggle
-│   │   └── YearFilter.tsx    # Year filter dropdown
+│   │   ├── WuwaBannerCard.tsx # WuWa resonator/selector card (nullable dates)
+│   │   ├── WuwaBannerDetail.tsx # WuWa detail (Featured Weapons section, Not listed dates)
+│   │   ├── WuwaTracker.tsx    # WuWa page (filters + grid + modal)
+│   │   ├── WuwaTypeFilter.tsx # Resonator/Selector pills
+│   │   ├── YearFilter.tsx    # Year filter dropdown
+│   │   ├── ZzzBannerCard.tsx  # ZZZ agent/W-Engine card
+│   │   ├── ZzzBannerDetail.tsx # ZZZ detail (type-aware no-featured note)
+│   │   ├── ZzzTracker.tsx     # ZZZ page (filters + grid + modal)
+│   │   └── ZzzTypeFilter.tsx  # Agent/W-Engine pills
 │   ├── contexts/
 │   │   ├── ServantContext.tsx # Servant status context
 │   │   └── ThemeContext.tsx   # Theme context
@@ -69,20 +92,32 @@ fgo-banner-tracker/
 │   │   ├── banners.json      # Banner data (742 banners)
 │   │   ├── genshin-banners.json # Genshin banner data (216 banners, Game8)
 │   │   ├── hsr-banners.json    # HSR banner data (131 banners, Game8)
+│   │   ├── zzz-banners.json    # ZZZ banner data (134, Game8)
+│   │   ├── wuwa-banners.json   # WuWa banner data (46, Game8)
+│   │   ├── hi3-banners.json    # HI3 version banner data (73, fandom)
+│   │   ├── shadowverse-banners.json # Shadowverse set/collab data (10, official site)
 │   │   └── servants.json     # Servant data (487 servants)
 │   ├── hooks/
 │   │   ├── useBannerFilter.ts # Banner filtering hook
 │   │   └── useKeyboardNavigation.ts # Keyboard navigation hook
 │   ├── lib/
-│   │   ├── apps.ts           # Multi-game app registry
+│   │   ├── apps.ts           # Multi-game app registry (7 apps)
 │   │   ├── data.ts           # Data access utilities
 │   │   ├── genshin-data.ts   # Genshin data access + date helpers
 │   │   ├── hsr-data.ts       # HSR data access + date helpers (nullable end)
+│   │   ├── zzz-data.ts       # ZZZ data access (TBA end → inactive)
+│   │   ├── wuwa-data.ts      # WuWa data access (nullable dates, weapons)
+│   │   ├── hi3-data.ts       # HI3 data access (null end → ongoing)
+│   │   ├── shadowverse-data.ts # SV data access (latest-set active rule)
 │   │   └── storage.ts        # localStorage utilities
 │   ├── types/
 │   │   ├── banner.ts         # TypeScript types
 │   │   ├── genshin.ts        # Genshin TypeScript types
-│   │   └── hsr.ts            # HSR TypeScript types (nullable version/end)
+│   │   ├── hsr.ts            # HSR TypeScript types (nullable version/end)
+│   │   ├── zzz.ts            # ZZZ types (agent/wengine)
+│   │   ├── wuwa.ts           # WuWa types (nullable dates, featuredWeapons)
+│   │   ├── hi3.ts            # HI3 types (nullable endDate)
+│   │   └── shadowverse.ts    # SV types (set/collab)
 │   └── __tests__/
 │       ├── setup.ts          # Test setup (jest-dom + RTL cleanup)
 │       ├── data.test.ts      # Data utility tests
@@ -91,13 +126,21 @@ fgo-banner-tracker/
 │       ├── ThemeContext.test.tsx # Theme toggle tests
 │       ├── AboutHelp.test.tsx # Help modal tests (Escape close)
 │       ├── AppSwitcher.test.tsx # App switcher tests
-│       ├── genshinData.test.ts # Genshin data integrity tests
-│       ├── hsrData.test.ts   # HSR data integrity tests
+│       ├── genshinData.test.ts # Genshin data integrity tests (21)
+│       ├── hsrData.test.ts   # HSR data integrity tests (23)
+│       ├── zzzData.test.ts   # ZZZ data integrity tests (21)
+│       ├── wuwaData.test.ts  # WuWa data integrity tests (20)
+│       ├── hi3Data.test.ts   # HI3 data integrity tests (23)
+│       ├── shadowverseData.test.ts # SV data integrity tests (17)
 │       └── useBannerFilter.test.tsx # Filter hook + URL state tests
 ├── scripts/
 │   ├── scrape-all.mjs        # Banner scraper (cheerio)
 │   ├── scrape-genshin.mjs    # Genshin banner scraper (Game8, cheerio)
 │   ├── scrape-hsr.mjs        # HSR banner scraper (Game8, cheerio)
+│   ├── scrape-zzz.mjs        # ZZZ banner scraper (Game8 two-column table)
+│   ├── scrape-wuwa.mjs       # WuWa banner scraper (Game8 detail-text zones)
+│   ├── scrape-hi3.mjs        # HI3 version scraper (fandom MediaWiki API)
+│   ├── scrape-shadowverse.mjs # Shadowverse set/collab scraper (official site)
 │   ├── scrape-servants.mjs   # Servant scraper (sitemap + pages)
 │   └── extract-banners.mjs   # Banner list extraction (dedupes servants)
 ├── public/                   # Static assets
@@ -112,6 +155,10 @@ fgo-banner-tracker/
 - `src/data/banners.json` - 742 banners scraped from GamePress (2017-2026)
 - `src/data/genshin-banners.json` - 216 Genshin banners scraped from Game8 (1.0-7.0)
 - `src/data/hsr-banners.json` - 131 HSR banners scraped from Game8 (1.0-4.7)
+- `src/data/zzz-banners.json` - 134 ZZZ banners scraped from Game8 (1.0-3.2)
+- `src/data/wuwa-banners.json` - 46 WuWa banners scraped from Game8 (1.0-3.7, nullable selector dates)
+- `src/data/hi3-banners.json` - 73 HI3 GLB versions from fandom (v1.8-v9.0, null end = ongoing)
+- `src/data/shadowverse-banners.json` - 10 Shadowverse WB entries (9 permanent sets + Frieren collab)
 - `src/data/servants.json` - 487 servants with thumbnail icons
 - `src/lib/apps.ts` - Multi-game app registry (7 apps, slugs, paths)
 - `src/contexts/ServantContext.tsx` - Global servant status management
@@ -119,7 +166,7 @@ fgo-banner-tracker/
 - `src/lib/storage.ts` - localStorage persistence
 - `src/lib/data.ts` - Data access (banners, servants, helpers)
 - `src/components/BannerCard.tsx` - Main banner display component
-- `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback
+- `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback; empty src → fallback UI (no request), `static.wikia.nocookie.net` → `unoptimized` (Fandom 403s optimizer fetches)
 - `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore)
 - `src/app/servants/page.tsx` - Servants summary page
 - `src/app/grands/page.tsx` - Grand servant lineup page

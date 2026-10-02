@@ -1,48 +1,59 @@
-# FGO JP Banner Tracker
+# Multi-Game Gacha Banner Tracker
 
 ## Vision
-A web application that helps Fate/Grand Order JP server players track their servant pulls and plan their quartz spending across summoning banners.
+A web application that helps gacha game players track their pulls and plan their spending across summoning banners — FGO JP, Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Wuthering Waves, Honkai Impact 3rd, and Shadowverse: Worlds Beyond.
 
 ## Target Users
 - FGO JP server players
-- Global players using JP as reference for future planning
-- Players who want to track which servants they own or plan to pull
+- Genshin Impact / Honkai: Star Rail / Zenless Zone Zero / Wuthering Waves / Honkai Impact 3rd players planning pity and pulls
+- Shadowverse: Worlds Beyond players tracking set/collab leader exchanges
+- Global players using JP/earlier regions as reference for future planning
+- Players who want to track owned/planning status across all banners
 
 ## Problem Solved
-- Currently, players manually track which banners contain servants they want
-- No centralized tool to see owned/planning status across all banners
-- Hard to plan quartz spending without visual indicators
+- Currently, players manually track which banners contain units they want
+- No centralized tool to see owned/planning status across all banners across multiple games
+- Hard to plan currency spending without visual indicators
 
 ## Tech Stack
 - **Frontend**: Next.js 16.3.3 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **State Management**: localStorage + React Context
-- **Testing**: Vitest + Testing Library
+- **State Management**: localStorage + React Context (hydration-safe via useSyncExternalStore)
+- **Testing**: Vitest + Testing Library (185 tests)
 - **Hosting**: Vercel (free tier)
 
 ## Key Features
+### Built
 1. Browse all 742 FGO JP summoning banners (2017-2026)
-2. Toggle servant status (owned/planning/none)
-3. Filter banners by servant status, year, search
-4. View banner details with rate-up information
-5. Servant collection page with 487 servants + thumbnails
-6. Responsive design for mobile and desktop
-7. Dark/light mode
-8. Import/export collection data
-9. Keyboard navigation
-10. Image fallback for broken thumbnails
+2. Toggle unit status (owned/planning/none), import/export collection
+3. Filter banners by status, year, search, sort, advanced filters
+4. Servant collection page with 487 servants + thumbnails
+5. Grand servant lineup (9 slots, localStorage persistence)
+6. Dark/light mode, keyboard navigation, image fallback, SEO meta
+7. Multi-game app switcher; all 7 games have static tracker routes (unknown slugs 404)
+8. Genshin Impact tracker at `/genshin` (216 banners: character/weapon/chronicled)
+9. Honkai: Star Rail tracker at `/hsr` (131 banners: character/light cone, TBA collab ends)
+10. Bucket 10 trackers: `/zzz` (134 agent/W-Engine), `/wuwa` (46 resonator/selector + weapons), `/hi3` (73 GLB versions, ongoing current version), `/shadowverse` (9 permanent sets + collab)
+
+### Roadmap (Buckets 11-13)
+11. Events tab: unified events feed (now/upcoming/past) across games
+12. Cross-game Units & Faves: per-game roster pages and favorites/lineup analogs of `/servants` and `/grands`
+13. Class/element button filters on the servants/units tab
 
 ## Data Sources
-- Banner data: Scraped from GamePress FGO Wiki (https://grandorder.gamepress.gg/summon-banner-list)
-- Servant data: Scraped from GamePress sitemap + individual pages (https://grandorder.gamepress.gg/c/servants)
-- Images: Hosted on static.mana.wiki with fallback placeholders
+- FGO banner data: GamePress FGO Wiki (https://grandorder.gamepress.gg/summon-banner-list)
+- FGO servant data: GamePress sitemap + individual pages
+- Genshin / HSR / ZZZ / WuWa banner data: Game8 archives (cheerio scrapers, static JSON)
+- HI3 banner data: Honkai Impact 3rd fandom MediaWiki API (`Category:Versions` + version pages)
+- Shadowverse WB data: official cards site (set schedules + researched leader maps)
+- Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3, served `unoptimized`), none for Shadowverse (fallback placeholders)
 
 ## Testing
-- 39 unit tests covering data, storage, context, and hooks
-- Run with `npm run test`
+- 185 unit tests covering data integrity, helpers, storage, context, hooks, components
+- Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion
-- Support for multiple gacha games (Genshin, HSR, HI3, ZZZ, WuWa)
 - Cloud sync with user accounts
 - E2E browser tests (Playwright/Cypress)
+- Push notifications for upcoming banners/events

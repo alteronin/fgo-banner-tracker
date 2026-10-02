@@ -1,0 +1,337 @@
+[
+  {
+    "id": "set-revenants-of-azvaldt",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Revenants of Azvaldt",
+        "url": "https://shadowverse-wb.com/en/cards/pack/revenants-of-azvaldt/",
+        "image": null
+      }
+    ],
+    "startDate": "2026-08-27",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Barbaros",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Magachiyo",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "set-chronicle-of-destiny",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Chronicle of Destiny",
+        "url": "https://shadowverse-wb.com/en/cards/pack/chronicle-of-destiny/",
+        "image": null
+      }
+    ],
+    "startDate": "2026-06-29",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Lumiore",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Zoe",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "set-anathemas-gambit",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Anathema's Gambit",
+        "url": "https://shadowverse-wb.com/en/cards/pack/anathemas-gambit/",
+        "image": null
+      }
+    ],
+    "startDate": "2026-04-28",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Gildaria",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Adahime",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "set-apocalypse-pact",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Apocalypse Pact",
+        "url": "https://shadowverse-wb.com/en/cards/pack/apocalypse-pact/",
+        "image": null
+      }
+    ],
+    "startDate": "2026-02-26",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Kandima",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Shymm",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "set-blossoming-fate",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Blossoming Fate",
+        "url": "https://shadowverse-wb.com/en/cards/pack/blossoming-fate/",
+        "image": null
+      }
+    ],
+    "startDate": "2025-12-29",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Imari",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Unkei",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "collab-frieren",
+    "type": "collab",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Frieren: Beyond Journey's End",
+        "url": null,
+        "image": null
+      }
+    ],
+    "startDate": "2025-12-29",
+    "endDate": "2026-01-27",
+    "featured5": [
+      {
+        "name": "Aura",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Fern",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Frieren",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Stark",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "set-skybound-dragons",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Skybound Dragons",
+        "url": "https://shadowverse-wb.com/en/cards/pack/skybound-dragons/",
+        "image": null
+      }
+    ],
+    "startDate": "2025-10-29",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Beelzebub",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Belial",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Ewiyar",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Fediel",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Galleon",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Lu Woh",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Wamdus",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Wilnas",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "set-heirs-of-the-omen",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Heirs of the Omen",
+        "url": "https://shadowverse-wb.com/en/cards/pack/heirs-of-the-omen/",
+        "image": null
+      }
+    ],
+    "startDate": "2025-08-27",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Galmieux",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Sinciro",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "set-infinity-evolved",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Infinity Evolved",
+        "url": "https://shadowverse-wb.com/en/cards/pack/infinity-evolved/",
+        "image": null
+      }
+    ],
+    "startDate": "2025-07-17",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Aether",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Filene",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Titania",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "set-legends-rise",
+    "type": "set",
+    "version": null,
+    "phase": null,
+    "banners": [
+      {
+        "name": "Legends Rise",
+        "url": "https://shadowverse-wb.com/en/cards/pack/legends-rise/",
+        "image": null
+      }
+    ],
+    "startDate": "2025-06-17",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Albert",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Cerberus",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Daria",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Orchis",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  }
+]

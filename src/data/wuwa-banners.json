@@ -1,0 +1,2842 @@
+[
+  {
+    "id": "wuwa-3.7-resonator-nine-deaths-one-unbent-heart",
+    "type": "resonator",
+    "version": "3.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Nine Deaths, One Unbent Heart",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/624333",
+        "image": "https://img.game8.co/4625155/11586eff50c83dabede2a7bba7ba61df.png/show"
+      },
+      {
+        "name": "Undefined Spectrum",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570865",
+        "image": "https://img.game8.co/4625154/c4373712b3c22045015d025d505cf90f.png/show"
+      },
+      {
+        "name": "Tomorrow in the Frame",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/602627",
+        "image": "https://img.game8.co/4625145/32f950deee24e5542b59b3f98139b678.png/show"
+      }
+    ],
+    "startDate": "2026-10-22",
+    "endDate": "2026-11-11",
+    "featured5": [
+      {
+        "name": "Suoming",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/605306",
+        "image": "https://img.game8.co/4602893/c4c18c4e755e8dd6564a535b15e5c633.png/show"
+      },
+      {
+        "name": "Lynae",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568211",
+        "image": "https://img.game8.co/4349973/bba3006fad0a2a412eb9224ee156ea65.png/show"
+      },
+      {
+        "name": "Lucilla",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568207",
+        "image": "https://img.game8.co/4496682/8c6c6cab2214d5f954e1c5bf86afa459.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Unspoken Rue",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/624314",
+        "image": "https://img.game8.co/4625109/21242344d52f62f27f039cfd3625bde6.png/show"
+      },
+      {
+        "name": "Spectrum Blaster",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570863",
+        "image": "https://img.game8.co/4374592/52a65a310f426eeb3fc459614cc8040f.png/show"
+      },
+      {
+        "name": "Freeze Frame",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/603090",
+        "image": "https://img.game8.co/4532389/afedab897303b82c80216c38137079e2.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.7-resonator-as-full-as-tonight-forever",
+    "type": "resonator",
+    "version": "3.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "As Full as Tonight, Forever",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/624331",
+        "image": "https://img.game8.co/4625153/7e31fe677516e779ca17040c04a6e9b5.png/show"
+      },
+      {
+        "name": "Across Time's Waxes and Wanes",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/543968",
+        "image": "https://img.game8.co/4625146/ee623ed977ff00f8fb2f805805f60e7a.png/show"
+      },
+      {
+        "name": "Horizon of Dawnbreak",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/564697",
+        "image": "https://img.game8.co/4625150/d29a4134da9457880690e4f0178e509c.png/show"
+      }
+    ],
+    "startDate": "2026-09-30",
+    "endDate": "2026-10-22",
+    "featured5": [
+      {
+        "name": "Hsin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/605309",
+        "image": "https://img.game8.co/4600520/e4ddf4aa977d150d9b33fc4e4a04154e.png/show"
+      },
+      {
+        "name": "Iuno",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524889",
+        "image": "https://img.game8.co/4303123/de9fb5b23bec84e6bb0940fee82287f2.png/show"
+      },
+      {
+        "name": "Chisa",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524880",
+        "image": "https://img.game8.co/4306505/028c56383a82aae47dac7362608da9c0.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      },
+      {
+        "name": "Buling",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/557981",
+        "image": "https://img.game8.co/4306764/c1f88f90c8648a638ed672c4bfcf454b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Blooming Jadehaven",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/624313",
+        "image": "https://img.game8.co/4634145/15b106feb62fa7455a5feaf0fda831dd.png/show"
+      },
+      {
+        "name": "Moongazer's Sigil",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/544474",
+        "image": "https://img.game8.co/4302952/6340eb91765765d2db0ddff55d5d5aad.png/show"
+      },
+      {
+        "name": "Kumokiri",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/565517",
+        "image": "https://img.game8.co/4341850/ecfb4cdeb56b9ec2af986225c6bddb81.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.6-resonator-where-santu-beckons",
+    "type": "resonator",
+    "version": "3.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Where Santu Beckons",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/614637",
+        "image": "https://img.game8.co/4581386/adec334b98cdbf349f4eb222d2163293.png/show"
+      },
+      {
+        "name": "Thousand Futures Mirrored In Snow",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/595037",
+        "image": "https://img.game8.co/4581379/6623ccdfdaa07e4c569b90c6b5f9cf8a.png/show"
+      },
+      {
+        "name": "Distant May the Starlights Be",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570877",
+        "image": "https://img.game8.co/4581384/d2a76b540c6b4908d1e0323b60cf7069.png/show"
+      }
+    ],
+    "startDate": "2026-09-10",
+    "endDate": "2026-09-29",
+    "featured5": [
+      {
+        "name": "Jingran",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/605307",
+        "image": "https://img.game8.co/4572123/18932eed923cdd845d400e0990924543.png/show"
+      },
+      {
+        "name": "Hiyuki",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/586421",
+        "image": "https://img.game8.co/4455713/334923e40f8e8503213561cebe01d460.png/show"
+      },
+      {
+        "name": "Mornye",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568193",
+        "image": "https://img.game8.co/4351069/ac2e42243db427e49453aa2c05e9680c.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Thousandfold Deliverance",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/614635",
+        "image": "https://img.game8.co/4614377/05f4b59da40b6733ae80fcb9e32d5b48.png/show"
+      },
+      {
+        "name": "Frostburn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/595087",
+        "image": "https://img.game8.co/4484921/afe46f1c94551974f8f8e4bc3ea8d6da.png/show"
+      },
+      {
+        "name": "Starfield Calibrator",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570864",
+        "image": "https://img.game8.co/4384969/bbe56b282c9b7111b531a54aa8d5d131.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.6-resonator-wind-of-transcendence",
+    "type": "resonator",
+    "version": "3.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Wind of Transcendence",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/614636",
+        "image": "https://img.game8.co/4581383/a039394ed8eed7f6c8f13d6c10b45614.png/show"
+      },
+      {
+        "name": "False Promise For Tomorrow",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/595039",
+        "image": "https://img.game8.co/4581381/c6c6c828fb40fd9c4cd9fe36b0c3e1e2.png/show"
+      }
+    ],
+    "startDate": "2026-08-20",
+    "endDate": "2026-09-10",
+    "featured5": [
+      {
+        "name": "Qingxiao",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/605308",
+        "image": "https://img.game8.co/4572124/28f66b42f6b05d0cfaab0e7f071859af.png/show"
+      },
+      {
+        "name": "Denia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/585681",
+        "image": "https://img.game8.co/4455868/acbdd5eea048423b03e54664facb9f80.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Glint of Clouds",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/614634",
+        "image": "https://img.game8.co/4581375/1a4f8cbe252754a138e9aed0abfae7dd.png/show"
+      },
+      {
+        "name": "Forged Dwarf Star",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/595088",
+        "image": "https://img.game8.co/4507096/17f6303ea17e79f0090d03a2a10cf4fd.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.5-resonator-blessings-from-dewy-wings",
+    "type": "resonator",
+    "version": "3.5",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Blessings From Dewy Wings",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/451864",
+        "image": "https://img.game8.co/4543819/b26765d9e15eb981debc805fc5a92053.png/show"
+      },
+      {
+        "name": "Take Flight in Spring",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/575840",
+        "image": "https://img.game8.co/4543809/71c1791b5ab67cc43188b878a6ae33db.png/show"
+      }
+    ],
+    "startDate": "2026-07-30",
+    "endDate": "2026-08-19",
+    "featured5": [
+      {
+        "name": "Suisui",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/605302",
+        "image": "https://img.game8.co/4535729/c9fa446cf56e72453e943b2173e3f97a.png/show"
+      },
+      {
+        "name": "Aemeath",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/572587",
+        "image": "https://img.game8.co/4377292/832335bfa4f1e0f5a704437908739837.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Firstlight's Herald",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/606963",
+        "image": "https://img.game8.co/4572304/bbd01244eeab0074fc0e409aab5eb4f8.png/show"
+      },
+      {
+        "name": "Everbright Polestar",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/575684",
+        "image": "https://img.game8.co/4406719/2b31a3f455cfa1adb2f1099a1a39c042.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.5-resonator-voices-on-azure-feathers",
+    "type": "resonator",
+    "version": "3.5",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Voices on Azure Feathers",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/606710",
+        "image": "https://img.game8.co/4543815/1cc5618fd96d1f7d81dc60fd179e25af.png/show"
+      },
+      {
+        "name": "Undefined Spectrum",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570865",
+        "image": "https://img.game8.co/4543814/70e1034f1933c0f429c1d06936aba3d9.png/show"
+      }
+    ],
+    "startDate": "2026-07-10",
+    "endDate": "2026-07-30",
+    "featured5": [
+      {
+        "name": "Yangyang Xuanling",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/605297",
+        "image": "https://img.game8.co/4535620/1dec41807ec9c36f03bbd9bde9f51c71.png/show"
+      },
+      {
+        "name": "Lynae",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568211",
+        "image": "https://img.game8.co/4349973/bba3006fad0a2a412eb9224ee156ea65.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Azure Oath",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/606962",
+        "image": "https://img.game8.co/4555379/842b1c59b73ca434e0285dd6a09ce7ed.png/show"
+      },
+      {
+        "name": "Spectrum Blaster",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570863",
+        "image": "https://img.game8.co/4374592/52a65a310f426eeb3fc459614cc8040f.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.4-resonator-dance-in-the-storm-s-wake",
+    "type": "resonator",
+    "version": "3.4",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Dance in The Storm's Wake",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524282",
+        "image": "https://img.game8.co/4518066/a82f5947740220d550fe96931573529b.png/show"
+      }
+    ],
+    "startDate": "2026-06-18",
+    "endDate": "2026-07-09",
+    "featured5": [
+      {
+        "name": "Cartethyia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/507777",
+        "image": "https://img.game8.co/4303124/614d37e3c4c4259698c09ac22159fa74.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Defier's Thorn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524868",
+        "image": "https://img.game8.co/4302930/c18911b0fd541f5e94582f07d7647732.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.4-resonator-tomorrow-in-the-frame",
+    "type": "resonator",
+    "version": "3.4",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Tomorrow in the Frame",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/602627",
+        "image": "https://img.game8.co/4518065/65f5a75c2c4aaad9f999511b74ceaaa9.png/show"
+      }
+    ],
+    "startDate": "2026-06-13",
+    "endDate": "2026-07-09",
+    "featured5": [
+      {
+        "name": "Lucilla",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568207",
+        "image": "https://img.game8.co/4496682/8c6c6cab2214d5f954e1c5bf86afa459.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Freeze Frame",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/603090",
+        "image": "https://img.game8.co/4532389/afedab897303b82c80216c38137079e2.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.4-resonator-dreaming-upon-the-moon",
+    "type": "resonator",
+    "version": "3.4",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dreaming Upon the Moon",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/602619",
+        "image": "https://img.game8.co/4518062/184b00692ad4beaf5eda12a955b825f6.png/show"
+      },
+      {
+        "name": "Rekindled Embers of Rage",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/602623",
+        "image": "https://img.game8.co/4518063/c294c743d21c2d615a62e3ecd7394545.png/show"
+      }
+    ],
+    "startDate": "2026-06-08",
+    "endDate": "2026-07-09",
+    "featured5": [
+      {
+        "name": "Lucy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/598702",
+        "image": "https://img.game8.co/4495476/57d4bf12fbbf24c0156fca5c6f1431cb.png/show"
+      },
+      {
+        "name": "Rebecca",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/598700",
+        "image": "https://img.game8.co/4495475/278763113c97608c034704e3df29c14f.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Spectral Trigger",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/603085",
+        "image": "https://img.game8.co/4528389/dfa26a51118c36d4cb5bc87ab768e421.png/show"
+      },
+      {
+        "name": "Skull Thrasher",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/603088",
+        "image": "https://img.game8.co/4528388/d1a033a8e957dd2295ee2b6b730fcf82.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.3-resonator-false-promise-for-tomorrow",
+    "type": "resonator",
+    "version": "3.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "False Promise For Tomorrow",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/595039",
+        "image": "https://img.game8.co/4471408/7302834e52df748164f2d4bbe5ed343c.png/show"
+      },
+      {
+        "name": "Horizon of Dawnbreak",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/564697",
+        "image": "https://img.game8.co/4334459/b12d808b0dda6bc84408e2112a89a790.png/show"
+      },
+      {
+        "name": "Requiem Without End",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/537901",
+        "image": "https://img.game8.co/4222359/7c5719e7654375a6ff81efe1b2466b92.png/show"
+      }
+    ],
+    "startDate": "2026-05-21",
+    "endDate": "2026-06-07",
+    "featured5": [
+      {
+        "name": "Denia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/585681",
+        "image": "https://img.game8.co/4455868/acbdd5eea048423b03e54664facb9f80.png/show"
+      },
+      {
+        "name": "Chisa",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524880",
+        "image": "https://img.game8.co/4306505/028c56383a82aae47dac7362608da9c0.png/show"
+      },
+      {
+        "name": "Phrolova",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524877",
+        "image": "https://img.game8.co/4303094/1bc654602c9fcf54ede3a6934ad418f2.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Buling",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/557981",
+        "image": "https://img.game8.co/4306764/c1f88f90c8648a638ed672c4bfcf454b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Forged Dwarf Star",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/595088",
+        "image": "https://img.game8.co/4507096/17f6303ea17e79f0090d03a2a10cf4fd.png/show"
+      },
+      {
+        "name": "Kumokiri",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/565517",
+        "image": "https://img.game8.co/4341850/ecfb4cdeb56b9ec2af986225c6bddb81.png/show"
+      },
+      {
+        "name": "Lethean Elegy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/537943",
+        "image": "https://img.game8.co/4302944/67a56109313e0cc5bb48a0957cd19ce4.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.3-resonator-thousand-futures-mirrored-in-snow",
+    "type": "resonator",
+    "version": "3.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Thousand Futures Mirrored In Snow",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/595037",
+        "image": "https://img.game8.co/4471406/e88bc095e042273a0592b86642c943b6.png/show"
+      },
+      {
+        "name": "Distant May the Starlights Be",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570877",
+        "image": "https://img.game8.co/4364117/1dec850ff9d218d6021db1a13a0036c7.png/show"
+      },
+      {
+        "name": "Across Time's Waxes and Wanes",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/543968",
+        "image": "https://img.game8.co/4250782/a015e2072a1b4ca1530ece414d8bcb27.png/show"
+      }
+    ],
+    "startDate": "2026-04-30",
+    "endDate": "2026-05-21",
+    "featured5": [
+      {
+        "name": "Hiyuki",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/586421",
+        "image": "https://img.game8.co/4455713/334923e40f8e8503213561cebe01d460.png/show"
+      },
+      {
+        "name": "Mornye",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568193",
+        "image": "https://img.game8.co/4351069/ac2e42243db427e49453aa2c05e9680c.png/show"
+      },
+      {
+        "name": "Iuno",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524889",
+        "image": "https://img.game8.co/4303123/de9fb5b23bec84e6bb0940fee82287f2.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Frostburn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/595087",
+        "image": "https://img.game8.co/4484921/afe46f1c94551974f8f8e4bc3ea8d6da.png/show"
+      },
+      {
+        "name": "Starfield Calibrator",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570864",
+        "image": "https://img.game8.co/4384969/bbe56b282c9b7111b531a54aa8d5d131.png/show"
+      },
+      {
+        "name": "Moongazer's Sigil",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/544474",
+        "image": "https://img.game8.co/4302952/6340eb91765765d2db0ddff55d5d5aad.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.2-resonator-undefined-spectrum",
+    "type": "resonator",
+    "version": "3.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Undefined Spectrum",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570865",
+        "image": "https://img.game8.co/4364116/dfd8371e12468ecfa9c907de44c2af52.png/show"
+      },
+      {
+        "name": "Between Light and Shadow",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514607",
+        "image": "https://img.game8.co/4153884/1368c8891246bb5d6c0446cbf4675117.png/show"
+      },
+      {
+        "name": "With Hushed Whispers",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498494",
+        "image": "https://img.game8.co/4099926/528900f4fa2c5004eaff9d4b58668ba7.png/show"
+      }
+    ],
+    "startDate": "2026-04-09",
+    "endDate": "2026-04-29",
+    "featured5": [
+      {
+        "name": "Lynae",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568211",
+        "image": "https://img.game8.co/4349973/bba3006fad0a2a412eb9224ee156ea65.png/show"
+      },
+      {
+        "name": "Zani",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486248",
+        "image": "https://img.game8.co/4303118/ce2fce03de768666b40051d8b6b0e9b9.png/show"
+      },
+      {
+        "name": "Phoebe",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486244",
+        "image": "https://img.game8.co/4303088/e12d120bb50d2988cab8d528c8ba0b2c.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Spectrum Blaster",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570863",
+        "image": "https://img.game8.co/4374592/52a65a310f426eeb3fc459614cc8040f.png/show"
+      },
+      {
+        "name": "Blazing Justice",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514609",
+        "image": "https://img.game8.co/4302870/4bc814c559b299fa66f226f78d27d6f0.png/show"
+      },
+      {
+        "name": "Luminous Hymn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498527",
+        "image": "https://img.game8.co/4302941/dd3869bc0d77183c57bb78b4c9395466.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.2-resonator-when-the-runes-glitter",
+    "type": "resonator",
+    "version": "3.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "When the Runes Glitter",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491395",
+        "image": "https://img.game8.co/4440838/3b4840cce6ae311f1f26ede764a4fa25.png/show"
+      },
+      {
+        "name": "Wanderer Knows No Far and Near",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/553597",
+        "image": "https://img.game8.co/4290845/74fba906d3ddd022616e2b52dabc44e6.png/show"
+      }
+    ],
+    "startDate": "2026-03-19",
+    "endDate": "2026-04-09",
+    "featured5": [
+      {
+        "name": "Sigrika",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568208",
+        "image": "https://img.game8.co/4414529/c88d80dd9b25a6463c537911d8646b59.png/show"
+      },
+      {
+        "name": "Qiuyuan",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524882",
+        "image": "https://img.game8.co/4303098/2b46b11b4cdd80f6a603b1dd7b40ddb8.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Buling",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/557981",
+        "image": "https://img.game8.co/4306764/c1f88f90c8648a638ed672c4bfcf454b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Solsworn Ciphers",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/585863",
+        "image": "https://img.game8.co/4446450/c5621dab96d7aa65c6bbb89e1412cc5d.png/show"
+      },
+      {
+        "name": "Emerald Sentence",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/553562",
+        "image": "https://img.game8.co/4320009/037b4d165c6ad93318a79d043109818b.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.1-resonator-when-winter-thaws",
+    "type": "resonator",
+    "version": "3.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "When Winter Thaws",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/575845",
+        "image": "https://img.game8.co/4393074/c9961f2bb9eb6035e678a163e6aa9b34.png/show"
+      },
+      {
+        "name": "From Ashes",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/553579",
+        "image": "https://img.game8.co/4290846/d6654deffb3fe2febb8a659cbcfecafc.png/show"
+      }
+    ],
+    "startDate": "2026-02-26",
+    "endDate": "2026-03-18",
+    "featured5": [
+      {
+        "name": "Luuk Herssen",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568210",
+        "image": "https://img.game8.co/4377291/da504ec70ce3ef50c6f1a80d4a975bee.png/show"
+      },
+      {
+        "name": "Galbrena",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524888",
+        "image": "https://img.game8.co/4303113/a30a011f145cae7b024deaefcef28d46.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Lux ＆ Umbra",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/553561",
+        "image": "https://img.game8.co/4302951/97fbca216135e2fc9ea9e05a5c86768b.png/show"
+      },
+      {
+        "name": "Daybreaker's Spine",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/575692",
+        "image": "https://img.game8.co/4424797/9f184c3a3fba9f68c53c0c4c49e3a577.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.1-resonator-take-flight-in-spring",
+    "type": "resonator",
+    "version": "3.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Take Flight in Spring",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/575840",
+        "image": "https://img.game8.co/4393073/a8a4f11db311d79e17a5fb6fe45b36d9.png/show"
+      },
+      {
+        "name": "Horizon of Dawnbreak",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/564697",
+        "image": "https://img.game8.co/4393058/912d6eae298f1e2106097ffe76aba2e4.png/show"
+      },
+      {
+        "name": "Roar of Triumph",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524283",
+        "image": "https://img.game8.co/4393089/dc77f28622b4a855d4df7b8466f1b7b7.png/show"
+      }
+    ],
+    "startDate": "2026-02-05",
+    "endDate": "2026-02-26",
+    "featured5": [
+      {
+        "name": "Aemeath",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/572587",
+        "image": "https://img.game8.co/4377292/832335bfa4f1e0f5a704437908739837.png/show"
+      },
+      {
+        "name": "Chisa",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524880",
+        "image": "https://img.game8.co/4306505/028c56383a82aae47dac7362608da9c0.png/show"
+      },
+      {
+        "name": "Lupa",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/520661",
+        "image": "https://img.game8.co/4303115/9f5148089ed93a02f26460e471948baf.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Wildfire Mark",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524869",
+        "image": "https://img.game8.co/4302947/03e97c8b3bda7c29797c35d6608f4f9d.png/show"
+      },
+      {
+        "name": "Kumokiri",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/565517",
+        "image": "https://img.game8.co/4341850/ecfb4cdeb56b9ec2af986225c6bddb81.png/show"
+      },
+      {
+        "name": "Everbright Polestar",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/575684",
+        "image": "https://img.game8.co/4406719/2b31a3f455cfa1adb2f1099a1a39c042.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.0-resonator-distant-may-the-starlights-be",
+    "type": "resonator",
+    "version": "3.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Distant May the Starlights Be",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570877",
+        "image": "https://img.game8.co/4364117/1dec850ff9d218d6021db1a13a0036c7.png/show"
+      },
+      {
+        "name": "Eternal Radiance on the Crown",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/543966",
+        "image": "https://img.game8.co/4250775/eb327c593e9fd2c0f2c9ea75e0bcab47.png/show"
+      },
+      {
+        "name": "Across Time's Waxes and Wanes",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/543968",
+        "image": "https://img.game8.co/4250782/a015e2072a1b4ca1530ece414d8bcb27.png/show"
+      }
+    ],
+    "startDate": "2026-01-15",
+    "endDate": "2026-02-04",
+    "featured5": [
+      {
+        "name": "Mornye",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568193",
+        "image": "https://img.game8.co/4351069/ac2e42243db427e49453aa2c05e9680c.png/show"
+      },
+      {
+        "name": "Augusta",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524890",
+        "image": "https://img.game8.co/4303091/392c6d1d392671876a973def15d3b45e.png/show"
+      },
+      {
+        "name": "Iuno",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524889",
+        "image": "https://img.game8.co/4303123/de9fb5b23bec84e6bb0940fee82287f2.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Starfield Calibrator",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570864",
+        "image": "https://img.game8.co/4384969/bbe56b282c9b7111b531a54aa8d5d131.png/show"
+      },
+      {
+        "name": "Thunderflare Dominion",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/544473",
+        "image": "https://img.game8.co/4302946/df429fdc4c19f4807bdf53c9a3c39f5b.png/show"
+      },
+      {
+        "name": "Moongazer's Sigil",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/544474",
+        "image": "https://img.game8.co/4302952/6340eb91765765d2db0ddff55d5d5aad.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.0-resonator-undefined-spectrum",
+    "type": "resonator",
+    "version": "3.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Undefined Spectrum",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570865",
+        "image": "https://img.game8.co/4364116/dfd8371e12468ecfa9c907de44c2af52.png/show"
+      },
+      {
+        "name": "Dance in The Storm's Wake",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524282",
+        "image": "https://img.game8.co/4183714/a4cdc7dfbd9bcbbf5f9ca762950f0eb6.png/show"
+      },
+      {
+        "name": "Through Verses and Rhythms",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514608",
+        "image": "https://img.game8.co/4153883/09393dcf8b38a461a147d583ea6e0d71.png/show"
+      }
+    ],
+    "startDate": "2025-12-25",
+    "endDate": "2026-01-15",
+    "featured5": [
+      {
+        "name": "Lynae",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/568211",
+        "image": "https://img.game8.co/4349973/bba3006fad0a2a412eb9224ee156ea65.png/show"
+      },
+      {
+        "name": "Cartethyia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/507777",
+        "image": "https://img.game8.co/4303124/614d37e3c4c4259698c09ac22159fa74.png/show"
+      },
+      {
+        "name": "Ciaccona",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/507924",
+        "image": "https://img.game8.co/4303128/1656f548f03c8b83df5d5756bbcc3cc7.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Spectrum Blaster",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/570863",
+        "image": "https://img.game8.co/4374592/52a65a310f426eeb3fc459614cc8040f.png/show"
+      },
+      {
+        "name": "Defier's Thorn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524868",
+        "image": "https://img.game8.co/4302930/c18911b0fd541f5e94582f07d7647732.png/show"
+      },
+      {
+        "name": "Woodland Aria",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514610",
+        "image": "https://img.game8.co/4302940/35c1199c7eef34469c6c7a21646e361f.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.8-resonator-requiem-without-end",
+    "type": "resonator",
+    "version": "2.8",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Requiem Without End",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/537901",
+        "image": "https://img.game8.co/4222359/7c5719e7654375a6ff81efe1b2466b92.png/show"
+      },
+      {
+        "name": "Neptune's Lullaby",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/506481",
+        "image": "https://img.game8.co/4136142/7b3fefbc2b256cffa9b17b426a4a07c4.png/show"
+      }
+    ],
+    "startDate": "2025-12-11",
+    "endDate": "2025-12-24",
+    "featured5": [
+      {
+        "name": "Phrolova",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524877",
+        "image": "https://img.game8.co/4303094/1bc654602c9fcf54ede3a6934ad418f2.png/show"
+      },
+      {
+        "name": "Cantarella",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/500493",
+        "image": "https://img.game8.co/4303093/e011460c6cf0963758c35cf03bdc95b2.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Buling",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/557981",
+        "image": "https://img.game8.co/4306764/c1f88f90c8648a638ed672c4bfcf454b.png/show"
+      },
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Lethean Elegy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/537943",
+        "image": "https://img.game8.co/4302944/67a56109313e0cc5bb48a0957cd19ce4.png/show"
+      },
+      {
+        "name": "Whispers of Sirens",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/506482",
+        "image": "https://img.game8.co/4302955/f7c502e967c857fd07f10720981655f0.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.8-resonator-horizon-of-dawnbreak",
+    "type": "resonator",
+    "version": "2.8",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Horizon of Dawnbreak",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/564697",
+        "image": "https://img.game8.co/4334459/b12d808b0dda6bc84408e2112a89a790.png/show"
+      },
+      {
+        "name": "With Hushed Whispers",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498494",
+        "image": "https://img.game8.co/4099926/528900f4fa2c5004eaff9d4b58668ba7.png/show"
+      }
+    ],
+    "startDate": "2025-11-20",
+    "endDate": "2025-12-11",
+    "featured5": [
+      {
+        "name": "Chisa",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524880",
+        "image": "https://img.game8.co/4306505/028c56383a82aae47dac7362608da9c0.png/show"
+      },
+      {
+        "name": "Phoebe",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486244",
+        "image": "https://img.game8.co/4303088/e12d120bb50d2988cab8d528c8ba0b2c.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Kumokiri",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/565517",
+        "image": "https://img.game8.co/4341850/ecfb4cdeb56b9ec2af986225c6bddb81.png/show"
+      },
+      {
+        "name": "Luminous Hymn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498527",
+        "image": "https://img.game8.co/4302941/dd3869bc0d77183c57bb78b4c9395466.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.7-resonator-wanderer-knows-no-far-and-near",
+    "type": "resonator",
+    "version": "2.7",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Wanderer Knows No Far and Near",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/553597",
+        "image": "https://img.game8.co/4290845/74fba906d3ddd022616e2b52dabc44e6.png/show"
+      },
+      {
+        "name": "Between Light and Shadow",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514607",
+        "image": "https://img.game8.co/4153884/1368c8891246bb5d6c0446cbf4675117.png/show"
+      }
+    ],
+    "startDate": "2025-10-30",
+    "endDate": "2025-11-19",
+    "featured5": [
+      {
+        "name": "Qiuyuan",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524882",
+        "image": "https://img.game8.co/4303098/2b46b11b4cdd80f6a603b1dd7b40ddb8.png/show"
+      },
+      {
+        "name": "Zani",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486248",
+        "image": "https://img.game8.co/4303118/ce2fce03de768666b40051d8b6b0e9b9.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Emerald Sentence",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/553562",
+        "image": "https://img.game8.co/4320009/037b4d165c6ad93318a79d043109818b.png/show"
+      },
+      {
+        "name": "Blazing Justice",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514609",
+        "image": "https://img.game8.co/4302870/4bc814c559b299fa66f226f78d27d6f0.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.7-resonator-from-ashes",
+    "type": "resonator",
+    "version": "2.7",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "From Ashes",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/553579",
+        "image": "https://img.game8.co/4290846/d6654deffb3fe2febb8a659cbcfecafc.png/show"
+      },
+      {
+        "name": "Roar of Triumph",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524283",
+        "image": "https://img.game8.co/4183715/c102c4bdf3baa4ea60b804e158eecc4c.png/show"
+      }
+    ],
+    "startDate": "2025-10-09",
+    "endDate": "2025-10-30",
+    "featured5": [
+      {
+        "name": "Galbrena",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524888",
+        "image": "https://img.game8.co/4303113/a30a011f145cae7b024deaefcef28d46.png/show"
+      },
+      {
+        "name": "Lupa",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/520661",
+        "image": "https://img.game8.co/4303115/9f5148089ed93a02f26460e471948baf.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Lux ＆ Umbra",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/553561",
+        "image": "https://img.game8.co/4302951/97fbca216135e2fc9ea9e05a5c86768b.png/show"
+      },
+      {
+        "name": "Wildfire Mark",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524869",
+        "image": "https://img.game8.co/4302947/03e97c8b3bda7c29797c35d6608f4f9d.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.6-resonator-across-time-s-waxes-and-wanes",
+    "type": "resonator",
+    "version": "2.6",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Across Time's Waxes and Wanes",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/543968",
+        "image": "https://img.game8.co/4250782/a015e2072a1b4ca1530ece414d8bcb27.png/show"
+      },
+      {
+        "name": "Through Verses and Rhythms",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514608",
+        "image": "https://img.game8.co/4153883/09393dcf8b38a461a147d583ea6e0d71.png/show"
+      }
+    ],
+    "startDate": "2025-09-17",
+    "endDate": "2025-10-08",
+    "featured5": [
+      {
+        "name": "Iuno",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524889",
+        "image": "https://img.game8.co/4303123/de9fb5b23bec84e6bb0940fee82287f2.png/show"
+      },
+      {
+        "name": "Ciaccona",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/507924",
+        "image": "https://img.game8.co/4303128/1656f548f03c8b83df5d5756bbcc3cc7.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Moongazer's Sigil",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/544474",
+        "image": "https://img.game8.co/4302952/6340eb91765765d2db0ddff55d5d5aad.png/show"
+      },
+      {
+        "name": "Woodland Aria",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514610",
+        "image": "https://img.game8.co/4302940/35c1199c7eef34469c6c7a21646e361f.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.6-resonator-eternal-radiance-on-the-crown",
+    "type": "resonator",
+    "version": "2.6",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Eternal Radiance on the Crown",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/543966",
+        "image": "https://img.game8.co/4250775/eb327c593e9fd2c0f2c9ea75e0bcab47.png/show"
+      },
+      {
+        "name": "When Silence Tolls",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491969",
+        "image": "https://img.game8.co/4074995/9ee757f653901fde68a72db5666f6218.png/show"
+      },
+      {
+        "name": "Till the Sea Turns Clear",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/474356",
+        "image": "https://img.game8.co/3999468/9542d4328ec04d07393fe7b74691ee3e.png/show"
+      }
+    ],
+    "startDate": "2025-08-28",
+    "endDate": "2025-09-17",
+    "featured5": [
+      {
+        "name": "Augusta",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524890",
+        "image": "https://img.game8.co/4303091/392c6d1d392671876a973def15d3b45e.png/show"
+      },
+      {
+        "name": "Carlotta",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486251",
+        "image": "https://img.game8.co/4303100/74d525f1f110aaead7a584b0c41adccd.png/show"
+      },
+      {
+        "name": "Shorekeeper",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463667",
+        "image": "https://img.game8.co/4303106/1a593bf54fb3bc2cfaba1084d8b069f0.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Thunderflare Dominion",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/544473",
+        "image": "https://img.game8.co/4302946/df429fdc4c19f4807bdf53c9a3c39f5b.png/show"
+      },
+      {
+        "name": "The Last Dance",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491970",
+        "image": "https://img.game8.co/4302924/b3692eb2bc84a37851e6e1cfb545448c.png/show"
+      },
+      {
+        "name": "Stellar Symphony",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/474386",
+        "image": "https://img.game8.co/4302949/48f8e85e2df0c363e3763f80cb65cd12.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.5-resonator-neptune-s-lullaby",
+    "type": "resonator",
+    "version": "2.5",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Neptune's Lullaby",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/506481",
+        "image": "https://img.game8.co/4136142/7b3fefbc2b256cffa9b17b426a4a07c4.png/show"
+      },
+      {
+        "name": "Blaze Across the Deep",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498497",
+        "image": "https://img.game8.co/4099927/7819f18d2bc2c42aec1e6f66cb1c2eba.png/show"
+      }
+    ],
+    "startDate": "2025-08-14",
+    "endDate": "2025-08-27",
+    "featured5": [
+      {
+        "name": "Cantarella",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/500493",
+        "image": "https://img.game8.co/4303093/e011460c6cf0963758c35cf03bdc95b2.png/show"
+      },
+      {
+        "name": "Brant",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486245",
+        "image": "https://img.game8.co/4303092/99973a09f42017036715ec7056e9de60.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Whispers of Sirens",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/506482",
+        "image": "https://img.game8.co/4302955/f7c502e967c857fd07f10720981655f0.png/show"
+      },
+      {
+        "name": "Unflickering Valor",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498528",
+        "image": "https://img.game8.co/4302956/ccf261943a6e5c62715c5fdbc3e59636.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.5-resonator-requiem-without-end",
+    "type": "resonator",
+    "version": "2.5",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Requiem Without End",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/537901",
+        "image": "https://img.game8.co/4222359/7c5719e7654375a6ff81efe1b2466b92.png/show"
+      },
+      {
+        "name": "Stage in the Box",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491968",
+        "image": "https://img.game8.co/4074997/b69519f7d73ed96d4916a78e2b4dd6c4.png/show"
+      }
+    ],
+    "startDate": "2025-07-24",
+    "endDate": "2025-08-14",
+    "featured5": [
+      {
+        "name": "Phrolova",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524877",
+        "image": "https://img.game8.co/4303094/1bc654602c9fcf54ede3a6934ad418f2.png/show"
+      },
+      {
+        "name": "Roccia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486246",
+        "image": "https://img.game8.co/4303099/46f5bc3e5afcb921472319edf1d870ce.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Lethean Elegy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/537943",
+        "image": "https://img.game8.co/4302944/67a56109313e0cc5bb48a0957cd19ce4.png/show"
+      },
+      {
+        "name": "Tragicomedy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491971",
+        "image": "https://img.game8.co/4302937/247c529f42271fd09dce9af19d919397.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.4-resonator-roar-of-triumph",
+    "type": "resonator",
+    "version": "2.4",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Roar of Triumph",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524283",
+        "image": "https://img.game8.co/4183715/c102c4bdf3baa4ea60b804e158eecc4c.png/show"
+      }
+    ],
+    "startDate": "2025-07-03",
+    "endDate": "2025-07-23",
+    "featured5": [
+      {
+        "name": "Lupa",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/520661",
+        "image": "https://img.game8.co/4303115/9f5148089ed93a02f26460e471948baf.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Wildfire Mark",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524869",
+        "image": "https://img.game8.co/4302947/03e97c8b3bda7c29797c35d6608f4f9d.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.4-resonator-dance-in-the-storm-s-wake",
+    "type": "resonator",
+    "version": "2.4",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Dance in The Storm's Wake",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524282",
+        "image": "https://img.game8.co/4183714/a4cdc7dfbd9bcbbf5f9ca762950f0eb6.png/show"
+      },
+      {
+        "name": "New Voyage Companions",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/599228",
+        "image": "https://img.game8.co/4497869/2540d85cb3f4783c8484fcb6ad9ee986.png/show"
+      }
+    ],
+    "startDate": "2025-06-12",
+    "endDate": "2025-07-03",
+    "featured5": [
+      {
+        "name": "Cartethyia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/507777",
+        "image": "https://img.game8.co/4303124/614d37e3c4c4259698c09ac22159fa74.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Defier's Thorn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/524868",
+        "image": "https://img.game8.co/4302930/c18911b0fd541f5e94582f07d7647732.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.3-resonator-through-verses-and-rhythms",
+    "type": "resonator",
+    "version": "2.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Through Verses and Rhythms",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514608",
+        "image": "https://img.game8.co/4153883/09393dcf8b38a461a147d583ea6e0d71.png/show"
+      },
+      {
+        "name": "Anniversary Resonator Convene Phase 2",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514611",
+        "image": "https://img.game8.co/4153864/b229251cef0bf0dd425794a474db8fd3.png/show"
+      }
+    ],
+    "startDate": "2025-05-22",
+    "endDate": "2025-06-11",
+    "featured5": [
+      {
+        "name": "Ciaccona",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/507924",
+        "image": "https://img.game8.co/4303128/1656f548f03c8b83df5d5756bbcc3cc7.png/show"
+      },
+      {
+        "name": "Jinhsi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455405",
+        "image": "https://img.game8.co/4303120/24763e189518dfc4e3f3aa650cacad2b.png/show"
+      },
+      {
+        "name": "Changli",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/452826",
+        "image": "https://img.game8.co/4303105/4ba6389b5f9c601438375f2237705e67.png/show"
+      },
+      {
+        "name": "Carlotta",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486251",
+        "image": "https://img.game8.co/4303100/74d525f1f110aaead7a584b0c41adccd.png/show"
+      },
+      {
+        "name": "Roccia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486246",
+        "image": "https://img.game8.co/4303099/46f5bc3e5afcb921472319edf1d870ce.png/show"
+      },
+      {
+        "name": "Brant",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486245",
+        "image": "https://img.game8.co/4303092/99973a09f42017036715ec7056e9de60.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Woodland Aria",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514610",
+        "image": "https://img.game8.co/4302940/35c1199c7eef34469c6c7a21646e361f.png/show"
+      },
+      {
+        "name": "Ages of Harvest",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/458249",
+        "image": "https://img.game8.co/4302871/e09c2b5b22a8b7c845b9a96092249c4e.png/show"
+      },
+      {
+        "name": "Blazing Brilliance",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/458273",
+        "image": "https://img.game8.co/4302860/d66e051de85e88eb048c20f07968420d.png/show"
+      },
+      {
+        "name": "The Last Dance",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491970",
+        "image": "https://img.game8.co/4302924/b3692eb2bc84a37851e6e1cfb545448c.png/show"
+      },
+      {
+        "name": "Tragicomedy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491971",
+        "image": "https://img.game8.co/4302937/247c529f42271fd09dce9af19d919397.png/show"
+      },
+      {
+        "name": "Unflickering Valor",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498528",
+        "image": "https://img.game8.co/4302956/ccf261943a6e5c62715c5fdbc3e59636.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.3-resonator-between-light-and-shadow",
+    "type": "resonator",
+    "version": "2.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Between Light and Shadow",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514607",
+        "image": "https://img.game8.co/4153884/1368c8891246bb5d6c0446cbf4675117.png/show"
+      },
+      {
+        "name": "Anniversary Resonator Convene Phase 1",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514611",
+        "image": "https://img.game8.co/4153866/bd3aea1bc28fda7a80b5fbf10177c3bb.png/show"
+      }
+    ],
+    "startDate": "2025-04-29",
+    "endDate": "2025-05-22",
+    "featured5": [
+      {
+        "name": "Zani",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486248",
+        "image": "https://img.game8.co/4303118/ce2fce03de768666b40051d8b6b0e9b9.png/show"
+      },
+      {
+        "name": "Jiyan",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454216",
+        "image": "https://img.game8.co/4303125/b8167e215c344e45fb232d1483c39315.png/show"
+      },
+      {
+        "name": "Yinlin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454218",
+        "image": "https://img.game8.co/4303122/f2572c97e3f89983fde9bd2acd504717.png/show"
+      },
+      {
+        "name": "Zhezhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/461497",
+        "image": "https://img.game8.co/4303117/77ef73d947def3477132861150ab6105.png/show"
+      },
+      {
+        "name": "Xiangli Yao",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/461501",
+        "image": "https://img.game8.co/4303109/d101f899f3ff1ef3314c45fb9f5aadcf.png/show"
+      },
+      {
+        "name": "Phoebe",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486244",
+        "image": "https://img.game8.co/4303088/e12d120bb50d2988cab8d528c8ba0b2c.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Blazing Justice",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/514609",
+        "image": "https://img.game8.co/4302870/4bc814c559b299fa66f226f78d27d6f0.png/show"
+      },
+      {
+        "name": "Verdant Summit",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455951",
+        "image": "https://img.game8.co/4302953/c37741f9c0a35fbe698037cfd6eb2dea.png/show"
+      },
+      {
+        "name": "Stringmaster",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455927",
+        "image": "https://img.game8.co/4302938/32585d28436ca1a4b807290582d8edd5.png/show"
+      },
+      {
+        "name": "Rime-Draped Sprouts",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464109",
+        "image": "https://img.game8.co/4302950/99aad39e6dcb5bfe94f0f85a0a09ce73.png/show"
+      },
+      {
+        "name": "Verity's Handle",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464110",
+        "image": "https://img.game8.co/4302954/09e6b0d7ec94aaa38d07a12010104f33.png/show"
+      },
+      {
+        "name": "Luminous Hymn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498527",
+        "image": "https://img.game8.co/4302941/dd3869bc0d77183c57bb78b4c9395466.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.2-resonator-till-the-sea-turns-clear",
+    "type": "resonator",
+    "version": "2.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Till the Sea Turns Clear",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/474356",
+        "image": "https://img.game8.co/3999468/9542d4328ec04d07393fe7b74691ee3e.png/show"
+      }
+    ],
+    "startDate": "2025-04-17",
+    "endDate": "2025-04-28",
+    "featured5": [
+      {
+        "name": "Shorekeeper",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463667",
+        "image": "https://img.game8.co/4303106/1a593bf54fb3bc2cfaba1084d8b069f0.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Stellar Symphony",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/474386",
+        "image": "https://img.game8.co/4302949/48f8e85e2df0c363e3763f80cb65cd12.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.2-resonator-neptune-s-lullaby",
+    "type": "resonator",
+    "version": "2.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Neptune's Lullaby",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/506481",
+        "image": "https://img.game8.co/4136142/7b3fefbc2b256cffa9b17b426a4a07c4.png/show"
+      },
+      {
+        "name": "End of Lost Trail",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/484274",
+        "image": "https://img.game8.co/4037903/b7a1c529202ae7dff22104e1bcdced1e.png/show"
+      }
+    ],
+    "startDate": "2025-03-27",
+    "endDate": "2025-04-17",
+    "featured5": [
+      {
+        "name": "Cantarella",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/500493",
+        "image": "https://img.game8.co/4303093/e011460c6cf0963758c35cf03bdc95b2.png/show"
+      },
+      {
+        "name": "Camellya",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473332",
+        "image": "https://img.game8.co/4303119/0338137bfa85c90af22fff9dca8d86a7.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Whispers of Sirens",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/506482",
+        "image": "https://img.game8.co/4302955/f7c502e967c857fd07f10720981655f0.png/show"
+      },
+      {
+        "name": "Red Spring",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/483281",
+        "image": "https://img.game8.co/4302932/9ebf5515a7a434c124b25a47f5837d72.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.1-resonator-blaze-across-the-deep",
+    "type": "resonator",
+    "version": "2.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Blaze Across the Deep",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498497",
+        "image": "https://img.game8.co/4099927/7819f18d2bc2c42aec1e6f66cb1c2eba.png/show"
+      },
+      {
+        "name": "Vermillion's Ploy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/459809",
+        "image": "https://img.game8.co/3937404/9895040e9606758a2278a803665ace69.png/show"
+      }
+    ],
+    "startDate": "2025-03-06",
+    "endDate": "2025-03-26",
+    "featured5": [
+      {
+        "name": "Brant",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486245",
+        "image": "https://img.game8.co/4303092/99973a09f42017036715ec7056e9de60.png/show"
+      },
+      {
+        "name": "Changli",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/452826",
+        "image": "https://img.game8.co/4303105/4ba6389b5f9c601438375f2237705e67.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Unflickering Valor",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498528",
+        "image": "https://img.game8.co/4302956/ccf261943a6e5c62715c5fdbc3e59636.png/show"
+      },
+      {
+        "name": "Blazing Brilliance",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/458273",
+        "image": "https://img.game8.co/4302860/d66e051de85e88eb048c20f07968420d.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.1-resonator-with-hushed-whispers",
+    "type": "resonator",
+    "version": "2.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "With Hushed Whispers",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498494",
+        "image": "https://img.game8.co/4099926/528900f4fa2c5004eaff9d4b58668ba7.png/show"
+      }
+    ],
+    "startDate": "2025-02-13",
+    "endDate": "2025-03-06",
+    "featured5": [
+      {
+        "name": "Phoebe",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486244",
+        "image": "https://img.game8.co/4303088/e12d120bb50d2988cab8d528c8ba0b2c.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Luminous Hymn",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/498527",
+        "image": "https://img.game8.co/4302941/dd3869bc0d77183c57bb78b4c9395466.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.0-resonator-stage-in-the-box",
+    "type": "resonator",
+    "version": "2.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Stage in the Box",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491968",
+        "image": "https://img.game8.co/4074997/b69519f7d73ed96d4916a78e2b4dd6c4.png/show"
+      },
+      {
+        "name": "Thawborn Renewal",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/459796",
+        "image": "https://img.game8.co/4074993/8ee6174d7cd32d3ff3e9f9ae4163479c.png/show"
+      }
+    ],
+    "startDate": "2025-01-23",
+    "endDate": "2025-02-12",
+    "featured5": [
+      {
+        "name": "Roccia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486246",
+        "image": "https://img.game8.co/4303099/46f5bc3e5afcb921472319edf1d870ce.png/show"
+      },
+      {
+        "name": "Jinhsi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455405",
+        "image": "https://img.game8.co/4303120/24763e189518dfc4e3f3aa650cacad2b.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Tragicomedy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491971",
+        "image": "https://img.game8.co/4302937/247c529f42271fd09dce9af19d919397.png/show"
+      },
+      {
+        "name": "Ages of Harvest",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/458249",
+        "image": "https://img.game8.co/4302871/e09c2b5b22a8b7c845b9a96092249c4e.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-2.0-resonator-when-silence-tolls",
+    "type": "resonator",
+    "version": "2.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "When Silence Tolls",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491969",
+        "image": "https://img.game8.co/4074995/9ee757f653901fde68a72db5666f6218.png/show"
+      },
+      {
+        "name": "Chromatic Prose",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464326",
+        "image": "https://img.game8.co/4074996/e0350105ee5e20fb7959b0b7b9aa6f43.png/show"
+      }
+    ],
+    "startDate": "2025-01-02",
+    "endDate": "2025-01-23",
+    "featured5": [
+      {
+        "name": "Carlotta",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/486251",
+        "image": "https://img.game8.co/4303100/74d525f1f110aaead7a584b0c41adccd.png/show"
+      },
+      {
+        "name": "Zhezhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/461497",
+        "image": "https://img.game8.co/4303117/77ef73d947def3477132861150ab6105.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "The Last Dance",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/491970",
+        "image": "https://img.game8.co/4302924/b3692eb2bc84a37851e6e1cfb545448c.png/show"
+      },
+      {
+        "name": "Rime-Draped Sprouts",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464109",
+        "image": "https://img.game8.co/4302950/99aad39e6dcb5bfe94f0f85a0a09ce73.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.4-resonator-when-thunder-pours",
+    "type": "resonator",
+    "version": "1.4",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "When Thunder Pours",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455315",
+        "image": "https://img.game8.co/4037899/165c590739bbef45046b933dbb10ebc0.png/show"
+      },
+      {
+        "name": "Celestial Revelation",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464327",
+        "image": "https://img.game8.co/4037902/7ce9b639e25e1df866af7d75ee8d42c0.png/show"
+      }
+    ],
+    "startDate": "2024-12-12",
+    "endDate": "2025-01-01",
+    "featured5": [
+      {
+        "name": "Yinlin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454218",
+        "image": "https://img.game8.co/4303122/f2572c97e3f89983fde9bd2acd504717.png/show"
+      },
+      {
+        "name": "Xiangli Yao",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/461501",
+        "image": "https://img.game8.co/4303109/d101f899f3ff1ef3314c45fb9f5aadcf.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      },
+      {
+        "name": "Lumi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+        "image": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Stringmaster",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455927",
+        "image": "https://img.game8.co/4302938/32585d28436ca1a4b807290582d8edd5.png/show"
+      },
+      {
+        "name": "Verity's Handle",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464110",
+        "image": "https://img.game8.co/4302954/09e6b0d7ec94aaa38d07a12010104f33.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.4-resonator-end-of-lost-trail",
+    "type": "resonator",
+    "version": "1.4",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "End of Lost Trail",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/484274",
+        "image": "https://img.game8.co/4037903/b7a1c529202ae7dff22104e1bcdced1e.png/show"
+      }
+    ],
+    "startDate": "2024-11-14",
+    "endDate": "2024-12-12",
+    "featured5": [
+      {
+        "name": "Camellya",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/473332",
+        "image": "https://img.game8.co/4303119/0338137bfa85c90af22fff9dca8d86a7.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Red Spring",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/483281",
+        "image": "https://img.game8.co/4302932/9ebf5515a7a434c124b25a47f5837d72.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.3-resonator-prevail-the-lasting-night",
+    "type": "resonator",
+    "version": "1.3",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Prevail the Lasting Night",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454743",
+        "image": "https://img.game8.co/3999469/b331b4134528fdcbb062da4674062cb0.png/show"
+      }
+    ],
+    "startDate": "2024-10-24",
+    "endDate": "2024-11-13",
+    "featured5": [
+      {
+        "name": "Jiyan",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454216",
+        "image": "https://img.game8.co/4303125/b8167e215c344e45fb232d1483c39315.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Youhu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+        "image": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Verdant Summit",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455951",
+        "image": "https://img.game8.co/4302953/c37741f9c0a35fbe698037cfd6eb2dea.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.3-resonator-till-the-sea-turns-clear",
+    "type": "resonator",
+    "version": "1.3",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Till the Sea Turns Clear",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/474356",
+        "image": "https://img.game8.co/3999468/9542d4328ec04d07393fe7b74691ee3e.png/show"
+      }
+    ],
+    "startDate": "2024-09-29",
+    "endDate": "2024-10-24",
+    "featured5": [
+      {
+        "name": "Shorekeeper",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/463667",
+        "image": "https://img.game8.co/4303106/1a593bf54fb3bc2cfaba1084d8b069f0.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Stellar Symphony",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/474386",
+        "image": "https://img.game8.co/4302949/48f8e85e2df0c363e3763f80cb65cd12.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.2-resonator-celestial-revelation",
+    "type": "resonator",
+    "version": "1.2",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Celestial Revelation",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464327",
+        "image": "https://img.game8.co/3951176/fb9102560a01814ea97e9ae96012b226.png/show"
+      }
+    ],
+    "startDate": "2024-09-07",
+    "endDate": "2024-09-28",
+    "featured5": [
+      {
+        "name": "Xiangli Yao",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/461501",
+        "image": "https://img.game8.co/4303109/d101f899f3ff1ef3314c45fb9f5aadcf.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Verity's Handle",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464110",
+        "image": "https://img.game8.co/4302954/09e6b0d7ec94aaa38d07a12010104f33.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.2-resonator-chromatic-prose",
+    "type": "resonator",
+    "version": "1.2",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Chromatic Prose",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464326",
+        "image": "https://img.game8.co/3951177/8eebdeb6775215abe813fcd345b699f6.png/show"
+      }
+    ],
+    "startDate": "2024-08-15",
+    "endDate": "2024-09-07",
+    "featured5": [
+      {
+        "name": "Zhezhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/461497",
+        "image": "https://img.game8.co/4303117/77ef73d947def3477132861150ab6105.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Rime-Draped Sprouts",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464109",
+        "image": "https://img.game8.co/4302950/99aad39e6dcb5bfe94f0f85a0a09ce73.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.1-resonator-vermillion-s-ploy",
+    "type": "resonator",
+    "version": "1.1",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "Vermillion's Ploy",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/459809",
+        "image": "https://img.game8.co/3937404/9895040e9606758a2278a803665ace69.png/show"
+      }
+    ],
+    "startDate": "2024-07-22",
+    "endDate": "2024-08-14",
+    "featured5": [
+      {
+        "name": "Changli",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/452826",
+        "image": "https://img.game8.co/4303105/4ba6389b5f9c601438375f2237705e67.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Baizhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+        "image": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Blazing Brilliance",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/458273",
+        "image": "https://img.game8.co/4302860/d66e051de85e88eb048c20f07968420d.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.1-resonator-thawborn-renewal",
+    "type": "resonator",
+    "version": "1.1",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Thawborn Renewal",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/459796",
+        "image": "https://img.game8.co/4074993/8ee6174d7cd32d3ff3e9f9ae4163479c.png/show"
+      }
+    ],
+    "startDate": "2024-06-28",
+    "endDate": "2024-07-22",
+    "featured5": [
+      {
+        "name": "Jinhsi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455405",
+        "image": "https://img.game8.co/4303120/24763e189518dfc4e3f3aa650cacad2b.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Yangyang",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+        "image": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show"
+      },
+      {
+        "name": "Sanhua",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+        "image": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Ages of Harvest",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/458249",
+        "image": "https://img.game8.co/4302871/e09c2b5b22a8b7c845b9a96092249c4e.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.0-resonator-when-thunder-pours",
+    "type": "resonator",
+    "version": "1.0",
+    "phase": 2,
+    "banners": [
+      {
+        "name": "When Thunder Pours",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455315",
+        "image": "https://img.game8.co/4037899/165c590739bbef45046b933dbb10ebc0.png/show"
+      }
+    ],
+    "startDate": "2024-06-06",
+    "endDate": "2024-06-26",
+    "featured5": [
+      {
+        "name": "Yinlin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454218",
+        "image": "https://img.game8.co/4303122/f2572c97e3f89983fde9bd2acd504717.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Aalto",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+        "image": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show"
+      },
+      {
+        "name": "Yuanwu",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+        "image": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show"
+      },
+      {
+        "name": "Taoqi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+        "image": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Stringmaster",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455927",
+        "image": "https://img.game8.co/4302938/32585d28436ca1a4b807290582d8edd5.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-1.0-resonator-prevail-the-lasting-night",
+    "type": "resonator",
+    "version": "1.0",
+    "phase": 1,
+    "banners": [
+      {
+        "name": "Prevail the Lasting Night",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454743",
+        "image": "https://img.game8.co/3999469/b331b4134528fdcbb062da4674062cb0.png/show"
+      }
+    ],
+    "startDate": "2024-05-23",
+    "endDate": "2024-06-13",
+    "featured5": [
+      {
+        "name": "Jiyan",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454216",
+        "image": "https://img.game8.co/4303125/b8167e215c344e45fb232d1483c39315.png/show"
+      }
+    ],
+    "featured4": [
+      {
+        "name": "Chixia",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+        "image": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show"
+      },
+      {
+        "name": "Mortefi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+        "image": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show"
+      },
+      {
+        "name": "Danjin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+        "image": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show"
+      }
+    ],
+    "featuredWeapons": [
+      {
+        "name": "Verdant Summit",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455951",
+        "image": "https://img.game8.co/4302953/c37741f9c0a35fbe698037cfd6eb2dea.png/show"
+      }
+    ]
+  },
+  {
+    "id": "wuwa-3.5-selector-starpath-reverbs",
+    "type": "selector",
+    "version": "3.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Starpath Reverbs",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/606968",
+        "image": "https://img.game8.co/4543808/a058a29fbe440a6d74f6a72fb8b5d469.png/show"
+      },
+      {
+        "name": "Tideforge Reverbs",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/606976",
+        "image": "https://img.game8.co/4543818/260a31901d8dbc59b117592ed60be8ff.png/show"
+      }
+    ],
+    "startDate": null,
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Jiyan",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454216",
+        "image": "https://img.game8.co/4303125/b8167e215c344e45fb232d1483c39315.png/show"
+      },
+      {
+        "name": "Yinlin",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/454218",
+        "image": "https://img.game8.co/4303122/f2572c97e3f89983fde9bd2acd504717.png/show"
+      },
+      {
+        "name": "Jinhsi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455405",
+        "image": "https://img.game8.co/4303120/24763e189518dfc4e3f3aa650cacad2b.png/show"
+      },
+      {
+        "name": "Changli",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/452826",
+        "image": "https://img.game8.co/4303105/4ba6389b5f9c601438375f2237705e67.png/show"
+      },
+      {
+        "name": "Zhezhi",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/461497",
+        "image": "https://img.game8.co/4303117/77ef73d947def3477132861150ab6105.png/show"
+      },
+      {
+        "name": "Xiangli Yao",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/461501",
+        "image": "https://img.game8.co/4303109/d101f899f3ff1ef3314c45fb9f5aadcf.png/show"
+      }
+    ],
+    "featured4": [],
+    "featuredWeapons": [
+      {
+        "name": "Verdant Summit",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455951",
+        "image": "https://img.game8.co/4302953/c37741f9c0a35fbe698037cfd6eb2dea.png/show"
+      },
+      {
+        "name": "Stringmaster",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/455927",
+        "image": "https://img.game8.co/4302938/32585d28436ca1a4b807290582d8edd5.png/show"
+      },
+      {
+        "name": "Ages of Harvest",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/458249",
+        "image": "https://img.game8.co/4302871/e09c2b5b22a8b7c845b9a96092249c4e.png/show"
+      },
+      {
+        "name": "Blazing Brilliance",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/458273",
+        "image": "https://img.game8.co/4302860/d66e051de85e88eb048c20f07968420d.png/show"
+      },
+      {
+        "name": "Rime-Draped Sprouts",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464109",
+        "image": "https://img.game8.co/4302950/99aad39e6dcb5bfe94f0f85a0a09ce73.png/show"
+      },
+      {
+        "name": "Verity's Handle",
+        "url": "https://game8.co/games/Wuthering-Waves/archives/464110",
+        "image": "https://img.game8.co/4302954/09e6b0d7ec94aaa38d07a12010104f33.png/show"
+      }
+    ]
+  }
+]

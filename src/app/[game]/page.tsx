@@ -5,9 +5,18 @@ import { TRACKED_APPS, getAppBySlug } from "@/lib/apps";
 
 export const dynamicParams = false;
 
+const SLUGS_WITH_OWN_PAGE = new Set([
+  "genshin",
+  "hsr",
+  "zzz",
+  "wuwa",
+  "hi3",
+  "shadowverse",
+]);
+
 export function generateStaticParams() {
   return TRACKED_APPS.filter(
-    (app) => app.slug !== "" && app.slug !== "genshin" && app.slug !== "hsr"
+    (app) => app.slug !== "" && !SLUGS_WITH_OWN_PAGE.has(app.slug)
   ).map((app) => ({
     game: app.slug,
   }));

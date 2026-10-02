@@ -52,6 +52,16 @@ src/
 - Multi-game: app registry `src/lib/apps.ts` + AppSwitcher dropdown; static routes override `[game]` dynamic route (`dynamicParams=false` for true 404s)
 - Genshin tracker at `/genshin`: 216 banners from Game8 via cheerio scraper (`scripts/scrape-genshin.mjs`), type/year/search filters, detail modal with featured chips
 - HSR tracker at `/hsr`: 131 banners from Game8 (`scripts/scrape-hsr.mjs`), character/light-cone filters, nullable end dates (TBA collab banners)
+- ZZZ tracker at `/zzz`: 134 banners from Game8 two-column table (`scripts/scrape-zzz.mjs`), agent/W-Engine filters, type-aware no-featured note
+- WuWa tracker at `/wuwa`: 46 banners from Game8 detail-text zones (`scripts/scrape-wuwa.mjs`), resonator/selector filters, `featuredWeapons[]`, nullable selector dates ("No dates listed"/"Not listed")
+- HI3 tracker at `/hi3`: 73 GLB versions from fandom MediaWiki API (`scripts/scrape-hi3.mjs`, `Category:Versions` + `Version Entry`/`Version Infobox` templates), no type filter, null end = ongoing ("Ongoing"), debut-line featured extraction
+- Shadowverse tracker at `/shadowverse`: 10 entries from official cards site (`scripts/scrape-shadowverse.mjs`), card-set/collab filters, latest-set active rule, permanent ranges, imageless fallback rendering
+- `ImageWithFallback`: empty `src` renders fallback UI without a request; `static.wikia.nocookie.net` sources render `unoptimized` (Fandom 403s the optimizer's referer-less fetch)
+
+## Upcoming Features (Buckets 11-13)
+- Events tab at `/events`: unified event schema `{id, game, name, startDate, endDate, type, url?, imageUrl?}`, nav tab, Now/Upcoming/Past sections, game + year filters
+- Cross-game Units & Faves: per-game roster pages (status tracking like `/servants`) and lineup pages (like `/grands`), status storage keyed per game (`unit-status:{game}`), per-game tab nav; likely static `/[game]/units` subroutes
+- Class/element button filters on servants/units tab: per-game taxonomy (FGO classes, Genshin elements, HSR elements/paths), multi-select pills combinable with search/sort/status
 
 ## Build & Run
 ```bash

@@ -1,0 +1,1834 @@
+[
+  {
+    "id": "version-9.0",
+    "type": "battlesuit",
+    "version": "9.0",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Senadina (AstralOp)",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_9.0",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/66/Version_9.0_%28Banner%29.png/revision/latest?cb=20260820040358"
+      }
+    ],
+    "startDate": "2026-08-20",
+    "endDate": null,
+    "featured5": [
+      {
+        "name": "Senadina (AstralOp)",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.9",
+    "type": "battlesuit",
+    "version": "8.9",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Wings of Panacea",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.9",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e3/Version_8.9_%28Banner%29.png/revision/latest?cb=20260625042456"
+      }
+    ],
+    "startDate": "2026-06-25",
+    "endDate": "2026-08-20",
+    "featured5": [
+      {
+        "name": "Wings of Panacea",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.8",
+    "type": "battlesuit",
+    "version": "8.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Bailu Youyun",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.8",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1b/Version_8.8_%28Banner%29.png/revision/latest?cb=20260430060630"
+      }
+    ],
+    "startDate": "2026-04-30",
+    "endDate": "2026-06-25",
+    "featured5": [
+      {
+        "name": "Bailu Youyun",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.7",
+    "type": "battlesuit",
+    "version": "8.7",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Xentinel · Dawnbearing Crescent",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.7",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d6/Version_8.7_%28Banner%29.png/revision/latest?cb=20260430060733"
+      }
+    ],
+    "startDate": "2026-03-05",
+    "endDate": "2026-04-30",
+    "featured5": [
+      {
+        "name": "Xentinel · Dawnbearing Crescent",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.6",
+    "type": "battlesuit",
+    "version": "8.6",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Miss Espionage",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.6",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/75/Version_8.6_%28Banner%29.png/revision/latest?cb=20251231051255"
+      }
+    ],
+    "startDate": "2025-12-31",
+    "endDate": "2026-03-05",
+    "featured5": [
+      {
+        "name": "Miss Espionage",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.5",
+    "type": "battlesuit",
+    "version": "8.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Hi♪ Love Elf♥",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.5",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/65/Version_8.5_%28Banner%29.png/revision/latest?cb=20251023050836"
+      }
+    ],
+    "startDate": "2025-10-23",
+    "endDate": "2025-12-31",
+    "featured5": [
+      {
+        "name": "Hi♪ Love Elf♥",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.4",
+    "type": "battlesuit",
+    "version": "8.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Behold! Fate-Defying Dragon",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.4",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7c/Version_8.4_%28Banner%29.png/revision/latest?cb=20250821040735"
+      }
+    ],
+    "startDate": "2025-08-21",
+    "endDate": "2025-10-23",
+    "featured5": [
+      {
+        "name": "Behold! Fate-Defying Dragon",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Chenxue",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.3",
+    "type": "battlesuit",
+    "version": "8.3",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Planar Armament: Warped Spacetime",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.3",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3a/Version_8.3_%28Banner%29.png/revision/latest?cb=20250626041543"
+      }
+    ],
+    "startDate": "2025-06-26",
+    "endDate": "2025-08-21",
+    "featured5": [
+      {
+        "name": "Planar Armament: Warped Spacetime",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.2",
+    "type": "battlesuit",
+    "version": "8.2",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Peregrine Sword",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.2",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/97/Version_8.2_%28Banner%29.png/revision/latest?cb=20250424032604"
+      }
+    ],
+    "startDate": "2025-04-24",
+    "endDate": "2025-06-26",
+    "featured5": [
+      {
+        "name": "Peregrine Sword",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.1",
+    "type": "battlesuit",
+    "version": "8.1",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Ba-Dum! Fiery Wishing Star",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.1",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7e/Version_8.1_%28Banner%29.png/revision/latest?cb=20250220040848"
+      }
+    ],
+    "startDate": "2025-02-20",
+    "endDate": "2025-04-24",
+    "featured5": [
+      {
+        "name": "Ba-Dum! Fiery Wishing Star",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Theresa Apocalypse (AstralOp)",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-8.0",
+    "type": "battlesuit",
+    "version": "8.0",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Reign Solaris",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_8.0",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/ff/Version_8.0_%28Banner%29.png/revision/latest?cb=20250109041106"
+      }
+    ],
+    "startDate": "2025-01-09",
+    "endDate": "2025-02-20",
+    "featured5": [
+      {
+        "name": "Reign Solaris",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.9",
+    "type": "battlesuit",
+    "version": "7.9",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Thousand-Faced Maestro: Cameo!",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.9",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6d/Version_7.9_%28Banner%29.png/revision/latest?cb=20241128080620"
+      }
+    ],
+    "startDate": "2024-11-28",
+    "endDate": "2025-01-09",
+    "featured5": [
+      {
+        "name": "Thousand-Faced Maestro: Cameo!",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.8",
+    "type": "battlesuit",
+    "version": "7.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Lone Planetfarer",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.8",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/86/Version_7.8_%28Banner%29.png/revision/latest?cb=20241017093435"
+      }
+    ],
+    "startDate": "2024-10-17",
+    "endDate": "2024-11-28",
+    "featured5": [
+      {
+        "name": "Lone Planetfarer",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.7",
+    "type": "battlesuit",
+    "version": "7.7",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Schicksal's Imperative",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.7",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6c/Version_7.7_%28Banner%29.png/revision/latest?cb=20240907003555"
+      }
+    ],
+    "startDate": "2024-09-05",
+    "endDate": "2024-10-17",
+    "featured5": [
+      {
+        "name": "Schicksal's Imperative",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.6",
+    "type": "battlesuit",
+    "version": "7.6",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Jovial Deception: Shadowdimmer",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.6",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/12/Version_7.6_%28Banner%29.png/revision/latest?cb=20240822013828"
+      }
+    ],
+    "startDate": "2024-07-25",
+    "endDate": "2024-09-05",
+    "featured5": [
+      {
+        "name": "Jovial Deception: Shadowdimmer",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Serapeum",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.5",
+    "type": "battlesuit",
+    "version": "7.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Lone Destruction: Shadowchaser",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.5",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2c/Version_7.5_%28Banner%29.png/revision/latest?cb=20240607163341"
+      }
+    ],
+    "startDate": "2024-06-06",
+    "endDate": "2024-07-25",
+    "featured5": [
+      {
+        "name": "Lone Destruction: Shadowchaser",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.4",
+    "type": "battlesuit",
+    "version": "7.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Mad Pleasure: Shadowbringer",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.4",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fd/Version_7.4_%28Banner%29.png/revision/latest?cb=20240426083044"
+      }
+    ],
+    "startDate": "2024-04-25",
+    "endDate": "2024-06-06",
+    "featured5": [
+      {
+        "name": "Mad Pleasure: Shadowbringer",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.3",
+    "type": "battlesuit",
+    "version": "7.3",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Deepspace Anchor: First Light",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.3",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/91/Version_7.3_%28Banner%29.png/revision/latest?cb=20240303075737"
+      }
+    ],
+    "startDate": "2024-02-29",
+    "endDate": "2024-04-25",
+    "featured5": [
+      {
+        "name": "Deepspace Anchor: First Light",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Valkyrie Boltstorm",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Valkyrie Blastmetal",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Dreamseeker",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Songque (AstralOp)",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.2",
+    "type": "battlesuit",
+    "version": "7.2",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Fenghuang of Vicissitude",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.2",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e9/Version_7.2_%28Banner%29.png/revision/latest?cb=20240119035037"
+      }
+    ],
+    "startDate": "2024-01-18",
+    "endDate": "2024-02-29",
+    "featured5": [
+      {
+        "name": "Fenghuang of Vicissitude",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.1",
+    "type": "battlesuit",
+    "version": "7.1",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Cosmic Expression",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.1",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6e/Version_7.1_%28Banner%29.png/revision/latest?cb=20231209082534"
+      }
+    ],
+    "startDate": "2023-12-07",
+    "endDate": "2024-01-18",
+    "featured5": [
+      {
+        "name": "Cosmic Expression",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-7.0",
+    "type": "battlesuit",
+    "version": "7.0",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Lunar Vow: Crimson Love",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_7.0",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d3/Version_7.0_%28Banner%29.png/revision/latest?cb=20240904004806"
+      }
+    ],
+    "startDate": "2023-10-26",
+    "endDate": "2023-12-07",
+    "featured5": [
+      {
+        "name": "Lunar Vow: Crimson Love",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.9",
+    "type": "battlesuit",
+    "version": "6.9",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Miracle ☆ Magical Girl",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.9",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/88/Version_6.9_%28Banner%29.png/revision/latest?cb=20230918185430"
+      }
+    ],
+    "startDate": "2023-09-14",
+    "endDate": "2023-10-26",
+    "featured5": [
+      {
+        "name": "Miracle ☆ Magical Girl",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.8",
+    "type": "battlesuit",
+    "version": "6.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of Rebirth",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.8",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/89/Version_6.8_%28Banner%29.png/revision/latest?cb=20230804073635"
+      }
+    ],
+    "startDate": "2023-08-03",
+    "endDate": "2023-09-14",
+    "featured5": [
+      {
+        "name": "Herrscher of Rebirth",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Project Bunny",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.7",
+    "type": "battlesuit",
+    "version": "6.7",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Sugary Starburst",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.7",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/17/Version_6.7_%28Banner%29.png/revision/latest?cb=20230629171857"
+      }
+    ],
+    "startDate": "2023-06-29",
+    "endDate": "2023-08-03",
+    "featured5": [
+      {
+        "name": "Sugary Starburst",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.6",
+    "type": "battlesuit",
+    "version": "6.6",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Dreamweaver",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.6",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a7/Version_6.6_%28Banner%29.png/revision/latest?cb=20230518143004"
+      }
+    ],
+    "startDate": "2023-05-18",
+    "endDate": "2023-06-29",
+    "featured5": [
+      {
+        "name": "Dreamweaver",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Terminal Aide 0017",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.5",
+    "type": "battlesuit",
+    "version": "6.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Valkyrie Quicksand",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.5",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/22/Version_6.5_%28Banner%29.png/revision/latest?cb=20230406200725"
+      }
+    ],
+    "startDate": "2023-04-06",
+    "endDate": "2023-05-18",
+    "featured5": [
+      {
+        "name": "Valkyrie Quicksand",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.4",
+    "type": "battlesuit",
+    "version": "6.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of Finality",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.4",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a2/Version_6.4_%28Banner%29.png/revision/latest?cb=20230216235904"
+      }
+    ],
+    "startDate": "2023-02-16",
+    "endDate": "2023-04-06",
+    "featured5": [
+      {
+        "name": "Herrscher of Finality",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Herrscher of Origin",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Kiana Kaslana (ELF)",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.3",
+    "type": "battlesuit",
+    "version": "6.3",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of Truth",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.3",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/87/Version_6.3_%28Banner%29.png/revision/latest?cb=20230129141649"
+      }
+    ],
+    "startDate": "2023-01-12",
+    "endDate": "2023-02-16",
+    "featured5": [
+      {
+        "name": "Herrscher of Truth",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.2",
+    "type": "battlesuit",
+    "version": "6.2",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Chrono Navi",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.2",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fa/Version_6.2_%28Banner%29.png/revision/latest?cb=20221212074400"
+      }
+    ],
+    "startDate": "2022-12-08",
+    "endDate": "2023-01-12",
+    "featured5": [
+      {
+        "name": "Chrono Navi",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.1",
+    "type": "battlesuit",
+    "version": "6.1",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Jade Knight",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.1",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/91/Version_6.1_%28Banner%29.png/revision/latest?cb=20221127081902"
+      }
+    ],
+    "startDate": "2022-10-27",
+    "endDate": "2022-12-08",
+    "featured5": [
+      {
+        "name": "Jade Knight",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-6.0",
+    "type": "battlesuit",
+    "version": "6.0",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of Human: Ego",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_6.0",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/81/Version_6.0_%28Banner%29.png/revision/latest?cb=20220918142009"
+      }
+    ],
+    "startDate": "2022-09-15",
+    "endDate": "2022-10-27",
+    "featured5": [
+      {
+        "name": "Herrscher of Human: Ego",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Elf Elysia",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.9",
+    "type": "battlesuit",
+    "version": "5.9",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Helical Contraption",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.9",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4a/Version_5.9_%28Banner%29.png/revision/latest?cb=20220830183743"
+      }
+    ],
+    "startDate": "2022-08-11",
+    "endDate": "2022-09-15",
+    "featured5": [
+      {
+        "name": "Helical Contraption",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.8",
+    "type": "battlesuit",
+    "version": "5.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Starry Impression",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.8",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a7/Version_5.8_%28Banner%29.png/revision/latest?cb=20220701054809"
+      }
+    ],
+    "startDate": "2022-06-30",
+    "endDate": "2022-08-11",
+    "featured5": [
+      {
+        "name": "Starry Impression",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.7",
+    "type": "battlesuit",
+    "version": "5.7",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Disciplinary Perdition",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.7",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/36/Version_5.7_%28Banner%29.png/revision/latest?cb=20220519105249"
+      }
+    ],
+    "startDate": "2022-05-19",
+    "endDate": "2022-06-30",
+    "featured5": [
+      {
+        "name": "Disciplinary Perdition",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Golden Diva",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.6",
+    "type": "battlesuit",
+    "version": "5.6",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Reverist Calico",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.6",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/89/Version_5.6_%28Banner%29.png/revision/latest?cb=20220411163753"
+      }
+    ],
+    "startDate": "2022-04-07",
+    "endDate": "2022-05-19",
+    "featured5": [
+      {
+        "name": "Reverist Calico",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.5",
+    "type": "battlesuit",
+    "version": "5.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Palatinus Equinox",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.5",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/21/Version_5.5_%28Banner%29.png/revision/latest?cb=20220224150003"
+      }
+    ],
+    "startDate": "2022-02-24",
+    "endDate": "2022-04-07",
+    "featured5": [
+      {
+        "name": "Palatinus Equinox",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Spina Astera",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Blade Durandal (ELF)",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.4",
+    "type": "battlesuit",
+    "version": "5.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Silverwing: N-EX",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.4",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/bc/Version_5.4_%28Banner%29.png/revision/latest?cb=20220121012455"
+      }
+    ],
+    "startDate": "2022-01-13",
+    "endDate": "2022-02-24",
+    "featured5": [
+      {
+        "name": "Silverwing: N-EX",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.3",
+    "type": "battlesuit",
+    "version": "5.3",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Sweet 'n' Spicy",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.3",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/25/Version_5.3_%28Banner%29.png/revision/latest?cb=20220121160220"
+      }
+    ],
+    "startDate": "2021-12-02",
+    "endDate": "2022-01-13",
+    "featured5": [
+      {
+        "name": "Sweet 'n' Spicy",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.2",
+    "type": "battlesuit",
+    "version": "5.2",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Infinite Ouroboros",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.2",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/38/Version_5.2_%28Banner%29.png/revision/latest?cb=20220121170623"
+      }
+    ],
+    "startDate": "2021-10-21",
+    "endDate": "2021-12-02",
+    "featured5": [
+      {
+        "name": "Infinite Ouroboros",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Midnight Absinthe",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Klein (ELF)",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.1",
+    "type": "battlesuit",
+    "version": "5.1",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Miss Pink Elf♪",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.1",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/eb/Version_5.1_%28Banner%29.png/revision/latest?cb=20220121171845"
+      }
+    ],
+    "startDate": "2021-09-16",
+    "endDate": "2021-10-21",
+    "featured5": [
+      {
+        "name": "Miss Pink Elf♪",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-5.0",
+    "type": "battlesuit",
+    "version": "5.0",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of Flamescion",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_5.0",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2a/Version_5.0_%28Banner%29.png/revision/latest?cb=20220121174656"
+      }
+    ],
+    "startDate": "2021-08-12",
+    "endDate": "2021-09-16",
+    "featured5": [
+      {
+        "name": "Herrscher of Flamescion",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Sirin (ELF)",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.9",
+    "type": "battlesuit",
+    "version": "4.9",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Prinzessin der Verurteilung!",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.9",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6c/Version_4.9_%28Banner%29.png/revision/latest?cb=20220121182822"
+      }
+    ],
+    "startDate": "2021-07-08",
+    "endDate": "2021-08-12",
+    "featured5": [
+      {
+        "name": "Prinzessin der Verurteilung!",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.8",
+    "type": "battlesuit",
+    "version": "4.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Starchasm Nyx",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.8",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0e/Version_4.8_%28Banner%29.png/revision/latest?cb=20220121183427"
+      }
+    ],
+    "startDate": "2021-05-27",
+    "endDate": "2021-07-08",
+    "featured5": [
+      {
+        "name": "Starchasm Nyx",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.7",
+    "type": "battlesuit",
+    "version": "4.7",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Haxxor Bunny",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.7",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c1/Version_4.7_%28Banner%29.png/revision/latest?cb=20220121191639"
+      }
+    ],
+    "startDate": "2021-04-22",
+    "endDate": "2021-05-27",
+    "featured5": [
+      {
+        "name": "Haxxor Bunny",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.6",
+    "type": "battlesuit",
+    "version": "4.6",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of Sentience",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.6",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9d/Version_4.6_%28Banner%29.png/revision/latest?cb=20220121193518"
+      }
+    ],
+    "startDate": "2021-03-04",
+    "endDate": "2021-04-22",
+    "featured5": [
+      {
+        "name": "Herrscher of Sentience",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Water's Edge",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.5",
+    "type": "battlesuit",
+    "version": "4.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Blazing Hope",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.5",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1c/Version_4.5_%28Banner%29.png/revision/latest?cb=20220121195825"
+      }
+    ],
+    "startDate": "2021-01-21",
+    "endDate": "2021-03-04",
+    "featured5": [
+      {
+        "name": "Blazing Hope",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.4",
+    "type": "battlesuit",
+    "version": "4.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Dea Anchora",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.4",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/02/Version_4.4_%28Banner%29.png/revision/latest?cb=20220121204725"
+      }
+    ],
+    "startDate": "2020-12-17",
+    "endDate": "2021-01-21",
+    "featured5": [
+      {
+        "name": "Dea Anchora",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.3",
+    "type": "battlesuit",
+    "version": "4.3",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Fervent Tempo Δ",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.3",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9d/Version_4.3_%28Banner%29.png/revision/latest?cb=20220121212221"
+      }
+    ],
+    "startDate": "2020-10-29",
+    "endDate": "2020-12-17",
+    "featured5": [
+      {
+        "name": "Fervent Tempo Δ",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Tesla ZERO",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.2",
+    "type": "battlesuit",
+    "version": "4.2",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Fallen Rosemary",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.2",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c1/Version_4.2_%28Banner%29.png/revision/latest?cb=20220121213923"
+      }
+    ],
+    "startDate": "2020-09-15",
+    "endDate": "2020-10-29",
+    "featured5": [
+      {
+        "name": "Fallen Rosemary",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Danzai Spectramancer",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Fallen Rosemary",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "War Treasury",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.1",
+    "type": "battlesuit",
+    "version": "4.1",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of Thunder",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.1",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/83/Version_4.1_%28Banner%29.png/revision/latest?cb=20220121220049"
+      }
+    ],
+    "startDate": "2020-08-06",
+    "endDate": "2020-09-15",
+    "featured5": [
+      {
+        "name": "Herrscher of Thunder",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Bella (ELF)",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-4.0",
+    "type": "battlesuit",
+    "version": "4.0",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Starlit Astrologos",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_4.0",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/99/Version_4.0_%28Banner%29.png/revision/latest?cb=20220121221908"
+      }
+    ],
+    "startDate": "2020-06-23",
+    "endDate": "2020-08-06",
+    "featured5": [
+      {
+        "name": "Starlit Astrologos",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.9",
+    "type": "battlesuit",
+    "version": "3.9",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Bright Knight: Excelsis",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.9",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/27/Version_3.9_%28Banner%29.png/revision/latest?cb=20220121224407"
+      }
+    ],
+    "startDate": "2020-05-14",
+    "endDate": "2020-06-23",
+    "featured5": [
+      {
+        "name": "Bright Knight: Excelsis",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.8",
+    "type": "battlesuit",
+    "version": "3.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Valkyrie Gloria",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.8",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ad/Version_3.8_%28Banner%29.png/revision/latest?cb=20220121230321"
+      }
+    ],
+    "startDate": "2020-04-02",
+    "endDate": "2020-05-14",
+    "featured5": [
+      {
+        "name": "Valkyrie Gloria",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.7",
+    "type": "battlesuit",
+    "version": "3.7",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Azure Empyrea",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.7",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/23/Version_3.7_%28Banner%29.png/revision/latest?cb=20220121231850"
+      }
+    ],
+    "startDate": "2020-02-13",
+    "endDate": "2020-04-02",
+    "featured5": [
+      {
+        "name": "Azure Empyrea",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Book of Fuxi",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.6",
+    "type": "battlesuit",
+    "version": "3.6",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Darkbolt Jonin",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.6",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f1/Version_3.6_%28Banner%29.png/revision/latest?cb=20220122001529"
+      }
+    ],
+    "startDate": "2019-12-26",
+    "endDate": "2020-02-13",
+    "featured5": [
+      {
+        "name": "Darkbolt Jonin",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.5",
+    "type": "battlesuit",
+    "version": "3.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Hawk of the Fog",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.5",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ab/Version_3.5_%28Banner%29.png/revision/latest?cb=20220122002912"
+      }
+    ],
+    "startDate": "2019-11-14",
+    "endDate": "2019-12-26",
+    "featured5": [
+      {
+        "name": "Hawk of the Fog",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Stygian Nymph",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.4",
+    "type": "battlesuit",
+    "version": "3.4",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Twilight Paladin",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.4",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6a/Version_3.4_%28Banner%29.png/revision/latest?cb=20220122005243"
+      }
+    ],
+    "startDate": "2019-09-26",
+    "endDate": "2019-11-14",
+    "featured5": [
+      {
+        "name": "Twilight Paladin",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.3",
+    "type": "battlesuit",
+    "version": "3.3",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of Reason",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.3",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/69/Version_3.3_%28Banner%29.png/revision/latest?cb=20220122010853"
+      }
+    ],
+    "startDate": "2019-08-15",
+    "endDate": "2019-09-26",
+    "featured5": [
+      {
+        "name": "Herrscher of Reason",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Void Drifter",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.2",
+    "type": "battlesuit",
+    "version": "3.2",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Swallowtail Phantasm",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.2",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/25/Version_3.2_%28Banner%29.png/revision/latest?cb=20220122012156"
+      }
+    ],
+    "startDate": "2019-07-04",
+    "endDate": "2019-08-15",
+    "featured5": [
+      {
+        "name": "Swallowtail Phantasm",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Selune's Elegy",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.1",
+    "type": "battlesuit",
+    "version": "3.1",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Molotov Cherry",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.1",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0c/Version_3.1_%28Banner%29.png/revision/latest?cb=20220122014301"
+      }
+    ],
+    "startDate": "2019-05-23",
+    "endDate": "2019-07-04",
+    "featured5": [
+      {
+        "name": "Molotov Cherry",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Drive Kometa",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Blueberry Blitz",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-3.0",
+    "type": "battlesuit",
+    "version": "3.0",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Argent Knight: Artemis",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_3.0",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/33/Version_3.0_%28Banner%29.png/revision/latest?cb=20190419051633"
+      }
+    ],
+    "startDate": "2019-04-18",
+    "endDate": "2019-05-23",
+    "featured5": [
+      {
+        "name": "Argent Knight: Artemis",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Phantom Iron",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Striker Fulminata",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Jingwei's Wings",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Blood Embrace",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-2.8",
+    "type": "battlesuit",
+    "version": "2.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Umbral Rose",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.8",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a9/Version_2.8_%28Banner%29.png/revision/latest?cb=20190306234007"
+      }
+    ],
+    "startDate": "2019-03-06",
+    "endDate": "2019-04-18",
+    "featured5": [
+      {
+        "name": "Umbral Rose",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Vermilion Knight: Eclipse",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-2.7",
+    "type": "battlesuit",
+    "version": "2.7",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Herrscher of the Void",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.7",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ab/Version_2.7_%28Banner%29.png/revision/latest?cb=20190124015422"
+      }
+    ],
+    "startDate": "2019-01-23",
+    "endDate": "2019-03-06",
+    "featured5": [
+      {
+        "name": "Herrscher of the Void",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Kriegsmesser",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-2.6.5",
+    "type": "battlesuit",
+    "version": "2.6.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Sündenjäger",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.6.5",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/53/Version_2.6.5_%28Banner%29.png/revision/latest?cb=20220122033005"
+      }
+    ],
+    "startDate": "2018-12-28",
+    "endDate": "2019-01-23",
+    "featured5": [
+      {
+        "name": "Sündenjäger",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-2.6",
+    "type": "battlesuit",
+    "version": "2.6",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Version 2.6",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.6",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e9/Version_2.6.png/revision/latest?cb=20220409130119"
+      }
+    ],
+    "startDate": "2018-12-12",
+    "endDate": "2018-12-28",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "version-2.3",
+    "type": "battlesuit",
+    "version": "2.3",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Version 2.3",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.3",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9c/Version_2.3.png/revision/latest?cb=20220409125155"
+      }
+    ],
+    "startDate": "2018-11-07",
+    "endDate": "2018-12-12",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "version-2.2.8",
+    "type": "battlesuit",
+    "version": "2.2.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Version 2.2.8",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.2.8",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9b/Version_2.2.8.png/revision/latest?cb=20220409122158"
+      }
+    ],
+    "startDate": "2018-10-18",
+    "endDate": "2018-11-07",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "version-2.2.5",
+    "type": "battlesuit",
+    "version": "2.2.5",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Version 2.2.5",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.2.5",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7c/Version_2.2.5.png/revision/latest?cb=20220409121450"
+      }
+    ],
+    "startDate": "2018-09-28",
+    "endDate": "2018-10-18",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "version-2.2.3",
+    "type": "battlesuit",
+    "version": "2.2.3",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Version 2.2.3",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.2.3",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/df/Version_2.2.3.png/revision/latest?cb=20220409121213"
+      }
+    ],
+    "startDate": "2018-09-05",
+    "endDate": "2018-09-28",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "version-2.2.2",
+    "type": "battlesuit",
+    "version": "2.2.2",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Version 2.2.2",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.2.2",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/01/Version_2.2.2.png/revision/latest?cb=20220409121037"
+      }
+    ],
+    "startDate": "2018-08-08",
+    "endDate": "2018-09-05",
+    "featured5": [],
+    "featured4": []
+  },
+  {
+    "id": "version-2.2.1",
+    "type": "battlesuit",
+    "version": "2.2.1",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Valkyrie Pledge",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.2.1",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/36/Version_2.2.1_%28Banner%29.png/revision/latest?cb=20241221115248"
+      }
+    ],
+    "startDate": "2018-06-20",
+    "endDate": "2018-08-08",
+    "featured5": [
+      {
+        "name": "Valkyrie Pledge",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Violet Executer",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Sakuno Rondo",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-2.0",
+    "type": "battlesuit",
+    "version": "2.0",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Goushinnso Memento",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_2.0",
+        "image": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4d/Version_2.0_%28Banner%29.png/revision/latest?cb=20180512100736"
+      }
+    ],
+    "startDate": "2018-05-09",
+    "endDate": "2018-06-20",
+    "featured5": [
+      {
+        "name": "Goushinnso Memento",
+        "url": null,
+        "image": null
+      },
+      {
+        "name": "Gyakushinn Miko",
+        "url": null,
+        "image": null
+      }
+    ],
+    "featured4": []
+  },
+  {
+    "id": "version-1.8",
+    "type": "battlesuit",
+    "version": "1.8",
+    "phase": null,
+    "banners": [
+      {
+        "name": "Version 1.8",
+        "url": "https://honkaiimpact3.fandom.com/wiki/Version_1.8",
+        "image": null
+      }
+    ],
+    "startDate": "2018-03-22",
+    "endDate": "2018-05-09",
+    "featured5": [],
+    "featured4": []
+  }
+]
