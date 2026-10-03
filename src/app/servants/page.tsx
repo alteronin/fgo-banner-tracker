@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { getServants } from "@/lib/data";
+import { matchesFilterGroups } from "@/lib/units";
 import { useServantStatus } from "@/contexts/ServantContext";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import { AppSwitcher } from "@/components/AppSwitcher";
@@ -53,6 +54,15 @@ export default function ServantsPage() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<FilterOption>("all");
   const [sort, setSort] = useState<SortOption>("name-asc");
+  const [selectedClasses, setSelectedClasses] = useState<string[]>([]);
+
+  const toggleClass = (className: string) => {
+    setSelectedClasses((prev) =>
+      prev.includes(className)
+        ? prev.filter((c) => c !== className)
+        : [...prev, className]
+    );
+  };
 
   const filteredServants = useMemo(() => {
     let result = allServants;
@@ -61,6 +71,10 @@ export default function ServantsPage() {
     if (filter !== "all") {
       result = result.filter((s) => getStatus(s.slug) === filter);
     }
+
+    result = result.filter((s) =>
+      matchesFilterGroups({ class: s.className }, { class: selectedClasses })
+    );
 
     // Filter by search
     if (search) {
@@ -90,7 +104,7 @@ export default function ServantsPage() {
     }
 
     return result;
-  }, [allServants, filter, search, sort, getStatus]);
+  }, [allServants, filter, search, sort, selectedClasses, getStatus]);
 
   const stats = useMemo(() => {
     const total = allServants.length;
@@ -162,6 +176,28 @@ export default function ServantsPage() {
             <option value="status">Status</option>
             <option value="class-asc">Class</option>
           </select>
+        </div>
+
+        {/* Class filter */}
+        <div className="flex flex-wrap items-center gap-2 mb-6">
+          <span className="w-20 sm:w-24 shrink-0 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            Class
+          </span>
+          <FilterButton
+            active={selectedClasses.length === 0}
+            onClick={() => setSelectedClasses([])}
+          >
+            All
+          </FilterButton>
+          {CLASS_ORDER.map((className) => (
+            <FilterButton
+              key={className}
+              active={selectedClasses.includes(className)}
+              onClick={() => toggleClass(className)}
+            >
+              {className}
+            </FilterButton>
+          ))}
         </div>
 
         {/* Results count */}
@@ -249,6 +285,7 @@ function FilterButton({
   return (
     <button
       onClick={onClick}
+      aria-pressed={active}
       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
         active
           ? "bg-white text-gray-900"

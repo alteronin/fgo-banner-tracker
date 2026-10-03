@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { getAppBySlug, type TrackedApp } from "@/lib/apps";
-import { getUnitRows, getUnitsConfig } from "@/lib/units";
+import { getUnitRows, getUnitsConfig, matchesFilterGroups } from "@/lib/units";
 import { UnitProvider, useUnitStatus } from "@/contexts/UnitContext";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { AppSwitcher } from "./AppSwitcher";
@@ -72,6 +72,21 @@ function UnitsView({
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<FilterOption>("all");
   const [sort, setSort] = useState<SortOption>("name-asc");
+  const [taxo, setTaxo] = useState<Record<string, string[]>>({});
+
+  const toggleTaxo = (key: string, value: string) => {
+    setTaxo((prev) => {
+      const current = prev[key] ?? [];
+      const next = current.includes(value)
+        ? current.filter((v) => v !== value)
+        : [...current, value];
+      return { ...prev, [key]: next };
+    });
+  };
+
+  const clearTaxo = (key: string) => {
+    setTaxo((prev) => ({ ...prev, [key]: [] }));
+  };
 
   const filteredRows = useMemo(() => {
     let result = rows;
@@ -79,6 +94,8 @@ function UnitsView({
     if (filter !== "all") {
       result = result.filter((r) => getStatus(r.id) === filter);
     }
+
+    result = result.filter((r) => matchesFilterGroups(r.filters, taxo));
 
     if (search) {
       const q = search.toLowerCase();
@@ -111,7 +128,7 @@ function UnitsView({
     }
 
     return result;
-  }, [rows, filter, search, sort, getStatus]);
+  }, [rows, filter, search, sort, taxo, getStatus]);
 
   const stats = useMemo(() => {
     const total = rows.length;
@@ -199,6 +216,39 @@ function UnitsView({
           </select>
         </div>
 
+        {config.filterGroups.length > 0 && (
+          <div className="mb-6 space-y-3">
+            {config.filterGroups.map((group) => {
+              const active = taxo[group.key] ?? [];
+              return (
+                <div
+                  key={group.key}
+                  className="flex flex-wrap items-center gap-2"
+                >
+                  <span className="w-20 sm:w-24 shrink-0 text-xs font-semibold uppercase tracking-wider text-gray-500">
+                    {group.label}
+                  </span>
+                  <FilterButton
+                    active={active.length === 0}
+                    onClick={() => clearTaxo(group.key)}
+                  >
+                    All
+                  </FilterButton>
+                  {group.values.map((value) => (
+                    <FilterButton
+                      key={value}
+                      active={active.includes(value)}
+                      onClick={() => toggleTaxo(group.key, value)}
+                    >
+                      {value}
+                    </FilterButton>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         <p className="text-sm text-gray-500 mb-4">
           Showing {filteredRows.length} of {rows.length} {config.noun}
         </p>
@@ -282,6 +332,7 @@ function FilterButton({
   return (
     <button
       onClick={onClick}
+      aria-pressed={active}
       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
         active
           ? "bg-white text-gray-900"

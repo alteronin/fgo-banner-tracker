@@ -79,6 +79,13 @@ export interface UnitRow {
   category: string;
   subtitle: string;
   sortRarity: number;
+  filters: Record<string, string | null>;
+}
+
+export interface UnitFilterGroup {
+  key: string;
+  label: string;
+  values: string[];
 }
 
 export interface UnitsConfig {
@@ -87,4 +94,5 @@ export interface UnitsConfig {
   searchPlaceholder: string;
   categoryLabel: string;
   rarityLabel: string | null;
+  filterGroups: UnitFilterGroup[];
 }
