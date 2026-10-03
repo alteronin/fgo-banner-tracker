@@ -185,3 +185,11 @@
 - A versioned envelope lets the import distinguish the multi-game payload from the original flat `{slug: status}` FGO file without ambiguity
 - Export reads all stores directly (works even when no UnitProvider is mounted); import notifies every affected store so mounted contexts re-render
 - Validation keeps only `owned`/`planning` entries; invalid JSON alerts, unknown keys are ignored
+## 26. Taxonomy Pill Filter Groups (Bucket 13)
+**Decision**: Per-game `TaxonomySpec` (key, label, canonical order, value getter) in `src/lib/units.ts` builds both `UnitRow.filters` and `UnitsConfig.filterGroups`; pure `matchesFilterGroups(filters, selected)` shared by UnitsPage and `/servants`
+**Reasoning**:
+- One spec per game is the single source of truth for label/order/values — group values are the distinct data values sorted canonically (unknown values last, alphabetical), so the UI auto-adapts if a roster gains a new element/path/class
+- Multi-select OR within a group, AND across groups and with status/search matches the buckets.md spec and user ask ("toggling anemo shows only anemo units"); empty group = unfiltered with an explicit active "All" pill
+- Null taxon (HSR light cones omit the `element` key entirely — getter coerces `?? null`) never matches a selection, so light cones drop out of element filters by design
+- `/servants` reuses the same helper with `{class: s.className}` + existing `CLASS_ORDER` instead of a second filter implementation; no URL state or persistence (local component state, consistent with existing type filters)
+- QA lesson: WuWa weapon value is `Pistol` (singular); FGO names use `Altria` not `Artoria`

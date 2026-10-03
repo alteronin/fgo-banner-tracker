@@ -198,10 +198,34 @@ Generalize the FGO-specific `/servants` and `/grands` pages to other games.
 
 ---
 
-## Bucket 13: Class & Element Button Filters (Planned)
-**Status**: Not started
+## Bucket 13: Class & Element Button Filters (Complete)
+**Status**: Completed (2026-10-04) — committed `9109c9c`, pushed, deployed to production, live QA green (qa-filters 134/134, qa-units 168/168, qa-backup 18/18, qa-live only 2 known stale export assertions)
+
+### Filter Groups (verified from roster data)
+- genshin: Element (7 canonical: Pyro, Hydro, Anemo, Electro, Dendro, Cryo, Geo) + Weapon (5: Sword, Claymore, Polearm, Bow, Catalyst)
+- hsr: Element (7: Fire, Ice, Lightning, Wind, Physical, Quantum, Imaginary — light cones have NO element key → null) + Path (9 "The *" values) + Type (Character / Light Cone)
+- zzz: Attribute (7: Fire, Ice, Electric, Ether, Physical, Wind, Lumiflux) + Specialty (7: Attack, Stun, Anomaly, Support, Defense, Rupture, Armorer)
+- wuwa: Element (6: Aero, Fusion, Glacio, Electro, Havoc, Spectro) + Weapon (5: Sword, Broadblade, Gauntlet, **Pistol** singular, Rectifier)
+- hi3: Type (6: MECH, PSY, BIO, IMG, QUA, SD) + Damage (4: Physical, Lightning, Fire, Ice)
+- shadowverse: Class (7: Swordcraft, Forestcraft, Dragoncraft, Havencraft, Runecraft, Portalcraft, Abysscraft)
+- FGO /servants: Class (15 via existing `CLASS_ORDER`, Shielder → Beast)
 
 ### Features
-- [ ] **unit-taxonomy-data**: Ensure every game's unit roster carries class/element fields (FGO classes exist: Saber-Archer-Mage...Avenger-Beast; Genshin elements: Pyro/Hydro/Anemo/Electro/Dendro/Cryo/Geo; HSR elements + paths — scrape/backfill as needed)
-- [ ] **class-element-filters**: Pill-button filter groups on the servants/units tab — multi-select buttons per game's taxonomy, combinable with existing search/sort/status filters; "All" reset behavior
-- [ ] **filter-tests**: button filter state, multi-select semantics, combination with search/status filters
+- [x] **unit-taxonomy-data**: All roster taxonomy fields confirmed present (782 units + 487 FGO servants with populated className); no scraping needed — probe script enumerated distinct values per field
+- [x] **class-element-filters**: `TaxonomySpec<T>` per game in `src/lib/units.ts` (key, label, canonical order, getter) → `UnitRow.filters: Record<string, string|null>` + `UnitsConfig.filterGroups: {key,label,values}[]` (distinct values from data, canonical sort); pure `matchesFilterGroups` helper; UnitsPage renders labeled pill rows (label + All + values) between controls and results count; `/servants` gets the same pattern inline with `CLASS_ORDER`; multi-select OR within group, AND across groups + status + search; per-group All reset; `aria-pressed` on all pills; existing FilterButton styling
+- [x] **filter-tests**: `unitFilters.test.ts` (16: group keys/values locked per game, unique+data-covered values, row filter mapping incl. hsr LC null element + 170/93 split, matchesFilterGroups semantics), `UnitsPage.test.tsx` (10: initial, single toggle, OR, All reset, weapon group, cross-group AND, +search, +status, hsr type/element exclusion, toggle-off), `ServantsPage.test.tsx` (6: initial, single class, OR, reset, +status, +search) → **272 tests total**
+- [x] **local-qa**: `qa-filters.js` — per game: group present, All active, first/second value counts (computed from JSON), OR counts, All resets, cross-group AND, taxonomy+search empty state, status combination, no page errors; hsr special (Light Cone 170 → +Fire 0 → clear type → Fire chars 15); FGO servants (Saber 59, +Lancer 115, Beast 14, +Owned 0, search "altria pendragon") → 134/134; regressions qa-units 168/168, qa-live 74 pass (2 stale export assertions)
+
+### Design Decisions
+- Multi-select per buckets.md spec (OR within group); empty group = no filter with explicit All pill showing active state
+- Null taxon never matches (HSR light cones drop out of every element selection — intentional: "Fire" means Fire units)
+- Group values derived from data at module load, sorted by hardcoded canonical order (unknown values sort last alphabetically) — stable UI + auto-adapts to new roster values
+- No URL state / no persistence — local component state like the existing type filters
+- Filter UI appears on units pages + FGO servants only (faves pools intentionally untouched)
+
+### Completion Checklist
+- [x] gates: tsc/eslint/`npm test` (272)/`npm run build` clean (24 routes)
+- [x] delete `scripts/_taxprobe.mjs` (temp research script)
+- [x] commit + push (`9109c9c`), `npx vercel --prod` (deployed 2026-10-04)
+- [x] live QA with `BASE=https://fgo-banner-tracker.vercel.app` (qa-filters 134/134 re-run — first run 131/134 had 3 transient failures, all green after; qa-units 168/168; qa-backup 18/18; qa-live 2 stale export assertions only)
+- [x] `npm prune` (playwright removed; reinstall with `npm i --no-save playwright` next cycle)

@@ -20,7 +20,7 @@ A web application that helps gacha game players track their pulls and plan their
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: localStorage + React Context (hydration-safe via useSyncExternalStore)
-- **Testing**: Vitest + Testing Library (240 tests)
+- **Testing**: Vitest + Testing Library (272 tests)
 - **Hosting**: Vercel (free tier)
 
 ## Key Features
@@ -37,11 +37,12 @@ A web application that helps gacha game players track their pulls and plan their
 10. Bucket 10 trackers: `/zzz` (134 agent/W-Engine), `/wuwa` (46 resonator/selector + weapons), `/hi3` (73 GLB versions, ongoing current version), `/shadowverse` (9 permanent sets + collab, official pack art)
 11. Bucket 12: per-game Units rosters at `/{game}/units` (782 units: genshin 127, hsr 263, zzz 60, wuwa 59, hi3 110, shadowverse 63) + Faves lineups at `/{game}/faves` (9 slots) + Banners/Units/Faves tab nav on all games
 12. Multi-game backup: Export/Import v2 (`{version, unitStatus, faves}` covering FGO + all games; legacy v1 files still import)
+13. Bucket 13: taxonomy pill filters on `/servants` + `/{game}/units` — multi-select Element/Weapon/Path/Type/Attribute/Specialty/Damage/Class groups, combinable with search/status, per-group All reset
 
-### Roadmap (Buckets 11-13)
+### Roadmap (Buckets 11-13 — all addressed)
 11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
 12. Cross-game Units & Faves — **COMPLETE (2026-10-03)**
-13. Class/element button filters on the servants/units tab (roster taxonomy fields already in data)
+13. Class/element button filters — **COMPLETE (2026-10-04)**
 
 ## Data Sources
 - FGO banner data: GamePress FGO Wiki (https://grandorder.gamepress.gg/summon-banner-list)
@@ -53,7 +54,7 @@ A web application that helps gacha game players track their pulls and plan their
 - Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3/SV, served `unoptimized`), shadowverse-wb.com pack art (SV banners)
 
 ## Testing
-- 240 unit tests covering data integrity, helpers, storage, contexts, hooks, components
+- 272 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics)
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion
