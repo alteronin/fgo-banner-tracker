@@ -8,7 +8,7 @@
       {
         "name": "Revenants of Azvaldt",
         "url": "https://shadowverse-wb.com/en/cards/pack/revenants-of-azvaldt/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_3.wN4TIWUu.webp"
       }
     ],
     "startDate": "2026-08-27",
@@ -36,7 +36,7 @@
       {
         "name": "Chronicle of Destiny",
         "url": "https://shadowverse-wb.com/en/cards/pack/chronicle-of-destiny/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_past.Ci-DcIyn.webp"
       }
     ],
     "startDate": "2026-06-29",
@@ -64,7 +64,7 @@
       {
         "name": "Anathema's Gambit",
         "url": "https://shadowverse-wb.com/en/cards/pack/anathemas-gambit/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_past.B8BrNT8h.webp"
       }
     ],
     "startDate": "2026-04-28",
@@ -92,7 +92,7 @@
       {
         "name": "Apocalypse Pact",
         "url": "https://shadowverse-wb.com/en/cards/pack/apocalypse-pact/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_past.BiEFcn5V.webp"
       }
     ],
     "startDate": "2026-02-26",
@@ -120,7 +120,7 @@
       {
         "name": "Blossoming Fate",
         "url": "https://shadowverse-wb.com/en/cards/pack/blossoming-fate/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_past.Dqmu6mCH.webp"
       }
     ],
     "startDate": "2025-12-29",
@@ -147,8 +147,8 @@
     "banners": [
       {
         "name": "Frieren: Beyond Journey's End",
-        "url": null,
-        "image": null
+        "url": "https://collaboration.shadowverse-wb.com/frieren/en/",
+        "image": "https://collaboration.shadowverse-wb.com/frieren/en/ogp/ogp.png"
       }
     ],
     "startDate": "2025-12-29",
@@ -186,7 +186,7 @@
       {
         "name": "Skybound Dragons",
         "url": "https://shadowverse-wb.com/en/cards/pack/skybound-dragons/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_past.0GH5LkoD.webp"
       }
     ],
     "startDate": "2025-10-29",
@@ -244,7 +244,7 @@
       {
         "name": "Heirs of the Omen",
         "url": "https://shadowverse-wb.com/en/cards/pack/heirs-of-the-omen/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_past.CYc95RO-.webp"
       }
     ],
     "startDate": "2025-08-27",
@@ -272,7 +272,7 @@
       {
         "name": "Infinity Evolved",
         "url": "https://shadowverse-wb.com/en/cards/pack/infinity-evolved/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_past.DpwmYVqF.webp"
       }
     ],
     "startDate": "2025-07-17",
@@ -305,7 +305,7 @@
       {
         "name": "Legends Rise",
         "url": "https://shadowverse-wb.com/en/cards/pack/legends-rise/",
-        "image": null
+        "image": "https://shadowverse-wb.com/assets/_app/immutable/assets/slide_past.Dtw-TLvi.webp"
       }
     ],
     "startDate": "2025-06-17",

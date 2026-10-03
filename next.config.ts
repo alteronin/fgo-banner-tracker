@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "static.wikia.nocookie.net",
       },
+      {
+        protocol: "https",
+        hostname: "shadowverse-wb.com",
+      },
+      {
+        protocol: "https",
+        hostname: "collaboration.shadowverse-wb.com",
+      },
     ],
   },
 };

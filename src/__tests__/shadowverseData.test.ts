@@ -54,6 +54,26 @@ describe("shadowverse-data", () => {
         });
     });
 
+    it("each banner has a non-null image and an absolute url when linked", () => {
+      const banners = getSvwbBanners();
+      banners.forEach((b) => {
+        expect(b.banners[0].image).toBeTruthy();
+        expect(b.banners[0].image).toMatch(/^https:\/\//);
+        if (b.banners[0].url !== null)
+          expect(b.banners[0].url).toMatch(/^https:\/\//);
+      });
+    });
+
+    it("the collaboration links to the official collab site", () => {
+      const collab = getSvwbBanners().find((b) => b.type === "collab")!;
+      expect(collab.banners[0].url).toBe(
+        "https://collaboration.shadowverse-wb.com/frieren/en/"
+      );
+      expect(collab.banners[0].image).toMatch(
+        /^https:\/\/collaboration\.shadowverse-wb\.com\//
+      );
+    });
+
     it("the collaboration has a bounded window within 60 days", () => {
       const collab = getSvwbBanners().find((b) => b.type === "collab")!;
       expect(collab.endDate).toBeTruthy();

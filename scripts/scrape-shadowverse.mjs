@@ -50,7 +50,8 @@ const COLLABS = [
     startDate: "2025-12-29",
     endDate: "2026-01-27",
     leaders: ["Aura", "Fern", "Frieren", "Stark"],
-    url: null,
+    url: "https://collaboration.shadowverse-wb.com/frieren/en/",
+    image: "https://collaboration.shadowverse-wb.com/frieren/en/ogp/ogp.png",
   },
 ];
 
@@ -75,9 +76,12 @@ async function main() {
     if (!name || seen.has(name)) return;
     seen.add(name);
     const href = $a.attr("href");
+    const img = $a.find("img").first().attr("src");
+    if (!img) throw new Error(`${name}: no pack image on listing page`);
     sets.push({
       name,
       url: href.startsWith("/") ? `https://shadowverse-wb.com${href}` : href,
+      image: img.startsWith("/") ? `https://shadowverse-wb.com${img}` : img,
     });
   });
   console.error(`Found ${sets.length} card sets: ${sets.map((s) => s.name).join(", ")}`);
@@ -100,7 +104,7 @@ async function main() {
       type: "set",
       version: null,
       phase: null,
-      banners: [{ name: s.name, url: s.url, image: null }],
+      banners: [{ name: s.name, url: s.url, image: s.image }],
       startDate: meta.date,
       endDate: null,
       featured5: meta.leaders.map((name) => ({ name, url: null, image: null })),
@@ -119,7 +123,7 @@ async function main() {
       type: "collab",
       version: null,
       phase: null,
-      banners: [{ name: c.name, url: c.url, image: null }],
+      banners: [{ name: c.name, url: c.url, image: c.image }],
       startDate: c.startDate,
       endDate: c.endDate,
       featured5: c.leaders.map((name) => ({ name, url: null, image: null })),
@@ -141,6 +145,9 @@ async function main() {
     idSeen.add(e.id);
     if (e.endDate && e.endDate <= e.startDate) throw new Error(`bad range: ${e.id}`);
     if (!e.featured5.length) throw new Error(`no featured5: ${e.id}`);
+    if (!e.banners[0].image) throw new Error(`no banner image: ${e.id}`);
+    if (e.banners[0].url && !e.banners[0].url.startsWith("https://"))
+      throw new Error(`bad url: ${e.id}`);
   }
 
   writeFileSync(OUT, JSON.stringify(entries, null, 2) + "\n", "utf8");
