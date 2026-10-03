@@ -6,7 +6,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454213",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "992281",
@@ -15,7 +16,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
     "rarity": "4",
     "element": "Aero",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "992282",
@@ -24,7 +26,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
     "rarity": "4",
     "element": "Aero",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "992283",
@@ -33,7 +36,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454217",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "992284",
@@ -42,7 +46,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "992285",
@@ -51,7 +56,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454221",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "992286",
@@ -60,7 +66,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
     "rarity": "4",
     "element": "Fusion",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "992287",
@@ -69,7 +76,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
     "rarity": "4",
     "element": "Fusion",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "992288",
@@ -78,7 +86,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454223",
     "rarity": "5",
     "element": "Glacio",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "992289",
@@ -87,7 +96,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
     "rarity": "4",
     "element": "Glacio",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "992290",
@@ -96,7 +106,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
     "rarity": "4",
     "element": "Glacio",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "992291",
@@ -105,7 +116,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
     "rarity": "4",
     "element": "Havoc",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "992292",
@@ -114,7 +126,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
     "rarity": "4",
     "element": "Havoc",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "992293",
@@ -123,7 +136,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454228",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "992294",
@@ -132,7 +146,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454229",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "992295",
@@ -141,7 +156,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454216",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "992296",
@@ -150,7 +166,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/454218",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1002030",
@@ -159,7 +176,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/455405",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "1002031",
@@ -168,7 +186,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/452826",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1003517",
@@ -177,7 +196,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/456120",
     "rarity": "5",
     "element": "Havoc",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1025479",
@@ -186,7 +206,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/461497",
     "rarity": "5",
     "element": "Glacio",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1025480",
@@ -195,7 +216,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/461501",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "1044973",
@@ -204,7 +226,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/463667",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1044974",
@@ -213,7 +236,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
     "rarity": "4",
     "element": "Glacio",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "1049692",
@@ -222,7 +246,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/473332",
     "rarity": "5",
     "element": "Havoc",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1081553",
@@ -231,7 +256,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "1123677",
@@ -240,7 +266,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/486244",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1123678",
@@ -249,7 +276,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/486245",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1123679",
@@ -258,7 +286,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/486246",
     "rarity": "5",
     "element": "Havoc",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "1123680",
@@ -267,7 +296,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/486248",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "1123759",
@@ -276,7 +306,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/486251",
     "rarity": "5",
     "element": "Glacio",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "1167656",
@@ -285,7 +316,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/500493",
     "rarity": "5",
     "element": "Havoc",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1183602",
@@ -294,7 +326,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/505267",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1192923",
@@ -303,7 +336,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/507924",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "1216787",
@@ -312,7 +346,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/507777",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1217270",
@@ -321,7 +356,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/520661",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "1231350",
@@ -330,7 +366,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/524877",
     "rarity": "5",
     "element": "Havoc",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1231351",
@@ -339,7 +376,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/524880",
     "rarity": "5",
     "element": "Havoc",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "1231352",
@@ -348,7 +386,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/524882",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1231353",
@@ -357,7 +396,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/524888",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "1231354",
@@ -366,7 +406,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/524890",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "1231355",
@@ -375,7 +416,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/524889",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "1323383",
@@ -384,7 +426,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/557981",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1354381",
@@ -393,7 +436,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/568193",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "1354382",
@@ -402,7 +446,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/568207",
     "rarity": "5",
     "element": "Glacio",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1354385",
@@ -411,7 +456,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/568208",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "1354387",
@@ -420,7 +466,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/568210",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Gauntlet"
+    "weapon": "Gauntlet",
+    "type": "resonator"
   },
   {
     "id": "1354389",
@@ -429,7 +476,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/568211",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "1370747",
@@ -438,7 +486,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/572587",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1422838",
@@ -447,7 +496,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/586421",
     "rarity": "5",
     "element": "Glacio",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1425102",
@@ -456,7 +506,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/585681",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1438982",
@@ -465,7 +516,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/598700",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "1457887",
@@ -474,7 +526,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/598702",
     "rarity": "5",
     "element": "Spectro",
-    "weapon": "Pistol"
+    "weapon": "Pistol",
+    "type": "resonator"
   },
   {
     "id": "1482754",
@@ -483,7 +536,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/605297",
     "rarity": "5",
     "element": "Havoc",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1482755",
@@ -492,7 +546,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/605302",
     "rarity": "5",
     "element": "Glacio",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1482757",
@@ -501,7 +556,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/605307",
     "rarity": "5",
     "element": "Fusion",
-    "weapon": "Broadblade"
+    "weapon": "Broadblade",
+    "type": "resonator"
   },
   {
     "id": "1482758",
@@ -510,7 +566,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/605308",
     "rarity": "5",
     "element": "Aero",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
   },
   {
     "id": "1482759",
@@ -519,7 +576,8 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/605309",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Rectifier"
+    "weapon": "Rectifier",
+    "type": "resonator"
   },
   {
     "id": "1491914",
@@ -528,6 +586,1137 @@
     "url": "https://game8.co/games/Wuthering-Waves/archives/606967",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "resonator"
+  },
+  {
+    "id": "w-455915",
+    "name": "Abyss Surges",
+    "imageUrl": "https://img.game8.co/4302856/26b79b179beb4d580ac5515c536985c1.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455915",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-458249",
+    "name": "Ages of Harvest",
+    "imageUrl": "https://img.game8.co/4302871/e09c2b5b22a8b7c845b9a96092249c4e.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/458249",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-606962",
+    "name": "Azure Oath",
+    "imageUrl": "https://img.game8.co/4555379/842b1c59b73ca434e0285dd6a09ce7ed.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/606962",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-458273",
+    "name": "Blazing Brilliance",
+    "imageUrl": "https://img.game8.co/4302860/d66e051de85e88eb048c20f07968420d.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/458273",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-514609",
+    "name": "Blazing Justice",
+    "imageUrl": "https://img.game8.co/4302870/4bc814c559b299fa66f226f78d27d6f0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/514609",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-506483",
+    "name": "Bloodpact's Pledge",
+    "imageUrl": "https://img.game8.co/4302865/11745c78176d915dcae82b86ed7ffdd0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/506483",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-624313",
+    "name": "Blooming Jadehaven",
+    "imageUrl": "https://img.game8.co/4634145/15b106feb62fa7455a5feaf0fda831dd.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/624313",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-571765",
+    "name": "Boson Astrolabe",
+    "imageUrl": "https://img.game8.co/4374588/92efc47d536bd720d7cd556496cb84e5.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/571765",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455928",
+    "name": "Cosmic Ripples",
+    "imageUrl": "https://img.game8.co/4303000/f484df42557f927652ba66edee2ce3a0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455928",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-575692",
+    "name": "Daybreaker's Spine",
+    "imageUrl": "https://img.game8.co/4424797/9f184c3a3fba9f68c53c0c4c49e3a577.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/575692",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-524868",
+    "name": "Defier's Thorn",
+    "imageUrl": "https://img.game8.co/4302930/c18911b0fd541f5e94582f07d7647732.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/524868",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455939",
+    "name": "Emerald of Genesis",
+    "imageUrl": "https://img.game8.co/4302884/65e151230324674470682a2b07197489.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455939",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-553562",
+    "name": "Emerald Sentence",
+    "imageUrl": "https://img.game8.co/4320009/037b4d165c6ad93318a79d043109818b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/553562",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-575684",
+    "name": "Everbright Polestar",
+    "imageUrl": "https://img.game8.co/4406719/2b31a3f455cfa1adb2f1099a1a39c042.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/575684",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-606963",
+    "name": "Firstlight's Herald",
+    "imageUrl": "https://img.game8.co/4572304/bbd01244eeab0074fc0e409aab5eb4f8.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/606963",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-595088",
+    "name": "Forged Dwarf Star",
+    "imageUrl": "https://img.game8.co/4507096/17f6303ea17e79f0090d03a2a10cf4fd.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/595088",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-603090",
+    "name": "Freeze Frame",
+    "imageUrl": "https://img.game8.co/4532389/afedab897303b82c80216c38137079e2.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/603090",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-595087",
+    "name": "Frostburn",
+    "imageUrl": "https://img.game8.co/4484921/afe46f1c94551974f8f8e4bc3ea8d6da.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/595087",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-614634",
+    "name": "Glint of Clouds",
+    "imageUrl": "https://img.game8.co/4581375/1a4f8cbe252754a138e9aed0abfae7dd.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/614634",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-565517",
+    "name": "Kumokiri",
+    "imageUrl": "https://img.game8.co/4341850/ecfb4cdeb56b9ec2af986225c6bddb81.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/565517",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-571767",
+    "name": "Laser Shearer",
+    "imageUrl": "https://img.game8.co/4374590/de408a2b501c1db43e03b1f3efb0a7bd.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/571767",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-537943",
+    "name": "Lethean Elegy",
+    "imageUrl": "https://img.game8.co/4302944/67a56109313e0cc5bb48a0957cd19ce4.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/537943",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-498527",
+    "name": "Luminous Hymn",
+    "imageUrl": "https://img.game8.co/4302941/dd3869bc0d77183c57bb78b4c9395466.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/498527",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455952",
+    "name": "Lustrous Razor",
+    "imageUrl": "https://img.game8.co/4302935/95d288f222a9699881bd4f8997b4690d.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455952",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-553561",
+    "name": "Lux ＆ Umbra",
+    "imageUrl": "https://img.game8.co/4302951/97fbca216135e2fc9ea9e05a5c86768b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/553561",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-544474",
+    "name": "Moongazer's Sigil",
+    "imageUrl": "https://img.game8.co/4302952/6340eb91765765d2db0ddff55d5d5aad.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/544474",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-571766",
+    "name": "Phasic Homogenizer",
+    "imageUrl": "https://img.game8.co/4374591/0551aa094c06777f3a55c17a4f2abce9.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/571766",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-571764",
+    "name": "Pulsation Bracer",
+    "imageUrl": "https://img.game8.co/4374589/b2def779e4e2b0ca8144fbb8cf232903.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/571764",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-571768",
+    "name": "Radiance Cleaver",
+    "imageUrl": "https://img.game8.co/4374593/649852b42802109c62976ebd9dcb85cc.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/571768",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-483281",
+    "name": "Red Spring",
+    "imageUrl": "https://img.game8.co/4302932/9ebf5515a7a434c124b25a47f5837d72.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/483281",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-464109",
+    "name": "Rime-Draped Sprouts",
+    "imageUrl": "https://img.game8.co/4302950/99aad39e6dcb5bfe94f0f85a0a09ce73.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/464109",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-603088",
+    "name": "Skull Thrasher",
+    "imageUrl": "https://img.game8.co/4528388/d1a033a8e957dd2295ee2b6b730fcf82.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/603088",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-585863",
+    "name": "Solsworn Ciphers",
+    "imageUrl": "https://img.game8.co/4446450/c5621dab96d7aa65c6bbb89e1412cc5d.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/585863",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-603085",
+    "name": "Spectral Trigger",
+    "imageUrl": "https://img.game8.co/4528389/dfa26a51118c36d4cb5bc87ab768e421.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/603085",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-570863",
+    "name": "Spectrum Blaster",
+    "imageUrl": "https://img.game8.co/4374592/52a65a310f426eeb3fc459614cc8040f.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/570863",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-570864",
+    "name": "Starfield Calibrator",
+    "imageUrl": "https://img.game8.co/4384969/bbe56b282c9b7111b531a54aa8d5d131.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/570864",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455904",
+    "name": "Static Mist",
+    "imageUrl": "https://img.game8.co/4302919/24688a5980fca3733becd8964aacdc15.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455904",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-474386",
+    "name": "Stellar Symphony",
+    "imageUrl": "https://img.game8.co/4302949/48f8e85e2df0c363e3763f80cb65cd12.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/474386",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455927",
+    "name": "Stringmaster",
+    "imageUrl": "https://img.game8.co/4302938/32585d28436ca1a4b807290582d8edd5.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455927",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-491970",
+    "name": "The Last Dance",
+    "imageUrl": "https://img.game8.co/4302924/b3692eb2bc84a37851e6e1cfb545448c.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/491970",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-614635",
+    "name": "Thousandfold Deliverance",
+    "imageUrl": "https://img.game8.co/4614377/05f4b59da40b6733ae80fcb9e32d5b48.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/614635",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-544473",
+    "name": "Thunderflare Dominion",
+    "imageUrl": "https://img.game8.co/4302946/df429fdc4c19f4807bdf53c9a3c39f5b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/544473",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-491971",
+    "name": "Tragicomedy",
+    "imageUrl": "https://img.game8.co/4302937/247c529f42271fd09dce9af19d919397.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/491971",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-498528",
+    "name": "Unflickering Valor",
+    "imageUrl": "https://img.game8.co/4302956/ccf261943a6e5c62715c5fdbc3e59636.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/498528",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455951",
+    "name": "Verdant Summit",
+    "imageUrl": "https://img.game8.co/4302953/c37741f9c0a35fbe698037cfd6eb2dea.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455951",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-464110",
+    "name": "Verity's Handle",
+    "imageUrl": "https://img.game8.co/4302954/09e6b0d7ec94aaa38d07a12010104f33.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/464110",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-506482",
+    "name": "Whispers of Sirens",
+    "imageUrl": "https://img.game8.co/4302955/f7c502e967c857fd07f10720981655f0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/506482",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-524869",
+    "name": "Wildfire Mark",
+    "imageUrl": "https://img.game8.co/4302947/03e97c8b3bda7c29797c35d6608f4f9d.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/524869",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-514610",
+    "name": "Woodland Aria",
+    "imageUrl": "https://img.game8.co/4302940/35c1199c7eef34469c6c7a21646e361f.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/514610",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-544845",
+    "name": "Aether Strike",
+    "imageUrl": "https://img.game8.co/4302857/b6308a08bc5b3a191b49fd08e643bdae.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/544845",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455914",
+    "name": "Amity Accord",
+    "imageUrl": "https://img.game8.co/4302866/aa229fff8690d30817655507cc73d718.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455914",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455926",
+    "name": "Augment",
+    "imageUrl": "https://img.game8.co/4302868/d480fcd8d6ff5ae2566487797167092f.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455926",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-544589",
+    "name": "Aureate Zenith",
+    "imageUrl": "https://img.game8.co/4302872/2f5267b1a11a707905103b93fa0d58be.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/544589",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455950",
+    "name": "Autumntrace",
+    "imageUrl": "https://img.game8.co/4302867/c89a5c859ed4303f7de02dc483bff36a.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455950",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455953",
+    "name": "Broadblade#41",
+    "imageUrl": "https://img.game8.co/4302863/d4181eb26cd7b52546899e6d3e03f60e.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455953",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455903",
+    "name": "Cadenza",
+    "imageUrl": "https://img.game8.co/4302862/bbeff581f0ac9a4388ae741f911a3496.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455903",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-492574",
+    "name": "Call of the Abyss",
+    "imageUrl": "https://img.game8.co/4302858/f716a0e4743dd376f99cdc5320b9d51d.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/492574",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-474517",
+    "name": "Celestial Spiral",
+    "imageUrl": "https://img.game8.co/4302859/637c5236b51598c2b4c5636afeb103cf.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/474517",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455925",
+    "name": "Comet Flare",
+    "imageUrl": "https://img.game8.co/4302873/5c20e8809eac05dbcbc5cf0837f573c6.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455925",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455938",
+    "name": "Commando of Conviction",
+    "imageUrl": "https://img.game8.co/4302879/e2c09de02ab33a482ec63c8af2d54c85.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455938",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455949",
+    "name": "Dauntless Evernight",
+    "imageUrl": "https://img.game8.co/4302877/92404e2d97f8544c1767bac30ad006c5.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455949",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455948",
+    "name": "Discord",
+    "imageUrl": "https://img.game8.co/4302876/6c246617124df7523a33f9641b0cbc2d.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455948",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-474515",
+    "name": "Endless Collapse",
+    "imageUrl": "https://img.game8.co/4302890/8b10845e4ba3a98f182eb6fbd94fdb81.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/474515",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-492569",
+    "name": "Fables of Wisdom",
+    "imageUrl": "https://img.game8.co/4302875/5679afc6a2d7b31faee5bacf9edadd8c.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/492569",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-544590",
+    "name": "Feather Edge",
+    "imageUrl": "https://img.game8.co/4302880/3c0f1fb2e1b12624e61b3c349156399c.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/544590",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-474512",
+    "name": "Fusion Accretion",
+    "imageUrl": "https://img.game8.co/4302888/d58f9a5268e5c067ad57c51bf28b22be.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/474512",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455973",
+    "name": "Gauntlets#21D",
+    "imageUrl": "https://img.game8.co/4302905/34d8b8c350e5d197877572e7aaf1f079.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455973",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455947",
+    "name": "Helios Cleaver",
+    "imageUrl": "https://img.game8.co/4302897/4878ce8d78ea13ea116f8e2d1dd3d0a0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455947",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455913",
+    "name": "Hollow Mirage",
+    "imageUrl": "https://img.game8.co/4302878/ce06d1fc19419f9482b9eb595d527c9a.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455913",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455924",
+    "name": "Jinzhou Keeper",
+    "imageUrl": "https://img.game8.co/4302887/1059e00e5cbf0cac78fea3f80dcee92b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455924",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-492572",
+    "name": "Legend of Drunken Hero",
+    "imageUrl": "https://img.game8.co/4302889/85eac3048f175ee40f8795bd9d634c7c.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/492572",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455937",
+    "name": "Lumingloss",
+    "imageUrl": "https://img.game8.co/4302881/48d9fef1e24456af9ec551d0eb725160.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455937",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455936",
+    "name": "Lunar Cutter",
+    "imageUrl": "https://img.game8.co/4302893/c206f901fbdc15cfa56e83362ed27b0e.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455936",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455912",
+    "name": "Marcato",
+    "imageUrl": "https://img.game8.co/4302902/3a0e23edbb4e16272439a8848a2ac431.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455912",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-492570",
+    "name": "Meditations on Mercy",
+    "imageUrl": "https://img.game8.co/4302901/85c6dea37e3e0c132d80bc400546b008.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/492570",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455902",
+    "name": "Novaburst",
+    "imageUrl": "https://img.game8.co/4302898/34aa216b06ce732adc2274bb4fee611f.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455902",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-498526",
+    "name": "Ocean's Gift",
+    "imageUrl": "https://img.game8.co/4302895/592377dad38af0de74b755fad3ce20be.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/498526",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455935",
+    "name": "Overture",
+    "imageUrl": "https://img.game8.co/4302909/0590a93a2abd8300e31a31b7df539bca.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455935",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455974",
+    "name": "Pistols#26",
+    "imageUrl": "https://img.game8.co/4302916/2021b1deecd00e194c9019687fd7c8c1.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455974",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-544744",
+    "name": "Radiant Dawn",
+    "imageUrl": "https://img.game8.co/4302908/a5d501893160b731d243211cd1367053.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/544744",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455916",
+    "name": "Rectifier#25",
+    "imageUrl": "https://img.game8.co/4302913/f2a5eebc396d00854b24ac9500fc55f4.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455916",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-474513",
+    "name": "Relativistic Jet",
+    "imageUrl": "https://img.game8.co/4302915/c4ab9a24050bc5aa889d56f1b9a582a5.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/474513",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-492571",
+    "name": "Romance in Farewell",
+    "imageUrl": "https://img.game8.co/4302906/7078ed9322769d1178092c5ace6f5596.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/492571",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-544594",
+    "name": "Solar Flame",
+    "imageUrl": "https://img.game8.co/4302912/d0ef2238196ac762014d72ee77cae449.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/544594",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-483284",
+    "name": "Somnoire Anchor",
+    "imageUrl": "https://img.game8.co/4302921/2efd44094a2957adbf063f38a0737dbe.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/483284",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455911",
+    "name": "Stonard",
+    "imageUrl": "https://img.game8.co/4302911/b93227ad927b1dde93754fe41325dccb.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455911",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455940",
+    "name": "Sword#18",
+    "imageUrl": "https://img.game8.co/4302926/62166a67f62ae3ca8ea31bfc257171b2.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455940",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455901",
+    "name": "Thunderbolt",
+    "imageUrl": "https://img.game8.co/4302927/d67a7671dc7817fc8e3a772e454b0af4.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455901",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455900",
+    "name": "Undying Flame",
+    "imageUrl": "https://img.game8.co/4302945/be089bc84f4f0831dad46a338fd1c3a2.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455900",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455923",
+    "name": "Variation",
+    "imageUrl": "https://img.game8.co/4302948/db070e6a7088a135d9ce41a8b15aaab0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455923",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-492573",
+    "name": "Waltz in Masquerade",
+    "imageUrl": "https://img.game8.co/4302942/36e43b4191e7c033bfb8e3e00e31a5d3.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/492573",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-474514",
+    "name": "Waning Redshift",
+    "imageUrl": "https://img.game8.co/4302943/80004e2ba86bbaec6519e11862f8b102.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/474514",
+    "rarity": "4",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-458986",
+    "name": "Beguiling Melody",
+    "imageUrl": "https://img.game8.co/4302861/9388c67e66fee37114da8c000da83fe0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/458986",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455946",
+    "name": "Broadblade of Night",
+    "imageUrl": "https://img.game8.co/4302869/def909755ab036a8188c7b3c0eca419e.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455946",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455945",
+    "name": "Broadblade of Voyager",
+    "imageUrl": "https://img.game8.co/4302864/1fe33cef3624d51665535a2a0aae89f1.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455945",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455910",
+    "name": "Gauntlets of Night",
+    "imageUrl": "https://img.game8.co/4302874/953c3bf406c3377a0f0782c93e69cb78.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455910",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455909",
+    "name": "Gauntlets of Voyager",
+    "imageUrl": "https://img.game8.co/4302883/6694ccc6bcea3c4e100d51eb04ffe518.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455909",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455944",
+    "name": "Guardian Broadblade",
+    "imageUrl": "https://img.game8.co/4302886/f6fac018ab4c7533075d07806dbad511.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455944",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455908",
+    "name": "Guardian Gauntlets",
+    "imageUrl": "https://img.game8.co/4302882/3311b7affa0946abb11f6e23bba0cc63.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455908",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455899",
+    "name": "Guardian Pistols",
+    "imageUrl": "https://img.game8.co/4302885/3b36511711fb4fdb035b451a7f951645.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455899",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455922",
+    "name": "Guardian Rectifier",
+    "imageUrl": "https://img.game8.co/4302892/9db130484a03bd27a1db66b7aba66407.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455922",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455934",
+    "name": "Guardian Sword",
+    "imageUrl": "https://img.game8.co/4302894/7f6eb15385dcf8037dc08351d067ff4b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455934",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455943",
+    "name": "Originite: Type I",
+    "imageUrl": "https://img.game8.co/4302914/8a2c321fffb34dd398550afa0129e042.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455943",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Broadblade",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455933",
+    "name": "Originite: Type II",
+    "imageUrl": "https://img.game8.co/4302891/87c975917b0a53975ae88b7a95b4ca69.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455933",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455898",
+    "name": "Originite: Type III",
+    "imageUrl": "https://img.game8.co/4302904/b16ab68630f33c7381a0f2d5d1ae547e.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455898",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455907",
+    "name": "Originite: Type IV",
+    "imageUrl": "https://img.game8.co/4302896/66dd40a3631cef8b18ff05422174388a.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455907",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Gauntlet",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455921",
+    "name": "Originite: Type V",
+    "imageUrl": "https://img.game8.co/4302903/d547c7c8905a36ded75556d8e8c68c50.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455921",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455897",
+    "name": "Pistols of Night",
+    "imageUrl": "https://img.game8.co/4302900/d4776a67530022b8a1e8a9d1d251dd50.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455897",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455896",
+    "name": "Pistols of Voyager",
+    "imageUrl": "https://img.game8.co/4302910/1eb7bbbde23f927f418be6dd5eefbc4f.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455896",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Pistol",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455920",
+    "name": "Rectifier of Night",
+    "imageUrl": "https://img.game8.co/4302920/bd7c71c32b148f1a86fbfba2292e07d4.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455920",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455919",
+    "name": "Rectifier of Voyager",
+    "imageUrl": "https://img.game8.co/4302907/89f2973cfac29fb4dac25e9cb165b1a4.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455919",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Rectifier",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455932",
+    "name": "Sword of Night",
+    "imageUrl": "https://img.game8.co/4302918/0b9992e87ac355e4c17e293a7ed4ebe6.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455932",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-455931",
+    "name": "Sword of Voyager",
+    "imageUrl": "https://img.game8.co/4302917/030eb50da55098f5db415434c72a8e20.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455931",
+    "rarity": "3",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
   }
 ]

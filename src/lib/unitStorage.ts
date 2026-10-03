@@ -60,6 +60,21 @@ export function getUnitStatus(game: string, unitId: string): UnitStatus {
   return getUnitStatuses(game)[unitId] || "none";
 }
 
+export function fillOwnedUnits(game: string, unitIds: string[]): number {
+  if (typeof window === "undefined") return 0;
+  const statuses = getUnitStatuses(game);
+  let filled = 0;
+  for (const unitId of unitIds) {
+    if (statuses[unitId]) continue;
+    statuses[unitId] = "owned";
+    filled += 1;
+  }
+  if (filled > 0) {
+    localStorage.setItem(unitStatusKey(game), JSON.stringify(statuses));
+  }
+  return filled;
+}
+
 export function getFaves(game: string): Record<string, string> {
   return readObject(favesStorageKey(game));
 }

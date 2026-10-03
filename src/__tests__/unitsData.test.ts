@@ -12,7 +12,7 @@ const COUNTS: Record<UnitGame, number> = {
   genshin: 127,
   hsr: 263,
   zzz: 60,
-  wuwa: 59,
+  wuwa: 172,
   hi3: 110,
   shadowverse: 63,
 };
@@ -78,6 +78,23 @@ describe("units data", () => {
     expect(rows.length - lightCones.length).toBe(93);
     for (const cone of lightCones) {
       expect(cone.id).toMatch(/^lc-/);
+    }
+  });
+
+  it("splits wuwa into resonators and weapons", () => {
+    const rows = getUnitRows("wuwa");
+    const weapons = rows.filter((r) => r.filters.type === "Weapon");
+    const resonators = rows.filter((r) => r.filters.type === "Resonator");
+    expect(weapons).toHaveLength(113);
+    expect(resonators).toHaveLength(59);
+    for (const w of weapons) {
+      expect(w.id).toMatch(/^w-/);
+      expect(w.filters.element ?? null).toBeNull();
+      expect(w.subtitle).toBe(`Weapon · ${w.filters.weapon}`);
+    }
+    for (const r of resonators) {
+      expect(r.filters.element).toBeTruthy();
+      expect(r.subtitle).toBe(`${r.filters.element} · ${r.filters.weapon}`);
     }
   });
 

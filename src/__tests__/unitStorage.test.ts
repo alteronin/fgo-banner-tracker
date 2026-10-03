@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import {
   favesStorageKey,
+  fillOwnedUnits,
   getFaves,
   getFavesServerSnapshot,
   getFavesSnapshot,
@@ -87,6 +88,30 @@ describe("unitStorage", () => {
     it("keeps games isolated", () => {
       setFave("zzz", "1", "miyabi");
       expect(getFaves("wuwa")).toEqual({});
+    });
+  });
+
+  describe("fillOwnedUnits", () => {
+    it("marks unset units as owned and reports the count", () => {
+      expect(fillOwnedUnits("genshin", ["nahida", "kazuha"])).toBe(2);
+      expect(getUnitStatus("genshin", "nahida")).toBe("owned");
+      expect(getUnitStatus("genshin", "kazuha")).toBe("owned");
+    });
+
+    it("never overwrites existing statuses", () => {
+      setUnitStatus("genshin", "nahida", "planning");
+      setUnitStatus("genshin", "kazuha", "owned");
+
+      expect(fillOwnedUnits("genshin", ["nahida", "kazuha", "furina"])).toBe(1);
+      expect(getUnitStatus("genshin", "nahida")).toBe("planning");
+      expect(getUnitStatus("genshin", "kazuha")).toBe("owned");
+      expect(getUnitStatus("genshin", "furina")).toBe("owned");
+    });
+
+    it("returns zero when everything is already marked", () => {
+      setUnitStatus("wuwa", "jiyan", "owned");
+      expect(fillOwnedUnits("wuwa", ["jiyan"])).toBe(0);
+      expect(fillOwnedUnits("wuwa", [])).toBe(0);
     });
   });
 

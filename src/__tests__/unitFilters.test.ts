@@ -36,6 +36,7 @@ describe("filter group configs", () => {
     expect(getUnitsConfig("wuwa").filterGroups.map((g) => g.key)).toEqual([
       "element",
       "weapon",
+      "type",
     ]);
     expect(getUnitsConfig("hi3").filterGroups.map((g) => g.key)).toEqual([
       "type",
@@ -123,6 +124,7 @@ describe("filter group configs", () => {
       "Pistol",
       "Rectifier",
     ]);
+    expect(group("wuwa", "type")).toEqual(["Resonator", "Weapon"]);
     expect(group("hi3", "type")).toEqual(["MECH", "PSY", "BIO", "IMG", "QUA", "SD"]);
     expect(group("hi3", "dmg")).toEqual(["Physical", "Lightning", "Fire", "Ice"]);
     expect(group("shadowverse", "class")).toEqual([
@@ -178,11 +180,15 @@ describe("row filter mapping", () => {
     }
   });
 
-  it("wuwa rows carry element and weapon filters", () => {
-    for (const row of getUnitRows("wuwa")) {
-      expect(row.filters.element).toBeTruthy();
-      expect(row.filters.weapon).toBeTruthy();
-    }
+  it("wuwa weapons have null element and Resonator/Weapon type", () => {
+    const rows = getUnitRows("wuwa");
+    const weapons = rows.filter((r) => r.filters.type === "Weapon");
+    const resonators = rows.filter((r) => r.filters.type === "Resonator");
+    expect(weapons.length).toBe(113);
+    expect(resonators.length).toBe(59);
+    for (const w of weapons) expect(w.filters.element ?? null).toBeNull();
+    for (const r of resonators) expect(r.filters.element).toBeTruthy();
+    for (const row of rows) expect(row.filters.weapon).toBeTruthy();
   });
 
   it("hi3 rows carry type and damage filters", () => {

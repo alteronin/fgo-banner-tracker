@@ -66,7 +66,11 @@ function FavesView({
   );
 
   const ownedRows = useMemo(
-    () => rows.filter((row) => getStatus(row.id) === "owned"),
+    () =>
+      rows.filter(
+        (row) =>
+          getStatus(row.id) === "owned" && row.filters.type !== "Weapon"
+      ),
     [rows, getStatus]
   );
 

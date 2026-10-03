@@ -34,6 +34,12 @@ export default function Home() {
             >
               Grands
             </Link>
+            <Link
+              href="/pulls"
+              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
+            >
+              Pulls
+            </Link>
             <ImportExport />
             <AboutHelp />
             <ThemeToggle />

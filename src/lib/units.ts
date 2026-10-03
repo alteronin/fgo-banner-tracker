@@ -110,13 +110,19 @@ const WUWA_TAXONOMY: TaxonomySpec<WuwaUnit>[] = [
     key: "element",
     label: "Element",
     order: ["Aero", "Fusion", "Glacio", "Electro", "Havoc", "Spectro"],
-    get: (u) => u.element,
+    get: (u) => u.element ?? null,
   },
   {
     key: "weapon",
     label: "Weapon",
     order: ["Sword", "Broadblade", "Gauntlet", "Pistol", "Rectifier"],
     get: (u) => u.weapon,
+  },
+  {
+    key: "type",
+    label: "Type",
+    order: ["Resonator", "Weapon"],
+    get: (u) => (u.type === "weapon" ? "Weapon" : "Resonator"),
   },
 ];
 
@@ -262,8 +268,10 @@ const ROWS: Record<UnitGame, UnitRow[]> = {
   wuwa: WUWA_UNITS.map((u) =>
     toRow(
       u,
-      u.element,
-      `${u.element} · ${u.weapon}`,
+      u.element ?? "Weapon",
+      u.type === "weapon"
+        ? `Weapon · ${u.weapon}`
+        : `${u.element ?? ""} · ${u.weapon}`,
       rarityNumber(u.rarity),
       filtersFor(WUWA_TAXONOMY, u)
     )
@@ -324,8 +332,8 @@ const CONFIGS: Record<UnitGame, UnitsConfig> = {
   },
   wuwa: {
     game: "wuwa",
-    noun: "resonators",
-    searchPlaceholder: "Search resonators...",
+    noun: "resonators and weapons",
+    searchPlaceholder: "Search resonators or weapons...",
     categoryLabel: "Element",
     rarityLabel: "Rarity",
     filterGroups: GROUPS.wuwa,

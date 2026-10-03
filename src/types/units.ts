@@ -45,8 +45,9 @@ export interface WuwaUnit {
   imageUrl: string;
   url: string;
   rarity: string;
-  element: string;
+  element: string | null;
   weapon: string;
+  type: "resonator" | "weapon";
 }
 
 export interface Hi3Unit {

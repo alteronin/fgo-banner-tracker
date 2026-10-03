@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 
-export type GameTab = "banners" | "units" | "faves";
+export type GameTab = "banners" | "units" | "faves" | "pulls";
 
 export function GameTabs({ game, active }: { game: string; active: GameTab }) {
   const tabs: { key: GameTab; label: string; href: string }[] = [
     { key: "banners", label: "Banners", href: `/${game}` },
     { key: "units", label: "Units", href: `/${game}/units` },
     { key: "faves", label: "Faves", href: `/${game}/faves` },
+    { key: "pulls", label: "Pulls", href: `/${game}/pulls` },
   ];
 
   return (
