@@ -241,7 +241,7 @@ fgo-banner-tracker/
 - `src/components/PullsPage.tsx` - Pull history: stat cards, pity histogram, category pills, drops table, List/Grid toggle with square ~76px 5★ tiles (thumbnail + pity chip + win/guarantee/loss border)
 - `src/components/ImportPulls.tsx` - Pull-history import (detect format → preview → merge + owned fill)
 - `src/app/{game}/pulls/page.tsx` - Static pull routes (4 full pages + 3 empty states incl. `/pulls`)
-- `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback; empty src → fallback UI (no request), `static.wikia.nocookie.net` → `unoptimized` (Fandom 403s optimizer fetches)
+- `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback; empty src → fallback UI (no request); optimization globally disabled via `next.config.ts` `images.unoptimized: true` (Vercel optimizer quota 402)
 - `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore)
 - `src/app/servants/page.tsx` - Servants summary page
 - `src/app/grands/page.tsx` - Grand servant lineup page
