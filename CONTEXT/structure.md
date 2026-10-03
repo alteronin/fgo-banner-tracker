@@ -89,7 +89,7 @@ fgo-banner-tracker/
 │   │   ├── ImageWithFallback.tsx # Image with error fallback; empty src → fallback UI, wikia → unoptimized
 │   │   ├── ImportExport.tsx  # JSON import/export (v3 backup incl. `pulls`, legacy v1/v2 accepted)
 │   │   ├── ImportPulls.tsx   # Pull-history file import (detect format → preview → merge + owned fill)
-│   │   ├── PullsPage.tsx     # Pull stats: pity cards, histogram, category pills, paginated rows
+│   │   ├── PullsPage.tsx     # Pull stats: pity cards, histogram, category pills, 5★ drops table + row pity, paginated rows
 │   │   ├── PullsEmptyPage.tsx # Empty pulls shell for FGO/HI3/SV
 │   │   ├── RateUpIndicator.tsx # Rate-up type badges
 │   │   ├── SearchBar.tsx     # Search bar component (optional placeholder)
@@ -150,7 +150,7 @@ fgo-banner-tracker/
 │   │   ├── unitStorage.ts    # Per-game unit-status/faves localStorage + fillOwnedUnits (fill-only-unset)
 │   │   ├── pullStorage.ts    # `pulls:{game}` GamePull[] storage (merge/dedupe, subscribe/snapshot/notify)
 │   │   ├── pullImport.ts     # wuwatracker/stardb detection + parsing → GamePull[] + warnings
-│   │   ├── pity.ts           # computeRarityStats, maxPityFor, banner windows + attribution
+│   │   ├── pity.ts           # computeRarityStats, pityByDrop, maxPityFor, banner windows + attribution
 │   │   └── units.ts          # Unit roster loaders, UnitRow mapping, UnitsConfig, UNIT_GAMES, taxonomy specs
 │   ├── types/
 │   │   ├── banner.ts         # TypeScript types
@@ -180,8 +180,8 @@ fgo-banner-tracker/
 │       ├── unitStorage.test.ts # Per-game storage tests (keys, isolation, snapshots, fillOwnedUnits)
 │       ├── pullStorage.test.ts # Pull storage tests (merge/dedupe/snapshots/notify)
 │       ├── pullImport.test.ts # Export detection, fixtures, dedupe ids, warnings, unit bridge
-│       ├── pity.test.ts   # Rarity stats, histogram, maxPityFor, window edges + attribution
-│       ├── PullsPage.test.tsx # Pulls page rendering + stardb import flow
+│       ├── pity.test.ts   # Rarity stats, histogram, pityByDrop, maxPityFor, window edges + attribution
+│       ├── PullsPage.test.tsx # Pulls page rendering, per-5★ pity display + stardb import flow
 │       ├── UnitContext.test.tsx # Unit context tests (toggle cycle, persistence, notify)
 │       └── useBannerFilter.test.tsx # Filter hook + URL state tests
 ├── scripts/
@@ -229,14 +229,14 @@ fgo-banner-tracker/
 - `src/lib/unitStorage.ts` - Per-game `unit-status:{game}` / `faves:{game}` persistence + `fillOwnedUnits` (fill-only-unset)
 - `src/lib/pullStorage.ts` - `pulls:{game}` GamePull[] persistence (merge-by-id dedupe, subscribe/snapshot/notify)
 - `src/lib/pullImport.ts` - wuwatracker/stardb detection + parsing into `GamePull[]` with warnings
-- `src/lib/pity.ts` - `computeRarityStats` (5★/4★ pity + histogram) and banner window attribution
+- `src/lib/pity.ts` - `computeRarityStats` (5★/4★ pity + histogram), `pityByDrop` (drop → pity map), banner window attribution
 - `src/lib/units.ts` - Unit roster access + UnitRow/UnitsConfig mapping
 - `src/lib/data.ts` - Data access (banners, servants, helpers)
 - `src/components/BannerCard.tsx` - Main banner display component
 - `src/components/UnitsPage.tsx` - Per-game units roster page
 - `src/components/FavesPage.tsx` - Per-game 9-slot favorites page
 - `src/components/GameTabs.tsx` - Banners/Units/Faves/Pulls pill navigation
-- `src/components/PullsPage.tsx` - Pull history: stat cards, pity histogram, category pills, paginated rows
+- `src/components/PullsPage.tsx` - Pull history: stat cards, pity histogram, category pills, 5★ drops table + row pity badges, paginated rows
 - `src/components/ImportPulls.tsx` - Pull-history import (detect format → preview → merge + owned fill)
 - `src/app/{game}/pulls/page.tsx` - Static pull routes (4 full pages + 3 empty states incl. `/pulls`)
 - `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback; empty src → fallback UI (no request), `static.wikia.nocookie.net` → `unoptimized` (Fandom 403s optimizer fetches)
