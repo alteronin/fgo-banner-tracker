@@ -233,7 +233,7 @@ Generalize the FGO-specific `/servants` and `/grands` pages to other games.
 ---
 
 ## Bucket 14: Pull-History Import & Pity Tracker (Complete)
-**Status**: Code Complete + gates green (2026-10-04); commit/push/deploy + live QA pending
+**Status**: Complete (2026-10-04) — committed `5817fde` (feat) + `98c16cf` (docs), pushed, deployed to production, live QA green
 
 Import the user's gacha pull-history exports (`wuwatracker-pulls.json` for WuWa, `stardb-export.json` for HSR/ZZZ/GI), auto-populate owned units, and add a Pulls page with pity stats + banner attribution.
 
@@ -285,8 +285,8 @@ Import the user's gacha pull-history exports (`wuwatracker-pulls.json` for WuWa,
 
 ### Completion Checklist
 - [x] gates: tsc/eslint/`npm test` (327/327)/`npm run build` (31 pages, all `/{game}/pulls` routes) clean
-- [ ] commit + push, `npx vercel --prod`
-- [ ] live QA (new pulls suite + regressions qa-units/qa-filters/qa-backup)
-- [x] CONTEXT update (state.md + buckets.md + decisions.md)
-- [ ] `npm prune`
-- [ ] commit agent-files block (`AGENTS.md` next dev regeneration)
+- [x] commit + push (`5817fde` feat, `98c16cf` docs → main), `npx vercel --prod` → https://fgo-banner-tracker.vercel.app (alias ready)
+- [x] live QA green: **qa-pulls 75/75** (new: routes/titles/4-tabs/empty states/import flow/category pity/re-import dedupe/auto-owned on units), **qa-units 168/168** (wuwa 172 + noun + 4 tabs), **qa-filters 140/140** (wuwa Type group added), **qa-faves 174/174** (wuwa pool skips weapons), **qa-backup 21/21** (v3 export incl. `pulls`, v3 restore, legacy v1) — zero console/page errors
+- [x] CONTEXT update (state.md + buckets.md + decisions.md + structure.md + project.md)
+- [x] `npm prune` (no extraneous packages; 8 pre-existing audit advisories untouched)
+- [x] agent-files block: `AGENTS.md` unmodified by this work — nothing to commit

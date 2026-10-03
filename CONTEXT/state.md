@@ -3,8 +3,8 @@ project_name: Multi-Game Gacha Banner Tracker
 status: active
 current_bucket: 14
 current_feature: pull-history-import
-current_phase: code_complete
-buckets_completed: 13
+current_phase: complete
+buckets_completed: 14
 total_buckets: 14
 features_completed:
   - seed-data
@@ -74,13 +74,13 @@ tech_stack:
 deploy_provider: vercel
 deploy_url: https://fgo-banner-tracker.vercel.app
 last_checkpoint: 2026-10-04
-context_version: 13
+context_version: 14
 ---
 
 # Project State
 
 ## Active Context
-**Bucket 14 CODE COMPLETE (2026-10-04) — pull-history import + pity tracker.** Implemented per approved plan: `types/pulls.ts`, `lib/{pullImport,pity,pullStorage}.ts`, `scripts/build-pull-maps.mjs` → 4 pull-map JSONs (offline rarity/unit bridge, 0 unresolved), WuWa weapon roster (113 weapons, `wuwa-units.json` 59→172 with `type` + Type filter group, excluded from faves), owned fill via `fillOwnedUnits` (fill-only-unset, never overwrites), backup **v3** `{version:3, unitStatus, faves, pulls}` (v1/v2 still importable), `PullsPage` + `ImportPulls` + `PullsEmptyPage`, GameTabs 4th "Pulls" pill, 7 static routes (genshin/hsr/zzz/wuwa full; hi3/shadowverse//pulls empty). Pity computed per category (`computeRarityStats`, 5★/4★, cap-indexed histogram); banner attribution from server-supplied `BannerWindow[]` (category→banner type, inclusive dates, overlap→latest start, fallback to category/pool label). Pull ids `${ts}|${category}|${itemKey}|${occ}` for order-independent re-import dedupe. **Gates green: tsc clean, eslint clean, `npm test` 327/327, `npm run build` 31 pages.** Pity constants verified (HSR/GI 90/80, ZZZ 90/80/80, WuWa 80, 4★ = 10; HSR departure 50). REMAINING: commit + push + `npx vercel --prod`, live QA (new pulls suite + qa-units/qa-filters/qa-backup regressions), `npm prune`, agent-files block commit. Full spec in `buckets.md` Bucket 14.
+**Bucket 14 SHIPPED (2026-10-04) — pull-history import + pity tracker.** Committed `5817fde` (feat, 35 files) + `98c16cf` (docs), pushed to `main`, deployed via `npx vercel --prod` (alias https://fgo-banner-tracker.vercel.app). Delivered: offline pull import (`wuwatracker-pulls.json` WuWa, `stardb-export.json` HSR/ZZZ/GI) via `scripts/build-pull-maps.mjs` → 4 pull-map JSONs, `types/pulls.ts` + `lib/{pullImport,pity,pullStorage}.ts`, fill-only-unset owned merge (`fillOwnedUnits`), backup **v3** `{version:3, unitStatus, faves, pulls}` (v1/v2 still importable), WuWa weapon roster (113 weapons, `wuwa-units.json` 59→172, Type filter group, excluded from faves pool), `PullsPage`/`ImportPulls`/`PullsEmptyPage`, GameTabs 4th "Pulls" pill, 7 static routes (genshin/hsr/zzz/wuwa full; hi3/shadowverse//pulls empty). Pity per category (5★/4★, cap-indexed histogram) + banner attribution from server `BannerWindow[]` props; order-independent dedupe ids `${ts}|${category}|${itemKey}|${occ}`. Gates: tsc/eslint/327 tests/build green. **Live QA green: qa-pulls 75/75 (new), qa-units 168/168, qa-filters 140/140, qa-faves 174/174, qa-backup 21/21 (v3), zero console errors.** `npm prune` clean (8 pre-existing audit advisories untouched); `AGENTS.md` unmodified. All 14 buckets complete — only Bucket 11 (events tab) remains, deferred by user. Next: await user direction.
 
 ## Features Built
 - Bucket 1: Core MVP (banner list, servant toggle, indicators, filter, detail, responsive)
@@ -95,14 +95,14 @@ context_version: 13
 - Bucket 10: Remaining game trackers (Complete 2026-10-03 — `/zzz` 134 banners, `/wuwa` 46, `/hi3` 73, `/shadowverse` 10; committed `95771ca`, deployed, live QA green; follow-up `ce29b7f` added official pack art to Shadowverse banner cards)
 - Bucket 12: Cross-game Units & Faves (Complete 2026-10-03 — 6 games × Units + Faves pages, GameTabs nav, per-game storage, ImportExport v2; 240 tests; committed `ef75305`, deployed, live QA green)
 - Bucket 13: Taxonomy Pill Filters (Complete 2026-10-04 — multi-select Element/Weapon/Path/Type/Attribute/Specialty/Damage/Class groups on `/servants` + 6 units pages; 272 tests; committed `9109c9c`, deployed, live QA green)
-- Bucket 14: Pull-History Import & Pity Tracker (**CODE COMPLETE 2026-10-04** — 327 tests, all gates green; commit/deploy/live QA pending — see buckets.md)
+- Bucket 14: Pull-History Import & Pity Tracker (**COMPLETE 2026-10-04** — `5817fde` + `98c16cf`, deployed, live QA green: qa-pulls 75/75, qa-units 168/168, qa-filters 140/140, qa-faves 174/174, qa-backup 21/21; 327 unit tests)
 
 ## Roadmap (Buckets 11-14)
 - Bucket 10: Remaining game trackers — **COMPLETE (2026-10-03)**: committed `95771ca`, deployed, live QA green; SV image fix `ce29b7f`
 - Bucket 11: Events tab — **DEFERRED by user (2026-10-03)**; `/events` route + nav tab; unified event feed (now/upcoming/past) with game + year filters, sources TBD
 - Bucket 12: Cross-game Units & Faves — **COMPLETE (2026-10-03)**: committed `ef75305`, deployed, live QA green (qa-units 168/168, qa-faves 174/174, qa-backup 18/18)
 - Bucket 13: Class/element button filters — **COMPLETE (2026-10-04)**: committed `9109c9c`, deployed, live QA green (qa-filters 134/134, qa-units 168/168, qa-backup 18/18)
-- Bucket 14: Pull-history import + pity — **CODE COMPLETE (2026-10-04)**; gates green (tsc/eslint/327 tests/build); ship steps pending
+- Bucket 14: Pull-history import + pity — **COMPLETE (2026-10-04)**: committed `5817fde`/`98c16cf`, deployed, live QA green (qa-pulls 75/75 + regressions qa-units 168/168, qa-filters 140/140, qa-faves 174/174, qa-backup 21/21)
 
 ## Data
 - 742 banners scraped from GamePress (2017-2026)

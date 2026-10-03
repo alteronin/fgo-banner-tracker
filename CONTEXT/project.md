@@ -44,7 +44,9 @@ A web application that helps gacha game players track their pulls and plan their
 11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
 12. Cross-game Units & Faves — **COMPLETE (2026-10-03)**
 13. Class/element button filters — **COMPLETE (2026-10-04)**
-14. Pull-history import + pity — **CODE COMPLETE (2026-10-04)**, ship pending
+14. Pull-history import + pity — **COMPLETE (2026-10-04)** (deployed, live QA green)
+
+All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 
 ## Data Sources
 - FGO banner data: GamePress FGO Wiki (https://grandorder.gamepress.gg/summon-banner-list)
