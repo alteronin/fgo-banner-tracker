@@ -229,3 +229,64 @@ Generalize the FGO-specific `/servants` and `/grands` pages to other games.
 - [x] commit + push (`9109c9c`), `npx vercel --prod` (deployed 2026-10-04)
 - [x] live QA with `BASE=https://fgo-banner-tracker.vercel.app` (qa-filters 134/134 re-run — first run 131/134 had 3 transient failures, all green after; qa-units 168/168; qa-backup 18/18; qa-live 2 stale export assertions only)
 - [x] `npm prune` (playwright removed; reinstall with `npm i --no-save playwright` next cycle)
+
+---
+
+## Bucket 14: Pull-History Import & Pity Tracker (Complete)
+**Status**: Code Complete + gates green (2026-10-04); commit/push/deploy + live QA pending
+
+Import the user's gacha pull-history exports (`wuwatracker-pulls.json` for WuWa, `stardb-export.json` for HSR/ZZZ/GI), auto-populate owned units, and add a Pulls page with pity stats + banner attribution.
+
+### Scope (user-approved via Q&A)
+1. Pulls tab on **all 6 games**; FGO/HI3/SV show empty state (no export formats exist for them)
+2. Owned population: **fill only unset units** — never overwrite existing `owned`/`planning`
+3. Pulls page shows: 5★ pity stats + pity histogram + banner attribution + 4★ pity
+4. Backup bumped to **v3** `{version:3, unitStatus, faves, pulls}`; v1/v2 still importable
+5. WuWa **weapons tracked as owned too** (added to roster, Type filter group)
+
+### Export Formats (verified)
+- **WuWa** `wuwatracker-pulls.json` (0.58MB): `{siteVersion, version, date, playerId, pulls[]}`; pull = `{cardPoolType, resourceId, qualityLevel, name, time, isSorted, group}`. Names inline (no external map needed), `qualityLevel` = rarity. Pools: 1=Featured Resonator, 2=Featured Weapon, 4=Permanent Weapon, 5/6=Novice/Permanent Resonator, 7=Giveback/Selector, 10/12=New Voyage; unknown → "Pool N". 2,918 pulls; 41/41 distinct resonator names match roster, 47/47 weapon names match new weapon roster (0 rarity mismatches).
+- **stardb-export.json** (1.25MB): `{user:{username, hsr/zzz/gi:{achievements, uids:[{uid, verified, private, warps|signals|wishes}]}}}`. Pull = `{id, item_id, type, timestamp, official}`. Pulls are **pre-grouped by banner category**: hsr `departure/standard/character/light_cone`, zzz `standard/character/w_engine/bangboo`, gi `beginner/standard/character/weapon/chronicled` — attribution category comes free, only date-window → phase/banner needed. Counts: HSR 3,742 (119 item ids), ZZZ 3,465, GI 4,550 (132 item ids).
+- GI/HSR/ZZZ item ids → roster unit via pull-map JSON baked at build time (rarity baked in too, so import is offline).
+
+### Pull-Map Sources (verified end-to-end)
+- **HSR**: stardb `GET /api/characters` + `/api/light-cones` → 119/119 ids resolved; rarity all present; **59 five-star pulls**. Name bridge: exact → segment-after-`•` (stardb alt-forms: `Himeko • Nova`→Nova, `Robin • Summeretto`→Summeretto, also `Dan Heng • Imbibitor Lunae`, `Dan Heng • Permansor Terrae`, `Aventurine • Waveflair`) → unique-substring. **No roster refresh needed** — local `hsr-units.json` already has Nova + Summeretto (263 units; live Game8 count = local 93 chars).
+- **GI**: yatta `https://gi.yatta.moe/api/v2/en/avatar` + `/weapon` → 132/132 ids, 0 unresolved (substring name match).
+- **ZZZ**: npm `zzz-data` → 3,337/3,465; 8 agent gap ids (1431, 1481, 1491, 1511, 1521, 1541, 1561, 1581) via GO `characterIdMap.json` → all 8 in `zzz-units.json`; bangboo `54021` (1 pull) has no rarity source → import as unknown-rarity item (excluded from pity, shown "Unknown").
+- **WuWa**: names inline in export → roster match (resonators + weapons).
+
+### Roster Additions (WuWa weapons)
+- Source: Game8 `archives/452490` ("List of All Weapons") — SSR table `Weapon|Type|Rarity`, 114 rows (49×5★, 43×4×, 21×3★), per-row `img.game8.co` `data-src` + archive link. New `scripts/scrape-wuwa-weapons.mjs` appends `{id:"w-<archiveId>", type:"weapon", element:null, weapon:<type>, rarity, imageUrl, url}`; existing 59 resonators gain `type:"resonator"` (→ `wuwa-units.json` 173).
+- `WUWA_TAXONOMY` gains Type group (Resonator/Weapon) mirroring HSR; `element` getter null for weapons (never matches an element selection); subtitle/category conditional; noun → "resonators and weapons"; weapons excluded from faves picker pool.
+
+### Architecture (as built)
+- `src/types/pulls.ts` — `GamePull {id, gameId, itemId, unitId|null, name, rarity|null, ts, category}` + `PullMapItem {name: string|null, rarity, kind, unit}`, `ParsedPulls {game, pulls, warnings, pulledUnitIds}`, `PULL_GAMES`
+- `scripts/build-pull-maps.mjs` → `src/data/{hsr,genshin,zzz,wuwa}-pull-map.json` (`{itemId: {unit, rarity, name}}`; WuWa `{normalized name: {unit, rarity, kind}}`; `name` may be `null` — ZZZ `54014`)
+- `src/lib/pullImport.ts` — `normalizeName` (lowercase, NFKC, `&`→"and", strip non-`[\p{L}\p{N}]`, matches build-pull-maps), `detectPullSource` (wuwatracker | stardb), `parseWuwaPulls`, `parseStardbPulls` (first uid only, per-category buckets), `parsePullFile`; names/rarity/unit resolved **at import time** and stored on each pull (snapshot of history); unknown ids → warning list (never throw)
+- `src/lib/pity.ts` — pure: `computeRarityStats(pulls, rarity, cap)` → `{rarity, cap, total, hits, avgPity, maxPity, currentPity, histogram}` (pity resets on `rarity >= target`; null rarity counts but never resets; histogram index = pity length, cap-indexed); `maxPityFor`/`MAX_PITY`/`FOUR_STAR_PITY=10`; banner attribution `toBannerWindows`/`indexWindows`/`findBannerWindow`/`attributePull` (`CATEGORY_BANNER_TYPES` map, overlap → latest start, null dates skipped)
+- `src/lib/pullStorage.ts` — localStorage `pulls:{game}` holding `GamePull[]` as JSON (sorted ascending), merge-by-id dedupe (`mergePulls` → `{added,total,ok}`), subscribe/snapshot/serverSnapshot/notify pattern mirrors `unitStorage.ts`; ~14.7k pulls ≈ 300–500KB
+- Pull ids: `${ts}|${category}|${itemKey}|${occ}` where `occ` = 0-based occurrence of that tuple (order-independent, re-import-safe; GI `id` fields are non-unique, HSR/ZZZ ids collide across same-second records); WuWa itemKey = `normalizeName(name)`, stardb itemKey = `item_id`
+- Owned merge: `fillOwnedUnits(game, unitIds)` in `unitStorage.ts` — fill-only-unset, returns filled count; called on import and on v3 backup restore (`ImportExport`)
+- Banner attribution: pull `category` + timestamp → `*-banners.json` window passed as `BannerWindow[]` prop from each server route page (keeps full banner JSON out of client bundles); unattributed → category/pool label only
+- `src/components/PullsPage.tsx` — stat cards (total, 5★ count, avg/max/current pity, banners), category pills, pity histogram (per category, index = pity length), per-category pity table on "All", pull rows (date, name, rarity, attributed banner) reverse-chron paginated (100 + 500 "Show more"), search, empty state
+- `src/components/ImportPulls.tsx` — file input → `parsePullFile` → preview (new/total/units/warnings) → confirm → `mergePulls` + `fillOwnedUnits` + notify; quota errors surfaced
+- `src/components/PullsEmptyPage.tsx` — shared empty state for FGO (`/pulls`), HI3, Shadowverse
+- `src/app/{genshin,hsr,zzz,wuwa}/pulls/page.tsx` server components (`metadata.title = {absolute}`, `windows={toBannerWindows(get<Banner>s())}`); `src/app/{hi3,shadowverse}/pulls/page.tsx` + `src/app/pulls/page.tsx` empty; `GameTabs` 4th "Pulls" pill on all games; FGO header gains "Pulls" link
+- `ImportExport` backup **v3** `{version:3, unitStatus, faves, pulls}` (`PULL_GAMES` only); v1/v2 still importable
+
+### Features
+- [x] **wuwa-weapons-roster**: `scripts/scrape-wuwa-units.mjs` now also scrapes Game8 `archives/452490` → 113 weapons appended (asserts ≥100), `type: "resonator"|"weapon"` on all entries (`wuwa-units.json` 59→172); `WUWA_TAXONOMY` Type group (Resonator/Weapon), units rows/noun updated, faves pool excludes weapons
+- [x] **pull-maps**: `scripts/build-pull-maps.mjs` → 4 pull-map JSONs (79KB; offline rarity + unit bridge; 0 unresolved for HSR/GI/ZZZ, 88/88 WuWa names)
+- [x] **pull-types-storage**: `src/types/pulls.ts` + `src/lib/pullStorage.ts`
+- [x] **pull-import-pity**: `src/lib/pullImport.ts` + `src/lib/pity.ts` (pure, testable)
+- [x] **owned-fill**: `fillOwnedUnits` (fill-only-unset) on import + ImportExport v3 restore
+- [x] **pulls-pages-ui**: GameTabs 4th pill, `PullsPage`, `ImportPulls`, `PullsEmptyPage`, 7 static routes (4 full + 3 empty), WuWa Type filter + noun, faves exclude weapons
+- [x] **pulls-tests**: new suites `pullImport`, `pity`, `pullStorage`, `PullsPage` (incl. import flow) + updates (unitsData 172, unitFilters wuwa groups, unitStorage fill tests) — 327 tests total
+
+### Completion Checklist
+- [x] gates: tsc/eslint/`npm test` (327/327)/`npm run build` (31 pages, all `/{game}/pulls` routes) clean
+- [ ] commit + push, `npx vercel --prod`
+- [ ] live QA (new pulls suite + regressions qa-units/qa-filters/qa-backup)
+- [x] CONTEXT update (state.md + buckets.md + decisions.md)
+- [ ] `npm prune`
+- [ ] commit agent-files block (`AGENTS.md` next dev regeneration)

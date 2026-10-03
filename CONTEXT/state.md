@@ -1,11 +1,11 @@
 ---
 project_name: Multi-Game Gacha Banner Tracker
 status: active
-current_bucket: 13
-current_feature: class-element-filters
-current_phase: complete
+current_bucket: 14
+current_feature: pull-history-import
+current_phase: code_complete
 buckets_completed: 13
-total_buckets: 13
+total_buckets: 14
 features_completed:
   - seed-data
   - banner-list
@@ -43,6 +43,7 @@ features_completed:
   - cross-game-units
   - cross-game-faves
   - taxonomy-pill-filters
+  - pull-history-import
 features_remaining:
   - events-tab
 issues_found:
@@ -69,17 +70,17 @@ tech_stack:
   styling: Tailwind CSS
   state: localStorage + React Context (useSyncExternalStore)
   hosting: Vercel
-  testing: Vitest + Testing Library (272 tests)
+  testing: Vitest + Testing Library (327 tests)
 deploy_provider: vercel
 deploy_url: https://fgo-banner-tracker.vercel.app
 last_checkpoint: 2026-10-04
-context_version: 11
+context_version: 13
 ---
 
 # Project State
 
 ## Active Context
-**Bucket 13 COMPLETE (deployed + live QA green).** Taxonomy pill-button filters added to `/servants` (Class group, 15 classes) and all 6 `/{game}/units` pages: multi-select groups per game — genshin Element+Weapon, hsr Element+Path+Type, zzz Attribute+Specialty, wuwa Element+Weapon, hi3 Type+Damage, shadowverse Class. Semantics: OR within a group, AND across groups, AND with status/search; empty group = no filter; explicit per-group "All" pill; `aria-pressed` on pills; null taxon (hsr light-cone element) never matches. Data model: `UnitRow.filters` + `UnitsConfig.filterGroups` derived from roster JSON with canonical value ordering; pure `matchesFilterGroups` helper shared by UnitsPage and servants page. Gates: 272 tests (+32: unitFilters 16, UnitsPage 10, ServantsPage 6), tsc/eslint/build clean. Committed `9109c9c`, pushed, deployed; live QA: qa-filters 134/134 (re-run after 3 transient first-run failures), qa-units 168/168, qa-backup 18/18, qa-live only 2 known stale export assertions. Local QA: qa-filters 134/134, qa-units 168/168, qa-live 74 pass. All 13 buckets now complete; Bucket 11 (Events) remains deferred. QA scripts in `%TEMP%\opencode\qa-*.js` (BASE env for production, NODE_PATH to repo node_modules). Next: nothing scheduled — awaiting user direction (Bucket 11 events tab if resumed).
+**Bucket 14 CODE COMPLETE (2026-10-04) — pull-history import + pity tracker.** Implemented per approved plan: `types/pulls.ts`, `lib/{pullImport,pity,pullStorage}.ts`, `scripts/build-pull-maps.mjs` → 4 pull-map JSONs (offline rarity/unit bridge, 0 unresolved), WuWa weapon roster (113 weapons, `wuwa-units.json` 59→172 with `type` + Type filter group, excluded from faves), owned fill via `fillOwnedUnits` (fill-only-unset, never overwrites), backup **v3** `{version:3, unitStatus, faves, pulls}` (v1/v2 still importable), `PullsPage` + `ImportPulls` + `PullsEmptyPage`, GameTabs 4th "Pulls" pill, 7 static routes (genshin/hsr/zzz/wuwa full; hi3/shadowverse//pulls empty). Pity computed per category (`computeRarityStats`, 5★/4★, cap-indexed histogram); banner attribution from server-supplied `BannerWindow[]` (category→banner type, inclusive dates, overlap→latest start, fallback to category/pool label). Pull ids `${ts}|${category}|${itemKey}|${occ}` for order-independent re-import dedupe. **Gates green: tsc clean, eslint clean, `npm test` 327/327, `npm run build` 31 pages.** Pity constants verified (HSR/GI 90/80, ZZZ 90/80/80, WuWa 80, 4★ = 10; HSR departure 50). REMAINING: commit + push + `npx vercel --prod`, live QA (new pulls suite + qa-units/qa-filters/qa-backup regressions), `npm prune`, agent-files block commit. Full spec in `buckets.md` Bucket 14.
 
 ## Features Built
 - Bucket 1: Core MVP (banner list, servant toggle, indicators, filter, detail, responsive)
@@ -94,12 +95,14 @@ context_version: 11
 - Bucket 10: Remaining game trackers (Complete 2026-10-03 — `/zzz` 134 banners, `/wuwa` 46, `/hi3` 73, `/shadowverse` 10; committed `95771ca`, deployed, live QA green; follow-up `ce29b7f` added official pack art to Shadowverse banner cards)
 - Bucket 12: Cross-game Units & Faves (Complete 2026-10-03 — 6 games × Units + Faves pages, GameTabs nav, per-game storage, ImportExport v2; 240 tests; committed `ef75305`, deployed, live QA green)
 - Bucket 13: Taxonomy Pill Filters (Complete 2026-10-04 — multi-select Element/Weapon/Path/Type/Attribute/Specialty/Damage/Class groups on `/servants` + 6 units pages; 272 tests; committed `9109c9c`, deployed, live QA green)
+- Bucket 14: Pull-History Import & Pity Tracker (**CODE COMPLETE 2026-10-04** — 327 tests, all gates green; commit/deploy/live QA pending — see buckets.md)
 
-## Roadmap (Buckets 11-13 — all addressed)
+## Roadmap (Buckets 11-14)
 - Bucket 10: Remaining game trackers — **COMPLETE (2026-10-03)**: committed `95771ca`, deployed, live QA green; SV image fix `ce29b7f`
 - Bucket 11: Events tab — **DEFERRED by user (2026-10-03)**; `/events` route + nav tab; unified event feed (now/upcoming/past) with game + year filters, sources TBD
 - Bucket 12: Cross-game Units & Faves — **COMPLETE (2026-10-03)**: committed `ef75305`, deployed, live QA green (qa-units 168/168, qa-faves 174/174, qa-backup 18/18)
 - Bucket 13: Class/element button filters — **COMPLETE (2026-10-04)**: committed `9109c9c`, deployed, live QA green (qa-filters 134/134, qa-units 168/168, qa-backup 18/18)
+- Bucket 14: Pull-history import + pity — **CODE COMPLETE (2026-10-04)**; gates green (tsc/eslint/327 tests/build); ship steps pending
 
 ## Data
 - 742 banners scraped from GamePress (2017-2026)
@@ -110,7 +113,9 @@ context_version: 11
 - 46 WuWa banners scraped from Game8 (versions 1.0-3.7: 45 resonator + 1 Special Reverbs selector with null dates; 1.5-1.9 skipped by game)
 - 73 HI3 GLB versions scraped from fandom `Category:Versions` (v1.8 2018-03-22 → v9.0 2026-08-20, endDate null = ongoing; v1.0-1.7 do not exist; 7 early versions lack debut data; v1.8 has no image)
 - 10 Shadowverse WB banner entries (9 card sets permanent + Frieren collab 2025-12-29 → 2026-01-27); official pack art added in `ce29b7f` (per-set `slide_*.webp` + collab ogp; `shadowverse-wb.com` + `collaboration.shadowverse-wb.com` in remotePatterns)
-- 782 unit roster entries for Units/Faves pages: genshin 127, hsr 263 (93 characters + 170 light cones), zzz 60, wuwa 59, hi3 110 (battlesuits from Module:Battlesuit/data), shadowverse 63 leaders (65 gallery entries − 2 broken-image Summer variants)
+- 795 unit roster entries for Units/Faves pages: genshin 127, hsr 263 (93 characters + 170 light cones), zzz 60, wuwa 172 (59 resonators + 113 weapons, `type` field + Type filter group), hi3 110 (battlesuits from Module:Battlesuit/data), shadowverse 63 leaders (65 gallery entries − 2 broken-image Summer variants)
+- 4 pull-map JSONs for offline import (`scripts/build-pull-maps.mjs`): hsr 268 ids / genshin 132 / zzz 3,465 / wuwa 88 names — 0 unresolved ids for the 3 stardb games
+- User pull exports verified: wuwatracker (2,918 pulls, 6 pools) + stardb (HSR 3,742 / ZZZ 3,465 / GI 4,550, pre-grouped by banner category)
 - Bracket-encoding fix for 24 broken image URLs
 - Duplicate servant entries removed (3 daily banners); 6 banner names whitespace-normalized
 
@@ -131,6 +136,7 @@ context_version: 11
 - `/shadowverse` — Shadowverse: Worlds Beyond banner tracker (static)
 - `/{game}/units` — per-game unit roster (static ×6: genshin/hsr/zzz/wuwa/hi3/shadowverse)
 - `/{game}/faves` — per-game 9-slot favorites lineup (static ×6)
+- `/{game}/pulls` — pull-history import + pity stats (static ×6: genshin/hsr/zzz/wuwa full pages; hi3/shadowverse empty state; FGO empty state at `/pulls`)
 - `/[game]` — dynamic route kept with empty `generateStaticParams` (all 7 slugs have own pages; unknown slugs 404 via `dynamicParams=false`; ComingSoonApp retained for future apps)
 
 ## Recent Decisions
@@ -158,6 +164,7 @@ context_version: 11
 22. Units/faves storage: `unit-status:{game}` + `faves:{game}` (FGO keys untouched), per-game subscribe/snapshot/notify; static `src/app/{game}/units|faves/page.tsx` routes; 9 fave slots for every game; pool = owned only; reassign moves unit between slots
 23. ImportExport v2: `{version: 2, unitStatus: {fgo+6 games}, faves: {fgo grands + 6 games}}` as `collection-backup.json`; v1 flat FGO files still import
 24. Taxonomy filters (Bucket 13): `TaxonomySpec` per game (key, display label, canonical order, getter) drives both `UnitRow.filters` and `UnitsConfig.filterGroups` (distinct values from data, canonical sort with unknown-last fallback); `matchesFilterGroups` is pure and shared with `/servants` (`{class: className}`); multi-select OR within group, AND across groups + status + search; HSR light cones omit `element` in JSON → getter coerces `?? null`; `Pistol` (singular) is the WuWa weapon value
+25. Pull-history import (Bucket 14): imports are **offline** — `build-pull-maps.mjs` bakes `{unit, rarity, name}` per item id so no runtime API calls; names/rarity/unit are snapshotted onto each `GamePull` at import (history is immutable). Dedupe ids are order-independent `${ts}|${category}|${itemKey}|${occ}` (GI export ids non-unique, HSR/ZZZ same-second dupes exist) so re-imports merge 0 new. Pity is computed **per banner category** (carries across banner instances of the same type, never across pools) with `computeRarityStats(pulls, rarity, cap)` returning a cap-indexed histogram; 4★ pity uses `FOUR_STAR_PITY=10` and only resets on 4★/5★. Banner attribution runs client-side against `BannerWindow[]` passed as a prop from server route pages (category→banner type, inclusive `T00:00:00.000Z`–`T23:59:59.999Z`, overlap → latest start, unattributed → category/pool label). Owned merge = `fillOwnedUnits` fill-only-unset; backup bumped to v3 (`pulls` key, `PULL_GAMES` only) while v1/v2 stay importable
 
 ## Blockers
 None.

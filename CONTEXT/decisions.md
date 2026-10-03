@@ -188,8 +188,16 @@
 ## 26. Taxonomy Pill Filter Groups (Bucket 13)
 **Decision**: Per-game `TaxonomySpec` (key, label, canonical order, value getter) in `src/lib/units.ts` builds both `UnitRow.filters` and `UnitsConfig.filterGroups`; pure `matchesFilterGroups(filters, selected)` shared by UnitsPage and `/servants`
 **Reasoning**:
-- One spec per game is the single source of truth for label/order/values � group values are the distinct data values sorted canonically (unknown values last, alphabetical), so the UI auto-adapts if a roster gains a new element/path/class
+- One spec per game is the single source of truth for label/order/values � group values are the distinct data values sorted canonically (unknown values last, alphabetical), so the UI auto-adapts if a roster gains a new element/path/class
 - Multi-select OR within a group, AND across groups and with status/search matches the buckets.md spec and user ask ("toggling anemo shows only anemo units"); empty group = unfiltered with an explicit active "All" pill
-- Null taxon (HSR light cones omit the `element` key entirely � getter coerces `?? null`) never matches a selection, so light cones drop out of element filters by design
+- Null taxon (HSR light cones omit the `element` key entirely � getter coerces `?? null`) never matches a selection, so light cones drop out of element filters by design
 - `/servants` reuses the same helper with `{class: s.className}` + existing `CLASS_ORDER` instead of a second filter implementation; no URL state or persistence (local component state, consistent with existing type filters)
 - QA lesson: WuWa weapon value is `Pistol` (singular); FGO names use `Altria` not `Artoria`
+## 27. Pull-History Import & Pity (Bucket 14)
+**Decision**: Fully client-side import of `wuwatracker-pulls.json` / `stardb-export.json` against build-time pull maps, with names/rarity/unit snapshotted onto each `GamePull`, order-independent dedupe ids (`${ts}|${category}|${itemKey}|${occ}`), pity computed per banner category, and banner attribution fed by `BannerWindow[]` props from the server route pages
+**Reasoning**:
+- Offline maps (`scripts/build-pull-maps.mjs` → `src/data/{game}-pull-map.json`) mean import never calls an API, works on a static Vercel deploy, and is deterministic in tests; resolving name/rarity/unit at import time makes history immutable — later roster changes cannot rewrite past pity
+- Non-unique export ids (GI `id` repeats, same-second HSR/ZZZ records) make occurrence-indexed tuple ids the only re-import-safe dedupe: merge-by-id then reports `added: 0` on a second import
+- Pity carries across banner instances of the same type but never across pools, so stats group by `category` rather than by banner; `computeRarityStats(pulls, rarity, cap)` returns a cap-indexed histogram (`index = pity length`) usable for both 5★ (90/80) and 4★ (10)
+- Attribution is a pure window lookup (inclusive `T00:00:00.000Z`–`T23:59:59.999Z`, overlap → latest start, null-dated banners skipped) fed by server components — full `*-banners.json` stays out of client bundles, unattributed pulls fall back to the category/pool label (incl. WuWa pool numbers)
+- Owned merge is fill-only-unset (`fillOwnedUnits`) so an import never clobbers deliberate `planning`/hidden statuses; backup bumped to v3 with a `pulls` key while v1/v2 files remain importable
