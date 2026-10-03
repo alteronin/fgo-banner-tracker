@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { AppSwitcher } from "./AppSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
+import { GameTabs } from "./GameTabs";
 import { SearchBar } from "./SearchBar";
 import { YearFilter } from "./YearFilter";
 import { GenshinTypeFilter, type GenshinTypeFilterValue } from "./GenshinTypeFilter";
@@ -50,6 +51,7 @@ export function GenshinTracker({ app }: { app: TrackedApp }) {
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
           <AppSwitcher title={app.name} subtitle={app.tagline} />
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <GameTabs game={app.slug} active="banners" />
             <Link
               href="/"
               className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"

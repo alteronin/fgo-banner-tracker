@@ -1,0 +1,506 @@
+[
+  {
+    "id": "lovesign",
+    "name": "Lovesign",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/7/73/Lovesign_em.png/revision/latest?cb=20250722183925",
+    "url": "https://shadowverse.fandom.com/wiki/Lovesign",
+    "className": "Forestcraft",
+    "obtain": "Default"
+  },
+  {
+    "id": "marie-malisse",
+    "name": "Marie Malisse",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/3/35/Marie_em.png/revision/latest?cb=20250722183925",
+    "url": "https://shadowverse.fandom.com/wiki/Marie_Malisse",
+    "className": "Swordcraft",
+    "obtain": "Default"
+  },
+  {
+    "id": "dreizehn",
+    "name": "Dreizehn",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/a/a3/Drei_em.png/revision/latest?cb=20250722183925",
+    "url": "https://shadowverse.fandom.com/wiki/Dreizehn",
+    "className": "Portalcraft",
+    "obtain": "Default"
+  },
+  {
+    "id": "kaori-yuihara",
+    "name": "Kaori Yuihara",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/64/Kaori_em.png/revision/latest?cb=20250722183925",
+    "url": "https://shadowverse.fandom.com/wiki/Kaori_Yuihara",
+    "className": "Runecraft",
+    "obtain": "Default"
+  },
+  {
+    "id": "galan",
+    "name": "Galan",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/2/23/Galan_em.png/revision/latest?cb=20250722183925",
+    "url": "https://shadowverse.fandom.com/wiki/Galan",
+    "className": "Dragoncraft",
+    "obtain": "Default"
+  },
+  {
+    "id": "diawl",
+    "name": "Diawl",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/4/4d/Diawl_em.png/revision/latest?cb=20250722183924",
+    "url": "https://shadowverse.fandom.com/wiki/Diawl",
+    "className": "Abysscraft",
+    "obtain": "Default"
+  },
+  {
+    "id": "esperanza",
+    "name": "Esperanza",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/7/7a/Esp_em.png/revision/latest?cb=20250722183925",
+    "url": "https://shadowverse.fandom.com/wiki/Esperanza",
+    "className": "Havencraft",
+    "obtain": "Default"
+  },
+  {
+    "id": "arisa",
+    "name": "Arisa",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/d/d9/Arisa4th_emblem.png/revision/latest?cb=20220111212436",
+    "url": "https://shadowverse.fandom.com/wiki/Arisa",
+    "className": "Forestcraft",
+    "obtain": "Classic"
+  },
+  {
+    "id": "erika",
+    "name": "Erika",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/9/9e/Erika4th_emblem.png/revision/latest?cb=20220111212951",
+    "url": "https://shadowverse.fandom.com/wiki/Erika",
+    "className": "Swordcraft",
+    "obtain": "Classic"
+  },
+  {
+    "id": "isabelle",
+    "name": "Isabelle",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/4/4e/Isabelle4th_emblem.png/revision/latest?cb=20220111214334",
+    "url": "https://shadowverse.fandom.com/wiki/Isabelle",
+    "className": "Runecraft",
+    "obtain": "Classic"
+  },
+  {
+    "id": "rowen",
+    "name": "Rowen",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/64/Rowen4th_emblem.png/revision/latest?cb=20220111215709",
+    "url": "https://shadowverse.fandom.com/wiki/Rowen",
+    "className": "Dragoncraft",
+    "obtain": "Classic"
+  },
+  {
+    "id": "luna",
+    "name": "Luna",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/19/Luna4th_emblem.png/revision/latest?cb=20220111214942",
+    "url": "https://shadowverse.fandom.com/wiki/Luna",
+    "className": "Abysscraft",
+    "obtain": "Classic"
+  },
+  {
+    "id": "urias",
+    "name": "Urias",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/d/dd/Urias4th_emblem.png/revision/latest?cb=20220111220308",
+    "url": "https://shadowverse.fandom.com/wiki/Urias",
+    "className": "Abysscraft",
+    "obtain": "Classic"
+  },
+  {
+    "id": "eris",
+    "name": "Eris",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/1a/Eris4th_emblem.png/revision/latest?cb=20220111212959",
+    "url": "https://shadowverse.fandom.com/wiki/Eris",
+    "className": "Havencraft",
+    "obtain": "Classic"
+  },
+  {
+    "id": "yuwan",
+    "name": "Yuwan",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/11/Yuwan4th_emblem.png/revision/latest?cb=20220111220441",
+    "url": "https://shadowverse.fandom.com/wiki/Yuwan",
+    "className": "Portalcraft",
+    "obtain": "Classic"
+  },
+  {
+    "id": "cerberus",
+    "name": "Cerberus",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/7/74/Cerbwb_em.png/revision/latest?cb=20250805123052",
+    "url": "https://shadowverse.fandom.com/wiki/Cerberus_(leader)",
+    "className": "Abysscraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "daria",
+    "name": "Daria",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/3/3c/Dariawb_em.png/revision/latest?cb=20250805123052",
+    "url": "https://shadowverse.fandom.com/wiki/Daria",
+    "className": "Runecraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "albert",
+    "name": "Albert",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/2/24/Albertwb_e%2C.png/revision/latest?cb=20250805123052",
+    "url": "https://shadowverse.fandom.com/wiki/Albert",
+    "className": "Swordcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "orchis",
+    "name": "Orchis",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/19/Orchiswb_em.png/revision/latest?cb=20250805123052",
+    "url": "https://shadowverse.fandom.com/wiki/Orchis",
+    "className": "Portalcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "titania",
+    "name": "Titania",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/1d/Titania_em.png/revision/latest?cb=20250805123051",
+    "url": "https://shadowverse.fandom.com/wiki/Titania",
+    "className": "Forestcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "aether",
+    "name": "Aether",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/6a/Aetherwb_em.png/revision/latest?cb=20250805123052",
+    "url": "https://shadowverse.fandom.com/wiki/Aether",
+    "className": "Havencraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "filene",
+    "name": "Filene",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/9/9a/Filenewb_em.png/revision/latest?cb=20250805123212",
+    "url": "https://shadowverse.fandom.com/wiki/Filene",
+    "className": "Dragoncraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "galmieux",
+    "name": "Galmieux",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/6a/Galmieuxwb_em.png/revision/latest?cb=20250908125616",
+    "url": "https://shadowverse.fandom.com/wiki/Galmieux",
+    "className": "Dragoncraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "sinciro",
+    "name": "Sinciro",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/1c/Sinciro_em.png/revision/latest?cb=20250908130921",
+    "url": "https://shadowverse.fandom.com/wiki/Sinciro",
+    "className": "Swordcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "ewiyar",
+    "name": "Ewiyar",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/8/8b/Ewiyar_skin.png/revision/latest?cb=20251231173730",
+    "url": "https://shadowverse.fandom.com/wiki/Ewiyar",
+    "className": "Forestcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "wamdus",
+    "name": "Wamdus",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/a/ac/Wamdus_skin.png/revision/latest?cb=20251231173753",
+    "url": "https://shadowverse.fandom.com/wiki/Wamdus",
+    "className": "Runecraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "wilnas",
+    "name": "Wilnas",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/e/e6/Wilnas_skin.png/revision/latest?cb=20251231173817",
+    "url": "https://shadowverse.fandom.com/wiki/Wilnas",
+    "className": "Dragoncraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "galleon",
+    "name": "Galleon",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/15/Galleon_skin.png/revision/latest?cb=20251231173838",
+    "url": "https://shadowverse.fandom.com/wiki/Galleon",
+    "className": "Havencraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "lu-woh",
+    "name": "Lu Woh",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/f/f7/Lu_Woh_skin.png/revision/latest?cb=20251231173857",
+    "url": "https://shadowverse.fandom.com/wiki/Lu_Woh",
+    "className": "Portalcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "fediel",
+    "name": "Fediel",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/a/ab/Fediel_skin.png/revision/latest?cb=20251231173938",
+    "url": "https://shadowverse.fandom.com/wiki/Fediel",
+    "className": "Abysscraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "beelzebub",
+    "name": "Beelzebub",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/4/4b/Beelzebub_skin.png/revision/latest?cb=20251231173919",
+    "url": "https://shadowverse.fandom.com/wiki/Beelzebub",
+    "className": "Portalcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "belial",
+    "name": "Belial",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/2/23/Belial_skin.png/revision/latest?cb=20251231173958",
+    "url": "https://shadowverse.fandom.com/wiki/Belial",
+    "className": "Abysscraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "unkei",
+    "name": "Unkei",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/60/Unkei_skin.png/revision/latest?cb=20251231174844",
+    "url": "https://shadowverse.fandom.com/wiki/Unkei",
+    "className": "Swordcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "imari",
+    "name": "Imari",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/8/8f/Imari_skin.png/revision/latest?cb=20251231174909",
+    "url": "https://shadowverse.fandom.com/wiki/Imari",
+    "className": "Portalcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "shymm",
+    "name": "Shymm",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/6b/Shymm_skin.png/revision/latest?cb=20260303160355",
+    "url": "https://shadowverse.fandom.com/wiki/Shymm",
+    "className": "Runecraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "kandima",
+    "name": "Kandima",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/0/0f/Kandima_skin.png/revision/latest?cb=20260303160515",
+    "url": "https://shadowverse.fandom.com/wiki/Kandima",
+    "className": "Havencraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "gildaria",
+    "name": "Gildaria",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/10/Gildaria_skin.png/revision/latest?cb=20260616133950",
+    "url": "https://shadowverse.fandom.com/wiki/Gildaria",
+    "className": "Swordcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "adahime",
+    "name": "Adahime",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/9/9c/Adahime_skin.png/revision/latest?cb=20260616134043",
+    "url": "https://shadowverse.fandom.com/wiki/Adahime",
+    "className": "Abysscraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "lilanthim",
+    "name": "Lilanthim",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/e/ee/Lilanthun_skin.png/revision/latest?cb=20260729181316",
+    "url": "https://shadowverse.fandom.com/wiki/Lilanthim",
+    "className": "Runecraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "lumiore",
+    "name": "Lumiore",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/a/a6/Lumiore_skin.png/revision/latest?cb=20260729181910",
+    "url": "https://shadowverse.fandom.com/wiki/Lumiore",
+    "className": "Dragoncraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "zoe",
+    "name": "Zoe",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/18/Zoe_skin.png/revision/latest?cb=20260916142811",
+    "url": "https://shadowverse.fandom.com/wiki/Zoe",
+    "className": "Havencraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "barbaros",
+    "name": "Barbaros",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/e/e6/Barbaros_skin.png/revision/latest?cb=20260916142258",
+    "url": "https://shadowverse.fandom.com/wiki/Barbaros",
+    "className": "Swordcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "megachiyo",
+    "name": "Megachiyo",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/3/34/Megachiyo_skin.png/revision/latest?cb=20260916142355",
+    "url": "https://shadowverse.fandom.com/wiki/Megachiyo",
+    "className": "Forestcraft",
+    "obtain": "Exchange"
+  },
+  {
+    "id": "eudie",
+    "name": "Eudie",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/f/f1/Eudie.png/revision/latest?cb=20251231180345",
+    "url": "https://shadowverse.fandom.com/wiki/Eudie",
+    "className": "Portalcraft",
+    "obtain": "Special"
+  },
+  {
+    "id": "nio",
+    "name": "Nio",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/3/3d/Nio_leader_emblem.png/revision/latest?cb=20250805070641",
+    "url": "https://shadowverse.fandom.com/wiki/Nio",
+    "className": "Abysscraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "silvarius",
+    "name": "Silvarius",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/6b/Silvarius_leader_emblem.png/revision/latest?cb=20250805070640",
+    "url": "https://shadowverse.fandom.com/wiki/Silvarius",
+    "className": "Swordcraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "keith-rothman",
+    "name": "Keith Rothman",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/7/79/Keith_skin.png/revision/latest?cb=20251027183649",
+    "url": "https://shadowverse.fandom.com/wiki/Keith_Rothman",
+    "className": "Runecraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "el",
+    "name": "El",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/2/2f/El_skin.png/revision/latest?cb=20251027183725",
+    "url": "https://shadowverse.fandom.com/wiki/El",
+    "className": "Dragoncraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "cupitan",
+    "name": "Cupitan",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/64/Cupitan_skin.png/revision/latest?cb=20251231172128",
+    "url": "https://shadowverse.fandom.com/wiki/Cupitan",
+    "className": "Forestcraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "zeta",
+    "name": "Zeta",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/d/d0/Zeta_skin.png/revision/latest?cb=20251231172152",
+    "url": "https://shadowverse.fandom.com/wiki/Zeta",
+    "className": "Swordcraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "aili",
+    "name": "Aili",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/7/79/Aili_skin.png/revision/latest?cb=20251231172209",
+    "url": "https://shadowverse.fandom.com/wiki/Aili",
+    "className": "Abysscraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "sofina",
+    "name": "Sofina",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/8/80/Sofina_Skin.png/revision/latest?cb=20260303155951",
+    "url": "https://shadowverse.fandom.com/wiki/Sofina",
+    "className": "Havencraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "sagatsumatsu",
+    "name": "Sagatsumatsu",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/3/33/Sagatsumatsu_skin.png/revision/latest?cb=20260303160038",
+    "url": "https://shadowverse.fandom.com/wiki/Sagatsumatsu",
+    "className": "Dragoncraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "velharia",
+    "name": "Velharia",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/a/ac/Velharia_skin.png/revision/latest?cb=20260616134544",
+    "url": "https://shadowverse.fandom.com/wiki/Velharia",
+    "className": "Runecraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "scarlet",
+    "name": "Scarlet",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/7/74/Scarlet_skin.png/revision/latest?cb=20260616134319",
+    "url": "https://shadowverse.fandom.com/wiki/Scarlet",
+    "className": "Portalcraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "thestae",
+    "name": "Thestae",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/2/21/Thestae_skin.png/revision/latest?cb=20260616134408",
+    "url": "https://shadowverse.fandom.com/wiki/Thestae",
+    "className": "Forestcraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "mirallia",
+    "name": "Mirallia",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/1/1d/Mirallia_skin.png/revision/latest?cb=20260729182513",
+    "url": "https://shadowverse.fandom.com/wiki/Mirallia",
+    "className": "Havencraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "ceres",
+    "name": "Ceres",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/4/41/Ceres_skin.png/revision/latest?cb=20260729182443",
+    "url": "https://shadowverse.fandom.com/wiki/Ceres",
+    "className": "Abysscraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "sephie",
+    "name": "Sephie",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/3/3a/Sephie_skin.png/revision/latest?cb=20260916142023",
+    "url": "https://shadowverse.fandom.com/wiki/Sephie",
+    "className": "Runecraft",
+    "obtain": "Battle Pass"
+  },
+  {
+    "id": "frieren",
+    "name": "Frieren",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/d/df/Frieren_skin.png/revision/latest?cb=20251231175227",
+    "url": "https://shadowverse.fandom.com/wiki/Frieren",
+    "className": "Forestcraft",
+    "obtain": "Frieren"
+  },
+  {
+    "id": "fern",
+    "name": "Fern",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/b/bb/Fern_skin.png/revision/latest?cb=20251231175252",
+    "url": "https://shadowverse.fandom.com/wiki/Fern",
+    "className": "Runecraft",
+    "obtain": "Frieren"
+  },
+  {
+    "id": "stark",
+    "name": "Stark",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/7/7e/Stark_skin.png/revision/latest?cb=20251231175316",
+    "url": "https://shadowverse.fandom.com/wiki/Stark",
+    "className": "Dragoncraft",
+    "obtain": "Frieren"
+  },
+  {
+    "id": "aura",
+    "name": "Aura",
+    "imageUrl": "https://static.wikia.nocookie.net/shadowverse/images/6/64/Aura_skin.png/revision/latest?cb=20251231175342",
+    "url": "https://shadowverse.fandom.com/wiki/Aura_(Character)",
+    "className": "Abysscraft",
+    "obtain": "Frieren"
+  }
+]

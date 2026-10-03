@@ -2,21 +2,111 @@
 
 import { useRef } from "react";
 import { useServantStatus } from "@/contexts/ServantContext";
+import {
+  getGrandServants,
+  getServantStatuses,
+  setGrandServant,
+  notifyGrandsChange,
+} from "@/lib/storage";
+import {
+  getFaves,
+  getUnitStatuses,
+  notifyFavesChange,
+  notifyUnitStatusesChange,
+  setFave,
+  setUnitStatus,
+} from "@/lib/unitStorage";
+import { UNIT_GAMES, isUnitGame } from "@/lib/units";
 import type { ServantStatus } from "@/types/banner";
+import type { UnitStatus } from "@/types/units";
+
+const VALID_STATUSES = ["owned", "planning"];
+
+interface BackupFile {
+  version: 2;
+  unitStatus: Record<string, Record<string, string>>;
+  faves: Record<string, Record<string, string>>;
+}
+
+function isBackupFile(data: unknown): data is BackupFile {
+  if (typeof data !== "object" || data === null) return false;
+  const backup = data as Partial<BackupFile>;
+  return (
+    backup.version === 2 &&
+    typeof backup.unitStatus === "object" &&
+    backup.unitStatus !== null &&
+    typeof backup.faves === "object" &&
+    backup.faves !== null
+  );
+}
 
 export function ImportExport() {
-  const { statuses, setStatus } = useServantStatus();
+  const { setStatus: setFgoStatus } = useServantStatus();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const exportData = () => {
-    const data = JSON.stringify(statuses, null, 2);
+    const unitStatus: Record<string, Record<string, string>> = {
+      fgo: getServantStatuses(),
+    };
+    for (const game of UNIT_GAMES) {
+      unitStatus[game] = getUnitStatuses(game);
+    }
+    const faves: Record<string, Record<string, string>> = {
+      fgo: getGrandServants(),
+    };
+    for (const game of UNIT_GAMES) {
+      faves[game] = getFaves(game);
+    }
+    const backup: BackupFile = { version: 2, unitStatus, faves };
+    const data = JSON.stringify(backup, null, 2);
     const blob = new Blob([data], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "fgo-collection.json";
+    a.download = "collection-backup.json";
     a.click();
     URL.revokeObjectURL(url);
+  };
+
+  const importBackup = (backup: BackupFile) => {
+    for (const [key, statuses] of Object.entries(backup.unitStatus)) {
+      if (typeof statuses !== "object" || statuses === null) continue;
+      for (const [id, status] of Object.entries(statuses)) {
+        if (!VALID_STATUSES.includes(status)) continue;
+        if (key === "fgo") {
+          setFgoStatus(id, status as ServantStatus);
+        } else if (isUnitGame(key)) {
+          setUnitStatus(key, id, status as UnitStatus);
+        }
+      }
+      if (isUnitGame(key)) notifyUnitStatusesChange(key);
+    }
+    for (const [key, slots] of Object.entries(backup.faves)) {
+      if (typeof slots !== "object" || slots === null) continue;
+      if (key === "fgo") {
+        for (const [slotId, unitId] of Object.entries(slots)) {
+          if (typeof unitId === "string" && unitId) {
+            setGrandServant(slotId, unitId);
+          }
+        }
+        notifyGrandsChange();
+      } else if (isUnitGame(key)) {
+        for (const [slotId, unitId] of Object.entries(slots)) {
+          if (typeof unitId === "string") {
+            setFave(key, slotId, unitId);
+          }
+        }
+        notifyFavesChange(key);
+      }
+    }
+  };
+
+  const importLegacy = (data: Record<string, unknown>) => {
+    Object.entries(data).forEach(([slug, status]) => {
+      if (["none", "owned", "planning"].includes(status as string)) {
+        setFgoStatus(slug, status as ServantStatus);
+      }
+    });
   };
 
   const importData = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,12 +117,10 @@ export function ImportExport() {
     reader.onload = (event) => {
       try {
         const data = JSON.parse(event.target?.result as string);
-        if (typeof data === "object" && data !== null) {
-          Object.entries(data).forEach(([slug, status]) => {
-            if (["none", "owned", "planning"].includes(status as string)) {
-              setStatus(slug, status as ServantStatus);
-            }
-          });
+        if (isBackupFile(data)) {
+          importBackup(data);
+        } else if (typeof data === "object" && data !== null) {
+          importLegacy(data);
         }
       } catch {
         alert("Invalid JSON file");

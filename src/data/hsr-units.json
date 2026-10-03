@@ -1,0 +1,2462 @@
+[
+  {
+    "id": "850176",
+    "name": "Arlan",
+    "imageUrl": "https://img.game8.co/3899479/d17ceded1c03d13aca9ab08068d740d2.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405754",
+    "rarity": "4",
+    "path": "The Destruction",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "850177",
+    "name": "Asta",
+    "imageUrl": "https://img.game8.co/3899477/349bbee976ca0a8f905905b6cbd15104.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405743",
+    "rarity": "4",
+    "path": "The Harmony",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "850178",
+    "name": "Bailu",
+    "imageUrl": "https://img.game8.co/3899478/31ca8c723a8b538b63288a8005782c55.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405753",
+    "rarity": "5",
+    "path": "The Abundance",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "850179",
+    "name": "Blade",
+    "imageUrl": "https://img.game8.co/3899480/30b6f624d746270de9ebb362a4ac3c31.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405762",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "850180",
+    "name": "Bronya",
+    "imageUrl": "https://img.game8.co/3899481/2920887de56599a720cf859f3d878635.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405750",
+    "rarity": "5",
+    "path": "The Harmony",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "850181",
+    "name": "Clara",
+    "imageUrl": "https://img.game8.co/3899470/2ead817c52ae81d7fe516587181abce5.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405769",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "850182",
+    "name": "Dan Heng",
+    "imageUrl": "https://img.game8.co/3899468/85afc52c45735db3262189e165d24232.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405749",
+    "rarity": "4",
+    "path": "The Hunt",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "850183",
+    "name": "Fu Xuan",
+    "imageUrl": "https://img.game8.co/3899471/8f7ee8e852fdc64a8c11f564b14a1d35.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405760",
+    "rarity": "5",
+    "path": "The Preservation",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "850184",
+    "name": "Gepard",
+    "imageUrl": "https://img.game8.co/3899469/e4dea5c96f85719ac115229235dc978d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405748",
+    "rarity": "5",
+    "path": "The Preservation",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "850185",
+    "name": "Herta",
+    "imageUrl": "https://img.game8.co/3899449/e95a308f997dd2e10893c5448455f968.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405747",
+    "rarity": "4",
+    "path": "The Erudition",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "850186",
+    "name": "Himeko",
+    "imageUrl": "https://img.game8.co/3899451/579d23b3f6ec047cf5ace13a5d17720c.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405742",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "850187",
+    "name": "Hook",
+    "imageUrl": "https://img.game8.co/3899450/82fbe1931bef5a5bdad2079f1486a86f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405741",
+    "rarity": "4",
+    "path": "The Destruction",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "850188",
+    "name": "Jing Yuan",
+    "imageUrl": "https://img.game8.co/3899462/00ff6e32c572242d331ff9d65727d028.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405756",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "850189",
+    "name": "Kafka",
+    "imageUrl": "https://img.game8.co/3899458/07e1e69d684f3f62496d384c5bab838c.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405755",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "850190",
+    "name": "Luocha",
+    "imageUrl": "https://img.game8.co/3899457/47c059b71cecd62fc53cce0830ca2097.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405764",
+    "rarity": "5",
+    "path": "The Abundance",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "850191",
+    "name": "March 7th",
+    "imageUrl": "https://img.game8.co/3899443/1641a4981574618b7ae3e92c57a3b5d8.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405746",
+    "rarity": "4",
+    "path": "The Preservation",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "850192",
+    "name": "Natasha",
+    "imageUrl": "https://img.game8.co/3899442/ea8e439aac0a70d4c78b1f1a29a20cf9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405768",
+    "rarity": "4",
+    "path": "The Abundance",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "850193",
+    "name": "Pela",
+    "imageUrl": "https://img.game8.co/3899438/e2e593766bfad3482dab9ec4e58f21d9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405745",
+    "rarity": "4",
+    "path": "The Nihility",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "850194",
+    "name": "Qingque",
+    "imageUrl": "https://img.game8.co/3899437/48e666d9c04a350f0195f74b7fd59aac.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405759",
+    "rarity": "4",
+    "path": "The Erudition",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "850195",
+    "name": "Sampo",
+    "imageUrl": "https://img.game8.co/3899425/2767c523379d81210dfbe4a02199bad6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405761",
+    "rarity": "4",
+    "path": "The Nihility",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "850196",
+    "name": "Seele",
+    "imageUrl": "https://img.game8.co/3899424/6c9398a601d7c1d96498b5bb2f6ee0cf.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405758",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "850197",
+    "name": "Serval",
+    "imageUrl": "https://img.game8.co/3899420/7e27bdb2ecc16409f7fea515c66fb41b.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405752",
+    "rarity": "4",
+    "path": "The Erudition",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "850198",
+    "name": "Silver Wolf",
+    "imageUrl": "https://img.game8.co/3899419/afffa6f75d327369e2ee20796d0942ff.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405757",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "850199",
+    "name": "Sushang",
+    "imageUrl": "https://img.game8.co/3899418/c48da99f2a769238654c12a31d5ae187.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405767",
+    "rarity": "4",
+    "path": "The Hunt",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "850200",
+    "name": "Tingyun",
+    "imageUrl": "https://img.game8.co/3899417/03476a3a36a23ccb597dc7ea70c1d114.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405751",
+    "rarity": "4",
+    "path": "The Harmony",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "850201",
+    "name": "Trailblazer",
+    "imageUrl": "https://img.game8.co/3889785/4a5f14c74e6bff1339cff521c8bf3986.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405766",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "850202",
+    "name": "Trailblazer (Fire)",
+    "imageUrl": "https://img.game8.co/3889786/d47a1144587a6338e4b9aad1e71aded2.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405740",
+    "rarity": "5",
+    "path": "The Preservation",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "850203",
+    "name": "Welt",
+    "imageUrl": "https://img.game8.co/3899404/4754cfef8a4e6e804634f6fd1ec804cd.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405763",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "850204",
+    "name": "Yanqing",
+    "imageUrl": "https://img.game8.co/3899383/bb93a8fe45ae19ea386ee51bffea014b.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/405744",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "850205",
+    "name": "Yukong",
+    "imageUrl": "https://img.game8.co/3730778/1eb5eb0197b55d92ce1c8dd320f29337.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/411586",
+    "rarity": "4",
+    "path": "The Harmony",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "875168",
+    "name": "Luka",
+    "imageUrl": "https://img.game8.co/3709147/a2da03bf1ea60db6e1d026500a936a62.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/413437",
+    "rarity": "4",
+    "path": "The Nihility",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "885476",
+    "name": "Imbibitor Lunae",
+    "imageUrl": "https://img.game8.co/3731670/80c542f9c4cbf8b42acb5e5b9b7b26b6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/417235",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "885840",
+    "name": "Lynx",
+    "imageUrl": "https://img.game8.co/3753097/5577e5e69fc88fbf63db533a923c15f7.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/417498",
+    "rarity": "4",
+    "path": "The Abundance",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "892354",
+    "name": "Jingliu",
+    "imageUrl": "https://img.game8.co/3750003/a2907cf7fc468eacd8cdd24122b5eca9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/411783",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "892698",
+    "name": "Topaz",
+    "imageUrl": "https://img.game8.co/3750454/7de457beafd82bf0721a8d29157352b4.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/421778",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "892859",
+    "name": "Guinaifen",
+    "imageUrl": "https://img.game8.co/3751182/50ea4b4dbb0a0866109e15e1342cb536.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/421890",
+    "rarity": "4",
+    "path": "The Nihility",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "911232",
+    "name": "Huohuo",
+    "imageUrl": "https://img.game8.co/3899380/226b90c621a962707100fc840295ae85.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/427878",
+    "rarity": "5",
+    "path": "The Abundance",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "911417",
+    "name": "Argenti",
+    "imageUrl": "https://img.game8.co/3899377/230f8944093a35278f34d877a8540ca3.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/428046",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "911766",
+    "name": "Hanya",
+    "imageUrl": "https://img.game8.co/3772186/6e56fdd4049875718bea6b1a3671fcc0.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/428424",
+    "rarity": "4",
+    "path": "The Harmony",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "920556",
+    "name": "Ruan Mei",
+    "imageUrl": "https://img.game8.co/3789467/e406ee52e1d144247ee182b49288e92a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/431762",
+    "rarity": "5",
+    "path": "The Harmony",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "920557",
+    "name": "Dr. Ratio",
+    "imageUrl": "https://img.game8.co/3899376/934386d61e7eb73e9beae58e34151e12.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/431768",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "920558",
+    "name": "Xueyi",
+    "imageUrl": "https://img.game8.co/3899371/411ef4407478d5f4615868a61a11dc4b.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/431761",
+    "rarity": "4",
+    "path": "The Destruction",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "931690",
+    "name": "Black Swan",
+    "imageUrl": "https://img.game8.co/3807686/fa433902a0f028d81123aa25322021d3.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/436054",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "932028",
+    "name": "Sparkle",
+    "imageUrl": "https://img.game8.co/3808836/a30de2a01761cf7046681553ecd51764.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/436832",
+    "rarity": "5",
+    "path": "The Harmony",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "932035",
+    "name": "Misha",
+    "imageUrl": "https://img.game8.co/3899369/a5d85a136e12f27ba586334ef8189ae3.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/436839",
+    "rarity": "4",
+    "path": "The Destruction",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "941511",
+    "name": "Acheron",
+    "imageUrl": "https://img.game8.co/3899367/9cedf24bc0ce960e0b3973250dd28c76.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/436053",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "941873",
+    "name": "Aventurine",
+    "imageUrl": "https://img.game8.co/3899365/ede5865f0e72fa872d5765e0664d78de.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/429966",
+    "rarity": "5",
+    "path": "The Preservation",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "941934",
+    "name": "Gallagher",
+    "imageUrl": "https://img.game8.co/3826180/39fbc415ce51174f6da010ff8a758d91.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/437255",
+    "rarity": "4",
+    "path": "The Abundance",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "978520",
+    "name": "Robin",
+    "imageUrl": "https://img.game8.co/3899484/9cca679cb587dc8e93fba1823aeca6d5.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/437261",
+    "rarity": "5",
+    "path": "The Harmony",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "978631",
+    "name": "Boothill",
+    "imageUrl": "https://img.game8.co/3899342/af65ac2c6e1cd81d4ae61b6375fcc3f6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/Boothill-Best-Builds",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "989328",
+    "name": "Firefly",
+    "imageUrl": "https://img.game8.co/3872328/d0781159f0e9e5914d76d7ca1462674d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/437263",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "989974",
+    "name": "Jade",
+    "imageUrl": "https://img.game8.co/3872780/f55e81b379b425ffcaa39465d2d87895.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/451833",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "995834",
+    "name": "Trailblazer (Imaginary)",
+    "imageUrl": "https://img.game8.co/3889787/1f641fb418d86bae0bbc225862a7514a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/453693",
+    "rarity": "5",
+    "path": "The Harmony",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "1013159",
+    "name": "Yunli",
+    "imageUrl": "https://img.game8.co/3903906/474e8b4ead39923b2e559bb1d0780ade.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/457101",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "1013529",
+    "name": "Jiaoqiu",
+    "imageUrl": "https://img.game8.co/3904619/7b4ae13a4cef45c1f969825437ff2244.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/457205",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "1014443",
+    "name": "March 7th (Imaginary)",
+    "imageUrl": "https://img.game8.co/3906080/af9e036db27327ee9df507272a13510e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/456967",
+    "rarity": "4",
+    "path": "The Hunt",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "1029985",
+    "name": "Feixiao",
+    "imageUrl": "https://img.game8.co/3934366/25477ebd5dd658e55460ee4de57ee35d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/462222",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "1030138",
+    "name": "Lingsha",
+    "imageUrl": "https://img.game8.co/3934896/550a68a0585d8b5cac8f8c418d659ee9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/462279",
+    "rarity": "5",
+    "path": "The Abundance",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "1030493",
+    "name": "Moze",
+    "imageUrl": "https://img.game8.co/3935762/b1833d89976ab075e844361beb6a9dc8.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/462333",
+    "rarity": "4",
+    "path": "The Hunt",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "1067635",
+    "name": "Rappa",
+    "imageUrl": "https://img.game8.co/4029048/53f27f108863a813ae1ca1d22aa50d40.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/469196",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "1099396",
+    "name": "Sunday",
+    "imageUrl": "https://img.game8.co/4010974/4d201b7d582745d60c2eecdaf80c8f0c.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/437272",
+    "rarity": "5",
+    "path": "The Harmony",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "1101362",
+    "name": "Fugue",
+    "imageUrl": "https://img.game8.co/4014497/2b73d729370dd4393da0d12602b01c98.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/478458",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "1121522",
+    "name": "The Herta",
+    "imageUrl": "https://img.game8.co/4044949/9986df56ea421e73acd7201b3efe5a22.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/485784",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "1121818",
+    "name": "Aglaea",
+    "imageUrl": "https://img.game8.co/4045833/e83dc6b2353dd84813ae7c1d0adb14bc.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/485982",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "1122956",
+    "name": "Trailblazer (Ice)",
+    "imageUrl": "https://img.game8.co/4047233/854727fffbde0282885bd3e808b4cf43.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/486082",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "1140633",
+    "name": "Tribbie",
+    "imageUrl": "https://img.game8.co/4074798/ca2244bb4304b47283f0c7d2593a404c.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/486293",
+    "rarity": "5",
+    "path": "The Harmony",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "1140634",
+    "name": "Mydei",
+    "imageUrl": "https://img.game8.co/4074811/d8f806b8713b2d167e2671c4b99278e7.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/486299",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "1160925",
+    "name": "Castorice",
+    "imageUrl": "https://img.game8.co/4104674/c7d4833be32744623796e69cd8955443.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/486305",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "1162061",
+    "name": "Anaxa",
+    "imageUrl": "https://img.game8.co/4105938/a7a620b0c9969474e506afc27d57874b.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/486296",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "1185075",
+    "name": "Hyacine",
+    "imageUrl": "https://img.game8.co/4137692/d5bcdd1e7f7a9543dffcdd702e19926a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/486300",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "1185643",
+    "name": "Cipher",
+    "imageUrl": "https://img.game8.co/4138632/f57bdd428064adf48a34155895e678e7.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/486303",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "1215726",
+    "name": "Saber",
+    "imageUrl": "https://img.game8.co/4164168/ae9e16e68c77438899098ffb89ebaacc.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/519564",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "1215727",
+    "name": "Archer",
+    "imageUrl": "https://img.game8.co/4164169/c4e56feb588ab15e0ecf85b432b4cc74.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/519877",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "1216197",
+    "name": "Phainon",
+    "imageUrl": "https://img.game8.co/4165361/9e36a72f4578bbd75a41f2971f5ec464.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/486307",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "1243385",
+    "name": "Hysilens",
+    "imageUrl": "https://img.game8.co/4197866/b8008b5796ced1fec83d66665197b7dd.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/529701",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "1243914",
+    "name": "Cerydra",
+    "imageUrl": "https://img.game8.co/4198742/c7e8758b57025c346759b7f2db800f3d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530015",
+    "rarity": "5",
+    "path": "The Harmony",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "1277588",
+    "name": "Evernight",
+    "imageUrl": "https://img.game8.co/4240167/179a9e473f3e2dcc0242b45458605f87.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/513418",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "1277756",
+    "name": "Permansor Terrae",
+    "imageUrl": "https://img.game8.co/4240461/e8573a2679b1355402aa468944a8ec59.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/541483",
+    "rarity": "5",
+    "path": "The Preservation",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "1301998",
+    "name": "Cyrene",
+    "imageUrl": "https://img.game8.co/4290333/096d6e53e6ac5581de695217e4dec7a5.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/541348",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "1327524",
+    "name": "The Dahlia",
+    "imageUrl": "https://img.game8.co/4311963/c377e74897801165482d930f6a03d3f1.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/559674",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "1370722",
+    "name": "Yao Guang",
+    "imageUrl": "https://img.game8.co/4376746/a258bf8d78850b8d8d2c436091016560.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/572586",
+    "rarity": "5",
+    "path": "The Elation",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "1370827",
+    "name": "Sparxie",
+    "imageUrl": "https://img.game8.co/4377005/0ca40ea822237b8f5beb3a513af7acac.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/572597",
+    "rarity": "5",
+    "path": "The Elation",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "1392153",
+    "name": "Ashveil",
+    "imageUrl": "https://img.game8.co/4408797/553d6e9892db8a130aceb671075acc07.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/574746",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "1409848",
+    "name": "Silver Wolf Lv.999",
+    "imageUrl": "https://img.game8.co/4474636/c0d6e6535e4bf7518c5dc21aeba70c29.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/574749",
+    "rarity": "5",
+    "path": "The Elation",
+    "element": "Imaginary",
+    "type": "character"
+  },
+  {
+    "id": "1410805",
+    "name": "Evanescia",
+    "imageUrl": "https://img.game8.co/4436704/b84cd711108861fab1e4681756c3b455.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/574765",
+    "rarity": "5",
+    "path": "The Elation",
+    "element": "Physical",
+    "type": "character"
+  },
+  {
+    "id": "1412499",
+    "name": "Trailblazer (Lightning)",
+    "imageUrl": "https://img.game8.co/4437695/81f7121db0f9b6fade3323e3f0277b6e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/586207",
+    "rarity": "5",
+    "path": "The Elation",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "1435285",
+    "name": "Mortenax Blade",
+    "imageUrl": "https://img.game8.co/4461472/6797582d962e3e53f3015289a039ec6a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/574766",
+    "rarity": "5",
+    "path": "The Nihility",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "1465707",
+    "name": "Nova",
+    "imageUrl": "https://img.game8.co/4504326/caae4de9f9923e57d6e53c5c7bc7a6de.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/601025",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Fire",
+    "type": "character"
+  },
+  {
+    "id": "1469966",
+    "name": "Rin Tohsaka",
+    "imageUrl": "https://img.game8.co/4510469/d15fb19c8abe09dde57e23caca1f2045.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/601938",
+    "rarity": "5",
+    "path": "The Erudition",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "1469967",
+    "name": "Gilgamesh",
+    "imageUrl": "https://img.game8.co/4510470/cab44c413c1ae484058e78385e5d4427.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/601941",
+    "rarity": "5",
+    "path": "The Destruction",
+    "element": "Lightning",
+    "type": "character"
+  },
+  {
+    "id": "1493820",
+    "name": "Summeretto",
+    "imageUrl": "https://img.game8.co/4545735/072aef95b6c00cda6a69104583a940ab.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/607261",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "element": "Wind",
+    "type": "character"
+  },
+  {
+    "id": "1493822",
+    "name": "Waveflair",
+    "imageUrl": "https://img.game8.co/4545774/07fa8965e398b5d5f461c594f8c5e112.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/607267",
+    "rarity": "5",
+    "path": "The Elation",
+    "element": "Quantum",
+    "type": "character"
+  },
+  {
+    "id": "1557886",
+    "name": "Pearl",
+    "imageUrl": "https://img.game8.co/4583947/4c18ce22132d458c3363deed4f419db0.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/614848",
+    "rarity": "5",
+    "path": "The Elation",
+    "element": "Ice",
+    "type": "character"
+  },
+  {
+    "id": "lc-442703",
+    "name": "A Grounded Ascent",
+    "imageUrl": "https://img.game8.co/4049244/b1fe087b1461b6e20613dc7b25a07459.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/442703",
+    "rarity": "5",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-608550",
+    "name": "A Star That Lights the Night",
+    "imageUrl": "https://img.game8.co/4548483/1113bfbefd8de7dd0f4f14dd6d31ce60.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/608550",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530841",
+    "name": "A Thankless Coronation",
+    "imageUrl": "https://img.game8.co/4201285/acdf470e97d859890dc47eaa1ab49949.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530841",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-448204",
+    "name": "Along the Passing Shore",
+    "imageUrl": "https://img.game8.co/3856783/fb2b58ced54f365fee740adf94a8e185.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/448204",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-431868",
+    "name": "An Instant Before A Gaze",
+    "imageUrl": "https://img.game8.co/3790078/6eea8e6431bbc01a0315a2f94808c75d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/431868",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-437250",
+    "name": "Baptism of Pure Thought",
+    "imageUrl": "https://img.game8.co/3810213/62ca2cf56d62be7f5cd5957aeb13a0be.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/437250",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408549",
+    "name": "Before Dawn",
+    "imageUrl": "https://img.game8.co/3648237/7ed80cf60a9dc95d775d8ff49b251201.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408549",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-422175",
+    "name": "Brighter Than the Sun",
+    "imageUrl": "https://img.game8.co/3753383/c470daebe31e0d055738d1b0f5209509.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/422175",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408542",
+    "name": "But the Battle Isn't Over",
+    "imageUrl": "https://img.game8.co/3648253/253cb735ffda95c8aceb3a9ebf57ea13.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408542",
+    "rarity": "5",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-624399",
+    "name": "Colors for Tomorrow",
+    "imageUrl": "https://img.game8.co/4625813/e15196722d8f8509a075e6bf291e7af3.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/624399",
+    "rarity": "5",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408559",
+    "name": "Cruising in the Stellar Sea",
+    "imageUrl": "https://img.game8.co/3648254/09189c461e1e0314e8965f5e917d7fc3.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408559",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-462466",
+    "name": "Dance at Sunset",
+    "imageUrl": "https://img.game8.co/3937100/947a10981cf0e9b981164ee21b521418.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/462466",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-579615",
+    "name": "Dazzled by a Flowery World",
+    "imageUrl": "https://img.game8.co/4408377/475599ad8131a69aeec4100bc54632ea.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/579615",
+    "rarity": "5",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441041",
+    "name": "Earthly Escapade",
+    "imageUrl": "https://img.game8.co/3827695/1313a3be46ba675d5148a0c212ecdf95.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441041",
+    "rarity": "5",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-413623",
+    "name": "Echoes of the Coffin",
+    "imageUrl": "https://img.game8.co/3753379/5fc6932293a11b5b77cddc1834f707fe.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/413623",
+    "rarity": "5",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-586427",
+    "name": "Elation Brimming With Blessings",
+    "imageUrl": "https://img.game8.co/4440898/7ac97168143b92f257eddc52ddcd036a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/586427",
+    "rarity": "5",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-541345",
+    "name": "Epoch Etched in Golden Blood",
+    "imageUrl": "https://img.game8.co/4240012/bb7a5c8c13f25e7886fdd2d2eb3a79a1.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/541345",
+    "rarity": "5",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-442043",
+    "name": "Eternal Calculus",
+    "imageUrl": "https://img.game8.co/3905920/72f5313a3aca6325d5fc201d5a12fc29.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/442043",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-499788",
+    "name": "Flame of Blood, Blaze My Path",
+    "imageUrl": "https://img.game8.co/4109299/a3e7ed65367b5b880eb10ff60e9649b6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/499788",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-608552",
+    "name": "Flickering Stars",
+    "imageUrl": "https://img.game8.co/4548484/8105fea98b660bcab9b80b1f8fb1ac01.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/608552",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-452090",
+    "name": "Flowing Nightglow",
+    "imageUrl": "https://img.game8.co/3975089/9ff991c04d7357222161135fdbe2e19c.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/452090",
+    "rarity": "5",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-608551",
+    "name": "I Am As You Behold",
+    "imageUrl": "https://img.game8.co/4548485/695c41c2075cfa875011d7f552ad4d73.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/608551",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-428847",
+    "name": "I Shall Be My Own Sword",
+    "imageUrl": "https://img.game8.co/3773609/c39250be9628e8d031a85add39235151.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/428847",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-470749",
+    "name": "I Venture Forth to Hunt",
+    "imageUrl": "https://img.game8.co/3975085/da697ccc7eb5870fc90a636ee9d06648.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/470749",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-499787",
+    "name": "If Time Were a Flower",
+    "imageUrl": "https://img.game8.co/4109298/05069f7270f20675584d56d1ebf70a3f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/499787",
+    "rarity": "5",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408535",
+    "name": "In the Name of the World",
+    "imageUrl": "https://img.game8.co/3648240/61a36920ca2fb942396b11f3ed4586a2.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408535",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408557",
+    "name": "In the Night",
+    "imageUrl": "https://img.game8.co/3648228/d3d09296b7d793ab1b2c6a07fc557fc0.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408557",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-413614",
+    "name": "Incessant Rain",
+    "imageUrl": "https://img.game8.co/3753378/6d43cf267df127aadcc883438c266373.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/413614",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-448205",
+    "name": "Inherently Unjust Destiny",
+    "imageUrl": "https://img.game8.co/3856782/f44f3a523b22d0b423efc82a952e6897.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/448205",
+    "rarity": "5",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-492448",
+    "name": "Into the Unreachable Veil",
+    "imageUrl": "https://img.game8.co/4075013/0b96eb6e95dbd921d379cbe0a3d0047a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/492448",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-521510",
+    "name": "Lies Dance on the Breeze",
+    "imageUrl": "https://img.game8.co/4168872/83edc7a4c2290f18b5cdfdd99c53a289.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/521510",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-507471",
+    "name": "Life Should Be Cast to Flames",
+    "imageUrl": "https://img.game8.co/4141885/719b5017394aa3ea256f67825484973f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/507471",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-521509",
+    "name": "Long May Rainbows Adorn the Sky",
+    "imageUrl": "https://img.game8.co/4168871/66b12ca9f3391b2506d2da9d45e01481.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/521509",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-427191",
+    "name": "Long Road Leads Home",
+    "imageUrl": "https://img.game8.co/4049245/d8c69bc8ae4194614d9c6f3f06a01f24.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/427191",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-507474",
+    "name": "Make Farewells More Beautiful",
+    "imageUrl": "https://img.game8.co/4141907/82a49c479f56ccb6d4c7e32270f15682.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/507474",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-499789",
+    "name": "Memory's Curtain Never Falls",
+    "imageUrl": "https://img.game8.co/4109300/95f6fa0b4406d134836f184bbecd2304.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/499789",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408528",
+    "name": "Moment of Victory",
+    "imageUrl": "https://img.game8.co/3648236/d5f3d057f893711c88c4585dd0203821.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408528",
+    "rarity": "5",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-569709",
+    "name": "Never Forget Her Flame",
+    "imageUrl": "https://img.game8.co/4358531/413ca3ca06da5e4ddb7d775ea74da8a6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/569709",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-431864",
+    "name": "Night of Fright",
+    "imageUrl": "https://img.game8.co/3790076/f2e6c91315ef98e768895e104d2c4fed.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/431864",
+    "rarity": "5",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408548",
+    "name": "Night on the Milky Way",
+    "imageUrl": "https://img.game8.co/3648229/4af08f7d1022dae0bad7fc4dbc795d7b.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408548",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-443697",
+    "name": "Ninjutsu Inscription - Dazzling Evilbreaker",
+    "imageUrl": "https://img.game8.co/4015238/1ba5cdd4ba7f226e065f2d73c256eced.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/443697",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408566",
+    "name": "On the Fall of an Aeon",
+    "imageUrl": "https://img.game8.co/3648256/ea0b441bcc1586734c978f95e7b16153.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408566",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-437251",
+    "name": "Past Self in Mirror",
+    "imageUrl": "https://img.game8.co/3810214/4a79866c3b9def68fbac58ac320cc335.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/437251",
+    "rarity": "5",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-417670",
+    "name": "Patience Is All You Need",
+    "imageUrl": "https://img.game8.co/3753385/f9c9a9b0f83b5ef34c86e813288f39a9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/417670",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-601945",
+    "name": "Reforged in Hellfire",
+    "imageUrl": "https://img.game8.co/4510673/b5287eda6206df937e2c9a7659568782.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/601945",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441039",
+    "name": "Reforged Remembrance",
+    "imageUrl": "https://img.game8.co/3827689/7e76c19f3dfc5ca584075564be1f4c4a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441039",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-615721",
+    "name": "Rise and Sing",
+    "imageUrl": "https://img.game8.co/4590783/1606b7dcc53fa05655c57f2769a7e09d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/615721",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-452129",
+    "name": "Sailing Towards A Second Life",
+    "imageUrl": "https://img.game8.co/3875056/ab541d3662eae699b993078f5bf17039.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/452129",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-470750",
+    "name": "Scent Alone Stays True",
+    "imageUrl": "https://img.game8.co/3975086/0b0fe6f6b3a2ace99bbc84e5d2954136.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/470750",
+    "rarity": "5",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-422176",
+    "name": "She Already Shut Her Eyes",
+    "imageUrl": "https://img.game8.co/3753381/14ee0114c91a24b903c86f786be71662.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/422176",
+    "rarity": "5",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408558",
+    "name": "Sleep Like the Dead",
+    "imageUrl": "https://img.game8.co/3648239/3315e8e0ca53d85b667812e11a19601e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408558",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-422233",
+    "name": "Solitary Healing",
+    "imageUrl": "https://img.game8.co/3753382/f29059ee2ef4fb3fcf56989a0984bc0e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/422233",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408565",
+    "name": "Something Irreplaceable",
+    "imageUrl": "https://img.game8.co/3648230/16525660356bcb40db90edfd8f2cae48.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408565",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-615720",
+    "name": "Summer Rides the Surf",
+    "imageUrl": "https://img.game8.co/4590784/c3bb6784b3972222e3a0b2ba9a002de8.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/615720",
+    "rarity": "5",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408529",
+    "name": "Texture of Memories",
+    "imageUrl": "https://img.game8.co/3648255/0f2dec44d0550120c9b88f232e002a14.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408529",
+    "rarity": "5",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-586423",
+    "name": "The Finale of a Lie",
+    "imageUrl": "https://img.game8.co/4440899/fb8d4a2d80b9fdb1735ddb8bd3640c2c.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/586423",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530842",
+    "name": "The Hell Where Ideals Burn",
+    "imageUrl": "https://img.game8.co/4201270/f066bfb3d154f0b7eeeecbbc33c79bf6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530842",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-417669",
+    "name": "The Unreachable Side",
+    "imageUrl": "https://img.game8.co/3753384/fb2f1a41db575b4e9cc26517e626c161.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/417669",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-560883",
+    "name": "This Love, Forever",
+    "imageUrl": "https://img.game8.co/4316884/97bb93c0169cc496db9dd620f5ba5786.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/560883",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-462467",
+    "name": "Those Many Springs",
+    "imageUrl": "https://img.game8.co/3937098/c40eda9f4ef13f2ed234f4bd2fc612ac.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/462467",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-550756",
+    "name": "Though Worlds Apart",
+    "imageUrl": "https://img.game8.co/4277406/86af4390e708c3030f4cad71987f5e41.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/550756",
+    "rarity": "5",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530840",
+    "name": "Thus Burns the Dawn",
+    "imageUrl": "https://img.game8.co/4201279/ebc193525e38b25003da8d6f4a3fbaae.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530840",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408521",
+    "name": "Time Waits for No One",
+    "imageUrl": "https://img.game8.co/3648238/cb4e21373db852d594b84e1f1550badf.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408521",
+    "rarity": "5",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-492441",
+    "name": "Time Woven into Gold",
+    "imageUrl": "https://img.game8.co/4075009/5173f70aab730123d0854f6c57d35a07.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/492441",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-550755",
+    "name": "To Evernight's Stars",
+    "imageUrl": "https://img.game8.co/4277407/8e5524cd539c73337ec02a8636ea6acd.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/550755",
+    "rarity": "5",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-594066",
+    "name": "Until the Flowers Bloom Again",
+    "imageUrl": "https://img.game8.co/4465789/6944a4578bce00ffa81a6e8f5e20273f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/594066",
+    "rarity": "5",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-594065",
+    "name": "Welcome to the Cosmic City",
+    "imageUrl": "https://img.game8.co/4465787/815d5095bcbf0b2aeaf042e94a0955e4.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/594065",
+    "rarity": "5",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-579616",
+    "name": "When She Decided to See",
+    "imageUrl": "https://img.game8.co/4408373/edfa4141c0d5548a7f20d86dedba9018.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/579616",
+    "rarity": "5",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-448309",
+    "name": "Whereabouts Should Dreams Rest",
+    "imageUrl": "https://img.game8.co/3905917/f8a6efbe29b49639384fb0ddfdef905b.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/448309",
+    "rarity": "5",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-541344",
+    "name": "Why Does the Ocean Sing",
+    "imageUrl": "https://img.game8.co/4240013/c03c4806652c143f0463a1c66498d208.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/541344",
+    "rarity": "5",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-428848",
+    "name": "Worrisome, Blissful",
+    "imageUrl": "https://img.game8.co/3773608/8d9e5ebb971da6e7e2f718b0b739fc6e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/428848",
+    "rarity": "5",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-417823",
+    "name": "Yet Hope Is Priceless",
+    "imageUrl": "https://img.game8.co/3905919/ee8a21fa47bc7d5b48bd0d61814f26da.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/417823",
+    "rarity": "5",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530846",
+    "name": "A Dream Scented in Wheat",
+    "imageUrl": "https://img.game8.co/4201274/9936cf99a2cf881f9ca2556532e3ffd4.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530846",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-615724",
+    "name": "A Little Getaway",
+    "imageUrl": "https://img.game8.co/4590785/b08d60e465f30fb8f173d109c7bbc472.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/615724",
+    "rarity": "4",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408568",
+    "name": "A Secret Vow",
+    "imageUrl": "https://img.game8.co/3647983/bb0e2a8926411e063f7af63e98757db7.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408568",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530844",
+    "name": "A Trail of Bygone Blood",
+    "imageUrl": "https://img.game8.co/4201263/2d2fb771c54909f3649bde3cd5d9598f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530844",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-442035",
+    "name": "After the Charmony Fall",
+    "imageUrl": "https://img.game8.co/3905960/c0cd7cc72b99f0078857ea4bcf101049.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/442035",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-413641",
+    "name": "Before the Tutorial Mission Starts",
+    "imageUrl": "https://img.game8.co/3753380/d5216dbfee722c289166941349b36b5f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/413641",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-452092",
+    "name": "Boundless Choreo",
+    "imageUrl": "https://img.game8.co/3875053/ad1a1bdf1347b08d2bd1e1185810dd09.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/452092",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408545",
+    "name": "Carve the Moon, Weave the Clouds",
+    "imageUrl": "https://img.game8.co/3647991/10528b04d18a3f07d125c7f4f381edbf.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408545",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-448206",
+    "name": "Concert for Two",
+    "imageUrl": "https://img.game8.co/3856778/8062efc1cad4d20b76ee1568249c40d9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/448206",
+    "rarity": "4",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410435",
+    "name": "Dance! Dance! Dance!",
+    "imageUrl": "https://img.game8.co/3680528/cc77c3bb567a3d76e177a1455b5193e3.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410435",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408530",
+    "name": "Day One of My New Life",
+    "imageUrl": "https://img.game8.co/3647941/83e2f1130bec20ef1ed88e6bf8b47381.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408530",
+    "rarity": "4",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441073",
+    "name": "Destiny’s Threads Forewoven",
+    "imageUrl": "https://img.game8.co/3827882/3a3cd5abc924e81a3f224138c217c966.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441073",
+    "rarity": "4",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-448342",
+    "name": "Dream's Montage",
+    "imageUrl": "https://img.game8.co/4015240/79b3f4e22c48946d47b803bd9bd18271.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/448342",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441070",
+    "name": "Dreamville Adventure",
+    "imageUrl": "https://img.game8.co/3827884/44730e8c5fdddcff19ef20837f8e4f11.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441070",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408537",
+    "name": "Eyes of the Prey",
+    "imageUrl": "https://img.game8.co/3647979/0413038bbbc2d4fdd6870d002b061879.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408537",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410433",
+    "name": "Fermata",
+    "imageUrl": "https://img.game8.co/3680517/0e8e08719c9ddef4c567c3d0e0845b51.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410433",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441071",
+    "name": "Final Victor",
+    "imageUrl": "https://img.game8.co/3827883/c53c1a4001b7e17008f52743e9cdbd06.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441071",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441072",
+    "name": "Flames Afar",
+    "imageUrl": "https://img.game8.co/3827880/13df10df3c956536f46c194b661f86e0.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441072",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-560884",
+    "name": "Fly Into a Pink Tomorrow",
+    "imageUrl": "https://img.game8.co/4324391/0753c053280bb6dc9073a84c61ee51c8.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/560884",
+    "rarity": "4",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-452131",
+    "name": "For Tomorrow's Journey",
+    "imageUrl": "https://img.game8.co/3875054/557531f3041397dfe7e38659e2c2fc30.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/452131",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-492458",
+    "name": "Geniuses' Greetings",
+    "imageUrl": "https://img.game8.co/4075014/188c36ca2be293949a58e622f1cf75d9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/492458",
+    "rarity": "4",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410438",
+    "name": "Geniuses' Repose",
+    "imageUrl": "https://img.game8.co/3680519/0e4cc4e89711d01b0b4fbf87601d248d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410438",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408536",
+    "name": "Good Night and Sleep Well",
+    "imageUrl": "https://img.game8.co/3647973/68b5c2d014e6e01384eaa7c422fe8724.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408536",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-431870",
+    "name": "Hey, Over Here",
+    "imageUrl": "https://img.game8.co/3790073/4ffbcce0463e9436e18dab089c681334.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/431870",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530848",
+    "name": "Holiday Thermae Escapade",
+    "imageUrl": "https://img.game8.co/4201264/4085532b8fa2af05db4ea66f9cd0b7d9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530848",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530847",
+    "name": "In Pursuit of the Wind",
+    "imageUrl": "https://img.game8.co/4201258/14a6b4cce28c25cde1f92090c9ec94f3.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530847",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441042",
+    "name": "Indelible Promise",
+    "imageUrl": "https://img.game8.co/3827691/fe705fffea7ce35a6286488b579d5645.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441042",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441075",
+    "name": "It’s Showtime",
+    "imageUrl": "https://img.game8.co/3827885/c6c89e7f8125207af7ae4a88d9301569.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441075",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530850",
+    "name": "Journey, Forever Peaceful",
+    "imageUrl": "https://img.game8.co/4201266/d1c94f8420044f14a3de9852c52a137f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530850",
+    "rarity": "4",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408531",
+    "name": "Landau's Choice",
+    "imageUrl": "https://img.game8.co/3647980/9d62ac642ebfc629a203a2b3cd3ac4bd.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408531",
+    "rarity": "4",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408551",
+    "name": "Make the World Clamor",
+    "imageUrl": "https://img.game8.co/3647984/85a7499435a255ec935cd7d3b3c3675f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408551",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408543",
+    "name": "Memories of the Past",
+    "imageUrl": "https://img.game8.co/3647977/1affacaff22c02a56caec0dc4863f9d1.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408543",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-579618",
+    "name": "Mushy Shroomy's Adventures",
+    "imageUrl": "https://img.game8.co/4408374/e5c74290b446aa501da9f9058ed06dc2.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/579618",
+    "rarity": "4",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-477938",
+    "name": "Ninja Record - Sound Hunt",
+    "imageUrl": "https://img.game8.co/4015241/8f6628e038c1712d3cfe833f4f22b10c.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/477938",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408570",
+    "name": "Nowhere to Run",
+    "imageUrl": "https://img.game8.co/3647990/61481b005d4bbfad2e0a17da6dc80553.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408570",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408560",
+    "name": "Only Silence Remains",
+    "imageUrl": "https://img.game8.co/3647942/55d44521f074678074fd6eac71558209.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408560",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410436",
+    "name": "Past and Future",
+    "imageUrl": "https://img.game8.co/3680494/59b2e9a7f7b90652202e1f64f92e0721.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410436",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410447",
+    "name": "Perfect Timing",
+    "imageUrl": "https://img.game8.co/3680514/244a25c7774d472946cd2fd13c3a6cb0.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410447",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408544",
+    "name": "Planetary Rendezvous",
+    "imageUrl": "https://img.game8.co/3647982/1800d49755bea702715af65b2db9795e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408544",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-462464",
+    "name": "Poised to Bloom",
+    "imageUrl": "https://img.game8.co/3937099/63ec41e0d0fcb295be28ec2050e906e2.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/462464",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408522",
+    "name": "Post-Op Conversation",
+    "imageUrl": "https://img.game8.co/3647974/8bc830a39a5027f1c09c02f76517a4fe.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408522",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410448",
+    "name": "Quid Pro Quo",
+    "imageUrl": "https://img.game8.co/3680523/4e718324646edc4def31a2a6cdbef21b.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410448",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-615725",
+    "name": "Race to the Horizon",
+    "imageUrl": "https://img.game8.co/4590787/368652c4227262a2a9bb09fe1178828a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/615725",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410434",
+    "name": "Resolution Shines As Pearls of Sweat",
+    "imageUrl": "https://img.game8.co/3680520/94ca527a1da475a69ef274a37159afad.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410434",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408562",
+    "name": "Return to Darkness",
+    "imageUrl": "https://img.game8.co/3647992/000910589e1e390a954091d29774f703.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408562",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410441",
+    "name": "River Flows in Spring",
+    "imageUrl": "https://img.game8.co/3680521/521d7654fea7f2381d3db2106b4b7dc8.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410441",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530845",
+    "name": "See You at the End",
+    "imageUrl": "https://img.game8.co/4201259/cb29bcf59348d21c7984d2647e2e9a7b.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530845",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-470751",
+    "name": "Shadowed by Night",
+    "imageUrl": "https://img.game8.co/3975081/653ced0e160453dc2b0572d927e88c42.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/470751",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408523",
+    "name": "Shared Feeling",
+    "imageUrl": "https://img.game8.co/3647975/2f7f89454443e2129dd83261f90086ec.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408523",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410440",
+    "name": "Subscribe for More!",
+    "imageUrl": "https://img.game8.co/3680522/528321a792b384134ea4a32c663b0b3d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410440",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-492459",
+    "name": "Sweat Now, Cry Less",
+    "imageUrl": "https://img.game8.co/4075010/601c2a4a6ccb2b374d25df89ca172346.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/492459",
+    "rarity": "4",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408561",
+    "name": "Swordplay",
+    "imageUrl": "https://img.game8.co/3647981/6f260c41b07bbea6c9069d092e6d892d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408561",
+    "rarity": "4",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408550",
+    "name": "The Birth of the Self",
+    "imageUrl": "https://img.game8.co/3647978/692dd04068743fc06a4c99ab727f79d4.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408550",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441074",
+    "name": "The Day The Cosmos Fell",
+    "imageUrl": "https://img.game8.co/3827881/e7246f3d19287e266945048195ec5656.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441074",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530851",
+    "name": "The Flower Remembers",
+    "imageUrl": "https://img.game8.co/4201262/e191a3dcd178575c621538c01c69fe45.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530851",
+    "rarity": "4",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-541346",
+    "name": "The Forever Victual",
+    "imageUrl": "https://img.game8.co/4240014/dc2557deae3296e76727b9949c3c83da.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/541346",
+    "rarity": "4",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-507473",
+    "name": "The Great Cosmic Enterprise",
+    "imageUrl": "https://img.game8.co/4141884/9fbd2d88d3de53f959c68eb205d0d4ed.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/507473",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408567",
+    "name": "The Moles Welcome You",
+    "imageUrl": "https://img.game8.co/3647976/a6f41031439e6d9fc7021615009112ba.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408567",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408552",
+    "name": "The Seriousness of Breakfast",
+    "imageUrl": "https://img.game8.co/3647943/2b4b4b81fc25e027e5e31bf9851b7ef1.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408552",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530843",
+    "name": "The Story's Next Page",
+    "imageUrl": "https://img.game8.co/4201284/f7cc997a6400ccf9855ffe68c6110c48.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530843",
+    "rarity": "4",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408532",
+    "name": "This Is Me!",
+    "imageUrl": "https://img.game8.co/3647988/32b4ce189368c9411d81cd7f29dbe041.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408532",
+    "rarity": "4",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408553",
+    "name": "Today Is Another Peaceful Day",
+    "imageUrl": "https://img.game8.co/3647989/216d7eac597f8bf08d348b716b12e058.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408553",
+    "rarity": "4",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-579619",
+    "name": "Today's Good Luck",
+    "imageUrl": "https://img.game8.co/4408372/8366b8ad6eb62366f4a2cb606978f749.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/579619",
+    "rarity": "4",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-594089",
+    "name": "Tomorrow, Together",
+    "imageUrl": "https://img.game8.co/4465790/9a585b91c2dbe9367f9a5e2d5f1c013e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/594089",
+    "rarity": "4",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410445",
+    "name": "Trend of the Universal Market",
+    "imageUrl": "https://img.game8.co/3680515/58a4aa44cff0de4eed44c48dbd24e4b6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410445",
+    "rarity": "4",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410443",
+    "name": "Under the Blue Sky",
+    "imageUrl": "https://img.game8.co/3680524/f89641ef1c1fff98ea05943cee37d9df.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410443",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-530849",
+    "name": "Unto Tomorrow's Morrow",
+    "imageUrl": "https://img.game8.co/4201261/9ce7f4e3fa03572dece5fa87a65e66b9.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/530849",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-492460",
+    "name": "Victory In a Blink",
+    "imageUrl": "https://img.game8.co/4075012/7e9e6d14ce714598ba53e816eba76c99.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/492460",
+    "rarity": "4",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408524",
+    "name": "Warmth Shortens Cold Nights",
+    "imageUrl": "https://img.game8.co/3647986/07d9bdb4c88a0bf8cecf744a937097f8.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408524",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410446",
+    "name": "We Are Wildfire",
+    "imageUrl": "https://img.game8.co/3680518/141f054422391d07353e23f66c77e4e1.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410446",
+    "rarity": "4",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408538",
+    "name": "We Will Meet Again",
+    "imageUrl": "https://img.game8.co/3647987/182720677329b4447b2202d410d2147e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408538",
+    "rarity": "4",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-441069",
+    "name": "What Is Real",
+    "imageUrl": "https://img.game8.co/3827879/d93bd4d016e3bad2764b68faa6e79292.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/441069",
+    "rarity": "4",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408569",
+    "name": "Woof! Walk Time!",
+    "imageUrl": "https://img.game8.co/3647985/90f28911cb1e23ee89c505beecd84a15.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408569",
+    "rarity": "4",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410442",
+    "name": "Adversarial",
+    "imageUrl": "https://img.game8.co/3680513/71f85c8ce1721e9a82d6223695660550.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410442",
+    "rarity": "3",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408533",
+    "name": "Amber",
+    "imageUrl": "https://img.game8.co/3648113/76e52e1b3a46f82a6f7d46a9594c1836.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408533",
+    "rarity": "3",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408563",
+    "name": "Arrows",
+    "imageUrl": "https://img.game8.co/3648050/8ac92eb7ce29aa1eeca1253d871ceef0.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408563",
+    "rarity": "3",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408546",
+    "name": "Chorus",
+    "imageUrl": "https://img.game8.co/3648112/16fc501e83a8c0593ef43380995db662.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408546",
+    "rarity": "3",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408571",
+    "name": "Collapsing Sky",
+    "imageUrl": "https://img.game8.co/3648052/7eedbe8eb8ded8ea406b214494d392fb.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408571",
+    "rarity": "3",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408525",
+    "name": "Cornucopia",
+    "imageUrl": "https://img.game8.co/3648051/c74739ffe0bd5b68db2818a33ac1dceb.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408525",
+    "rarity": "3",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408564",
+    "name": "Darting Arrow",
+    "imageUrl": "https://img.game8.co/3648100/0711170b49920334eded20297ee8deb1.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408564",
+    "rarity": "3",
+    "path": "The Hunt",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408554",
+    "name": "Data Bank",
+    "imageUrl": "https://img.game8.co/3648101/3656bf539e50c6bf074266a4c1da54ab.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408554",
+    "rarity": "3",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408534",
+    "name": "Defense",
+    "imageUrl": "https://img.game8.co/3648105/e2e6a34f2e2faf7c4be6e1a2372b2234.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408534",
+    "rarity": "3",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408526",
+    "name": "Fine Fruit",
+    "imageUrl": "https://img.game8.co/3648102/c1224bb605426a90868fef651bdefb29.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408526",
+    "rarity": "3",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410451",
+    "name": "Hidden Shadow",
+    "imageUrl": "https://img.game8.co/3680529/0df65337ea08dce60e41240126e803ee.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410451",
+    "rarity": "3",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-579620",
+    "name": "Lingering Tear",
+    "imageUrl": "https://img.game8.co/4408375/3b26ae5447a286d9e66e3d73c34b5f4a.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/579620",
+    "rarity": "3",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408540",
+    "name": "Loop",
+    "imageUrl": "https://img.game8.co/3648104/c2e7c17a18935809466ebdc177a06bb1.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408540",
+    "rarity": "3",
+    "path": "The Nihility",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410437",
+    "name": "Mediation",
+    "imageUrl": "https://img.game8.co/3648059/2beb2486cc33f71ea13240e10291b046.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410437",
+    "rarity": "3",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408547",
+    "name": "Meshing Cogs",
+    "imageUrl": "https://img.game8.co/3648070/4908a08bafb9a3c59d5ee185ba7e0ee6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408547",
+    "rarity": "3",
+    "path": "The Harmony",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410449",
+    "name": "Multiplication",
+    "imageUrl": "https://img.game8.co/3648063/8a5de65afd9ebb766d2bfb8e8a814b6f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410449",
+    "rarity": "3",
+    "path": "The Abundance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410444",
+    "name": "Mutual Demise",
+    "imageUrl": "https://img.game8.co/3648065/b2bf9f29e3bf61bc8ca28136824d487f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410444",
+    "rarity": "3",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408556",
+    "name": "Passkey",
+    "imageUrl": "https://img.game8.co/3648071/5c8eb184ecf149c7969464f8493ca2ce.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408556",
+    "rarity": "3",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410450",
+    "name": "Pioneering",
+    "imageUrl": "https://img.game8.co/3680525/1a42943d0fb65eb5867a5c220e54b07e.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410450",
+    "rarity": "3",
+    "path": "The Preservation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-492462",
+    "name": "Reminiscence",
+    "imageUrl": "https://img.game8.co/4075008/884b494ff28e25ee1a4b2f510e860546.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/492462",
+    "rarity": "3",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-410439",
+    "name": "Sagacity",
+    "imageUrl": "https://img.game8.co/3648049/a4dbec0bd6fe0c428f4a3bad2ea58ba6.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/410439",
+    "rarity": "3",
+    "path": "The Erudition",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-492461",
+    "name": "Shadowburn",
+    "imageUrl": "https://img.game8.co/4075011/aabeb4e6da2ca7fc01bff13cd5fab88d.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/492461",
+    "rarity": "3",
+    "path": "The Remembrance",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408572",
+    "name": "Shattered Home",
+    "imageUrl": "https://img.game8.co/3648103/e851b846d272a13bf67e333c564b337f.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408572",
+    "rarity": "3",
+    "path": "The Destruction",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-579621",
+    "name": "Sneering",
+    "imageUrl": "https://img.game8.co/4408376/d018a9b4c651869038dc9451b9f4d303.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/579621",
+    "rarity": "3",
+    "path": "The Elation",
+    "type": "light-cone"
+  },
+  {
+    "id": "lc-408539",
+    "name": "Void",
+    "imageUrl": "https://img.game8.co/3648114/a25f8a0fa6037d5efa99fd833f7a8773.png/show",
+    "url": "https://game8.co/games/Honkai-Star-Rail/archives/408539",
+    "rarity": "3",
+    "path": "The Nihility",
+    "type": "light-cone"
+  }
+]

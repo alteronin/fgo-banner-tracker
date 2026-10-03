@@ -146,8 +146,8 @@
 
 ---
 
-## Bucket 11: Events Tab (Planned)
-**Status**: Not started
+## Bucket 11: Events Tab (Deferred)
+**Status**: Deferred by user (2026-10-03) — skipped in favor of Bucket 12; revisit later
 
 ### Features
 - [ ] **events-data**: Unified event schema `{id, game, name, startDate, endDate, type, url?, imageUrl?}` + per-game JSON store merged into one feed
@@ -157,17 +157,44 @@
 
 ---
 
-## Bucket 12: Cross-Game Units & Faves (Planned)
-**Status**: Not started
+## Bucket 12: Cross-Game Units & Faves (Complete)
+**Status**: Completed (2026-10-03) — local QA green (qa-units 168/168, qa-faves 174/174, qa-backup 18/18 + all banner regressions)
 
 Generalize the FGO-specific `/servants` and `/grands` pages to other games.
 
+### Roster Sources (verified)
+- **Game8 roster API** (genshin/hsr/zzz/wuwa): roster page embeds `#react-collection_browser-wrapper[data-react-props]` → `{toolStructuralMappingId, updatedAt}`; fetch `https://game8.co/api/tool_structural_mappings/{id}.json?updatedAt={ts}` with `referer` + `origin: https://game8.co` headers (403 without them) → `collectionArraySchema.collectionItems` `{id,name,imageUrl,url,...}`. Shared helper `scripts/lib/game8-roster.mjs`.
+  - genshin: page `archives/296707` → **127** chars {rarity, element, weapon}
+  - hsr chars: page `archives/404256` → **93** {rarity, path, element}
+  - hsr light cones: SSR table on `archives/406599` (no widget) → **170** rows (`Light Cone|Rarity|Path` heads, portraits `img.game8.co` data-src, rarity `5-Star`→`5`), ids prefixed `lc-` (no collision with char ids)
+  - zzz: page `archives/435684` → **60** agents {rarity, attribute, specialty}
+  - wuwa: page `archives/452489` → **59** {rarity, element, weapon}
+- **HI3**: fandom MediaWiki API — `list=categorymembers Category:Battlesuits` → **110** titles; metadata from `Module:Battlesuit/data` Lua table (one parse: character, base_rank, game_type, weapon, dmg_type, version_all — per-page wikitext templates are sparse/empty for old suits); portraits `File:{name with ":"→" -"} (Thumbnail).png` via batch `prop=imageinfo`
+- **Shadowverse**: `action=parse&page=Leader/Worlds Beyond` wikitext → `<gallery>` entries `File:X em.png|[[Leader]]/[[Class]]` across 7 top-level sections; **65** gallery entries → **63** units (2 Summer entries reference files that don't exist on the wiki — wiki itself renders them broken, skipped with warning + count guards); duplicate leader names qualified from filename parens → `Eudie (Summer)`, `Lilanthim (Summer)`; section → `obtain` taxonomy (Default/Classic/Exchange/Limited/Battle Pass/Special/Frieren)
+
 ### Features
-- [ ] **units-pages**: Per-game unit roster pages reusing the `/servants` pattern (thumbnails, status tracking owned/planning, search, sort) — e.g. Genshin characters, HSR characters + light cones; route scheme TBD (likely `/[game]/units` static subroutes so `[game]` params stay unaffected)
-- [ ] **unit-status-storage**: Status storage keyed per game (`unit-status:{game}`) via useSyncExternalStore; import/export extended to all games
-- [ ] **faves-pages**: Per-game favorites/lineup pages as analog of `/grands` (select units into roster slots, persisted per game); per-game slot counts TBD (FGO keeps 9)
-- [ ] **per-game-nav**: Per-game tab navigation (Banners / Units / Faves, later Events) consistent across games
-- [ ] **units-faves-tests**: storage keys, status toggling, slot persistence per game
+- [x] **units-pages**: static `src/app/{game}/units/page.tsx` ×6 wrapping shared client `UnitsPage` (`src/components/UnitsPage.tsx`) — mirrors `/servants`: stats cards (Total/Owned/Planning/Unmarked), search, status filter pills, sort (Name/Status/`{categoryLabel}`/Rarity|Rank, omitted for SV), toggle button cycling none→owned→planning→none; per-game subtitle (`Element · Weapon`, `Path · Element` / `Light Cone · Path`, `Attribute · Specialty`, `Type · Character`, `Class · Obtain`); `getAppBySlug` titles
+- [x] **unit-status-storage**: `src/lib/unitStorage.ts` — `unit-status:{game}` + `faves:{game}` keys, raw-string-keyed per-game caches, `subscribe/getSnapshot/serverSnapshot/notify` per game, keys removed when emptied; `src/types/units.ts` + `src/lib/units.ts` (data loaders, `UnitRow` mapping, `UnitsConfig`, `UNIT_GAMES`, `isUnitGame`)
+- [x] **unit-context**: `src/contexts/UnitContext.tsx` — `UnitProvider({game})` + `useUnitStatus()`, useSyncExternalStore with per-game memoized subscribe trio
+- [x] **faves-pages**: static `src/app/{game}/faves/page.tsx` ×6 wrapping shared `FavesPage` — **9 slots for all games** (`Favorite 1..9`), pool = owned units only, click = assign, same-slot click = clear, unit in another slot = move (never duplicated); selected name in slot header, `N of 9 selected` subtitle, empty state linking to `/{game}/units`
+- [x] **per-game-nav**: `src/components/GameTabs.tsx` (Banners/Units/Faves pills, `aria-current`, active = white pill) wired into all 6 tracker headers (before FGO pill) and both new page headers; FGO keeps its existing `/servants`+`/grands` nav untouched
+- [x] **import-export-v2**: `ImportExport` now exports `{version: 2, unitStatus: {fgo, genshin, ...}, faves: {fgo(grands), ...}}` as `collection-backup.json`; import detects v2 (applies per game incl. faves + notifies all stores) and still accepts legacy flat v1 FGO-only files
+- [x] **units-faves-tests**: `unitsData.test.ts` (counts 127/263/60/59/110/63, unique ids, https images, hsr 93/170 split, hi3 rank scores, SV broken-image skip + obtain set), `unitStorage.test.ts` (keys, isolation, snapshot identity, subscriptions), `UnitContext.test.tsx` (toggle cycle, persistence, cross-provider notify) → **240 tests total**
+- [x] **local-qa**: `qa-units.js` (28 checks ×6 games: route/title/tabs/active/stats/rows/images/search/empty-state/sort/toggle-cycle/persistence/filters/nav) 168/168; `qa-faves.js` (29 ×6: slots/pool/select/move/deselect/persist/clear/empty-state/nav) 174/174; `qa-backup.js` (export payload shape, v2 import roundtrip, v1 legacy import, invalid alert) 18/18; regressions: qa-genshin 42, qa-hsr 46, qa-zzz 47, qa-wuwa 51, qa-hi3 44, qa-shadowverse 47, qa-switcher 24, qa-sort/theme/mobile exit 0
+
+### Design Decisions
+- FGO keeps its existing storage keys (`fgo-servant-status`, `fgo-grand-servants`) — no migration; other games use generic `unit-status:{game}` / `faves:{game}`
+- Static per-game route dirs (`src/app/{game}/units|faves/page.tsx`) following the tracker convention — `[game]` dynamic segment untouched
+- 9 fave slots for every game (no taxonomy constraint like FGO's class slots); pool restricted to owned units
+- Rosters include announced/unreleased units (users mark "planning"); taxonomy pill-button FILTER UI deferred to Bucket 13 but fields (element/path/attribute/class/type/rank) already in the data
+- HSR = characters + light cones (`type` field, `lc-` id prefix); ZZZ = agents only; SV = leaders only (no rarity → sort option omitted)
+
+### Completion Checklist
+- [x] gates: tsc/eslint/`npm test` (240)/`npm run build` clean; build shows all 12 new static routes
+- [x] delete `scripts/_probe.mjs` + `scripts/_fetch.mjs` (temp research scripts)
+- [ ] commit + push, `npx vercel --prod`
+- [ ] live QA with `BASE=https://fgo-banner-tracker.vercel.app` (qa-units/qa-faves/qa-backup + regressions)
+- [ ] `npm prune` (playwright removed; reinstall with `npm i --no-save playwright` next cycle)
 
 ---
 

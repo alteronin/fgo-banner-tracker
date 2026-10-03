@@ -1,0 +1,533 @@
+[
+  {
+    "id": "992280",
+    "name": "Jianxin",
+    "imageUrl": "https://img.game8.co/4303095/b648ffe22004ebcd1ab7971eb52ed9fe.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454213",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "992281",
+    "name": "Aalto",
+    "imageUrl": "https://img.game8.co/4303108/b0fb772ba532d38dfefd3cd2abd6986e.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454214",
+    "rarity": "4",
+    "element": "Aero",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "992282",
+    "name": "Yangyang",
+    "imageUrl": "https://img.game8.co/4303112/923df17bc1a2c9894cb85c8c8053edb3.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454215",
+    "rarity": "4",
+    "element": "Aero",
+    "weapon": "Sword"
+  },
+  {
+    "id": "992283",
+    "name": "Calcharo",
+    "imageUrl": "https://img.game8.co/4303097/3ba11e0980a892e40440d927a1e369d9.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454217",
+    "rarity": "5",
+    "element": "Electro",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "992284",
+    "name": "Yuanwu",
+    "imageUrl": "https://img.game8.co/4303107/6b0b421e0da2416deb91ebddfe57a5ae.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454219",
+    "rarity": "4",
+    "element": "Electro",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "992285",
+    "name": "Encore",
+    "imageUrl": "https://img.game8.co/4303101/a9feaff6c3e3a28c1e328fb7f9351776.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454221",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "992286",
+    "name": "Chixia",
+    "imageUrl": "https://img.game8.co/4303104/351340f23c83950cae8bf7b2eebc5c45.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454220",
+    "rarity": "4",
+    "element": "Fusion",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "992287",
+    "name": "Mortefi",
+    "imageUrl": "https://img.game8.co/4303090/7d10a26422687b1e19bf0a30661332dc.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454222",
+    "rarity": "4",
+    "element": "Fusion",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "992288",
+    "name": "Lingyang",
+    "imageUrl": "https://img.game8.co/4303089/9e16af9146ba79fd821b9c7f00d44652.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454223",
+    "rarity": "5",
+    "element": "Glacio",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "992289",
+    "name": "Sanhua",
+    "imageUrl": "https://img.game8.co/4303110/6d077a23694618d6d9ee885a60a2f9f2.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454225",
+    "rarity": "4",
+    "element": "Glacio",
+    "weapon": "Sword"
+  },
+  {
+    "id": "992290",
+    "name": "Baizhi",
+    "imageUrl": "https://img.game8.co/4303116/fee43219645462f11309ac6b33074947.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454224",
+    "rarity": "4",
+    "element": "Glacio",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "992291",
+    "name": "Danjin",
+    "imageUrl": "https://img.game8.co/4303096/e5818f20b97dc740b31061ed3eeddcbd.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454227",
+    "rarity": "4",
+    "element": "Havoc",
+    "weapon": "Sword"
+  },
+  {
+    "id": "992292",
+    "name": "Taoqi",
+    "imageUrl": "https://img.game8.co/4303087/efb9d8f381fb86c1718f3ccd67bda454.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454226",
+    "rarity": "4",
+    "element": "Havoc",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "992293",
+    "name": "Rover (Spectro)",
+    "imageUrl": "https://img.game8.co/4303114/c7bc9a87bd17f110d84fdeec8f1647c2.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454228",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Sword"
+  },
+  {
+    "id": "992294",
+    "name": "Verina",
+    "imageUrl": "https://img.game8.co/4303111/76ec23d993e57c62d409ed30460ad37f.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454229",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "992295",
+    "name": "Jiyan",
+    "imageUrl": "https://img.game8.co/4303125/b8167e215c344e45fb232d1483c39315.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454216",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "992296",
+    "name": "Yinlin",
+    "imageUrl": "https://img.game8.co/4303122/f2572c97e3f89983fde9bd2acd504717.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/454218",
+    "rarity": "5",
+    "element": "Electro",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1002030",
+    "name": "Jinhsi",
+    "imageUrl": "https://img.game8.co/4303120/24763e189518dfc4e3f3aa650cacad2b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/455405",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "1002031",
+    "name": "Changli",
+    "imageUrl": "https://img.game8.co/4303105/4ba6389b5f9c601438375f2237705e67.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/452826",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1003517",
+    "name": "Rover (Havoc)",
+    "imageUrl": "https://img.game8.co/4303121/7ff5c3aabaa10fe1caf08ac64d860f5c.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/456120",
+    "rarity": "5",
+    "element": "Havoc",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1025479",
+    "name": "Zhezhi",
+    "imageUrl": "https://img.game8.co/4303117/77ef73d947def3477132861150ab6105.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/461497",
+    "rarity": "5",
+    "element": "Glacio",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1025480",
+    "name": "Xiangli Yao",
+    "imageUrl": "https://img.game8.co/4303109/d101f899f3ff1ef3314c45fb9f5aadcf.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/461501",
+    "rarity": "5",
+    "element": "Electro",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "1044973",
+    "name": "Shorekeeper",
+    "imageUrl": "https://img.game8.co/4303106/1a593bf54fb3bc2cfaba1084d8b069f0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/463667",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1044974",
+    "name": "Youhu",
+    "imageUrl": "https://img.game8.co/4303103/fc6605249736b271b2be895b0cd3fc5b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/463668",
+    "rarity": "4",
+    "element": "Glacio",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "1049692",
+    "name": "Camellya",
+    "imageUrl": "https://img.game8.co/4303119/0338137bfa85c90af22fff9dca8d86a7.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/473332",
+    "rarity": "5",
+    "element": "Havoc",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1081553",
+    "name": "Lumi",
+    "imageUrl": "https://img.game8.co/4303102/5df7e6360328e600dab33212fd2050eb.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/473488",
+    "rarity": "4",
+    "element": "Electro",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "1123677",
+    "name": "Phoebe",
+    "imageUrl": "https://img.game8.co/4303088/e12d120bb50d2988cab8d528c8ba0b2c.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/486244",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1123678",
+    "name": "Brant",
+    "imageUrl": "https://img.game8.co/4303092/99973a09f42017036715ec7056e9de60.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/486245",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1123679",
+    "name": "Roccia",
+    "imageUrl": "https://img.game8.co/4303099/46f5bc3e5afcb921472319edf1d870ce.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/486246",
+    "rarity": "5",
+    "element": "Havoc",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "1123680",
+    "name": "Zani",
+    "imageUrl": "https://img.game8.co/4303118/ce2fce03de768666b40051d8b6b0e9b9.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/486248",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "1123759",
+    "name": "Carlotta",
+    "imageUrl": "https://img.game8.co/4303100/74d525f1f110aaead7a584b0c41adccd.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/486251",
+    "rarity": "5",
+    "element": "Glacio",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "1167656",
+    "name": "Cantarella",
+    "imageUrl": "https://img.game8.co/4303093/e011460c6cf0963758c35cf03bdc95b2.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/500493",
+    "rarity": "5",
+    "element": "Havoc",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1183602",
+    "name": "Rover (Aero)",
+    "imageUrl": "https://img.game8.co/4303126/1a236853448627dac955c8e15e080bb0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/505267",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1192923",
+    "name": "Ciaccona",
+    "imageUrl": "https://img.game8.co/4303128/1656f548f03c8b83df5d5756bbcc3cc7.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/507924",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "1216787",
+    "name": "Cartethyia",
+    "imageUrl": "https://img.game8.co/4303124/614d37e3c4c4259698c09ac22159fa74.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/507777",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1217270",
+    "name": "Lupa",
+    "imageUrl": "https://img.game8.co/4303115/9f5148089ed93a02f26460e471948baf.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/520661",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "1231350",
+    "name": "Phrolova",
+    "imageUrl": "https://img.game8.co/4303094/1bc654602c9fcf54ede3a6934ad418f2.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/524877",
+    "rarity": "5",
+    "element": "Havoc",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1231351",
+    "name": "Chisa",
+    "imageUrl": "https://img.game8.co/4306505/028c56383a82aae47dac7362608da9c0.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/524880",
+    "rarity": "5",
+    "element": "Havoc",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "1231352",
+    "name": "Qiuyuan",
+    "imageUrl": "https://img.game8.co/4303098/2b46b11b4cdd80f6a603b1dd7b40ddb8.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/524882",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1231353",
+    "name": "Galbrena",
+    "imageUrl": "https://img.game8.co/4303113/a30a011f145cae7b024deaefcef28d46.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/524888",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "1231354",
+    "name": "Augusta",
+    "imageUrl": "https://img.game8.co/4303091/392c6d1d392671876a973def15d3b45e.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/524890",
+    "rarity": "5",
+    "element": "Electro",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "1231355",
+    "name": "Iuno",
+    "imageUrl": "https://img.game8.co/4303123/de9fb5b23bec84e6bb0940fee82287f2.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/524889",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "1323383",
+    "name": "Buling",
+    "imageUrl": "https://img.game8.co/4306764/c1f88f90c8648a638ed672c4bfcf454b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/557981",
+    "rarity": "4",
+    "element": "Electro",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1354381",
+    "name": "Mornye",
+    "imageUrl": "https://img.game8.co/4351069/ac2e42243db427e49453aa2c05e9680c.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/568193",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "1354382",
+    "name": "Lucilla",
+    "imageUrl": "https://img.game8.co/4496682/8c6c6cab2214d5f954e1c5bf86afa459.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/568207",
+    "rarity": "5",
+    "element": "Glacio",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1354385",
+    "name": "Sigrika",
+    "imageUrl": "https://img.game8.co/4414529/c88d80dd9b25a6463c537911d8646b59.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/568208",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "1354387",
+    "name": "Luuk Herssen",
+    "imageUrl": "https://img.game8.co/4377291/da504ec70ce3ef50c6f1a80d4a975bee.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/568210",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Gauntlet"
+  },
+  {
+    "id": "1354389",
+    "name": "Lynae",
+    "imageUrl": "https://img.game8.co/4349973/bba3006fad0a2a412eb9224ee156ea65.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/568211",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "1370747",
+    "name": "Aemeath",
+    "imageUrl": "https://img.game8.co/4377292/832335bfa4f1e0f5a704437908739837.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/572587",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1422838",
+    "name": "Hiyuki",
+    "imageUrl": "https://img.game8.co/4455713/334923e40f8e8503213561cebe01d460.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/586421",
+    "rarity": "5",
+    "element": "Glacio",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1425102",
+    "name": "Denia",
+    "imageUrl": "https://img.game8.co/4455868/acbdd5eea048423b03e54664facb9f80.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/585681",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1438982",
+    "name": "Rebecca",
+    "imageUrl": "https://img.game8.co/4495475/278763113c97608c034704e3df29c14f.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/598700",
+    "rarity": "5",
+    "element": "Electro",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "1457887",
+    "name": "Lucy",
+    "imageUrl": "https://img.game8.co/4495476/57d4bf12fbbf24c0156fca5c6f1431cb.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/598702",
+    "rarity": "5",
+    "element": "Spectro",
+    "weapon": "Pistol"
+  },
+  {
+    "id": "1482754",
+    "name": "Yangyang Xuanling",
+    "imageUrl": "https://img.game8.co/4535620/1dec41807ec9c36f03bbd9bde9f51c71.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/605297",
+    "rarity": "5",
+    "element": "Havoc",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1482755",
+    "name": "Suisui",
+    "imageUrl": "https://img.game8.co/4535729/c9fa446cf56e72453e943b2173e3f97a.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/605302",
+    "rarity": "5",
+    "element": "Glacio",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1482757",
+    "name": "Jingran",
+    "imageUrl": "https://img.game8.co/4572123/18932eed923cdd845d400e0990924543.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/605307",
+    "rarity": "5",
+    "element": "Fusion",
+    "weapon": "Broadblade"
+  },
+  {
+    "id": "1482758",
+    "name": "Qingxiao",
+    "imageUrl": "https://img.game8.co/4572124/28f66b42f6b05d0cfaab0e7f071859af.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/605308",
+    "rarity": "5",
+    "element": "Aero",
+    "weapon": "Sword"
+  },
+  {
+    "id": "1482759",
+    "name": "Hsin",
+    "imageUrl": "https://img.game8.co/4600520/e4ddf4aa977d150d9b33fc4e4a04154e.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/605309",
+    "rarity": "5",
+    "element": "Electro",
+    "weapon": "Rectifier"
+  },
+  {
+    "id": "1491914",
+    "name": "Rover (Electro)",
+    "imageUrl": "https://img.game8.co/4543856/7cbb670f2a7d42091e56da6d3986d44b.png/show",
+    "url": "https://game8.co/games/Wuthering-Waves/archives/606967",
+    "rarity": "5",
+    "element": "Electro",
+    "weapon": "Sword"
+  }
+]

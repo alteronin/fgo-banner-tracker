@@ -1,0 +1,542 @@
+[
+  {
+    "id": "931137",
+    "name": "Anby",
+    "imageUrl": "https://img.game8.co/3924009/e033bf15c11f0cb6bc13841f042eedf3.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436705",
+    "rarity": "A",
+    "attribute": "Electric",
+    "specialty": "Stun"
+  },
+  {
+    "id": "931138",
+    "name": "Billy",
+    "imageUrl": "https://img.game8.co/3923998/0428802054152e251460f10bc94d4389.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436719",
+    "rarity": "A",
+    "attribute": "Physical",
+    "specialty": "Attack"
+  },
+  {
+    "id": "931139",
+    "name": "Nicole",
+    "imageUrl": "https://img.game8.co/3924001/6037584f79e763106f549329c49694ac.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436888",
+    "rarity": "A",
+    "attribute": "Ether",
+    "specialty": "Support"
+  },
+  {
+    "id": "931140",
+    "name": "Nekomata",
+    "imageUrl": "https://img.game8.co/3924000/f9b62d0301948b834fd55cd6b92b161d.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436887",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Attack"
+  },
+  {
+    "id": "931141",
+    "name": "Anton",
+    "imageUrl": "https://img.game8.co/3923999/207ec3d48ccaa4b6c1bcc3f86fa9da28.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436886",
+    "rarity": "A",
+    "attribute": "Electric",
+    "specialty": "Attack"
+  },
+  {
+    "id": "931142",
+    "name": "Corin",
+    "imageUrl": "https://img.game8.co/3923995/51d070560be0aa686c1f637e9ea4f526.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436885",
+    "rarity": "A",
+    "attribute": "Physical",
+    "specialty": "Attack"
+  },
+  {
+    "id": "931143",
+    "name": "Lycaon",
+    "imageUrl": "https://img.game8.co/3924007/3e47c0f4df8528482d214be586a0836e.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436884",
+    "rarity": "S",
+    "attribute": "Ice",
+    "specialty": "Stun"
+  },
+  {
+    "id": "931144",
+    "name": "Ben",
+    "imageUrl": "https://img.game8.co/3924010/0d8d7008a5deffce8aeb77ce8631eff6.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436883",
+    "rarity": "A",
+    "attribute": "Fire",
+    "specialty": "Defense"
+  },
+  {
+    "id": "931145",
+    "name": "Soldier 11",
+    "imageUrl": "https://img.game8.co/3924011/c14ae22115e44c275520b9141455a80c.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436882",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Attack"
+  },
+  {
+    "id": "931146",
+    "name": "Miyabi",
+    "imageUrl": "https://img.game8.co/4059077/b698c612993abf856d7e0f54bf2c5e56.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436881",
+    "rarity": "S",
+    "attribute": "Ice",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "931147",
+    "name": "Soukaku",
+    "imageUrl": "https://img.game8.co/3924008/88a8ba60bb56346c356f8ebf6815d4b3.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436880",
+    "rarity": "A",
+    "attribute": "Ice",
+    "specialty": "Support"
+  },
+  {
+    "id": "931148",
+    "name": "Koleda",
+    "imageUrl": "https://img.game8.co/3923997/439f6f5b82caba6f99a91aab3270d63d.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436879",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Stun"
+  },
+  {
+    "id": "931149",
+    "name": "Grace",
+    "imageUrl": "https://img.game8.co/3924003/112a303ede260f70d16464cc3b1eb5ca.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436878",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "931150",
+    "name": "Ellen",
+    "imageUrl": "https://img.game8.co/3924005/a28c4b5e622c7f11b5acbb83cc05dfa1.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436877",
+    "rarity": "S",
+    "attribute": "Ice",
+    "specialty": "Attack"
+  },
+  {
+    "id": "931151",
+    "name": "Rina",
+    "imageUrl": "https://img.game8.co/3924002/ead27c7a32143e09826330a7f5290eb2.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/436876",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Support"
+  },
+  {
+    "id": "979224",
+    "name": "Zhu Yuan",
+    "imageUrl": "https://img.game8.co/3923996/67a6304640717fb19b3f44ce416e56d0.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/448244",
+    "rarity": "S",
+    "attribute": "Ether",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1019219",
+    "name": "Lucy",
+    "imageUrl": "https://img.game8.co/3924006/121cb049558c2fddc6da0f7c1cd7e746.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/459730",
+    "rarity": "A",
+    "attribute": "Fire",
+    "specialty": "Support"
+  },
+  {
+    "id": "1019398",
+    "name": "Piper",
+    "imageUrl": "https://img.game8.co/3924012/cf1eecefb5e91ca60f2c9bec5fcda53f.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/459818",
+    "rarity": "A",
+    "attribute": "Physical",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1022338",
+    "name": "Qingyi",
+    "imageUrl": "https://img.game8.co/3945538/cbccc4844dc4a4308bfb055e943c2d62.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/460407",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Stun"
+  },
+  {
+    "id": "1023092",
+    "name": "Seth",
+    "imageUrl": "https://img.game8.co/3945539/bc46469d22f668fdf796c24f07c2df6e.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/460687",
+    "rarity": "A",
+    "attribute": "Electric",
+    "specialty": "Defense"
+  },
+  {
+    "id": "1028278",
+    "name": "Jane",
+    "imageUrl": "https://img.game8.co/3945540/e66bf59517987886ee8fe97f5b571841.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/461990",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1051844",
+    "name": "Caesar",
+    "imageUrl": "https://img.game8.co/3993916/ec5a2ee7b4f6304ba8fa54963e53722c.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/464303",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Defense"
+  },
+  {
+    "id": "1051972",
+    "name": "Burnice",
+    "imageUrl": "https://img.game8.co/3993915/0aef23a8526bbcaec123574cde1394b2.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/464323",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1086121",
+    "name": "Yanagi",
+    "imageUrl": "https://img.game8.co/4026481/ac49d23dde845471e5439c33e5e64c8d.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/474448",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1087273",
+    "name": "Lighter",
+    "imageUrl": "https://img.game8.co/4026479/7ec8c2c338cb381371795ae58de1584d.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/474509",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Stun"
+  },
+  {
+    "id": "1112281",
+    "name": "Harumasa",
+    "imageUrl": "https://img.game8.co/4059076/7e65a50d343dd4474cac1071e826b280.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/483077",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1132771",
+    "name": "Astra",
+    "imageUrl": "https://img.game8.co/4080089/37fe7367246eef11936e4f6207060c68.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/490842",
+    "rarity": "S",
+    "attribute": "Ether",
+    "specialty": "Support"
+  },
+  {
+    "id": "1132883",
+    "name": "Evelyn",
+    "imageUrl": "https://img.game8.co/4080090/fcc04fb9757fdb4c738aa20c6542a365.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/490872",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1150649",
+    "name": "Soldier 0 Anby",
+    "imageUrl": "https://img.game8.co/4121012/599e7435ac66ebc9c2e9be46dd692686.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/495109",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1150650",
+    "name": "Pulchra",
+    "imageUrl": "https://img.game8.co/4121011/6351bcc6bd64cd8056747103b48bfed2.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/495110",
+    "rarity": "A",
+    "attribute": "Physical",
+    "specialty": "Stun"
+  },
+  {
+    "id": "1151092",
+    "name": "Trigger",
+    "imageUrl": "https://img.game8.co/4121015/d302ccef8acf75dff4df463173b0911c.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/495167",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Stun"
+  },
+  {
+    "id": "1177237",
+    "name": "Vivian",
+    "imageUrl": "https://img.game8.co/4170527/406b52b3d223decf10ab49a56dc55f60.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/503828",
+    "rarity": "S",
+    "attribute": "Ether",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1177842",
+    "name": "Hugo",
+    "imageUrl": "https://img.game8.co/4170526/7d525a34c24b288f870b495e98b11275.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/504291",
+    "rarity": "S",
+    "attribute": "Ice",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1209614",
+    "name": "Pan Yinhu",
+    "imageUrl": "https://img.game8.co/4178909/6d3820422bfefe5b2f6cd4e3a183aa01.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/517115",
+    "rarity": "A",
+    "attribute": "Physical",
+    "specialty": "Defense"
+  },
+  {
+    "id": "1209615",
+    "name": "Yixuan",
+    "imageUrl": "https://img.game8.co/4178828/56d13d76675df5970a3d7464523714c4.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/516115",
+    "rarity": "S",
+    "attribute": "Ether",
+    "specialty": "Rupture"
+  },
+  {
+    "id": "1210095",
+    "name": "Ju Fufu",
+    "imageUrl": "https://img.game8.co/4178881/77ff6c4ec3a55ee972aa038a0fdecfa6.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/517404",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Stun"
+  },
+  {
+    "id": "1238301",
+    "name": "Yuzuha",
+    "imageUrl": "https://img.game8.co/4212686/d7dbc99162f04aa4c801391db80040ae.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/527726",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Support"
+  },
+  {
+    "id": "1238758",
+    "name": "Alice",
+    "imageUrl": "https://img.game8.co/4212684/a0ef2a0f1e99af54bbc99ee576161965.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/527839",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1270496",
+    "name": "Seed",
+    "imageUrl": "https://img.game8.co/4229330/f025d5dfe57774912a64008ba2a3b17a.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/538934",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1271310",
+    "name": "Orphie and Magus",
+    "imageUrl": "https://img.game8.co/4230539/1740f1d50f2ac381113a7ec17e3169f4.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/539135",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1290266",
+    "name": "Lucia",
+    "imageUrl": "https://img.game8.co/4254780/8169c206af0301a756551d770f76f631.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/545821",
+    "rarity": "S",
+    "attribute": "Ether",
+    "specialty": "Support"
+  },
+  {
+    "id": "1290267",
+    "name": "Manato",
+    "imageUrl": "https://img.game8.co/4254777/59f8657e57a08ae937019906806108af.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/545823",
+    "rarity": "A",
+    "attribute": "Fire",
+    "specialty": "Rupture"
+  },
+  {
+    "id": "1290269",
+    "name": "Yidhari",
+    "imageUrl": "https://img.game8.co/4254791/bc5532069eff37fb64cc283e34af059a.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/545830",
+    "rarity": "S",
+    "attribute": "Ice",
+    "specialty": "Rupture"
+  },
+  {
+    "id": "1319823",
+    "name": "Dialyn",
+    "imageUrl": "https://img.game8.co/4302308/68d7b92761b80fdfed372e1aa67ca0fc.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/557173",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Stun"
+  },
+  {
+    "id": "1321653",
+    "name": "Banyue",
+    "imageUrl": "https://img.game8.co/4302309/04650f892eab04c0cbb567c15a5d5ef1.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/557174",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Rupture"
+  },
+  {
+    "id": "1346472",
+    "name": "Zhao",
+    "imageUrl": "https://img.game8.co/4335703/dcd14e7ca88523bb90f6c8bb711f5382.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/565599",
+    "rarity": "S",
+    "attribute": "Ice",
+    "specialty": "Defense"
+  },
+  {
+    "id": "1350660",
+    "name": "Ye Shunguang",
+    "imageUrl": "https://img.game8.co/4372196/d5acf19318f7d62e286d09d74b2ef942.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/566448",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1370826",
+    "name": "Sunna",
+    "imageUrl": "https://img.game8.co/4377008/091bffe978a333e15f288177efeb5d9f.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572600",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Support"
+  },
+  {
+    "id": "1370833",
+    "name": "Aria",
+    "imageUrl": "https://img.game8.co/4377154/a872522999d838cf2d4ee399527e4950.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/572601",
+    "rarity": "S",
+    "attribute": "Ether",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1394553",
+    "name": "Nangong Yu",
+    "imageUrl": "https://img.game8.co/4413128/136310231a12b44ff0430c6cfecfb86b.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/580322",
+    "rarity": "S",
+    "attribute": "Ether",
+    "specialty": "Stun"
+  },
+  {
+    "id": "1394945",
+    "name": "Cissia",
+    "imageUrl": "https://img.game8.co/4414506/e8b05265b81e49422ea7ff244d69f26d.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/580467",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1426518",
+    "name": "Promeia",
+    "imageUrl": "https://img.game8.co/4456855/1d56b064e4667c1781f60f70cc3acfc0.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588172",
+    "rarity": "S",
+    "attribute": "Ice",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1426519",
+    "name": "Starlight Billy",
+    "imageUrl": "https://img.game8.co/4456882/374940f42ad5626e9bb39435f70866b7.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/590337",
+    "rarity": "S",
+    "attribute": "Physical",
+    "specialty": "Rupture"
+  },
+  {
+    "id": "1448487",
+    "name": "Pyrois",
+    "imageUrl": "https://img.game8.co/4480224/3ea29463032306fdf5ae6d73589471c8.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/597128",
+    "rarity": "S",
+    "attribute": "Ether",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1451432",
+    "name": "Velina",
+    "imageUrl": "https://img.game8.co/4482455/1bbea2a50d9e29377276724755afb066.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/594748",
+    "rarity": "S",
+    "attribute": "Wind",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1451433",
+    "name": "Norma",
+    "imageUrl": "https://img.game8.co/4482449/1ab1b073baeb3c95ba063beb4bac6f33.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/589810",
+    "rarity": "S",
+    "attribute": "Fire",
+    "specialty": "Stun"
+  },
+  {
+    "id": "1484778",
+    "name": "Remielle",
+    "imageUrl": "https://img.game8.co/4537422/7e62f953a55ecc8c1537a0befbf85f59.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/588854",
+    "rarity": "S",
+    "attribute": "Lumiflux",
+    "specialty": "Anomaly"
+  },
+  {
+    "id": "1484787",
+    "name": "Sigrid",
+    "imageUrl": "https://img.game8.co/4537469/2ef4afe57b0f3cf2eedc15ab9f9de138.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/597649",
+    "rarity": "S",
+    "attribute": "Ice",
+    "specialty": "Attack"
+  },
+  {
+    "id": "1554566",
+    "name": "Claret",
+    "imageUrl": "https://img.game8.co/4580187/42db3ab20014620a68068c2528b420d7.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/597662",
+    "rarity": "S",
+    "attribute": "Electric",
+    "specialty": "Armorer"
+  },
+  {
+    "id": "1555409",
+    "name": "Roxy",
+    "imageUrl": "https://img.game8.co/4581329/c9fee2449e9b410858a668b62438f01f.png/show",
+    "url": "https://game8.co/games/Zenless-Zone-Zero/archives/597672",
+    "rarity": "S",
+    "attribute": "Wind",
+    "specialty": "Stun"
+  }
+]

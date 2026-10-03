@@ -20,7 +20,7 @@ A web application that helps gacha game players track their pulls and plan their
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: localStorage + React Context (hydration-safe via useSyncExternalStore)
-- **Testing**: Vitest + Testing Library (185 tests)
+- **Testing**: Vitest + Testing Library (240 tests)
 - **Hosting**: Vercel (free tier)
 
 ## Key Features
@@ -34,12 +34,14 @@ A web application that helps gacha game players track their pulls and plan their
 7. Multi-game app switcher; all 7 games have static tracker routes (unknown slugs 404)
 8. Genshin Impact tracker at `/genshin` (216 banners: character/weapon/chronicled)
 9. Honkai: Star Rail tracker at `/hsr` (131 banners: character/light cone, TBA collab ends)
-10. Bucket 10 trackers: `/zzz` (134 agent/W-Engine), `/wuwa` (46 resonator/selector + weapons), `/hi3` (73 GLB versions, ongoing current version), `/shadowverse` (9 permanent sets + collab)
+10. Bucket 10 trackers: `/zzz` (134 agent/W-Engine), `/wuwa` (46 resonator/selector + weapons), `/hi3` (73 GLB versions, ongoing current version), `/shadowverse` (9 permanent sets + collab, official pack art)
+11. Bucket 12: per-game Units rosters at `/{game}/units` (782 units: genshin 127, hsr 263, zzz 60, wuwa 59, hi3 110, shadowverse 63) + Faves lineups at `/{game}/faves` (9 slots) + Banners/Units/Faves tab nav on all games
+12. Multi-game backup: Export/Import v2 (`{version, unitStatus, faves}` covering FGO + all games; legacy v1 files still import)
 
 ### Roadmap (Buckets 11-13)
-11. Events tab: unified events feed (now/upcoming/past) across games
-12. Cross-game Units & Faves: per-game roster pages and favorites/lineup analogs of `/servants` and `/grands`
-13. Class/element button filters on the servants/units tab
+11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
+12. Cross-game Units & Faves — **COMPLETE (2026-10-03)**
+13. Class/element button filters on the servants/units tab (roster taxonomy fields already in data)
 
 ## Data Sources
 - FGO banner data: GamePress FGO Wiki (https://grandorder.gamepress.gg/summon-banner-list)
@@ -47,10 +49,11 @@ A web application that helps gacha game players track their pulls and plan their
 - Genshin / HSR / ZZZ / WuWa banner data: Game8 archives (cheerio scrapers, static JSON)
 - HI3 banner data: Honkai Impact 3rd fandom MediaWiki API (`Category:Versions` + version pages)
 - Shadowverse WB data: official cards site (set schedules + researched leader maps)
-- Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3, served `unoptimized`), none for Shadowverse (fallback placeholders)
+- Unit rosters: Game8 roster API (`tool_structural_mappings/{id}.json` via widget props) for genshin/hsr/zzz/wuwa; fandom API + `Module:Battlesuit/data` for HI3; `Leader/Worlds Beyond` wikitext galleries for Shadowverse
+- Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3/SV, served `unoptimized`), shadowverse-wb.com pack art (SV banners)
 
 ## Testing
-- 185 unit tests covering data integrity, helpers, storage, context, hooks, components
+- 240 unit tests covering data integrity, helpers, storage, contexts, hooks, components
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion
