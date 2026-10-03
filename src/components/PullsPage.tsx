@@ -7,11 +7,15 @@ import { categoryLabel } from "@/lib/pullImport";
 import {
   attributePull,
   computeRarityStats,
+  fiftyFiftyResult,
   FOUR_STAR_PITY,
   indexWindows,
   maxPityFor,
   pityByDrop,
+  pityTone,
   type BannerWindow,
+  type FiftyFiftyResult,
+  type PityTone,
   type RarityStats,
 } from "@/lib/pity";
 import {
@@ -19,9 +23,11 @@ import {
   getPullsSnapshot,
   subscribePulls,
 } from "@/lib/pullStorage";
+import { getUnitRows } from "@/lib/units";
 import type { GamePull, PullGame } from "@/types/pulls";
 import { AppSwitcher } from "./AppSwitcher";
 import { GameTabs } from "./GameTabs";
+import { ImageWithFallback } from "./ImageWithFallback";
 import { ImportPulls } from "./ImportPulls";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -40,6 +46,28 @@ const RARITY_STYLES: Record<number, string> = {
   4: "text-purple-400",
   3: "text-blue-300",
 };
+
+const TONE_TEXT: Record<PityTone, string> = {
+  early: "text-emerald-400",
+  mid: "text-amber-400",
+  late: "text-orange-400",
+  hard: "text-red-500",
+};
+
+const FIFTY_BORDER: Record<FiftyFiftyResult | "none", string> = {
+  win: "border-emerald-500",
+  loss: "border-rose-500",
+  none: "border-gray-700",
+};
+
+function initials(name: string): string {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0]?.toUpperCase() ?? "")
+    .join("");
+}
 
 const formatCount = (value: number) => value.toLocaleString("en-US");
 
@@ -66,6 +94,7 @@ export function PullsPage({
   const [category, setCategory] = useState("all");
   const [search, setSearch] = useState("");
   const [visible, setVisible] = useState(PAGE_SIZE);
+  const [view, setView] = useState<"list" | "grid">("list");
 
   const store = useMemo(
     () => ({
@@ -114,6 +143,12 @@ export function PullsPage({
   );
 
   const pityMap = useMemo(() => pityByDrop(pulls, 5), [pulls]);
+
+  const images = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const row of getUnitRows(game)) map.set(row.id, row.imageUrl);
+    return map;
+  }, [game]);
 
   const fiveDrops = useMemo(() => {
     const list: { pull: GamePull; pity: number }[] = [];
@@ -250,13 +285,45 @@ export function PullsPage({
               ))}
             </div>
 
-            <input
-              type="text"
-              placeholder="Search pulled items…"
-              value={search}
-              onChange={(e) => changeSearch(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-gray-500"
-            />
+            <div className="flex items-center gap-2">
+              <input
+                type="text"
+                placeholder="Search pulled items…"
+                value={search}
+                onChange={(e) => changeSearch(e.target.value)}
+                className="flex-1 min-w-0 px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-gray-500"
+              />
+              <div
+                className="flex shrink-0 rounded-lg border border-gray-700 overflow-hidden"
+                role="group"
+                aria-label="Pulls view"
+              >
+                <button
+                  type="button"
+                  onClick={() => setView("list")}
+                  aria-pressed={view === "list"}
+                  className={`px-3 py-2 text-xs font-medium transition-colors ${
+                    view === "list"
+                      ? "bg-gray-700 text-white"
+                      : "bg-gray-900 text-gray-400 hover:bg-gray-800"
+                  }`}
+                >
+                  List
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setView("grid")}
+                  aria-pressed={view === "grid"}
+                  className={`px-3 py-2 text-xs font-medium transition-colors ${
+                    view === "grid"
+                      ? "bg-gray-700 text-white"
+                      : "bg-gray-900 text-gray-400 hover:bg-gray-800"
+                  }`}
+                >
+                  Grid
+                </button>
+              </div>
+            </div>
 
             {selectedStats && (
               <div className="space-y-4">
@@ -295,7 +362,9 @@ export function PullsPage({
               </div>
             )}
 
-            <FiveStarDrops drops={fiveDrops} index={index} game={game} />
+            {view === "list" && (
+              <FiveStarDrops drops={fiveDrops} index={index} game={game} />
+            )}
 
             {category === "all" && pityRows.length > 0 && (
               <div className="rounded-lg border border-gray-800 overflow-hidden">
@@ -330,32 +399,45 @@ export function PullsPage({
               </div>
             )}
 
-            <p className="text-sm text-gray-500">
-              Showing {formatCount(Math.min(visible, rows.length))} of{" "}
-              {formatCount(rows.length)} pulls (newest first)
-            </p>
+            {view === "list" ? (
+              <>
+                <p className="text-sm text-gray-500">
+                  Showing {formatCount(Math.min(visible, rows.length))} of{" "}
+                  {formatCount(rows.length)} pulls (newest first)
+                </p>
 
-            <div className="space-y-2">
-              {shownRows.map((pull) => (
-                <PullRow
-                  key={pull.id}
-                  pull={pull}
+                <div className="space-y-2">
+                  {shownRows.map((pull) => (
+                    <PullRow
+                      key={pull.id}
+                      pull={pull}
+                      index={index}
+                      game={game}
+                      pity={pityMap.get(pull.id)}
+                    />
+                  ))}
+                </div>
+
+                {rows.length > visible && (
+                  <div className="flex justify-center">
+                    <button
+                      onClick={() => setVisible((count) => count + PAGE_SIZE * 5)}
+                      className="px-4 py-2 text-sm font-medium bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors"
+                    >
+                      Show {formatCount(Math.min(PAGE_SIZE * 5, rows.length - visible))} more
+                    </button>
+                  </div>
+                )}
+              </>
+            ) : (
+              rows.length > 0 && (
+                <PullGrid
+                  drops={fiveDrops}
                   index={index}
                   game={game}
-                  pity={pityMap.get(pull.id)}
+                  images={images}
                 />
-              ))}
-            </div>
-
-            {rows.length > visible && (
-              <div className="flex justify-center">
-                <button
-                  onClick={() => setVisible((count) => count + PAGE_SIZE * 5)}
-                  className="px-4 py-2 text-sm font-medium bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors"
-                >
-                  Show {formatCount(Math.min(PAGE_SIZE * 5, rows.length - visible))} more
-                </button>
-              </div>
+              )
             )}
 
             {rows.length === 0 && (
@@ -408,6 +490,79 @@ function PullRow({
         {attribution.label}
         {attribution.version ? ` · v${attribution.version}` : ""}
       </span>
+    </div>
+  );
+}
+
+function PullGrid({
+  drops,
+  index,
+  game,
+  images,
+}: {
+  drops: { pull: GamePull; pity: number }[];
+  index: Map<string, BannerWindow[]>;
+  game: PullGame;
+  images: Map<string, string>;
+}) {
+  if (drops.length === 0) {
+    return (
+      <div className="text-center py-12 text-gray-500">
+        No 5★ pulled in this view.
+      </div>
+    );
+  }
+  return (
+    <div className="space-y-3">
+      <div
+        role="list"
+        aria-label="5★ drops"
+        className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 sm:gap-3"
+      >
+        {drops.map(({ pull, pity }) => {
+          const result = fiftyFiftyResult(game, pull, index);
+          const tone = pityTone(pity, maxPityFor(game, pull.category));
+          const attribution = attributePull(game, pull, index);
+          const imageUrl = pull.unitId ? images.get(pull.unitId) : undefined;
+          return (
+            <div
+              key={pull.id}
+              data-fifty={result ?? "none"}
+              data-tone={tone}
+              role="listitem"
+              title={`${pull.name} · Pity ${pity} · ${attribution.label}`}
+              className={`group relative aspect-[3/4] rounded-lg overflow-hidden border-2 bg-gray-900 transition-transform hover:-translate-y-0.5 ${FIFTY_BORDER[result ?? "none"]}`}
+            >
+              {imageUrl ? (
+                <ImageWithFallback
+                  src={imageUrl}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="160px"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-600">
+                  {initials(pull.name)}
+                </div>
+              )}
+              <span className="absolute inset-x-0 top-0 -translate-y-full group-hover:translate-y-0 transition-transform bg-gray-950/85 text-[11px] leading-tight px-2 py-1 truncate">
+                {pull.name}
+              </span>
+              <span
+                aria-label={`pity ${pity}`}
+                className={`absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-gray-950/85 text-xs font-bold tabular-nums ${TONE_TEXT[tone]}`}
+              >
+                {pity}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <p className="text-xs text-gray-500">
+        Number = pity at the drop (green early → red near hard pity). Border =
+        50/50 on rate-up banners (green won, red lost); grey = no rate-up.
+      </p>
     </div>
   );
 }

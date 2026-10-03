@@ -1,4 +1,4 @@
-import { categoryLabel } from "@/lib/pullImport";
+import { categoryLabel, normalizeName } from "@/lib/pullImport";
 import type { GamePull, PullGame } from "@/types/pulls";
 
 export const FOUR_STAR_PITY = 10;
@@ -134,6 +134,8 @@ export interface BannerLike {
   endDate: string | null;
   version?: string | null;
   phase?: number | null;
+  featured5?: { name: string }[] | null;
+  featuredWeapons?: { name: string }[] | null;
 }
 
 export interface BannerWindow {
@@ -144,6 +146,8 @@ export interface BannerWindow {
   phase: number | null;
   start: number;
   end: number;
+  featured5: string[];
+  featuredWeapons: string[];
 }
 
 const CATEGORY_BANNER_TYPES: Record<PullGame, Record<string, string>> = {
@@ -192,6 +196,8 @@ export function toBannerWindow(banner: BannerLike): BannerWindow | null {
     phase: banner.phase ?? null,
     start,
     end,
+    featured5: (banner.featured5 ?? []).map((entry) => entry.name).filter(Boolean),
+    featuredWeapons: (banner.featuredWeapons ?? []).map((entry) => entry.name).filter(Boolean),
   };
 }
 
@@ -251,4 +257,53 @@ export function attributePull(
     }
   }
   return { label: categoryLabel(game, pull.category), bannerId: null, version: null };
+}
+
+export type PityTone = "early" | "mid" | "late" | "hard";
+
+export function pityTone(pity: number, cap: number): PityTone {
+  const ratio = cap > 0 ? pity / cap : 0;
+  if (pity >= cap || ratio >= 0.9) return "hard";
+  if (ratio >= 2 / 3) return "late";
+  if (ratio >= 1 / 3) return "mid";
+  return "early";
+}
+
+const RATEUP_WINDOW_TYPES: Record<PullGame, Record<string, string[]>> = {
+  hsr: { character: ["character"], light_cone: ["lightcone"] },
+  genshin: { character: ["character"], weapon: ["weapon"] },
+  zzz: { character: ["agent"], w_engine: ["wengine"] },
+  wuwa: { "1": ["resonator"], "2": ["resonator"] },
+};
+
+export type FiftyFiftyResult = "win" | "loss";
+
+export function fiftyFiftyResult(
+  game: PullGame,
+  pull: GamePull,
+  index: Map<string, BannerWindow[]>
+): FiftyFiftyResult | null {
+  if (pull.rarity !== 5) return null;
+  const types = RATEUP_WINDOW_TYPES[game]?.[pull.category];
+  if (!types) return null;
+  let window: BannerWindow | null = null;
+  for (const type of types) {
+    const match = findBannerWindow(index, type, pull.ts);
+    if (match && (!window || match.start >= window.start)) window = match;
+  }
+  if (!window) return null;
+  const featured = [...window.featured5, ...window.featuredWeapons];
+  if (featured.length === 0) return null;
+  const name = normalizeName(pull.name);
+  if (!name) return null;
+  const win = featured.some((entry) => {
+    const featuredName = normalizeName(entry);
+    if (!featuredName) return false;
+    return (
+      featuredName === name ||
+      featuredName.includes(name) ||
+      name.includes(featuredName)
+    );
+  });
+  return win ? "win" : "loss";
 }

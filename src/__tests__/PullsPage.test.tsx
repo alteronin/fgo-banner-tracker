@@ -83,10 +83,10 @@ function pull(overrides: Partial<GamePull>): GamePull {
   };
 }
 
-function renderPage() {
+function renderPage(windows = toBannerWindows([])) {
   return render(
     <ThemeProvider>
-      <PullsPage game="hsr" windows={toBannerWindows([])} />
+      <PullsPage game="hsr" windows={windows} />
     </ThemeProvider>
   );
 }
@@ -170,6 +170,41 @@ describe("PullsPage", () => {
     ).toBeDefined();
     expect(screen.queryByText("5★ drops (pity)")).toBeNull();
     expect(screen.getByText(/Pity length of each 5★ in Character Event Warp/)).toBeDefined();
+  });
+
+  it("switches to a grid of 5★ tiles with pity numbers and 50/50 borders", () => {
+    setPulls("hsr", [
+      pull({ id: "a", ts: 1000, rarity: 3, category: "character" }),
+      pull({ id: "b", ts: 2000, rarity: 5, name: "Kafka", category: "character" }),
+      pull({ id: "c", ts: 3000, rarity: 5, name: "Himeko", category: "character" }),
+    ]);
+    const windows = toBannerWindows([
+      {
+        id: "b1",
+        type: "character",
+        banners: [{ name: "Character Event Warp" }],
+        startDate: "1970-01-01",
+        endDate: "2035-01-01",
+        featured5: [{ name: "Kafka" }],
+      },
+    ]);
+    renderPage(windows);
+    fireEvent.click(screen.getByRole("button", { name: "Grid" }));
+
+    expect(screen.getAllByRole("listitem")).toHaveLength(2);
+    expect(screen.getByLabelText("pity 1")).toBeDefined();
+    expect(screen.getByLabelText("pity 2")).toBeDefined();
+    expect(screen.getAllByLabelText(/pity/).length).toBeGreaterThanOrEqual(2);
+    expect(document.querySelectorAll('[data-fifty="win"]')).toHaveLength(1);
+    expect(document.querySelectorAll('[data-fifty="loss"]')).toHaveLength(1);
+    expect(document.querySelectorAll('[data-tone="early"]')).toHaveLength(2);
+    expect(screen.queryByText("5★ drops (pity)")).toBeNull();
+    expect(screen.queryByText(/pulls \(newest first\)/)).toBeNull();
+
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
+    expect(screen.getByText("5★ drops (pity)")).toBeDefined();
+    expect(screen.getByText(/pulls \(newest first\)/)).toBeDefined();
+    expect(document.querySelectorAll("[data-fifty]")).toHaveLength(0);
   });
 
   it("filters rows by search text", () => {

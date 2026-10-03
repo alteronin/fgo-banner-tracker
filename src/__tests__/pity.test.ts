@@ -2,11 +2,13 @@ import { describe, it, expect } from "vitest";
 import {
   attributePull,
   computeRarityStats,
+  fiftyFiftyResult,
   findBannerWindow,
   FOUR_STAR_PITY,
   indexWindows,
   maxPityFor,
   pityByDrop,
+  pityTone,
   toBannerWindow,
   toBannerWindows,
 } from "@/lib/pity";
@@ -126,6 +128,189 @@ describe("pity", () => {
         0
       );
       expect(fromDrops).toBe(fromHistogram);
+    });
+  });
+
+  describe("pityTone", () => {
+    it("buckets the pity by share of the cap", () => {
+      expect(pityTone(7, 90)).toBe("early");
+      expect(pityTone(30, 90)).toBe("mid");
+      expect(pityTone(60, 90)).toBe("late");
+      expect(pityTone(82, 90)).toBe("hard");
+      expect(pityTone(90, 90)).toBe("hard");
+      expect(pityTone(3, 10)).toBe("early");
+      expect(pityTone(4, 10)).toBe("mid");
+      expect(pityTone(7, 10)).toBe("late");
+      expect(pityTone(10, 10)).toBe("hard");
+    });
+  });
+
+  describe("fiftyFiftyResult", () => {
+    const at = (iso: string) => Date.parse(iso);
+    const index = indexWindows(
+      toBannerWindows([
+        {
+          id: "b1",
+          type: "character",
+          banners: [{ name: "Character Event Warp" }],
+          startDate: "2024-01-01",
+          endDate: "2024-01-31",
+          featured5: [{ name: "Kafka" }],
+        },
+        {
+          id: "b2",
+          type: "character",
+          banners: [{ name: "No Rate-Up" }],
+          startDate: "2024-02-01",
+          endDate: "2024-02-29",
+        },
+      ])
+    );
+
+    it("returns win when the pulled 5★ is featured", () => {
+      const result = fiftyFiftyResult(
+        "hsr",
+        pull({ id: "a", ts: at("2024-01-05T00:00:00Z"), rarity: 5, name: "Kafka" }),
+        index
+      );
+      expect(result).toBe("win");
+    });
+
+    it("matches short and long name variants", () => {
+      expect(
+        fiftyFiftyResult(
+          "hsr",
+          pull({
+            id: "b",
+            ts: at("2024-01-05T00:00:00Z"),
+            rarity: 5,
+            name: "Kafka - Night",
+          }),
+          index
+        )
+      ).toBe("win");
+      const longIndex = indexWindows(
+        toBannerWindows([
+          {
+            id: "b3",
+            type: "character",
+            banners: [{ name: "X" }],
+            startDate: "2024-01-01",
+            endDate: "2024-01-31",
+            featured5: [{ name: "Kafka the Amber" }],
+          },
+        ])
+      );
+      expect(
+        fiftyFiftyResult(
+          "hsr",
+          pull({ id: "c", ts: at("2024-01-05T00:00:00Z"), rarity: 5, name: "Kafka" }),
+          longIndex
+        )
+      ).toBe("win");
+    });
+
+    it("returns loss when the banner has rate-up but the pull is off-banner", () => {
+      const result = fiftyFiftyResult(
+        "hsr",
+        pull({ id: "d", ts: at("2024-01-05T00:00:00Z"), rarity: 5, name: "Himeko" }),
+        index
+      );
+      expect(result).toBe("loss");
+    });
+
+    it("returns null without rate-up data, outside rate-up categories, or non-5★", () => {
+      expect(
+        fiftyFiftyResult(
+          "hsr",
+          pull({ id: "e", ts: at("2024-02-10T00:00:00Z"), rarity: 5, name: "Himeko" }),
+          index
+        )
+      ).toBeNull();
+      expect(
+        fiftyFiftyResult(
+          "hsr",
+          pull({
+            id: "f",
+            ts: at("2024-01-05T00:00:00Z"),
+            rarity: 5,
+            name: "Himeko",
+            category: "standard",
+          }),
+          index
+        )
+      ).toBeNull();
+      expect(
+        fiftyFiftyResult(
+          "hsr",
+          pull({ id: "g", ts: at("2024-01-05T00:00:00Z"), rarity: 4, name: "Kafka" }),
+          index
+        )
+      ).toBeNull();
+      expect(
+        fiftyFiftyResult(
+          "hsr",
+          pull({ id: "h", ts: at("2023-06-01T00:00:00Z"), rarity: 5, name: "Kafka" }),
+          index
+        )
+      ).toBeNull();
+    });
+
+    it("uses per-game pool mappings (wuwa featured pool)", () => {
+      const wuwa = indexWindows(
+        toBannerWindows([
+          {
+            id: "w1",
+            type: "resonator",
+            banners: [{ name: "Featured Resonator" }],
+            startDate: "2024-01-01",
+            endDate: "2024-01-31",
+            featured5: [{ name: "Jianxin" }],
+          },
+        ])
+      );
+      expect(
+        fiftyFiftyResult(
+          "wuwa",
+          pull({
+            id: "w",
+            gameId: "wuwa",
+            ts: at("2024-01-05T00:00:00Z"),
+            rarity: 5,
+            name: "Jianxin",
+            category: "1",
+          }),
+          wuwa
+        )
+      ).toBe("win");
+      expect(
+        fiftyFiftyResult(
+          "wuwa",
+          pull({
+            id: "x",
+            gameId: "wuwa",
+            ts: at("2024-01-05T00:00:00Z"),
+            rarity: 5,
+            name: "Yangyang",
+            category: "1",
+          }),
+          wuwa
+        )
+      ).toBe("loss");
+      expect(
+        fiftyFiftyResult(
+          "wuwa",
+          pull({
+            id: "y",
+            gameId: "wuwa",
+            ts: at("2024-01-05T00:00:00Z"),
+            rarity: 5,
+            name: "Yangyang",
+            category: "5",
+          }),
+          wuwa
+        )
+      ).toBeNull();
     });
   });
 
