@@ -1,3 +1,4 @@
+import { comparePullOrder } from "@/lib/pullOrder";
 import {
   PULL_GAMES,
   type GamePull,
@@ -127,7 +128,7 @@ function finalize(
   total: number,
   warnings: PullWarning[]
 ): ParsedPulls {
-  pulls.sort((a, b) => a.ts - b.ts || a.id.localeCompare(b.id));
+  pulls.sort(comparePullOrder);
   const unitIds = new Set<string>();
   for (const pull of pulls) {
     if (pull.unitId) unitIds.add(pull.unitId);
@@ -151,7 +152,8 @@ export function parseWuwaPulls(data: unknown, map: PullMap): ParsedPulls | null 
   const unresolved = new Map<string, PullWarning>();
   const pulls: GamePull[] = [];
 
-  for (const raw of records) {
+  for (let index = 0; index < records.length; index++) {
+    const raw = records[index];
     if (typeof raw !== "object" || raw === null) continue;
     const record = raw as Record<string, unknown>;
     const name = typeof record.name === "string" ? record.name : "";
@@ -180,6 +182,7 @@ export function parseWuwaPulls(data: unknown, map: PullMap): ParsedPulls | null 
       rarity: resolved.rarity,
       ts,
       category,
+      seq: index,
     });
   }
 
@@ -213,7 +216,8 @@ export function parseStardbPulls(
 
   for (const [category, rawList] of Object.entries(buckets)) {
     if (!Array.isArray(rawList)) continue;
-    for (const raw of rawList) {
+    for (let index = 0; index < rawList.length; index++) {
+      const raw = rawList[index];
       if (typeof raw !== "object" || raw === null) continue;
       const record = raw as Record<string, unknown>;
       const ts = Date.parse(String(record.timestamp ?? ""));
@@ -242,6 +246,7 @@ export function parseStardbPulls(
         rarity: resolved.rarity,
         ts,
         category,
+        seq: index,
       });
     }
   }

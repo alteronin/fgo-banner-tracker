@@ -177,6 +177,7 @@ describe("PullsPage", () => {
       pull({ id: "a", ts: 1000, rarity: 3, category: "character" }),
       pull({ id: "b", ts: 2000, rarity: 5, name: "Kafka", category: "character" }),
       pull({ id: "c", ts: 3000, rarity: 5, name: "Himeko", category: "character" }),
+      pull({ id: "d", ts: 4000, rarity: 5, name: "Kafka", category: "character" }),
     ]);
     const windows = toBannerWindows([
       {
@@ -191,15 +192,21 @@ describe("PullsPage", () => {
     renderPage(windows);
     fireEvent.click(screen.getByRole("button", { name: "Grid" }));
 
-    expect(screen.getAllByRole("listitem")).toHaveLength(2);
-    expect(screen.getByLabelText("pity 1")).toBeDefined();
-    expect(screen.getByLabelText("pity 2")).toBeDefined();
-    expect(screen.getAllByLabelText(/pity/).length).toBeGreaterThanOrEqual(2);
+    expect(screen.getAllByRole("listitem")).toHaveLength(3);
+    expect(screen.getAllByLabelText("pity 1")).toHaveLength(2);
+    expect(screen.getAllByLabelText("pity 2")).toHaveLength(1);
     expect(document.querySelectorAll('[data-fifty="win"]')).toHaveLength(1);
     expect(document.querySelectorAll('[data-fifty="loss"]')).toHaveLength(1);
-    expect(document.querySelectorAll('[data-tone="early"]')).toHaveLength(2);
+    expect(document.querySelectorAll('[data-fifty="guarantee"]')).toHaveLength(1);
+    expect(document.querySelectorAll('[data-tone="early"]')).toHaveLength(3);
     expect(screen.queryByText("5★ drops (pity)")).toBeNull();
     expect(screen.queryByText(/pulls \(newest first\)/)).toBeNull();
+
+    const grid = document.querySelector('[aria-label="5★ drops"]')!;
+    expect(grid.className).toContain("minmax(76px,1fr)");
+    expect(grid.className).toContain("gap-2");
+    expect(grid.parentElement!.className).toContain("p-3");
+    expect(grid.firstElementChild!.className).toContain("aspect-square");
 
     fireEvent.click(screen.getByRole("button", { name: "List" }));
     expect(screen.getByText("5★ drops (pity)")).toBeDefined();

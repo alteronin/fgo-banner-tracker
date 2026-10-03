@@ -1,4 +1,5 @@
 import { categoryLabel, normalizeName } from "@/lib/pullImport";
+import { comparePullOrder } from "@/lib/pullOrder";
 import type { GamePull, PullGame } from "@/types/pulls";
 
 export const FOUR_STAR_PITY = 10;
@@ -67,7 +68,7 @@ export function computeRarityStats(
   rarity: number,
   cap: number
 ): RarityStats {
-  const sorted = pulls.slice().sort((a, b) => a.ts - b.ts || a.id.localeCompare(b.id));
+  const sorted = pulls.slice().sort(comparePullOrder);
   const pityValues: number[] = [];
   let since = 0;
   for (const pull of sorted) {
@@ -113,7 +114,7 @@ export function pityByDrop(
 
   const drops = new Map<string, number>();
   for (const list of byCategory.values()) {
-    const sorted = list.slice().sort((a, b) => a.ts - b.ts || a.id.localeCompare(b.id));
+    const sorted = list.slice().sort(comparePullOrder);
     let since = 0;
     for (const pull of sorted) {
       since += 1;
@@ -276,12 +277,13 @@ const RATEUP_WINDOW_TYPES: Record<PullGame, Record<string, string[]>> = {
   wuwa: { "1": ["resonator"], "2": ["resonator"] },
 };
 
-export type FiftyFiftyResult = "win" | "loss";
+export type FiftyFiftyResult = "win" | "loss" | "guarantee";
 
 export function fiftyFiftyResult(
   game: PullGame,
   pull: GamePull,
-  index: Map<string, BannerWindow[]>
+  index: Map<string, BannerWindow[]>,
+  guaranteed = false
 ): FiftyFiftyResult | null {
   if (pull.rarity !== 5) return null;
   const types = RATEUP_WINDOW_TYPES[game]?.[pull.category];
@@ -305,5 +307,24 @@ export function fiftyFiftyResult(
       name.includes(featuredName)
     );
   });
-  return win ? "win" : "loss";
+  if (!win) return "loss";
+  return guaranteed ? "guarantee" : "win";
+}
+
+export function fiftyFiftyResults(
+  game: PullGame,
+  pulls: GamePull[],
+  index: Map<string, BannerWindow[]>
+): Map<string, FiftyFiftyResult> {
+  const sorted = pulls.slice().sort(comparePullOrder);
+  const pending = new Set<string>();
+  const results = new Map<string, FiftyFiftyResult>();
+  for (const pull of sorted) {
+    const result = fiftyFiftyResult(game, pull, index, pending.has(pull.category));
+    if (!result) continue;
+    results.set(pull.id, result);
+    if (result === "loss") pending.add(pull.category);
+    else if (result === "guarantee") pending.delete(pull.category);
+  }
+  return results;
 }

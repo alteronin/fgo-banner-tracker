@@ -15,6 +15,7 @@ export interface GamePull {
   rarity: number | null;
   ts: number;
   category: string;
+  seq?: number;
 }
 
 export interface PullMapItem {

@@ -95,20 +95,34 @@ describe("pullStorage", () => {
         pull({ id: "a", ts: 1000 }),
         pull({ id: "b", ts: 2000 }),
       ]);
-      expect(first).toEqual({ added: 1, total: 2, ok: true });
+      expect(first).toEqual({ added: 1, upgraded: 0, total: 2, ok: true });
 
       const second = mergePulls("hsr", [
         pull({ id: "a", ts: 1000 }),
         pull({ id: "b", ts: 2000 }),
       ]);
-      expect(second).toEqual({ added: 0, total: 2, ok: true });
+      expect(second).toEqual({ added: 0, upgraded: 0, total: 2, ok: true });
       expect(getPulls("hsr")).toHaveLength(2);
     });
 
     it("merges into an empty store", () => {
       const result = mergePulls("wuwa", [pull({ gameId: "wuwa" })]);
-      expect(result).toEqual({ added: 1, total: 1, ok: true });
+      expect(result).toEqual({ added: 1, upgraded: 0, total: 1, ok: true });
       expect(getPulls("wuwa")).toHaveLength(1);
+    });
+
+    it("upgrades stored pulls with canonical seq on re-import", () => {
+      setPulls("genshin", [pull({ id: "a", gameId: "genshin", ts: 1000 })]);
+      const result = mergePulls("genshin", [
+        pull({ id: "a", gameId: "genshin", ts: 1000, seq: 0 }),
+      ]);
+      expect(result).toEqual({ added: 0, upgraded: 1, total: 1, ok: true });
+      expect(getPulls("genshin")[0].seq).toBe(0);
+
+      const again = mergePulls("genshin", [
+        pull({ id: "a", gameId: "genshin", ts: 1000, seq: 0 }),
+      ]);
+      expect(again).toEqual({ added: 0, upgraded: 0, total: 1, ok: true });
     });
   });
 

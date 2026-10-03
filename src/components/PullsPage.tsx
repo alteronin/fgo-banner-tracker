@@ -7,7 +7,7 @@ import { categoryLabel } from "@/lib/pullImport";
 import {
   attributePull,
   computeRarityStats,
-  fiftyFiftyResult,
+  fiftyFiftyResults,
   FOUR_STAR_PITY,
   indexWindows,
   maxPityFor,
@@ -18,6 +18,7 @@ import {
   type PityTone,
   type RarityStats,
 } from "@/lib/pity";
+import { comparePullOrder } from "@/lib/pullOrder";
 import {
   getPullsServerSnapshot,
   getPullsSnapshot,
@@ -56,6 +57,7 @@ const TONE_TEXT: Record<PityTone, string> = {
 
 const FIFTY_BORDER: Record<FiftyFiftyResult | "none", string> = {
   win: "border-emerald-500",
+  guarantee: "border-teal-400",
   loss: "border-rose-500",
   none: "border-gray-700",
 };
@@ -135,14 +137,16 @@ export function PullsPage({
   }, [pulls, category, search]);
 
   const rows = useMemo(
-    () =>
-      filtered
-        .slice()
-        .sort((a, b) => b.ts - a.ts || a.id.localeCompare(b.id)),
+    () => filtered.slice().sort((a, b) => comparePullOrder(b, a)),
     [filtered]
   );
 
   const pityMap = useMemo(() => pityByDrop(pulls, 5), [pulls]);
+
+  const fiftyMap = useMemo(
+    () => fiftyFiftyResults(game, pulls, index),
+    [game, pulls, index]
+  );
 
   const images = useMemo(() => {
     const map = new Map<string, string>();
@@ -158,9 +162,7 @@ export function PullsPage({
       if (pity === undefined) continue;
       list.push({ pull, pity });
     }
-    return list.sort(
-      (a, b) => b.pull.ts - a.pull.ts || a.pull.id.localeCompare(b.pull.id)
-    );
+    return list.sort((a, b) => comparePullOrder(b.pull, a.pull));
   }, [filtered, pityMap]);
 
   const counts = useMemo(() => {
@@ -436,6 +438,7 @@ export function PullsPage({
                   index={index}
                   game={game}
                   images={images}
+                  fifty={fiftyMap}
                 />
               )
             )}
@@ -499,11 +502,13 @@ function PullGrid({
   index,
   game,
   images,
+  fifty,
 }: {
   drops: { pull: GamePull; pity: number }[];
   index: Map<string, BannerWindow[]>;
   game: PullGame;
   images: Map<string, string>;
+  fifty: Map<string, FiftyFiftyResult>;
 }) {
   if (drops.length === 0) {
     return (
@@ -514,54 +519,57 @@ function PullGrid({
   }
   return (
     <div className="space-y-3">
-      <div
-        role="list"
-        aria-label="5★ drops"
-        className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 sm:gap-3"
-      >
-        {drops.map(({ pull, pity }) => {
-          const result = fiftyFiftyResult(game, pull, index);
-          const tone = pityTone(pity, maxPityFor(game, pull.category));
-          const attribution = attributePull(game, pull, index);
-          const imageUrl = pull.unitId ? images.get(pull.unitId) : undefined;
-          return (
-            <div
-              key={pull.id}
-              data-fifty={result ?? "none"}
-              data-tone={tone}
-              role="listitem"
-              title={`${pull.name} · Pity ${pity} · ${attribution.label}`}
-              className={`group relative aspect-[3/4] rounded-lg overflow-hidden border-2 bg-gray-900 transition-transform hover:-translate-y-0.5 ${FIFTY_BORDER[result ?? "none"]}`}
-            >
-              {imageUrl ? (
-                <ImageWithFallback
-                  src={imageUrl}
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="160px"
-                />
-              ) : (
-                <div className="absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-600">
-                  {initials(pull.name)}
-                </div>
-              )}
-              <span className="absolute inset-x-0 top-0 -translate-y-full group-hover:translate-y-0 transition-transform bg-gray-950/85 text-[11px] leading-tight px-2 py-1 truncate">
-                {pull.name}
-              </span>
-              <span
-                aria-label={`pity ${pity}`}
-                className={`absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-gray-950/85 text-xs font-bold tabular-nums ${TONE_TEXT[tone]}`}
+      <div className="rounded-lg border border-gray-800 bg-gray-900/40 p-3 sm:p-4">
+        <div
+          role="list"
+          aria-label="5★ drops"
+          className="grid grid-cols-[repeat(auto-fill,minmax(76px,1fr))] gap-2"
+        >
+          {drops.map(({ pull, pity }) => {
+            const result = fifty.get(pull.id) ?? null;
+            const tone = pityTone(pity, maxPityFor(game, pull.category));
+            const attribution = attributePull(game, pull, index);
+            const imageUrl = pull.unitId ? images.get(pull.unitId) : undefined;
+            return (
+              <div
+                key={pull.id}
+                data-fifty={result ?? "none"}
+                data-tone={tone}
+                role="listitem"
+                title={`${pull.name} · Pity ${pity} · ${attribution.label}`}
+                className={`group relative aspect-square rounded-lg overflow-hidden border-2 bg-gray-900 transition-transform hover:-translate-y-0.5 ${FIFTY_BORDER[result ?? "none"]}`}
               >
-                {pity}
-              </span>
-            </div>
-          );
-        })}
+                {imageUrl ? (
+                  <ImageWithFallback
+                    src={imageUrl}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="76px"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-gray-600">
+                    {initials(pull.name)}
+                  </div>
+                )}
+                <span className="absolute inset-x-0 top-0 -translate-y-full group-hover:translate-y-0 transition-transform bg-gray-950/85 text-[10px] leading-tight px-1.5 py-0.5 truncate">
+                  {pull.name}
+                </span>
+                <span
+                  aria-label={`pity ${pity}`}
+                  className={`absolute bottom-0.5 right-0.5 px-1 py-0.5 rounded bg-gray-950/85 text-[10px] font-bold tabular-nums ${TONE_TEXT[tone]}`}
+                >
+                  {pity}
+                </span>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <p className="text-xs text-gray-500">
         Number = pity at the drop (green early → red near hard pity). Border =
-        50/50 on rate-up banners (green won, red lost); grey = no rate-up.
+        rate-up result (green won 50/50, teal guaranteed after a loss, red
+        lost); grey = no rate-up.
       </p>
     </div>
   );

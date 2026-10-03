@@ -77,7 +77,10 @@ export function ImportPulls({ game }: { game: PullGame }) {
     if (filled > 0) notifyUnitStatusesChange(game);
     setMessage(
       `Imported ${formatCount(result.added)} new pulls (${formatCount(result.total)} total) · ` +
-        `${formatCount(filled)} units marked owned.`
+        `${formatCount(filled)} units marked owned.` +
+        (result.upgraded > 0
+          ? ` ${formatCount(result.upgraded)} pulls updated with canonical order.`
+          : "")
     );
     setPreview(null);
   };

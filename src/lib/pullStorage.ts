@@ -1,3 +1,4 @@
+import { comparePullOrder } from "@/lib/pullOrder";
 import type { GamePull, PullGame } from "@/types/pulls";
 
 export function pullsStorageKey(game: string): string {
@@ -45,7 +46,7 @@ export function getPulls(game: PullGame): GamePull[] {
 }
 
 export function sortPulls(pulls: GamePull[]): GamePull[] {
-  return pulls.slice().sort((a, b) => (a.ts - b.ts) || a.id.localeCompare(b.id));
+  return pulls.slice().sort(comparePullOrder);
 }
 
 export function setPulls(game: PullGame, pulls: GamePull[]): boolean {
@@ -66,18 +67,28 @@ export function setPulls(game: PullGame, pulls: GamePull[]): boolean {
 export function mergePulls(
   game: PullGame,
   incoming: GamePull[]
-): { added: number; total: number; ok: boolean } {
+): { added: number; upgraded: number; total: number; ok: boolean } {
   const existing = getPulls(game);
-  const seen = new Set(existing.map((pull) => pull.id));
+  const positions = new Map<string, number>();
+  existing.forEach((pull, i) => positions.set(pull.id, i));
   let added = 0;
+  let upgraded = 0;
   for (const pull of incoming) {
-    if (seen.has(pull.id)) continue;
-    seen.add(pull.id);
+    const position = positions.get(pull.id);
+    if (position !== undefined) {
+      const current = existing[position];
+      if (current.seq === undefined && pull.seq !== undefined) {
+        existing[position] = pull;
+        upgraded += 1;
+      }
+      continue;
+    }
+    positions.set(pull.id, existing.length);
     existing.push(pull);
     added += 1;
   }
-  const ok = added === 0 ? true : setPulls(game, existing);
-  return { added, total: existing.length, ok };
+  const ok = added + upgraded === 0 ? true : setPulls(game, existing);
+  return { added, upgraded, total: existing.length, ok };
 }
 
 export function clearPulls(game: PullGame): void {

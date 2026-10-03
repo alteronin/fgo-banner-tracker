@@ -235,6 +235,10 @@ describe("pullImport", () => {
         parsed.pulls.map((pull) => pull.id)
       );
     });
+
+    it("records source array position as seq", () => {
+      expect(parsed.pulls.map((pull) => pull.seq)).toEqual([0, 1, 2, 3, 4]);
+    });
   });
 
   describe("parseStardbPulls", () => {
@@ -273,6 +277,37 @@ describe("pullImport", () => {
 
     it("rejects wuwa as a stardb game", () => {
       expect(parseStardbPulls(stardbFile, "wuwa", hsrMap)).toBeNull();
+    });
+
+    it("keeps canonical bucket order for same-second pulls via seq", () => {
+      expect(parsed.pulls.map((pull) => [pull.category, pull.seq])).toEqual([
+        ["standard", 0],
+        ["character", 0],
+        ["character", 1],
+        ["character", 2],
+      ]);
+    });
+
+    it("keeps raw bucket positions when records are skipped", () => {
+      const file = {
+        user: {
+          hsr: {
+            uids: [
+              {
+                warps: {
+                  character: [
+                    { item_id: 20011, timestamp: "2023-11-15T03:44:35Z" },
+                    { item_id: 20011, timestamp: "invalid" },
+                    { item_id: 1202, timestamp: "2023-11-15T03:44:35Z" },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      };
+      const result = parseStardbPulls(file, "hsr", hsrMap)!;
+      expect(result.pulls.map((pull) => pull.seq)).toEqual([0, 2]);
     });
   });
 

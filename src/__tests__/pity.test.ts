@@ -3,6 +3,7 @@ import {
   attributePull,
   computeRarityStats,
   fiftyFiftyResult,
+  fiftyFiftyResults,
   findBannerWindow,
   FOUR_STAR_PITY,
   indexWindows,
@@ -129,6 +130,38 @@ describe("pity", () => {
       );
       expect(fromDrops).toBe(fromHistogram);
     });
+
+    it("orders same-second pulls by canonical seq, not id", () => {
+      const drops = pityByDrop(
+        [
+          pull({ id: "10", ts: 1000, rarity: 5, seq: 1, category: "character" }),
+          pull({ id: "2", ts: 1000, rarity: 3, seq: 0, category: "character" }),
+        ],
+        5
+      );
+      expect(drops.get("10")).toBe(2);
+      const stats = computeRarityStats(
+        [
+          pull({ id: "10", ts: 1000, rarity: 5, seq: 1, category: "character" }),
+          pull({ id: "2", ts: 1000, rarity: 3, seq: 0, category: "character" }),
+        ],
+        5,
+        90
+      );
+      expect(stats.hits).toBe(1);
+      expect(stats.avgPity).toBe(2);
+    });
+
+    it("falls back to id order for pulls without seq", () => {
+      const drops = pityByDrop(
+        [
+          pull({ id: "b", ts: 1000, rarity: 5 }),
+          pull({ id: "a", ts: 1000, rarity: 3 }),
+        ],
+        5
+      );
+      expect(drops.get("b")).toBe(2);
+    });
   });
 
   describe("pityTone", () => {
@@ -217,6 +250,57 @@ describe("pity", () => {
         index
       );
       expect(result).toBe("loss");
+    });
+
+    it("returns guarantee for a featured pull when the previous rate-up was lost", () => {
+      const result = fiftyFiftyResult(
+        "hsr",
+        pull({ id: "g1", ts: at("2024-01-05T00:00:00Z"), rarity: 5, name: "Kafka" }),
+        index,
+        true
+      );
+      expect(result).toBe("guarantee");
+    });
+
+    it("chains win/loss/guarantee across banners in pull order", () => {
+      const chainIndex = indexWindows(
+        toBannerWindows([
+          {
+            id: "c1",
+            type: "character",
+            banners: [{ name: "January" }],
+            startDate: "2024-01-01",
+            endDate: "2024-01-31",
+            featured5: [{ name: "Kafka" }],
+          },
+          {
+            id: "c2",
+            type: "character",
+            banners: [{ name: "February" }],
+            startDate: "2024-02-01",
+            endDate: "2024-02-29",
+            featured5: [{ name: "Kafka" }],
+          },
+        ])
+      );
+      const results = fiftyFiftyResults(
+        "hsr",
+        [
+          pull({ id: "c", ts: at("2024-02-10T00:00:00Z"), rarity: 3 }),
+          pull({ id: "a", ts: at("2024-01-05T00:00:00Z"), rarity: 5, name: "Himeko" }),
+          pull({ id: "b", ts: at("2024-02-05T00:00:00Z"), rarity: 5, name: "Kafka" }),
+          pull({ id: "d", ts: at("2024-02-10T00:00:00Z"), rarity: 5, name: "Kafka" }),
+          pull({ id: "e", ts: at("2024-02-15T00:00:00Z"), rarity: 5, name: "Himeko" }),
+          pull({ id: "f", ts: at("2024-02-20T00:00:00Z"), rarity: 5, name: "Kafka" }),
+        ],
+        chainIndex
+      );
+      expect(results.get("a")).toBe("loss");
+      expect(results.get("b")).toBe("guarantee");
+      expect(results.get("d")).toBe("win");
+      expect(results.get("e")).toBe("loss");
+      expect(results.get("f")).toBe("guarantee");
+      expect(results.has("c")).toBe(false);
     });
 
     it("returns null without rate-up data, outside rate-up categories, or non-5★", () => {
