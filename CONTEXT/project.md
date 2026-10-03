@@ -38,13 +38,13 @@ A web application that helps gacha game players track their pulls and plan their
 11. Bucket 12: per-game Units rosters at `/{game}/units` (795 units: genshin 127, hsr 263, zzz 60, wuwa 172, hi3 110, shadowverse 63) + Faves lineups at `/{game}/faves` (9 slots) + Banners/Units/Faves tab nav on all games
 12. Multi-game backup: Export/Import v3 (`{version, unitStatus, faves, pulls}` covering FGO + all games; legacy v1/v2 files still import)
 13. Bucket 13: taxonomy pill filters on `/servants` + `/{game}/units` — multi-select Element/Weapon/Path/Type/Attribute/Specialty/Damage/Class groups, combinable with search/status, per-group All reset
-14. Bucket 14: pull-history import at `/{game}/pulls` (wuwatracker + stardb exports, offline item maps, fill-only-unset owned merge) with 5★/4★ pity stats, cap-indexed pity histogram, banner attribution, per-category pity tables, per-5★ drop pity (`Pity N` badge + 5★ drops table), and a List/Grid toggle where the grid shows 5★ drops as thumbnail tiles (pity-colored number + 50/50 win/loss border) (FGO/HI3/SV show an empty state)
+14. Bucket 14: pull-history import at `/{game}/pulls` (wuwatracker + stardb exports, offline item maps, fill-only-unset owned merge) with 5★/4★ pity stats, cap-indexed pity histogram, banner attribution, per-category pity tables, per-5★ drop pity (`Pity N` badge + 5★ drops table), and a List/Grid toggle where the grid shows 5★ drops as square ~76px thumbnail tiles (pity-colored number + win/guarantee/loss border); pull order matches stardb exactly (`comparePullOrder`: ts → export-array `seq` → id) (FGO/HI3/SV show an empty state)
 
 ### Roadmap (Buckets 11-14 — all addressed)
 11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
 12. Cross-game Units & Faves — **COMPLETE (2026-10-03)**
 13. Class/element button filters — **COMPLETE (2026-10-04)**
-14. Pull-history import + pity — **COMPLETE (2026-10-04)** (deployed, live QA green; follow-ups `cbdef13` per-5★ drop pity and `978f769` 5★ grid view with 50/50 borders, qa-pity 40/40)
+14. Pull-history import + pity — **COMPLETE (2026-10-04)** (deployed, live QA green; follow-ups `cbdef13` per-5★ drop pity, `978f769` 5★ grid view with 50/50 borders, `ecdba38` stardb-parity order + Guarantee state + square tiles, qa-pity 41/41)
 
 All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 
@@ -59,7 +59,7 @@ All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 - Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3/SV, served `unoptimized`), shadowverse-wb.com pack art (SV banners)
 
 ## Testing
-- 338 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50 scoring, pulls page grid view)
+- 346 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, pulls page grid view)
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion
