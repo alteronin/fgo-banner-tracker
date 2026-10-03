@@ -6,6 +6,7 @@ import {
   FOUR_STAR_PITY,
   indexWindows,
   maxPityFor,
+  pityByDrop,
   toBannerWindow,
   toBannerWindows,
 } from "@/lib/pity";
@@ -76,6 +77,55 @@ describe("pity", () => {
       expect(stats.avgPity).toBeNull();
       expect(stats.maxPity).toBeNull();
       expect(stats.currentPity).toBe(0);
+    });
+  });
+
+  describe("pityByDrop", () => {
+    it("assigns each drop its pity length, isolated per category", () => {
+      const drops = pityByDrop(
+        [
+          pull({ id: "a", ts: 1000, rarity: 3, category: "character" }),
+          pull({ id: "b", ts: 2000, rarity: 5, category: "character" }),
+          pull({ id: "c", ts: 3000, rarity: 5, category: "character" }),
+          pull({ id: "d", ts: 4000, rarity: 3, category: "standard" }),
+          pull({ id: "e", ts: 5000, rarity: 3, category: "standard" }),
+          pull({ id: "f", ts: 6000, rarity: 5, category: "standard" }),
+        ],
+        5
+      );
+      expect(drops.size).toBe(3);
+      expect(drops.get("b")).toBe(2);
+      expect(drops.get("c")).toBe(1);
+      expect(drops.get("f")).toBe(3);
+      expect(drops.has("a")).toBe(false);
+    });
+
+    it("counts unknown-rarity pulls without recording non-drops", () => {
+      const drops = pityByDrop(
+        [
+          pull({ id: "a", ts: 1000, rarity: null }),
+          pull({ id: "b", ts: 2000, rarity: 4 }),
+          pull({ id: "c", ts: 3000, rarity: 5 }),
+        ],
+        5
+      );
+      expect([...drops.keys()]).toEqual(["c"]);
+      expect(drops.get("c")).toBe(3);
+    });
+
+    it("agrees with computeRarityStats histogram", () => {
+      const pulls = [3, 5, 4, 3, 3, 5].map((rarity, i) =>
+        pull({ id: `p${i}`, ts: 1000 + i, rarity })
+      );
+      const stats = computeRarityStats(pulls, 5, 90);
+      const drops = pityByDrop(pulls, 5);
+      expect(drops.size).toBe(stats.hits);
+      const fromDrops = [...drops.values()].reduce((sum, value) => sum + value, 0);
+      const fromHistogram = stats.histogram.reduce(
+        (sum, count, pity) => sum + count * pity,
+        0
+      );
+      expect(fromDrops).toBe(fromHistogram);
     });
   });
 

@@ -10,6 +10,7 @@ import {
   FOUR_STAR_PITY,
   indexWindows,
   maxPityFor,
+  pityByDrop,
   type BannerWindow,
   type RarityStats,
 } from "@/lib/pity";
@@ -32,6 +33,7 @@ const CATEGORY_ORDER: Record<PullGame, string[]> = {
 };
 
 const PAGE_SIZE = 100;
+const DROPS_LIMIT = 20;
 
 const RARITY_STYLES: Record<number, string> = {
   5: "text-amber-400",
@@ -110,6 +112,21 @@ export function PullsPage({
         .sort((a, b) => b.ts - a.ts || a.id.localeCompare(b.id)),
     [filtered]
   );
+
+  const pityMap = useMemo(() => pityByDrop(pulls, 5), [pulls]);
+
+  const fiveDrops = useMemo(() => {
+    const list: { pull: GamePull; pity: number }[] = [];
+    for (const pull of filtered) {
+      if (pull.rarity !== 5) continue;
+      const pity = pityMap.get(pull.id);
+      if (pity === undefined) continue;
+      list.push({ pull, pity });
+    }
+    return list.sort(
+      (a, b) => b.pull.ts - a.pull.ts || a.pull.id.localeCompare(b.pull.id)
+    );
+  }, [filtered, pityMap]);
 
   const counts = useMemo(() => {
     let five = 0;
@@ -278,6 +295,8 @@ export function PullsPage({
               </div>
             )}
 
+            <FiveStarDrops drops={fiveDrops} index={index} game={game} />
+
             {category === "all" && pityRows.length > 0 && (
               <div className="rounded-lg border border-gray-800 overflow-hidden">
                 <div className="grid grid-cols-[1fr_auto_auto_auto_auto] gap-3 px-4 py-2 bg-gray-900/70 text-xs uppercase tracking-wider text-gray-500">
@@ -318,7 +337,13 @@ export function PullsPage({
 
             <div className="space-y-2">
               {shownRows.map((pull) => (
-                <PullRow key={pull.id} pull={pull} index={index} game={game} />
+                <PullRow
+                  key={pull.id}
+                  pull={pull}
+                  index={index}
+                  game={game}
+                  pity={pityMap.get(pull.id)}
+                />
               ))}
             </div>
 
@@ -349,10 +374,12 @@ function PullRow({
   pull,
   index,
   game,
+  pity,
 }: {
   pull: GamePull;
   index: Map<string, BannerWindow[]>;
   game: PullGame;
+  pity?: number;
 }) {
   const when = formatWhen(pull.ts);
   const attribution = attributePull(game, pull, index);
@@ -371,11 +398,78 @@ function PullRow({
             {"★".repeat(pull.rarity)}
           </span>
         )}
+        {pity !== undefined && (
+          <span className="text-xs shrink-0 text-amber-500/90 tabular-nums">
+            Pity {pity}
+          </span>
+        )}
       </div>
       <span className="col-span-2 sm:col-span-1 text-xs text-gray-500 truncate sm:text-right">
         {attribution.label}
         {attribution.version ? ` · v${attribution.version}` : ""}
       </span>
+    </div>
+  );
+}
+
+function FiveStarDrops({
+  drops,
+  index,
+  game,
+}: {
+  drops: { pull: GamePull; pity: number }[];
+  index: Map<string, BannerWindow[]>;
+  game: PullGame;
+}) {
+  if (drops.length === 0) return null;
+  const shown = drops.slice(0, DROPS_LIMIT);
+  return (
+    <div className="rounded-lg border border-gray-800 overflow-hidden">
+      <div className="flex flex-wrap items-baseline justify-between gap-2 px-4 py-2 bg-gray-900/70">
+        <span className="text-xs uppercase tracking-wider text-gray-500">
+          5★ drops (pity)
+        </span>
+        <span className="text-xs text-gray-600">
+          Showing {formatCount(shown.length)} of {formatCount(drops.length)}
+        </span>
+      </div>
+      <div className="grid grid-cols-[6.5rem_1fr_auto] sm:grid-cols-[6.5rem_1fr_12rem_auto] gap-3 px-4 py-2 border-t border-gray-800 text-[10px] uppercase tracking-wider text-gray-600">
+        <span>Date</span>
+        <span>Name</span>
+        <span className="hidden sm:block">Banner</span>
+        <span className="text-right">Pity</span>
+      </div>
+      {shown.map(({ pull, pity }) => {
+        const when = formatWhen(pull.ts);
+        const attribution = attributePull(game, pull, index);
+        return (
+          <div
+            key={pull.id}
+            className="grid grid-cols-[6.5rem_1fr_auto] sm:grid-cols-[6.5rem_1fr_12rem_auto] gap-3 px-4 py-2 border-t border-gray-800 text-sm"
+          >
+            <span
+              className="text-xs text-gray-500 tabular-nums"
+              title={when.time}
+            >
+              {when.date}
+            </span>
+            <span className="text-gray-200 truncate">{pull.name}</span>
+            <span className="hidden sm:block text-xs text-gray-500 truncate">
+              {attribution.label}
+              {attribution.version ? ` · v${attribution.version}` : ""}
+            </span>
+            <span className="text-right text-amber-400 tabular-nums">
+              Pity {pity}
+            </span>
+          </div>
+        );
+      })}
+      {drops.length > DROPS_LIMIT && (
+        <div className="px-4 py-2 border-t border-gray-800 text-xs text-gray-600">
+          + {formatCount(drops.length - DROPS_LIMIT)} older 5★ — see the pull
+          list below
+        </div>
+      )}
     </div>
   );
 }

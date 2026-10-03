@@ -100,6 +100,32 @@ export function computeRarityStats(
   };
 }
 
+export function pityByDrop(
+  pulls: GamePull[],
+  rarity: number
+): Map<string, number> {
+  const byCategory = new Map<string, GamePull[]>();
+  for (const pull of pulls) {
+    const list = byCategory.get(pull.category);
+    if (list) list.push(pull);
+    else byCategory.set(pull.category, [pull]);
+  }
+
+  const drops = new Map<string, number>();
+  for (const list of byCategory.values()) {
+    const sorted = list.slice().sort((a, b) => a.ts - b.ts || a.id.localeCompare(b.id));
+    let since = 0;
+    for (const pull of sorted) {
+      since += 1;
+      if (pull.rarity !== null && pull.rarity >= rarity) {
+        drops.set(pull.id, since);
+        since = 0;
+      }
+    }
+  }
+  return drops;
+}
+
 export interface BannerLike {
   id: string;
   type: string;

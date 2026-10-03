@@ -130,7 +130,28 @@ describe("PullsPage", () => {
       screen.getAllByText("Character Event Warp").length
     ).toBeGreaterThan(0);
     expect(screen.getByText("Showing 3 of 3 pulls (newest first)")).toBeDefined();
-    expect(screen.getAllByText("Item")).toHaveLength(3);
+    expect(screen.getAllByText("Item")).toHaveLength(4);
+    expect(screen.getByText("5★ drops (pity)")).toBeDefined();
+    expect(screen.getByText("Showing 1 of 1")).toBeDefined();
+  });
+
+  it("shows the pity counter per 5★ drop, isolated per banner", () => {
+    setPulls("hsr", [
+      pull({ id: "a", ts: 1000, rarity: 3, category: "standard" }),
+      pull({ id: "b", ts: 2000, rarity: 3, category: "character" }),
+      pull({ id: "c", ts: 3000, rarity: 5, name: "Kafka", category: "character" }),
+      pull({ id: "d", ts: 4000, rarity: 3, category: "character" }),
+      pull({ id: "e", ts: 5000, rarity: 3, category: "character" }),
+      pull({ id: "f", ts: 6000, rarity: 5, name: "Blade", category: "character" }),
+      pull({ id: "g", ts: 7000, rarity: 5, name: "Bronya", category: "standard" }),
+    ]);
+    renderPage();
+
+    expect(screen.getByText("5★ drops (pity)")).toBeDefined();
+    expect(screen.getByText("Showing 3 of 3")).toBeDefined();
+    expect(screen.getAllByText("Pity 3").length).toBe(2);
+    expect(screen.getAllByText("Pity 2").length).toBe(4);
+    expect(screen.queryByText("Pity 5")).toBeNull();
   });
 
   it("switches to per-banner pity stats when a pill is selected", () => {
@@ -147,6 +168,7 @@ describe("PullsPage", () => {
     expect(
       screen.getByText("No 5★ pulled in this banner yet.")
     ).toBeDefined();
+    expect(screen.queryByText("5★ drops (pity)")).toBeNull();
     expect(screen.getByText(/Pity length of each 5★ in Character Event Warp/)).toBeDefined();
   });
 
@@ -161,8 +183,8 @@ describe("PullsPage", () => {
       target: { value: "himeko" },
     });
 
-    expect(screen.getByText("Himeko")).toBeDefined();
     expect(screen.queryByText("Astral Express")).toBeNull();
+    expect(screen.getAllByText("Himeko")).toHaveLength(2);
     expect(screen.getByText("Showing 1 of 1 pulls (newest first)")).toBeDefined();
   });
 
