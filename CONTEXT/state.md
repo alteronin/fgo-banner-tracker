@@ -79,7 +79,7 @@ context_version: 10
 # Project State
 
 ## Active Context
-**Bucket 12 COMPLETE (local QA green) — deploy pending.** All 6 tracked games now have Units + Faves pages: `/{game}/units` rosters (genshin 127, hsr 263 = 93 chars + 170 light cones, zzz 60, wuwa 59, hi3 110, shadowverse 63 = 782 units total) with owned/planning status tracking, and `/{game}/faves` 9-slot lineups (pool = owned only, move-on-reassign). GameTabs (Banners/Units/Faves) pill nav on all 6 trackers + new pages. Storage: `unit-status:{game}` / `faves:{game}` via useSyncExternalStore; ImportExport upgraded to v2 backup (`{version:2, unitStatus, faves}` → `collection-backup.json`, legacy v1 import still accepted). Local gates: 240 tests, tsc/eslint/build clean (12 new static routes). Local prod-server QA: qa-units 168/168, qa-faves 174/174, qa-backup 18/18, regressions qa-genshin 42 / qa-hsr 46 / qa-zzz 47 / qa-wuwa 51 / qa-hi3 44 / qa-shadowverse 47 / qa-switcher 24 / sort+theme+mobile exit 0. Bucket 11 (Events tab) deferred by user. Next: commit → deploy → live QA → npm prune, then Bucket 13. QA scripts in `%TEMP%\opencode\qa-*.js` (BASE env for production, NODE_PATH to repo node_modules).
+**Bucket 12 COMPLETE (deployed + live QA green).** All 6 tracked games now have Units + Faves pages: `/{game}/units` rosters (genshin 127, hsr 263 = 93 chars + 170 light cones, zzz 60, wuwa 59, hi3 110, shadowverse 63 = 782 units total) with owned/planning status tracking, and `/{game}/faves` 9-slot lineups (pool = owned only, move-on-reassign). GameTabs (Banners/Units/Faves) pill nav on all 6 trackers + new pages. Storage: `unit-status:{game}` / `faves:{game}` via useSyncExternalStore; ImportExport upgraded to v2 backup (`{version:2, unitStatus, faves}` → `collection-backup.json`, legacy v1 import still accepted). Gates: 240 tests, tsc/eslint/build clean (24 static routes). Committed `ef75305`, pushed, deployed to production. Live QA: qa-units 168/168, qa-faves 174/174, qa-backup 18/18; regressions qa-genshin 42 / qa-hsr 46 / qa-zzz 47 / qa-wuwa 51 / qa-hi3 44 / qa-shadowverse 47 / qa-switcher 24 all 0 fail; qa-live 74 pass (2 stale export assertions superseded by qa-backup 18/18); qa-sort 0 diffs, qa-theme/mobile exit 0. Bucket 11 (Events tab) deferred by user. Remaining: `npm prune`, then Bucket 13 (class/element filters). QA scripts in `%TEMP%\opencode\qa-*.js` (BASE env for production, NODE_PATH to repo node_modules).
 
 ## Features Built
 - Bucket 1: Core MVP (banner list, servant toggle, indicators, filter, detail, responsive)
@@ -92,12 +92,12 @@ context_version: 10
 - Bucket 8: Multi-Game Expansion (app switcher dropdown on all routes + static `[game]` placeholder routes with `dynamicParams=false` 404s; Genshin Impact tracker at `/genshin` — 216 banners, type/year/search filters, detail modal with featured 5★/4★ chips)
 - Bucket 9: HSR Tracker (static `/hsr` route — 131 banners from Game8: 66 character + 65 light cone warps, 32 versions 1.0-4.7, collab banners with nullable version/end, type/year/search filters)
 - Bucket 10: Remaining game trackers (Complete 2026-10-03 — `/zzz` 134 banners, `/wuwa` 46, `/hi3` 73, `/shadowverse` 10; committed `95771ca`, deployed, live QA green; follow-up `ce29b7f` added official pack art to Shadowverse banner cards)
-- Bucket 12: Cross-game Units & Faves (Complete 2026-10-03 — 6 games × Units + Faves pages, GameTabs nav, per-game storage, ImportExport v2; 240 tests; local QA green; deploy pending)
+- Bucket 12: Cross-game Units & Faves (Complete 2026-10-03 — 6 games × Units + Faves pages, GameTabs nav, per-game storage, ImportExport v2; 240 tests; committed `ef75305`, deployed, live QA green)
 
 ## Roadmap (Upcoming Buckets 11-13)
 - Bucket 10: Remaining game trackers — **COMPLETE (2026-10-03)**: committed `95771ca`, deployed, live QA green; SV image fix `ce29b7f`
 - Bucket 11: Events tab — **DEFERRED by user (2026-10-03)**; `/events` route + nav tab; unified event feed (now/upcoming/past) with game + year filters, sources TBD
-- Bucket 12: Cross-game Units & Faves — **COMPLETE (2026-10-03)**: local QA green, deploy pending
+- Bucket 12: Cross-game Units & Faves — **COMPLETE (2026-10-03)**: committed `ef75305`, deployed, live QA green (qa-units 168/168, qa-faves 174/174, qa-backup 18/18)
 - Bucket 13: Class/element button filters — pill-button multi-select filter groups on the servants/units tab (FGO classes, Genshin elements, HSR elements/paths, etc.); roster taxonomy fields already scraped in Bucket 12, UI + FGO servants data check remain
 
 ## Data
