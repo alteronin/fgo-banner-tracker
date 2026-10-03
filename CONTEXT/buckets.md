@@ -194,7 +194,7 @@ Generalize the FGO-specific `/servants` and `/grands` pages to other games.
 - [x] delete `scripts/_probe.mjs` + `scripts/_fetch.mjs` (temp research scripts)
 - [x] commit + push (`ef75305`), `npx vercel --prod` (deployed 2026-10-03, 24 static routes)
 - [x] live QA with `BASE=https://fgo-banner-tracker.vercel.app` (qa-units 168/168, qa-faves 174/174, qa-backup 18/18; regressions: genshin 42, hsr 46, zzz 47, wuwa 51, hi3 44, shadowverse 47, switcher 24 all 0 fail; qa-live 74 pass — 2 stale export assertions superseded by qa-backup; qa-sort 0 diffs, qa-theme/mobile exit 0)
-- [ ] `npm prune` (playwright removed; reinstall with `npm i --no-save playwright` next cycle)
+- [x] `npm prune` (playwright removed; reinstall with `npm i --no-save playwright` next cycle)
 
 ---
 
