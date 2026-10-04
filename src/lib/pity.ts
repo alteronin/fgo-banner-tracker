@@ -328,3 +328,85 @@ export function fiftyFiftyResults(
   }
   return results;
 }
+
+export type ManualPullIssue =
+  | { kind: "future" }
+  | { kind: "not-oldest"; oldestTs: number }
+  | { kind: "pity5-cap"; cap: number }
+  | { kind: "pity4-cap" }
+  | { kind: "consecutive-loss" };
+
+function pityCapViolations(
+  game: PullGame,
+  pulls: GamePull[],
+  rarity: number
+): Map<string, number> {
+  const byCategory = new Map<string, GamePull[]>();
+  for (const pull of pulls) {
+    const list = byCategory.get(pull.category);
+    if (list) list.push(pull);
+    else byCategory.set(pull.category, [pull]);
+  }
+  const violations = new Map<string, number>();
+  for (const [category, list] of byCategory) {
+    const cap = rarity === 5 ? maxPityFor(game, category) : FOUR_STAR_PITY;
+    const sorted = list.slice().sort(comparePullOrder);
+    let since = 0;
+    for (const pull of sorted) {
+      since += 1;
+      if (pull.rarity !== null && pull.rarity >= rarity) {
+        if (since > cap) violations.set(pull.id, cap);
+        since = 0;
+      }
+    }
+  }
+  return violations;
+}
+
+export function validateManualPull(
+  game: PullGame,
+  draft: GamePull,
+  others: GamePull[],
+  index: Map<string, BannerWindow[]>
+): ManualPullIssue | null {
+  if (draft.ts > Date.now()) return { kind: "future" };
+
+  let oldest: number | null = null;
+  for (const pull of others) {
+    if (pull.manual) continue;
+    if (oldest === null || pull.ts < oldest) oldest = pull.ts;
+  }
+  if (oldest !== null && draft.ts >= oldest) {
+    return { kind: "not-oldest", oldestTs: oldest };
+  }
+
+  const hypothetical = [...others, draft];
+
+  const before5 = pityCapViolations(game, others, 5);
+  for (const [id, cap] of pityCapViolations(game, hypothetical, 5)) {
+    if (!before5.has(id)) return { kind: "pity5-cap", cap };
+  }
+
+  const before4 = pityCapViolations(game, others, 4);
+  for (const id of pityCapViolations(game, hypothetical, 4).keys()) {
+    if (!before4.has(id)) return { kind: "pity4-cap" };
+  }
+
+  const results = fiftyFiftyResults(game, hypothetical, index);
+  if (results.get(draft.id) !== "loss") return null;
+  const chain = hypothetical
+    .filter((pull) => pull.category === draft.category)
+    .sort(comparePullOrder);
+  const at = chain.findIndex((pull) => pull.id === draft.id);
+  const nearest = (step: number): FiftyFiftyResult | undefined => {
+    for (let i = at + step; i >= 0 && i < chain.length; i += step) {
+      const result = results.get(chain[i].id);
+      if (result !== undefined) return result;
+    }
+    return undefined;
+  };
+  if (nearest(-1) === "loss" || nearest(1) === "loss") {
+    return { kind: "consecutive-loss" };
+  }
+  return null;
+}

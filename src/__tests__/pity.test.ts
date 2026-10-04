@@ -12,6 +12,7 @@ import {
   pityTone,
   toBannerWindow,
   toBannerWindows,
+  validateManualPull,
 } from "@/lib/pity";
 import type { GamePull } from "@/types/pulls";
 
@@ -573,5 +574,186 @@ describe("pity", () => {
         version: null,
       });
     });
+  });
+});
+
+describe("validateManualPull", () => {
+  const emptyIndex = indexWindows([]);
+  const at = (iso: string) => Date.parse(iso);
+  const windowIndex = indexWindows(
+    toBannerWindows([
+      {
+        id: "b1",
+        type: "character",
+        banners: [{ name: "Character Event Warp" }],
+        startDate: "2024-01-01",
+        endDate: "2024-01-31",
+        featured5: [{ name: "Kafka" }],
+      },
+    ])
+  );
+
+  it("rejects future-dated drafts", () => {
+    const draft = pull({
+      id: "future",
+      ts: Date.now() + 60_000,
+      rarity: 3,
+      manual: true,
+    });
+    expect(validateManualPull("hsr", draft, [], emptyIndex)).toEqual({
+      kind: "future",
+    });
+  });
+
+  it("rejects a draft not older than the oldest imported pull", () => {
+    const others = [pull({ id: "imp", ts: 1000, rarity: 3 })];
+    const draft = pull({
+      id: "draft",
+      ts: 2000,
+      rarity: 3,
+      manual: true,
+    });
+    expect(validateManualPull("hsr", draft, others, emptyIndex)).toEqual({
+      kind: "not-oldest",
+      oldestTs: 1000,
+    });
+  });
+
+  it("accepts a draft older than every imported pull", () => {
+    const others = [
+      pull({ id: "manual", ts: 500, rarity: 3, manual: true }),
+      pull({ id: "imp", ts: 1000, rarity: 3 }),
+    ];
+    const draft = pull({
+      id: "draft",
+      ts: 750,
+      rarity: 3,
+      manual: true,
+    });
+    expect(validateManualPull("hsr", draft, others, emptyIndex)).toBeNull();
+  });
+
+  it("has no oldest constraint for manual-only histories", () => {
+    const others = [pull({ id: "manual", ts: 1000, rarity: 3, manual: true })];
+    const draft = pull({
+      id: "draft",
+      ts: 2000,
+      rarity: 3,
+      manual: true,
+    });
+    expect(validateManualPull("hsr", draft, others, emptyIndex)).toBeNull();
+  });
+
+  it("rejects a non-5★ draft that pushes an existing 5★ over the hard pity cap", () => {
+    const cap = maxPityFor("hsr", "character");
+    const others = [
+      ...Array.from({ length: cap - 1 }, (_, i) =>
+        pull({ id: `r3-${i}`, ts: 1000 + i, rarity: 3 })
+      ),
+      pull({ id: "r5", ts: 2000, rarity: 5 }),
+    ];
+    const draft = pull({ id: "draft", ts: 1, rarity: 3, manual: true });
+    expect(validateManualPull("hsr", draft, others, emptyIndex)).toEqual({
+      kind: "pity5-cap",
+      cap,
+    });
+  });
+
+  it("accepts a manual 5★ at the oldest position that resets the run", () => {
+    const others = Array.from({ length: 100 }, (_, i) =>
+      pull({ id: `r3-${i}`, ts: 1000 + i, rarity: 3 })
+    );
+    const draft = pull({ id: "draft", ts: 1, rarity: 5, manual: true });
+    expect(validateManualPull("hsr", draft, others, emptyIndex)).toBeNull();
+  });
+
+  it("rejects a draft that pushes an existing 4★ over the four-star cap", () => {
+    const others = [
+      ...Array.from({ length: FOUR_STAR_PITY - 1 }, (_, i) =>
+        pull({ id: `r3-${i}`, ts: 1000 + i, rarity: 3 })
+      ),
+      pull({ id: "r4", ts: 2000, rarity: 4 }),
+    ];
+    const draft = pull({ id: "draft", ts: 1, rarity: 3, manual: true });
+    expect(validateManualPull("hsr", draft, others, emptyIndex)).toEqual({
+      kind: "pity4-cap",
+    });
+  });
+
+  it("does not flag violations the imported history already had", () => {
+    const cap = maxPityFor("hsr", "character");
+    const others = [
+      ...Array.from({ length: cap + 10 }, (_, i) =>
+        pull({ id: `r3-${i}`, ts: 1000 + i, rarity: 3 })
+      ),
+      pull({ id: "r5", ts: 5000, rarity: 5 }),
+    ];
+    const draft = pull({ id: "draft", ts: 1, rarity: 3, manual: true });
+    expect(validateManualPull("hsr", draft, others, emptyIndex)).toBeNull();
+  });
+
+  it("flags two adjacent off-banner losses", () => {
+    const others = [
+      pull({
+        id: "loss",
+        ts: at("2024-01-10T00:00:00Z"),
+        rarity: 5,
+        name: "Himeko",
+      }),
+    ];
+    const draft = pull({
+      id: "draft",
+      ts: at("2024-01-05T00:00:00Z"),
+      rarity: 5,
+      name: "Himeko",
+      manual: true,
+    });
+    expect(validateManualPull("hsr", draft, others, windowIndex)).toEqual({
+      kind: "consecutive-loss",
+    });
+  });
+
+  it("flags a manual loss directly before another loss", () => {
+    const others = [
+      pull({
+        id: "prev",
+        ts: at("2024-01-03T00:00:00Z"),
+        rarity: 5,
+        name: "Himeko",
+        manual: true,
+      }),
+      pull({ id: "later", ts: at("2024-01-20T00:00:00Z"), rarity: 3 }),
+    ];
+    const draft = pull({
+      id: "draft",
+      ts: at("2024-01-05T00:00:00Z"),
+      rarity: 5,
+      name: "Himeko",
+      manual: true,
+    });
+    expect(validateManualPull("hsr", draft, others, windowIndex)).toEqual({
+      kind: "consecutive-loss",
+    });
+  });
+
+  it("accepts a featured pull consumed by the guarantee", () => {
+    const others = [
+      pull({
+        id: "prev",
+        ts: at("2024-01-03T00:00:00Z"),
+        rarity: 5,
+        name: "Himeko",
+        manual: true,
+      }),
+      pull({ id: "later", ts: at("2024-01-20T00:00:00Z"), rarity: 3 }),
+    ];
+    const draft = pull({
+      id: "draft",
+      ts: at("2024-01-05T00:00:00Z"),
+      rarity: 5,
+      name: "Kafka",
+      manual: true,
+    });
+    expect(validateManualPull("hsr", draft, others, windowIndex)).toBeNull();
   });
 });

@@ -32,7 +32,7 @@ import { AppSwitcher } from "./AppSwitcher";
 import { GameTabs } from "./GameTabs";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { ImportPulls } from "./ImportPulls";
-import { ManualPullForm } from "./ManualPullForm";
+import { ManualPullForm, safeChipColor } from "./ManualPullForm";
 import { ThemeToggle } from "./ThemeToggle";
 
 const PAGE_SIZE = 100;
@@ -113,6 +113,12 @@ export function PullsPage({
 
   const index = useMemo(() => indexWindows(windows), [windows]);
 
+  const imported = useMemo(
+    () => pulls.filter((pull) => !pull.manual),
+    [pulls]
+  );
+  const manualCount = pulls.length - imported.length;
+
   const categories = useMemo(() => {
     const present = new Set(pulls.map((pull) => pull.category));
     return CATEGORY_ORDER[game].filter((key) => present.has(key));
@@ -140,11 +146,11 @@ export function PullsPage({
     [filtered]
   );
 
-  const pityMap = useMemo(() => pityByDrop(pulls, 5), [pulls]);
+  const pityMap = useMemo(() => pityByDrop(imported, 5), [imported]);
 
   const fiftyMap = useMemo(
-    () => fiftyFiftyResults(game, pulls, index),
-    [game, pulls, index]
+    () => fiftyFiftyResults(game, imported, index),
+    [game, imported, index]
   );
 
   const images = useMemo(() => {
@@ -164,24 +170,36 @@ export function PullsPage({
     return list.sort((a, b) => comparePullOrder(b.pull, a.pull));
   }, [filtered, pityMap]);
 
+  const gridDrops = useMemo(() => {
+    const list: { pull: GamePull; pity: number | null }[] = [];
+    for (const pull of filtered) {
+      if (pull.rarity !== 5) continue;
+      const pity = pityMap.get(pull.id) ?? null;
+      if (pity === null && !pull.manual) continue;
+      list.push({ pull, pity });
+    }
+    return list.sort((a, b) => comparePullOrder(b.pull, a.pull));
+  }, [filtered, pityMap]);
+
   const counts = useMemo(() => {
     let five = 0;
     let four = 0;
-    for (const pull of pulls) {
+    for (const pull of imported) {
       if (pull.rarity === 5) five += 1;
       else if (pull.rarity === 4) four += 1;
     }
-    return { total: pulls.length, five, four };
-  }, [pulls]);
+    return { total: imported.length, five, four };
+  }, [imported]);
 
   const selectedStats = useMemo(() => {
     if (category === "all") return null;
     const cap = maxPityFor(game, category);
+    const rows = filtered.filter((pull) => !pull.manual);
     return {
       category,
       label: categoryLabel(game, category),
-      five: computeRarityStats(filtered, 5, cap),
-      four: computeRarityStats(filtered, 4, FOUR_STAR_PITY),
+      five: computeRarityStats(rows, 5, cap),
+      four: computeRarityStats(rows, 4, FOUR_STAR_PITY),
     };
   }, [filtered, category, game]);
 
@@ -192,12 +210,12 @@ export function PullsPage({
       label: categoryLabel(game, key),
       count: categoryCounts.get(key) ?? 0,
       five: computeRarityStats(
-        pulls.filter((pull) => pull.category === key),
+        imported.filter((pull) => pull.category === key),
         5,
         maxPityFor(game, key)
       ),
     }));
-  }, [category, categories, categoryCounts, pulls, game]);
+  }, [category, categories, categoryCounts, imported, game]);
 
   if (!app) return null;
 
@@ -246,7 +264,9 @@ export function PullsPage({
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
           <AppSwitcher
             title={`${app.name} Pulls`}
-            subtitle={`${formatCount(counts.total)} pulls imported`}
+            subtitle={`${formatCount(counts.total)} pulls imported${
+              manualCount > 0 ? ` · ${formatCount(manualCount)} manual` : ""
+            }`}
           />
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <GameTabs game={app.slug} active="pulls" />
@@ -277,6 +297,7 @@ export function PullsPage({
           <ManualPullForm
             game={game}
             pulls={pulls}
+            index={index}
             initial={editing ?? undefined}
             onSaved={(message) => {
               closeForm();
@@ -288,7 +309,7 @@ export function PullsPage({
 
         {status && <p className="text-sm text-gray-400">{status}</p>}
 
-        {counts.total === 0 ? (
+        {pulls.length === 0 ? (
           <div className="rounded-lg border border-gray-800 bg-gray-900/40 p-6 space-y-2">
             <p className="text-sm font-medium text-gray-300">
               No pull history imported yet.
@@ -302,7 +323,7 @@ export function PullsPage({
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3">
               <StatCard label="Total pulls" value={formatCount(counts.total)} color="gray" />
               <StatCard label="5★ pulled" value={formatCount(counts.five)} color="gold" />
               <StatCard label="4★ pulled" value={formatCount(counts.four)} color="purple" />
@@ -316,6 +337,12 @@ export function PullsPage({
                       : "—"
                 }
                 color="blue"
+              />
+              <StatCard
+                label="Manual"
+                value={formatCount(manualCount)}
+                color="violet"
+                wide
               />
             </div>
 
@@ -486,7 +513,7 @@ export function PullsPage({
             ) : (
               rows.length > 0 && (
                 <PullGrid
-                  drops={fiveDrops}
+                  drops={gridDrops}
                   index={index}
                   game={game}
                   images={images}
@@ -540,10 +567,20 @@ function PullRow({
             {"★".repeat(pull.rarity)}
           </span>
         )}
-        {pity !== undefined && (
-          <span className="text-xs shrink-0 text-amber-500/90 tabular-nums">
-            Pity {pity}
+        {pull.manual ? (
+          <span
+            className="text-xs shrink-0 rounded px-1.5 py-0.5 font-semibold text-gray-950"
+            style={{ backgroundColor: safeChipColor(pull.chipColor) }}
+            title="Manual entry — not counted in pity stats"
+          >
+            ✱ Manual
           </span>
+        ) : (
+          pity !== undefined && (
+            <span className="text-xs shrink-0 text-amber-500/90 tabular-nums">
+              Pity {pity}
+            </span>
+          )
         )}
       </div>
       <div className="col-span-2 sm:col-span-1 flex items-center justify-between sm:justify-end gap-2">
@@ -605,7 +642,7 @@ function PullGrid({
   images,
   fifty,
 }: {
-  drops: { pull: GamePull; pity: number }[];
+  drops: { pull: GamePull; pity: number | null }[];
   index: Map<string, BannerWindow[]>;
   game: PullGame;
   images: Map<string, string>;
@@ -627,17 +664,26 @@ function PullGrid({
           className="grid grid-cols-[repeat(auto-fill,minmax(76px,1fr))] gap-2"
         >
           {drops.map(({ pull, pity }) => {
-            const result = fifty.get(pull.id) ?? null;
-            const tone = pityTone(pity, maxPityFor(game, pull.category));
+            const manual = pull.manual === true;
+            const result = manual ? null : fifty.get(pull.id) ?? null;
+            const tone =
+              !manual && pity !== null
+                ? pityTone(pity, maxPityFor(game, pull.category))
+                : null;
             const attribution = attributePull(game, pull, index);
             const imageUrl = pull.unitId ? images.get(pull.unitId) : undefined;
             return (
               <div
                 key={pull.id}
                 data-fifty={result ?? "none"}
-                data-tone={tone}
+                data-manual={manual ? "true" : undefined}
+                {...(tone ? { "data-tone": tone } : {})}
                 role="listitem"
-                title={`${pull.name} · Pity ${pity} · ${attribution.label}`}
+                title={
+                  manual
+                    ? `${pull.name} · Manual (not counted) · ${attribution.label}`
+                    : `${pull.name} · Pity ${pity} · ${attribution.label}`
+                }
                 className={`group relative aspect-square rounded-lg overflow-hidden border-2 bg-gray-900 transition-transform hover:-translate-y-0.5 ${FIFTY_BORDER[result ?? "none"]}`}
               >
                 {imageUrl ? (
@@ -656,12 +702,22 @@ function PullGrid({
                 <span className="absolute inset-x-0 top-0 -translate-y-full group-hover:translate-y-0 transition-transform bg-gray-950/85 text-[10px] leading-tight px-1.5 py-0.5 truncate">
                   {pull.name}
                 </span>
-                <span
-                  aria-label={`pity ${pity}`}
-                  className={`absolute bottom-0.5 right-0.5 px-1 py-0.5 rounded bg-gray-950/85 text-[10px] font-bold tabular-nums ${TONE_TEXT[tone]}`}
-                >
-                  {pity}
-                </span>
+                {manual ? (
+                  <span
+                    aria-label="manual entry"
+                    className="absolute bottom-0.5 right-0.5 px-1 py-0.5 rounded text-[10px] font-bold text-gray-950"
+                    style={{ backgroundColor: safeChipColor(pull.chipColor) }}
+                  >
+                    ✱
+                  </span>
+                ) : (
+                  <span
+                    aria-label={`pity ${pity}`}
+                    className={`absolute bottom-0.5 right-0.5 px-1 py-0.5 rounded bg-gray-950/85 text-[10px] font-bold tabular-nums ${TONE_TEXT[tone ?? "early"]}`}
+                  >
+                    {pity}
+                  </span>
+                )}
               </div>
             );
           })}
@@ -670,7 +726,8 @@ function PullGrid({
       <p className="text-xs text-gray-500">
         Number = pity at the drop (green early → red near hard pity). Border =
         rate-up result (green won 50/50, teal guaranteed after a loss, red
-        lost); grey = no rate-up.
+        lost); grey = no rate-up. ✱ = manual entry (your chip color, not
+        counted in stats).
       </p>
     </div>
   );
@@ -773,19 +830,26 @@ function StatCard({
   label,
   value,
   color,
+  wide = false,
 }: {
   label: string;
   value: string;
-  color: "gray" | "gold" | "purple" | "blue";
+  color: "gray" | "gold" | "purple" | "blue" | "violet";
+  wide?: boolean;
 }) {
   const colorMap = {
     gray: "border-gray-700 text-gray-400",
     gold: "border-amber-700 text-amber-400",
     purple: "border-purple-700 text-purple-400",
     blue: "border-blue-700 text-blue-400",
+    violet: "border-violet-700 text-violet-400",
   };
   return (
-    <div className={`rounded-lg border p-3 bg-gray-900/50 ${colorMap[color]}`}>
+    <div
+      className={`rounded-lg border p-3 bg-gray-900/50 ${colorMap[color]} ${
+        wide ? "col-span-2 sm:col-span-4 lg:col-span-1" : ""
+      }`}
+    >
       <p className="text-xs text-gray-500 mb-1">{label}</p>
       <p className={`text-xl sm:text-2xl font-bold ${colorMap[color].split(" ")[1]}`}>
         {value}

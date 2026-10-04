@@ -1,7 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { pityByDrop } from "@/lib/pity";
+import {
+  pityByDrop,
+  validateManualPull,
+  type BannerWindow,
+  type ManualPullIssue,
+} from "@/lib/pity";
 import { PULL_MAPS } from "@/lib/pullMaps";
 import {
   buildManualPull,
@@ -14,6 +19,43 @@ import { fillOwnedUnits, notifyUnitStatusesChange } from "@/lib/unitStorage";
 import type { GamePull, PullGame } from "@/types/pulls";
 
 const MAX_RESULTS = 24;
+
+export const CHIP_COLORS = [
+  "#8b5cf6",
+  "#38bdf8",
+  "#2dd4bf",
+  "#34d399",
+  "#fbbf24",
+  "#fb923c",
+  "#fb7185",
+  "#94a3b8",
+] as const;
+
+export const DEFAULT_CHIP_COLOR = CHIP_COLORS[0];
+
+const CHIP_HEX = /^#[0-9a-fA-F]{6}$/;
+
+export function safeChipColor(value: string | null | undefined): string {
+  return value && CHIP_HEX.test(value) ? value : DEFAULT_CHIP_COLOR;
+}
+
+function formatIssue(issue: ManualPullIssue): string {
+  switch (issue.kind) {
+    case "future":
+      return "Pick a date in the past — future pulls don't exist.";
+    case "not-oldest": {
+      const date = new Date(issue.oldestTs);
+      const pad = (n: number) => String(n).padStart(2, "0");
+      return `Manual entries must be dated before your oldest imported pull (${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}).`;
+    }
+    case "pity5-cap":
+      return `Impossible: this would leave more than ${issue.cap} pulls without a 5★ (the guarantee would have fired).`;
+    case "pity4-cap":
+      return "Impossible: this would leave more than 10 pulls without a 4★ (the guarantee would have fired).";
+    case "consecutive-loss":
+      return "Impossible: two 50/50 losses in a row — the 5★ after a loss is always guaranteed.";
+  }
+}
 
 interface MapChoice {
   itemId: string;
@@ -62,12 +104,14 @@ const FIELD_CLASS =
 export function ManualPullForm({
   game,
   pulls,
+  index,
   initial,
   onSaved,
   onCancel,
 }: {
   game: PullGame;
   pulls: GamePull[];
+  index: Map<string, BannerWindow[]>;
   initial?: GamePull;
   onSaved: (message: string) => void;
   onCancel: () => void;
@@ -90,7 +134,15 @@ export function ManualPullForm({
     ? entries.find((entry) => entry.itemId === initial.itemId) ?? null
     : null;
 
-  const [when, setWhen] = useState(() => toLocalInput(initial?.ts ?? Date.now()));
+  const [when, setWhen] = useState(() => {
+    if (initial) return toLocalInput(initial.ts);
+    let oldest: number | null = null;
+    for (const pull of pulls) {
+      if (pull.manual) continue;
+      if (oldest === null || pull.ts < oldest) oldest = pull.ts;
+    }
+    return toLocalInput(oldest !== null ? oldest - 86_400_000 : Date.now());
+  });
   const [category, setCategory] = useState(
     initial?.category ?? CATEGORY_ORDER[game][0]
   );
@@ -101,6 +153,9 @@ export function ManualPullForm({
   );
   const [customRarity, setCustomRarity] = useState(
     initial?.rarity ?? 5
+  );
+  const [chipColor, setChipColor] = useState(() =>
+    safeChipColor(initial?.chipColor)
   );
   const [error, setError] = useState<string | null>(null);
 
@@ -127,6 +182,8 @@ export function ManualPullForm({
   const valid =
     ts !== null && category !== "" && (choice !== null || trimmedName !== "");
 
+  const keepManual = !initial || initial.manual === true;
+
   const draft = useMemo(() => {
     if (ts === null || !category) return null;
     if (!choice && !trimmedName) return null;
@@ -135,7 +192,7 @@ export function ManualPullForm({
       : game === "wuwa"
         ? normalizeName(trimmedName)
         : `manual-${normalizeName(trimmedName)}`;
-    return buildManualPull({
+    const built = buildManualPull({
       game,
       ts,
       category,
@@ -145,8 +202,38 @@ export function ManualPullForm({
       unitId: choice ? choice.unitId : null,
       existing: scope,
       seq: initial?.seq,
+      chipColor: keepManual ? chipColor : undefined,
     });
-  }, [ts, category, choice, trimmedName, game, customRarity, scope, initial]);
+    if (initial && !initial.manual) return { ...built, manual: false };
+    return built;
+  }, [
+    ts,
+    category,
+    choice,
+    trimmedName,
+    game,
+    customRarity,
+    scope,
+    initial,
+    chipColor,
+    keepManual,
+  ]);
+
+  const issue: ManualPullIssue | null = useMemo(() => {
+    if (!draft || draft.manual !== true) return null;
+    return validateManualPull(game, draft, scope, index);
+  }, [draft, game, scope, index]);
+
+  const issueMessage = issue ? formatIssue(issue) : null;
+
+  const importedOldestTs = useMemo(() => {
+    let oldest: number | null = null;
+    for (const pull of scope) {
+      if (pull.manual) continue;
+      if (oldest === null || pull.ts < oldest) oldest = pull.ts;
+    }
+    return oldest;
+  }, [scope]);
 
   const preview = useMemo(() => {
     if (!draft) return null;
@@ -155,7 +242,9 @@ export function ManualPullForm({
       const hypothetical = pityByDrop([...scope, draft], 5);
       const pity = hypothetical.get(draft.id);
       if (pity !== undefined) {
-        return `Preview: this will be Pity ${pity} · ${label}`;
+        return draft.manual
+          ? `Preview: implied Pity ${pity} · ${label} — not counted in stats`
+          : `Preview: this will be Pity ${pity} · ${label}`;
       }
     }
     return `Preview: ${draft.rarity ?? "?"}★ · ${label}`;
@@ -171,6 +260,7 @@ export function ManualPullForm({
       );
       return;
     }
+    if (issue) return;
     const next = initial
       ? pulls.map((pull) => (pull.id === initial.id ? draft : pull))
       : [...pulls, draft];
@@ -214,6 +304,11 @@ export function ManualPullForm({
             className={FIELD_CLASS}
           />
         </label>
+        {keepManual && importedOldestTs !== null && (
+          <p className="text-[11px] text-gray-500">
+            Must be before your oldest imported pull.
+          </p>
+        )}
         <label className="block space-y-1 text-xs text-gray-400">
           Banner
           <select
@@ -320,13 +415,44 @@ export function ManualPullForm({
         </div>
       )}
 
+      {keepManual && (
+        <div className="space-y-1 text-xs text-gray-400">
+          <span>Tile chip color</span>
+          <div
+            className="flex gap-2"
+            role="group"
+            aria-label="Tile chip color"
+          >
+            {CHIP_COLORS.map((hex) => (
+              <button
+                key={hex}
+                type="button"
+                aria-label={`Chip color ${hex}`}
+                aria-pressed={chipColor === hex}
+                onClick={() => setChipColor(hex)}
+                className={`w-7 h-7 rounded-full border-2 transition-transform ${
+                  chipColor === hex
+                    ? "border-white scale-110"
+                    : "border-transparent hover:scale-105"
+                }`}
+                style={{ backgroundColor: hex }}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
       {preview && <p className="text-xs text-amber-400">{preview}</p>}
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      {issueMessage ? (
+        <p className="text-sm text-red-400">{issueMessage}</p>
+      ) : (
+        error && <p className="text-sm text-red-400">{error}</p>
+      )}
 
       <div className="flex gap-2">
         <button
           type="submit"
-          disabled={!valid}
+          disabled={!valid || issue !== null}
           className="px-3 py-1.5 text-sm font-medium bg-blue-600 hover:bg-blue-500 disabled:bg-gray-800 disabled:text-gray-500 text-white rounded-lg transition-colors"
         >
           {initial ? "Save changes" : "Add entry"}

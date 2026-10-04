@@ -284,7 +284,7 @@ describe("PullsPage", () => {
 
     expect(screen.getByText("Entry added.")).toBeDefined();
     expect(screen.queryByRole("form", { name: "Add pull entry" })).toBeNull();
-    expect(screen.getByText("1 pulls imported")).toBeDefined();
+    expect(screen.getByText("0 pulls imported · 1 manual")).toBeDefined();
     expect(screen.getAllByText("Trailblazer").length).toBeGreaterThan(0);
 
     const [stored] = getPulls("hsr");
@@ -316,15 +316,18 @@ describe("PullsPage", () => {
     });
 
     expect(
-      screen.getByText("Preview: this will be Pity 3 · Character Event Warp")
+      screen.getByText(
+        "Preview: implied Pity 1 · Character Event Warp — not counted in stats"
+      )
     ).toBeDefined();
 
     const form = screen.getByRole("form", { name: "Add pull entry" });
     fireEvent.click(within(form).getByRole("button", { name: "Add entry" }));
 
     expect(screen.getByText("Entry added.")).toBeDefined();
-    expect(screen.getByText("3 pulls imported")).toBeDefined();
-    expect(screen.getAllByText("Pity 3").length).toBeGreaterThan(0);
+    expect(screen.getByText("2 pulls imported · 1 manual")).toBeDefined();
+    expect(screen.queryByText("Pity 3")).toBeNull();
+    expect(screen.getByText("✱ Manual")).toBeDefined();
     expect(getPulls("hsr")).toHaveLength(3);
   });
 
@@ -435,5 +438,149 @@ describe("PullsPage", () => {
     expect(
       getPulls("hsr").map((entry) => entry.name)
     ).toEqual(["Exported Item"]);
+  });
+
+  it("keeps imported stats pure and counts manual entries separately", () => {
+    setPulls("hsr", [
+      pull({ id: "a", ts: 500, rarity: 3, category: "character", manual: true }),
+      pull({ id: "b", ts: 2000, rarity: 3, category: "character" }),
+      pull({ id: "c", ts: 3000, rarity: 5, name: "Kafka", category: "character" }),
+    ]);
+    renderPage();
+
+    expect(screen.getByText("2 pulls imported · 1 manual")).toBeDefined();
+    expect(
+      screen.getByText("Total pulls").parentElement?.textContent
+    ).toContain("2");
+    expect(
+      screen.getByText("Manual").parentElement?.textContent
+    ).toContain("1");
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "Character Event Warp (3)" })
+    );
+    expect(
+      screen.getByText("5★ average").parentElement?.textContent
+    ).toContain("2.0");
+    expect(
+      screen.getByText("5★ average").parentElement?.textContent
+    ).not.toContain("3.0");
+    expect(
+      screen.getByText("5★ current pity").parentElement?.textContent
+    ).toContain("0 / 90");
+  });
+
+  it("blocks manual entries that are not older than the oldest pull", () => {
+    setPulls("hsr", [pull({ id: "a", ts: 1000, rarity: 3 })]);
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Add Entry" }));
+
+    fireEvent.change(screen.getByLabelText("Date & time"), {
+      target: { value: "1970-01-02T00:00:00" },
+    });
+    fireEvent.change(screen.getByLabelText("Custom item name"), {
+      target: { value: "Too New" },
+    });
+
+    expect(
+      screen.getByText(
+        /Manual entries must be dated before your oldest imported pull \(\d{4}-\d{2}-\d{2}\)\./
+      )
+    ).toBeDefined();
+    expect(
+      screen.getByText("Must be before your oldest imported pull.")
+    ).toBeDefined();
+    const form = screen.getByRole("form", { name: "Add pull entry" });
+    expect(
+      within(form).getByRole("button", { name: "Add entry" })
+    ).toBeDisabled();
+
+    fireEvent.change(screen.getByLabelText("Date & time"), {
+      target: { value: "1969-12-31T00:00:00" },
+    });
+    expect(screen.queryByText(/Manual entries must be dated/)).toBeNull();
+    fireEvent.click(within(form).getByRole("button", { name: "Add entry" }));
+    expect(screen.getByText("Entry added.")).toBeDefined();
+  });
+
+  it("stores a chosen chip color for manual entries", () => {
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Add Entry" }));
+
+    const group = screen.getByRole("group", { name: "Tile chip color" });
+    fireEvent.change(screen.getByLabelText("Custom item name"), {
+      target: { value: "Colored Entry" },
+    });
+    fireEvent.click(
+      within(group).getByRole("button", { name: "Chip color #38bdf8" })
+    );
+    expect(
+      within(group).getByRole("button", { name: "Chip color #38bdf8" })
+        .getAttribute("aria-pressed")
+    ).toBe("true");
+
+    const form = screen.getByRole("form", { name: "Add pull entry" });
+    fireEvent.click(within(form).getByRole("button", { name: "Add entry" }));
+
+    const [stored] = getPulls("hsr");
+    expect(stored.chipColor).toBe("#38bdf8");
+  });
+
+  it("marks manual tiles in the grid with the chosen chip color", () => {
+    setPulls("hsr", [
+      pull({ id: "a", ts: 2000, rarity: 5, name: "Kafka", category: "character" }),
+      pull({
+        id: "m",
+        ts: 1000,
+        rarity: 5,
+        name: "Old Manual",
+        category: "character",
+        manual: true,
+        chipColor: "#38bdf8",
+      }),
+    ]);
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Grid" }));
+
+    const manualTile = document.querySelector('[data-manual="true"]');
+    expect(manualTile).not.toBeNull();
+    expect(manualTile!.getAttribute("data-fifty")).toBe("none");
+    expect(manualTile!.getAttribute("title")).toContain("Manual (not counted)");
+    expect(manualTile!.hasAttribute("data-tone")).toBe(false);
+    const chip = manualTile!.querySelector(
+      '[aria-label="manual entry"]'
+    ) as HTMLElement;
+    expect(chip.style.backgroundColor).toBe("rgb(56, 189, 248)");
+
+    expect(screen.getByLabelText("pity 1")).toBeDefined();
+    expect(screen.queryByLabelText("pity 2")).toBeNull();
+    expect(document.querySelectorAll("[data-tone]")).toHaveLength(1);
+  });
+
+  it("keeps export-derived entries export-derived when edited", () => {
+    setPulls("hsr", [
+      pull({ id: "a", itemId: "zzz-not-in-map", ts: 1000, name: "Exported Item" }),
+    ]);
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Edit Exported Item" }));
+
+    expect(
+      screen.getByText("From your export — re-importing restores the original.")
+    ).toBeDefined();
+    expect(
+      screen.queryByRole("group", { name: "Tile chip color" })
+    ).toBeNull();
+
+    fireEvent.change(screen.getByLabelText("Custom item name"), {
+      target: { value: "Renamed Export" },
+    });
+    const form = screen.getByRole("form", { name: "Edit pull entry" });
+    fireEvent.click(within(form).getByRole("button", { name: "Save changes" }));
+
+    expect(screen.getByText("Entry updated.")).toBeDefined();
+    const [stored] = getPulls("hsr");
+    expect(stored.name).toBe("Renamed Export");
+    expect(stored.manual).toBeFalsy();
+    expect(stored.chipColor).toBeUndefined();
   });
 });

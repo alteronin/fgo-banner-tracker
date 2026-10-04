@@ -17,6 +17,7 @@ export interface GamePull {
   category: string;
   seq?: number;
   manual?: boolean;
+  chipColor?: string;
 }
 
 export interface PullMapItem {

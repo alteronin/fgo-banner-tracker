@@ -506,5 +506,19 @@ describe("pullImport", () => {
       const pull = buildManualPull({ ...base, existing: [], seq: 7 });
       expect(pull.seq).toBe(7);
     });
+
+    it("passes a chip color through for manual pulls", () => {
+      const pull = buildManualPull({
+        ...base,
+        existing: [],
+        chipColor: "#38bdf8",
+      });
+      expect(pull.chipColor).toBe("#38bdf8");
+    });
+
+    it("omits chipColor when none is chosen", () => {
+      const pull = buildManualPull({ ...base, existing: [] });
+      expect(pull.chipColor).toBeUndefined();
+    });
   });
 });

@@ -294,6 +294,7 @@ export function buildManualPull(params: {
   unitId: string | null;
   existing: GamePull[];
   seq?: number;
+  chipColor?: string;
 }): GamePull {
   const base = `${params.ts}|${params.category}|${params.itemId}`;
   const taken = new Set(params.existing.map((pull) => pull.id));
@@ -309,6 +310,7 @@ export function buildManualPull(params: {
     ts: params.ts,
     category: params.category,
     ...(params.seq !== undefined ? { seq: params.seq } : {}),
+    ...(params.chipColor ? { chipColor: params.chipColor } : {}),
     manual: true,
   };
 }
