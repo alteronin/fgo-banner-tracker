@@ -63,6 +63,7 @@ All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion
+- Manual pull-entry editor (add/edit/delete on pulls pages) — scoped 2026-10-04, design in `CONTEXT/state.md` § Remaining Work
 - Cloud sync with user accounts
 - E2E browser tests (Playwright/Cypress)
 - Push notifications for upcoming banners/events
