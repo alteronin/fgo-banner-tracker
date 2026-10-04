@@ -36,7 +36,7 @@ export function ImportPulls({ game }: { game: PullGame }) {
     reader.onload = (event) => {
       try {
         const data = JSON.parse(event.target?.result as string);
-        const parsed = parsePullFile(data, PULL_MAPS);
+        const parsed = parsePullFile(data, PULL_MAPS, game);
         if (!parsed || parsed.game !== game) {
           setPreview(null);
           setMessage("This file is not a pull history for this game.");

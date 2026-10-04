@@ -140,6 +140,80 @@ const stardbFile = {
   },
 };
 
+const multiFile = {
+  user: {
+    username: "multi",
+    gi: {
+      uids: [
+        {
+          uid: "805218236",
+          wishes: {
+            beginner: [],
+            standard: [],
+            character: [
+              {
+                item_id: 10000003,
+                type: "character",
+                timestamp: "2024-01-01T00:00:00Z",
+                official: true,
+              },
+            ],
+            weapon: [],
+            chronicled: [],
+          },
+        },
+      ],
+    },
+    hsr: {
+      uids: [
+        {
+          uid: "800003779",
+          warps: {
+            departure: [],
+            standard: [],
+            character: [
+              {
+                item_id: 1202,
+                type: "character",
+                timestamp: "2024-01-02T00:00:00Z",
+                official: true,
+              },
+            ],
+            light_cone: [
+              {
+                item_id: 20011,
+                type: "light_cone",
+                timestamp: "2024-01-03T00:00:00Z",
+                official: true,
+              },
+            ],
+          },
+        },
+      ],
+    },
+    zzz: {
+      uids: [
+        {
+          uid: "100000001",
+          signals: {
+            standard: [],
+            character: [
+              {
+                item_id: 1001,
+                type: "character",
+                timestamp: "2024-01-04T00:00:00Z",
+                official: true,
+              },
+            ],
+            w_engine: [],
+            bangboo: [],
+          },
+        },
+      ],
+    },
+  },
+};
+
 describe("pullImport", () => {
   describe("normalizeName", () => {
     it("lowercases, folds punctuation and ampersands", () => {
@@ -181,6 +255,36 @@ describe("pullImport", () => {
       expect(detectPullSource(null)).toBeNull();
       expect(detectPullSource({ hello: "world" })).toBeNull();
       expect(detectPullSource({ pulls: [] })).toBeNull();
+    });
+
+    it("detects the hinted game in a multi-game export", () => {
+      expect(detectPullSource(multiFile, "genshin")).toEqual({
+        kind: "stardb",
+        game: "genshin",
+      });
+      expect(detectPullSource(multiFile, "hsr")).toEqual({
+        kind: "stardb",
+        game: "hsr",
+      });
+      expect(detectPullSource(multiFile, "zzz")).toEqual({
+        kind: "stardb",
+        game: "zzz",
+      });
+      expect(detectPullSource(multiFile, "wuwa")).toBeNull();
+    });
+
+    it("defaults to the first game when no hint is given", () => {
+      expect(detectPullSource(multiFile)).toEqual({
+        kind: "stardb",
+        game: "genshin",
+      });
+    });
+
+    it("rejects a wuwa-format file for other games", () => {
+      expect(detectPullSource(wuwaFile, "wuwa")).toEqual({
+        kind: "wuwatracker",
+      });
+      expect(detectPullSource(wuwaFile, "genshin")).toBeNull();
     });
   });
 
@@ -324,6 +428,23 @@ describe("pullImport", () => {
     it("returns null for unrecognized files", () => {
       expect(
         parsePullFile({ nope: true }, withMaps({ hsr: hsrMap }))
+      ).toBeNull();
+    });
+
+    it("parses the hinted game section of a multi-game export", () => {
+      const parsed = parsePullFile(
+        multiFile,
+        withMaps({ hsr: hsrMap }),
+        "hsr"
+      )!;
+      expect(parsed.game).toBe("hsr");
+      expect(parsed.total).toBe(2);
+      expect(parsed.pulls.map((pull) => pull.category)).toEqual([
+        "character",
+        "light_cone",
+      ]);
+      expect(
+        parsePullFile(multiFile, withMaps({ hsr: hsrMap }), "wuwa")
       ).toBeNull();
     });
   });

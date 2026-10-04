@@ -78,7 +78,7 @@ export function categoryLabel(game: PullGame, category: string): string {
   return CATEGORY_LABELS[game][category] ?? category;
 }
 
-export function detectPullSource(data: unknown): PullSource {
+export function detectPullSource(data: unknown, game?: PullGame): PullSource {
   if (typeof data !== "object" || data === null) return null;
   const record = data as Record<string, unknown>;
 
@@ -90,18 +90,30 @@ export function detectPullSource(data: unknown): PullSource {
       "cardPoolType" in first &&
       "name" in first
     ) {
-      return { kind: "wuwatracker" };
+      if (!game || game === "wuwa") return { kind: "wuwatracker" };
+      return null;
     }
   }
 
   const user = record.user;
   if (typeof user === "object" && user !== null) {
     const accounts = user as Record<string, unknown>;
-    for (const game of PULL_GAMES) {
+    if (game) {
       const entry = accounts[STARDB_GAME_KEYS[game]];
+      if (
+        typeof entry === "object" &&
+        entry !== null &&
+        Array.isArray((entry as Record<string, unknown>).uids)
+      ) {
+        return { kind: "stardb", game };
+      }
+      return null;
+    }
+    for (const candidate of PULL_GAMES) {
+      const entry = accounts[STARDB_GAME_KEYS[candidate]];
       if (typeof entry !== "object" || entry === null) continue;
       const uids = (entry as Record<string, unknown>).uids;
-      if (Array.isArray(uids)) return { kind: "stardb", game };
+      if (Array.isArray(uids)) return { kind: "stardb", game: candidate };
     }
   }
 
@@ -256,9 +268,10 @@ export function parseStardbPulls(
 
 export function parsePullFile(
   data: unknown,
-  maps: Record<PullGame, PullMap>
+  maps: Record<PullGame, PullMap>,
+  game?: PullGame
 ): ParsedPulls | null {
-  const source = detectPullSource(data);
+  const source = detectPullSource(data, game);
   if (!source) return null;
   if (source.kind === "wuwatracker") return parseWuwaPulls(data, maps.wuwa);
   return parseStardbPulls(data, source.game, maps[source.game]);
