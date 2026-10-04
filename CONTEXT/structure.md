@@ -89,8 +89,8 @@ fgo-banner-tracker/
 │   │   ├── ImageWithFallback.tsx # Image with error fallback; empty src → fallback UI, wikia → unoptimized
 │   │   ├── ImportExport.tsx  # JSON import/export (v3 backup incl. `pulls`, legacy v1/v2 accepted)
 │   │   ├── ImportPulls.tsx   # Pull-history file import (detect format → preview → merge + owned fill)
-│   │   ├── ManualPullForm.tsx # Manual pull entry form (datetime/combobox/custom fallback, pity preview, atomic save/edit)
-│   │   ├── PullsPage.tsx     # Pull stats: pity cards, histogram, pills, drops table, List/Grid (5★ tiles), Add Entry + row Edit/Delete
+│   │   ├── ManualPullForm.tsx # Manual pull entry form (datetime/combobox/custom fallback, validation + chip swatches, pity preview, atomic save/edit)
+│   │   ├── PullsPage.tsx     # Pull stats (imported-only + Manual card), histogram, pills, drops table, List/Grid (5★ + ✱ manual tiles), Add Entry + row Edit/Delete
 │   │   ├── PullsEmptyPage.tsx # Empty pulls shell for FGO/HI3/SV
 │   │   ├── RateUpIndicator.tsx # Rate-up type badges
 │   │   ├── SearchBar.tsx     # Search bar component (optional placeholder)
@@ -184,7 +184,7 @@ fgo-banner-tracker/
 │       ├── pullStorage.test.ts # Pull storage tests (merge/dedupe/snapshots/notify, deletePull)
 │       ├── pullImport.test.ts # Export detection, fixtures, dedupe ids, warnings, unit bridge, buildManualPull
 │       ├── pity.test.ts   # Rarity stats, histogram, pityByDrop (seq order), pityTone, fiftyFifty/guarantee, attribution
-│       ├── PullsPage.test.tsx # Pulls page: pity display, grid view + win/guarantee/loss borders, stardb import, manual entry add/edit/delete
+│       ├── PullsPage.test.tsx # Pulls page: pity display, grid view + win/guarantee/loss borders, stardb import, manual entry add/edit/delete + v2 (stats purity, oldest rule, chip colors)
 │       ├── UnitContext.test.tsx # Unit context tests (toggle cycle, persistence, notify)
 │       └── useBannerFilter.test.tsx # Filter hook + URL state tests
 ├── scripts/
@@ -231,19 +231,19 @@ fgo-banner-tracker/
 - `src/lib/storage.ts` - localStorage persistence (FGO keys)
 - `src/lib/unitStorage.ts` - Per-game `unit-status:{game}` / `faves:{game}` persistence + `fillOwnedUnits` (fill-only-unset)
 - `src/lib/pullStorage.ts` - `pulls:{game}` GamePull[] persistence (merge-by-id dedupe, `deletePull`, subscribe/snapshot/notify)
-- `src/lib/pullImport.ts` - wuwatracker/stardb detection + parsing into `GamePull[]` with warnings; exported `CATEGORY_ORDER` + `buildManualPull` (shared id scheme, `manual: true`)
+- `src/lib/pullImport.ts` - wuwatracker/stardb detection + parsing into `GamePull[]` with warnings; exported `CATEGORY_ORDER` + `buildManualPull` (shared id scheme, `manual: true`, optional `chipColor`)
 - `src/lib/pullMaps.ts` - Shared `PULL_MAPS` pull-map JSON loaders (ImportPulls + ManualPullForm)
 - `src/lib/pullOrder.ts` - `comparePullOrder(a, b)` (ts ascending → same-category `seq` when both known → id) used by import finalize, storage sort, pity walks and PullsPage sorts
-- `src/lib/pity.ts` - `computeRarityStats` (5★/4★ pity + histogram), `pityByDrop`, `pityTone` (color bucket), `fiftyFiftyResult`/`fiftyFiftyResults` (win/loss/guarantee vs featured), banner windows + attribution
+- `src/lib/pity.ts` - `computeRarityStats` (5★/4★ pity + histogram), `pityByDrop`, `pityTone` (color bucket), `fiftyFiftyResult`/`fiftyFiftyResults` (win/loss/guarantee vs featured), `validateManualPull` (oldest-position + sequence checks: future/not-oldest/pity caps/consecutive-loss), banner windows + attribution
 - `src/lib/units.ts` - Unit roster access + UnitRow/UnitsConfig mapping
 - `src/lib/data.ts` - Data access (banners, servants, helpers)
 - `src/components/BannerCard.tsx` - Main banner display component
 - `src/components/UnitsPage.tsx` - Per-game units roster page
 - `src/components/FavesPage.tsx` - Per-game 9-slot favorites page
 - `src/components/GameTabs.tsx` - Banners/Units/Faves/Pulls pill navigation
-- `src/components/PullsPage.tsx` - Pull history: stat cards, pity histogram, category pills, drops table, List/Grid toggle with square ~76px 5★ tiles (thumbnail + pity chip + win/guarantee/loss border), Add Entry wiring + row Edit/Delete (two-step confirm, export-row re-import warning)
+- `src/components/PullsPage.tsx` - Pull history: stat cards over **imported pulls only** + 5th Manual card, pity histogram, category pills, drops table, List/Grid toggle with square ~76px 5★ tiles (thumbnail + pity chip + win/guarantee/loss border; manual tiles = user chip color + ✱, `data-manual`), `N pulls imported · M manual` subtitle, Add Entry wiring + row Edit/Delete (two-step confirm, export-row re-import warning; manual rows show ✱ badge instead of pity)
 - `src/components/ImportPulls.tsx` - Pull-history import (detect format → preview → merge + owned fill)
-- `src/components/ManualPullForm.tsx` - Manual pull entry form (datetime-local seconds, banner select, searchable map combobox + custom name/3-4-5★ fallback, live pity preview; atomic `setPulls` save/edit, quota error display)
+- `src/components/ManualPullForm.tsx` - Manual pull entry form (datetime-local seconds, banner select, searchable map combobox + custom name/3-4-5★ fallback, live pity preview; `validateManualPull` gating with issue message/disabled submit/date hint, 8-swatch `CHIP_COLORS` + `safeChipColor`; atomic `setPulls` save/edit, quota error display)
 - `src/app/{game}/pulls/page.tsx` - Static pull routes (4 full pages + 3 empty states incl. `/pulls`)
 - `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback; empty src → fallback UI (no request); optimization globally disabled via `next.config.ts` `images.unoptimized: true` (Vercel optimizer quota 402)
 - `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore)
