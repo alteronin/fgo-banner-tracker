@@ -59,11 +59,10 @@ All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 - Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3/SV, served `unoptimized`), shadowverse-wb.com pack art (SV banners)
 
 ## Testing
-- 350 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view)
+- 362 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view, manual entry add/edit/delete)
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion
-- Manual pull-entry editor (add/edit/delete on pulls pages) — scoped 2026-10-04, design in `CONTEXT/state.md` § Remaining Work
 - Cloud sync with user accounts
 - E2E browser tests (Playwright/Cypress)
 - Push notifications for upcoming banners/events

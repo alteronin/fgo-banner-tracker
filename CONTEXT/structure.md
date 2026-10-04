@@ -89,7 +89,8 @@ fgo-banner-tracker/
 │   │   ├── ImageWithFallback.tsx # Image with error fallback; empty src → fallback UI, wikia → unoptimized
 │   │   ├── ImportExport.tsx  # JSON import/export (v3 backup incl. `pulls`, legacy v1/v2 accepted)
 │   │   ├── ImportPulls.tsx   # Pull-history file import (detect format → preview → merge + owned fill)
-│   │   ├── PullsPage.tsx     # Pull stats: pity cards, histogram, pills, drops table, List/Grid (5★ tiles)
+│   │   ├── ManualPullForm.tsx # Manual pull entry form (datetime/combobox/custom fallback, pity preview, atomic save/edit)
+│   │   ├── PullsPage.tsx     # Pull stats: pity cards, histogram, pills, drops table, List/Grid (5★ tiles), Add Entry + row Edit/Delete
 │   │   ├── PullsEmptyPage.tsx # Empty pulls shell for FGO/HI3/SV
 │   │   ├── RateUpIndicator.tsx # Rate-up type badges
 │   │   ├── SearchBar.tsx     # Search bar component (optional placeholder)
@@ -148,8 +149,9 @@ fgo-banner-tracker/
 │   │   ├── shadowverse-data.ts # SV data access (latest-set active rule)
 │   │   ├── storage.ts        # localStorage utilities (FGO)
 │   │   ├── unitStorage.ts    # Per-game unit-status/faves localStorage + fillOwnedUnits (fill-only-unset)
-│   │   ├── pullStorage.ts    # `pulls:{game}` GamePull[] storage (merge/dedupe, subscribe/snapshot/notify)
-│   │   ├── pullImport.ts     # wuwatracker/stardb detection + parsing → GamePull[] + warnings
+│   │   ├── pullStorage.ts    # `pulls:{game}` GamePull[] storage (merge/dedupe, deletePull, subscribe/snapshot/notify)
+│   │   ├── pullImport.ts     # wuwatracker/stardb detection + parsing → GamePull[] + warnings; CATEGORY_ORDER, buildManualPull
+│   │   ├── pullMaps.ts       # Shared PULL_MAPS (pull-map JSON per game) for ImportPulls + ManualPullForm
 │   │   ├── pullOrder.ts      # comparePullOrder (ts → seq → id): stardb-parity pull order
 │   │   ├── pity.ts           # computeRarityStats, pityByDrop, pityTone, fiftyFiftyResult/Results, banner windows
 │   │   └── units.ts          # Unit roster loaders, UnitRow mapping, UnitsConfig, UNIT_GAMES, taxonomy specs
@@ -179,10 +181,10 @@ fgo-banner-tracker/
 │       ├── shadowverseData.test.ts # SV data integrity tests (17)
 │       ├── unitsData.test.ts # Unit roster integrity tests (counts, ids, hsr split, SV skip)
 │       ├── unitStorage.test.ts # Per-game storage tests (keys, isolation, snapshots, fillOwnedUnits)
-│       ├── pullStorage.test.ts # Pull storage tests (merge/dedupe/snapshots/notify)
-│       ├── pullImport.test.ts # Export detection, fixtures, dedupe ids, warnings, unit bridge
+│       ├── pullStorage.test.ts # Pull storage tests (merge/dedupe/snapshots/notify, deletePull)
+│       ├── pullImport.test.ts # Export detection, fixtures, dedupe ids, warnings, unit bridge, buildManualPull
 │       ├── pity.test.ts   # Rarity stats, histogram, pityByDrop (seq order), pityTone, fiftyFifty/guarantee, attribution
-│       ├── PullsPage.test.tsx # Pulls page: pity display, grid view + win/guarantee/loss borders, stardb import
+│       ├── PullsPage.test.tsx # Pulls page: pity display, grid view + win/guarantee/loss borders, stardb import, manual entry add/edit/delete
 │       ├── UnitContext.test.tsx # Unit context tests (toggle cycle, persistence, notify)
 │       └── useBannerFilter.test.tsx # Filter hook + URL state tests
 ├── scripts/
@@ -228,8 +230,9 @@ fgo-banner-tracker/
 - `src/contexts/ThemeContext.tsx` - Dark/light mode management
 - `src/lib/storage.ts` - localStorage persistence (FGO keys)
 - `src/lib/unitStorage.ts` - Per-game `unit-status:{game}` / `faves:{game}` persistence + `fillOwnedUnits` (fill-only-unset)
-- `src/lib/pullStorage.ts` - `pulls:{game}` GamePull[] persistence (merge-by-id dedupe, subscribe/snapshot/notify)
-- `src/lib/pullImport.ts` - wuwatracker/stardb detection + parsing into `GamePull[]` with warnings
+- `src/lib/pullStorage.ts` - `pulls:{game}` GamePull[] persistence (merge-by-id dedupe, `deletePull`, subscribe/snapshot/notify)
+- `src/lib/pullImport.ts` - wuwatracker/stardb detection + parsing into `GamePull[]` with warnings; exported `CATEGORY_ORDER` + `buildManualPull` (shared id scheme, `manual: true`)
+- `src/lib/pullMaps.ts` - Shared `PULL_MAPS` pull-map JSON loaders (ImportPulls + ManualPullForm)
 - `src/lib/pullOrder.ts` - `comparePullOrder(a, b)` (ts ascending → same-category `seq` when both known → id) used by import finalize, storage sort, pity walks and PullsPage sorts
 - `src/lib/pity.ts` - `computeRarityStats` (5★/4★ pity + histogram), `pityByDrop`, `pityTone` (color bucket), `fiftyFiftyResult`/`fiftyFiftyResults` (win/loss/guarantee vs featured), banner windows + attribution
 - `src/lib/units.ts` - Unit roster access + UnitRow/UnitsConfig mapping
@@ -238,8 +241,9 @@ fgo-banner-tracker/
 - `src/components/UnitsPage.tsx` - Per-game units roster page
 - `src/components/FavesPage.tsx` - Per-game 9-slot favorites page
 - `src/components/GameTabs.tsx` - Banners/Units/Faves/Pulls pill navigation
-- `src/components/PullsPage.tsx` - Pull history: stat cards, pity histogram, category pills, drops table, List/Grid toggle with square ~76px 5★ tiles (thumbnail + pity chip + win/guarantee/loss border)
+- `src/components/PullsPage.tsx` - Pull history: stat cards, pity histogram, category pills, drops table, List/Grid toggle with square ~76px 5★ tiles (thumbnail + pity chip + win/guarantee/loss border), Add Entry wiring + row Edit/Delete (two-step confirm, export-row re-import warning)
 - `src/components/ImportPulls.tsx` - Pull-history import (detect format → preview → merge + owned fill)
+- `src/components/ManualPullForm.tsx` - Manual pull entry form (datetime-local seconds, banner select, searchable map combobox + custom name/3-4-5★ fallback, live pity preview; atomic `setPulls` save/edit, quota error display)
 - `src/app/{game}/pulls/page.tsx` - Static pull routes (4 full pages + 3 empty states incl. `/pulls`)
 - `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback; empty src → fallback UI (no request); optimization globally disabled via `next.config.ts` `images.unoptimized: true` (Vercel optimizer quota 402)
 - `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore)
