@@ -44,7 +44,7 @@ A web application that helps gacha game players track their pulls and plan their
 11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
 12. Cross-game Units & Faves — **COMPLETE (2026-10-03)**
 13. Class/element button filters — **COMPLETE (2026-10-04)**
-14. Pull-history import + pity — **COMPLETE (2026-10-04)** (deployed, live QA green; follow-ups `cbdef13` per-5★ drop pity, `978f769` 5★ grid view with 50/50 borders, `ecdba38` stardb-parity order + Guarantee state + square tiles, qa-pity 41/41)
+14. Pull-history import + pity — **COMPLETE (2026-10-04)** (deployed, live QA green; follow-ups `cbdef13` per-5★ drop pity, `978f769` 5★ grid view with 50/50 borders, `ecdba38` stardb-parity order + Guarantee state + square tiles, `d691e3e` unoptimized images after Vercel 402, `b00f440` multi-game export import, qa-pity 41/41 + qa-multi 3/3)
 
 All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 
@@ -59,7 +59,7 @@ All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 - Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3/SV, served `unoptimized`), shadowverse-wb.com pack art (SV banners)
 
 ## Testing
-- 346 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, pulls page grid view)
+- 350 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view)
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion
