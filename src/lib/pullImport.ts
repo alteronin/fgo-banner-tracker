@@ -62,6 +62,13 @@ const CATEGORY_LABELS: Record<PullGame, Record<string, string>> = {
   wuwa: {},
 };
 
+export const CATEGORY_ORDER: Record<PullGame, string[]> = {
+  hsr: ["departure", "standard", "character", "light_cone"],
+  genshin: ["beginner", "standard", "character", "weapon", "chronicled"],
+  zzz: ["standard", "character", "w_engine", "bangboo"],
+  wuwa: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
+};
+
 export function normalizeName(value: unknown): string {
   return String(value ?? "")
     .toLowerCase()
@@ -275,4 +282,33 @@ export function parsePullFile(
   if (!source) return null;
   if (source.kind === "wuwatracker") return parseWuwaPulls(data, maps.wuwa);
   return parseStardbPulls(data, source.game, maps[source.game]);
+}
+
+export function buildManualPull(params: {
+  game: PullGame;
+  ts: number;
+  category: string;
+  itemId: string;
+  name: string;
+  rarity: number | null;
+  unitId: string | null;
+  existing: GamePull[];
+  seq?: number;
+}): GamePull {
+  const base = `${params.ts}|${params.category}|${params.itemId}`;
+  const taken = new Set(params.existing.map((pull) => pull.id));
+  let occurrence = 0;
+  while (taken.has(`${base}|${occurrence}`)) occurrence += 1;
+  return {
+    id: `${base}|${occurrence}`,
+    gameId: params.game,
+    itemId: params.itemId,
+    unitId: params.unitId,
+    name: params.name,
+    rarity: params.rarity,
+    ts: params.ts,
+    category: params.category,
+    ...(params.seq !== undefined ? { seq: params.seq } : {}),
+    manual: true,
+  };
 }

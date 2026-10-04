@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import {
   clearPulls,
+  deletePull,
   getPulls,
   getPullsRaw,
   getPullsServerSnapshot,
@@ -39,6 +40,7 @@ describe("pullStorage", () => {
   describe("validation", () => {
     it("accepts well-formed pulls and rejects the rest", () => {
       expect(isGamePull(pull())).toBe(true);
+      expect(isGamePull({ ...pull(), manual: true })).toBe(true);
       expect(isGamePull({ ...pull(), ts: "nope" })).toBe(false);
       expect(isGamePull({})).toBe(false);
       expect(isGamePull(null)).toBe(false);
@@ -123,6 +125,29 @@ describe("pullStorage", () => {
         pull({ id: "a", gameId: "genshin", ts: 1000, seq: 0 }),
       ]);
       expect(again).toEqual({ added: 0, upgraded: 0, total: 1, ok: true });
+    });
+  });
+
+  describe("deletePull", () => {
+    it("removes a stored pull by id", () => {
+      setPulls("hsr", [
+        pull({ id: "a", ts: 1000 }),
+        pull({ id: "b", ts: 2000 }),
+      ]);
+      expect(deletePull("hsr", "a")).toEqual({ removed: 1, ok: true });
+      expect(getPulls("hsr").map((entry) => entry.id)).toEqual(["b"]);
+    });
+
+    it("reports unknown ids without touching storage", () => {
+      setPulls("hsr", [pull({ id: "a", ts: 1000 })]);
+      expect(deletePull("hsr", "nope")).toEqual({ removed: 0, ok: true });
+      expect(getPulls("hsr")).toHaveLength(1);
+    });
+
+    it("clears the key when the last pull is deleted", () => {
+      setPulls("zzz", [pull({ id: "solo", gameId: "zzz" })]);
+      expect(deletePull("zzz", "solo")).toEqual({ removed: 1, ok: true });
+      expect(getPullsRaw("zzz")).toBeNull();
     });
   });
 

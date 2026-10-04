@@ -3,7 +3,7 @@
 import { useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { getAppBySlug } from "@/lib/apps";
-import { categoryLabel } from "@/lib/pullImport";
+import { categoryLabel, CATEGORY_ORDER } from "@/lib/pullImport";
 import {
   attributePull,
   computeRarityStats,
@@ -20,8 +20,10 @@ import {
 } from "@/lib/pity";
 import { comparePullOrder } from "@/lib/pullOrder";
 import {
+  deletePull,
   getPullsServerSnapshot,
   getPullsSnapshot,
+  notifyPullsChange,
   subscribePulls,
 } from "@/lib/pullStorage";
 import { getUnitRows } from "@/lib/units";
@@ -30,14 +32,8 @@ import { AppSwitcher } from "./AppSwitcher";
 import { GameTabs } from "./GameTabs";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { ImportPulls } from "./ImportPulls";
+import { ManualPullForm } from "./ManualPullForm";
 import { ThemeToggle } from "./ThemeToggle";
-
-const CATEGORY_ORDER: Record<PullGame, string[]> = {
-  hsr: ["departure", "standard", "character", "light_cone"],
-  genshin: ["beginner", "standard", "character", "weapon", "chronicled"],
-  zzz: ["standard", "character", "w_engine", "bangboo"],
-  wuwa: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
-};
 
 const PAGE_SIZE = 100;
 const DROPS_LIMIT = 20;
@@ -97,6 +93,9 @@ export function PullsPage({
   const [search, setSearch] = useState("");
   const [visible, setVisible] = useState(PAGE_SIZE);
   const [view, setView] = useState<"list" | "grid">("list");
+  const [adding, setAdding] = useState(false);
+  const [editing, setEditing] = useState<GamePull | null>(null);
+  const [status, setStatus] = useState<string | null>(null);
 
   const store = useMemo(
     () => ({
@@ -214,6 +213,33 @@ export function PullsPage({
     setVisible(PAGE_SIZE);
   };
 
+  const openAdd = () => {
+    setEditing(null);
+    setStatus(null);
+    setAdding(true);
+  };
+
+  const editEntry = (pull: GamePull) => {
+    setAdding(false);
+    setStatus(null);
+    setEditing(pull);
+  };
+
+  const closeForm = () => {
+    setAdding(false);
+    setEditing(null);
+  };
+
+  const deleteEntry = (pull: GamePull) => {
+    const { removed, ok } = deletePull(game, pull.id);
+    if (!ok) {
+      setStatus("Could not save: browser storage is full.");
+      return;
+    }
+    if (removed > 0) notifyPullsChange(game);
+    setStatus(removed > 0 ? "Entry deleted." : "Entry not found.");
+  };
+
   return (
     <div className="min-h-screen bg-gray-950 dark:bg-gray-950 light:bg-gray-50">
       <header className="border-b border-gray-800 dark:border-gray-800 light:border-gray-200 bg-gray-900/80 dark:bg-gray-900/80 light:bg-white/80 backdrop-blur-sm sticky top-0 z-10">
@@ -236,7 +262,31 @@ export function PullsPage({
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-6 space-y-6">
-        <ImportPulls game={game} />
+        <div className="flex flex-wrap items-start gap-2">
+          <ImportPulls game={game} />
+          <button
+            type="button"
+            onClick={openAdd}
+            className="px-3 py-1.5 text-sm font-medium bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg transition-colors"
+          >
+            Add Entry
+          </button>
+        </div>
+
+        {(adding || editing) && (
+          <ManualPullForm
+            game={game}
+            pulls={pulls}
+            initial={editing ?? undefined}
+            onSaved={(message) => {
+              closeForm();
+              setStatus(message);
+            }}
+            onCancel={closeForm}
+          />
+        )}
+
+        {status && <p className="text-sm text-gray-400">{status}</p>}
 
         {counts.total === 0 ? (
           <div className="rounded-lg border border-gray-800 bg-gray-900/40 p-6 space-y-2">
@@ -416,6 +466,8 @@ export function PullsPage({
                       index={index}
                       game={game}
                       pity={pityMap.get(pull.id)}
+                      onEdit={editEntry}
+                      onDelete={deleteEntry}
                     />
                   ))}
                 </div>
@@ -460,12 +512,17 @@ function PullRow({
   index,
   game,
   pity,
+  onEdit,
+  onDelete,
 }: {
   pull: GamePull;
   index: Map<string, BannerWindow[]>;
   game: PullGame;
   pity?: number;
+  onEdit: (pull: GamePull) => void;
+  onDelete: (pull: GamePull) => void;
 }) {
+  const [confirming, setConfirming] = useState(false);
   const when = formatWhen(pull.ts);
   const attribution = attributePull(game, pull, index);
   return (
@@ -489,10 +546,54 @@ function PullRow({
           </span>
         )}
       </div>
-      <span className="col-span-2 sm:col-span-1 text-xs text-gray-500 truncate sm:text-right">
-        {attribution.label}
-        {attribution.version ? ` · v${attribution.version}` : ""}
-      </span>
+      <div className="col-span-2 sm:col-span-1 flex items-center justify-between sm:justify-end gap-2">
+        <span className="text-xs text-gray-500 truncate sm:text-right">
+          {attribution.label}
+          {attribution.version ? ` · v${attribution.version}` : ""}
+        </span>
+        {confirming ? (
+          <span className="flex items-center gap-1 shrink-0 text-xs">
+            <span className="text-amber-400">
+              {pull.manual ? "Delete?" : "Delete? Re-import restores it."}
+            </span>
+            <button
+              type="button"
+              aria-label={`Confirm delete ${pull.name}`}
+              onClick={() => onDelete(pull)}
+              className="px-2 py-0.5 rounded bg-red-600/80 hover:bg-red-500 text-white font-medium"
+            >
+              Confirm
+            </button>
+            <button
+              type="button"
+              aria-label={`Cancel delete ${pull.name}`}
+              onClick={() => setConfirming(false)}
+              className="px-2 py-0.5 rounded bg-gray-800 hover:bg-gray-700 text-gray-300"
+            >
+              Cancel
+            </button>
+          </span>
+        ) : (
+          <span className="flex items-center gap-1 shrink-0">
+            <button
+              type="button"
+              aria-label={`Edit ${pull.name}`}
+              onClick={() => onEdit(pull)}
+              className="px-2 py-0.5 rounded text-xs text-gray-400 hover:text-white hover:bg-gray-800"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              aria-label={`Delete ${pull.name}`}
+              onClick={() => setConfirming(true)}
+              className="px-2 py-0.5 rounded text-xs text-gray-400 hover:text-white hover:bg-gray-800"
+            >
+              Delete
+            </button>
+          </span>
+        )}
+      </div>
     </div>
   );
 }

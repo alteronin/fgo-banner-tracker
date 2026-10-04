@@ -5,13 +5,15 @@ import {
   fireEvent,
   cleanup,
   waitFor,
+  within,
 } from "@testing-library/react";
 import { PullsPage } from "@/components/PullsPage";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { toBannerWindows } from "@/lib/pity";
-import { setPulls } from "@/lib/pullStorage";
+import { getPulls, setPulls } from "@/lib/pullStorage";
 import { getUnitStatus } from "@/lib/unitStorage";
 import type { GamePull } from "@/types/pulls";
+import hsrPullMap from "@/data/hsr-pull-map.json";
 
 vi.mock("next/navigation", () => ({
   usePathname: () => "/hsr/pulls",
@@ -265,5 +267,173 @@ describe("PullsPage", () => {
       "This file is not a pull history for this game."
     );
     expect(screen.getByText("No pull history imported yet.")).toBeDefined();
+  });
+
+  it("adds a manual entry through the Add Entry form", () => {
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Add Entry" }));
+
+    const form = screen.getByRole("form", { name: "Add pull entry" });
+    fireEvent.change(screen.getByLabelText("Date & time"), {
+      target: { value: "2024-03-01T12:34:56" },
+    });
+    fireEvent.change(screen.getByLabelText("Custom item name"), {
+      target: { value: "Trailblazer" },
+    });
+    fireEvent.click(within(form).getByRole("button", { name: "Add entry" }));
+
+    expect(screen.getByText("Entry added.")).toBeDefined();
+    expect(screen.queryByRole("form", { name: "Add pull entry" })).toBeNull();
+    expect(screen.getByText("1 pulls imported")).toBeDefined();
+    expect(screen.getAllByText("Trailblazer").length).toBeGreaterThan(0);
+
+    const [stored] = getPulls("hsr");
+    expect(stored.manual).toBe(true);
+    expect(stored.name).toBe("Trailblazer");
+    expect(stored.category).toBe("departure");
+    expect(stored.rarity).toBe(5);
+    expect(stored.id).toBe(`${stored.ts}|departure|manual-trailblazer|0`);
+    const date = new Date(stored.ts);
+    const pad = (n: number) => String(n).padStart(2, "0");
+    expect(
+      `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`
+    ).toBe("2024-03-01T12:34:56");
+  });
+
+  it("previews pity against existing pulls before saving", () => {
+    setPulls("hsr", [
+      pull({ id: "a", ts: 1000, rarity: 3, category: "character" }),
+      pull({ id: "b", ts: 2000, rarity: 3, category: "character" }),
+    ]);
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Add Entry" }));
+
+    fireEvent.change(screen.getByLabelText("Banner"), {
+      target: { value: "character" },
+    });
+    fireEvent.change(screen.getByLabelText("Custom item name"), {
+      target: { value: "Kafka" },
+    });
+
+    expect(
+      screen.getByText("Preview: this will be Pity 3 · Character Event Warp")
+    ).toBeDefined();
+
+    const form = screen.getByRole("form", { name: "Add pull entry" });
+    fireEvent.click(within(form).getByRole("button", { name: "Add entry" }));
+
+    expect(screen.getByText("Entry added.")).toBeDefined();
+    expect(screen.getByText("3 pulls imported")).toBeDefined();
+    expect(screen.getAllByText("Pity 3").length).toBeGreaterThan(0);
+    expect(getPulls("hsr")).toHaveLength(3);
+  });
+
+  it("selects an item from the pull map and stores its snapshot", () => {
+    const items = Object.entries(hsrPullMap.items).filter(
+      ([, entry]) => entry.name !== null
+    );
+    const [itemId, item] = items.find(
+      ([, entry]) =>
+        entry.rarity === 5 &&
+        items.filter(([, other]) =>
+          other.name!.toLowerCase().includes(entry.name!.toLowerCase())
+        ).length === 1
+    )!;
+    const name = item.name!;
+
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Add Entry" }));
+    fireEvent.change(screen.getByLabelText("Search items"), {
+      target: { value: name.toLowerCase() },
+    });
+    fireEvent.click(screen.getByText(name));
+
+    expect(screen.getByText(name)).toBeDefined();
+    expect(screen.queryByLabelText("Custom item name")).toBeNull();
+    expect(screen.queryByLabelText("Search items")).toBeNull();
+
+    const form = screen.getByRole("form", { name: "Add pull entry" });
+    fireEvent.click(within(form).getByRole("button", { name: "Add entry" }));
+
+    const [stored] = getPulls("hsr");
+    expect(stored.itemId).toBe(itemId);
+    expect(stored.name).toBe(name);
+    expect(stored.rarity).toBe(5);
+    expect(stored.manual).toBe(true);
+  });
+
+  it("edits an entry through the form", () => {
+    setPulls("hsr", [
+      pull({
+        id: "x",
+        itemId: "custom-edit",
+        ts: 1700000000000,
+        name: "Old Name",
+        rarity: 4,
+        manual: true,
+      }),
+    ]);
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Edit Old Name" }));
+
+    expect(
+      screen.getByRole("form", { name: "Edit pull entry" })
+    ).toBeDefined();
+    expect(screen.getByText("Custom item name")).toBeDefined();
+    const date = new Date(1700000000000);
+    const pad = (n: number) => String(n).padStart(2, "0");
+    expect(
+      (
+        screen.getByLabelText("Date & time") as HTMLInputElement
+      ).value.replace(/\.\d+$/, "")
+    ).toBe(
+      `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`
+    );
+
+    fireEvent.change(screen.getByLabelText("Custom item name"), {
+      target: { value: "New Name" },
+    });
+    const form = screen.getByRole("form", { name: "Edit pull entry" });
+    fireEvent.click(within(form).getByRole("button", { name: "Save changes" }));
+
+    expect(screen.getByText("Entry updated.")).toBeDefined();
+    expect(screen.queryByRole("form", { name: "Edit pull entry" })).toBeNull();
+    const stored = getPulls("hsr");
+    expect(stored).toHaveLength(1);
+    expect(stored[0].name).toBe("New Name");
+    expect(stored[0].manual).toBe(true);
+    expect(screen.getByText("New Name")).toBeDefined();
+  });
+
+  it("confirms deletes and warns for export-derived entries", () => {
+    setPulls("hsr", [
+      pull({ id: "a", ts: 1000, name: "Exported Item" }),
+      pull({ id: "b", ts: 2000, name: "Manual Item", manual: true }),
+    ]);
+    renderPage();
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "Delete Exported Item" })
+    );
+    expect(
+      screen.getByText("Delete? Re-import restores it.")
+    ).toBeDefined();
+    fireEvent.click(
+      screen.getByRole("button", { name: "Cancel delete Exported Item" })
+    );
+    expect(screen.getByText("Exported Item")).toBeDefined();
+    expect(screen.queryByText("Delete? Re-import restores it.")).toBeNull();
+
+    fireEvent.click(screen.getByRole("button", { name: "Delete Manual Item" }));
+    expect(screen.getByText("Delete?")).toBeDefined();
+    expect(screen.queryByText("Delete? Re-import restores it.")).toBeNull();
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "Confirm delete Manual Item" })
+    );
+    expect(screen.getByText("Entry deleted.")).toBeDefined();
+    expect(
+      getPulls("hsr").map((entry) => entry.name)
+    ).toEqual(["Exported Item"]);
   });
 });

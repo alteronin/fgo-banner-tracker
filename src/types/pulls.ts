@@ -16,6 +16,7 @@ export interface GamePull {
   ts: number;
   category: string;
   seq?: number;
+  manual?: boolean;
 }
 
 export interface PullMapItem {

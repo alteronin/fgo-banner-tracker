@@ -100,6 +100,16 @@ export function clearPulls(game: PullGame): void {
   }
 }
 
+export function deletePull(
+  game: PullGame,
+  id: string
+): { removed: number; ok: boolean } {
+  const pulls = getPulls(game);
+  const next = pulls.filter((pull) => pull.id !== id);
+  if (next.length === pulls.length) return { removed: 0, ok: true };
+  return { removed: pulls.length - next.length, ok: setPulls(game, next) };
+}
+
 const EMPTY_PULLS: GamePull[] = [];
 
 interface Cache<T> {

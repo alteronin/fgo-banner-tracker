@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import {
+  buildManualPull,
   categoryLabel,
   detectPullSource,
   normalizeName,
@@ -7,7 +8,7 @@ import {
   parseStardbPulls,
   parseWuwaPulls,
 } from "@/lib/pullImport";
-import type { PullGame, PullMap } from "@/types/pulls";
+import type { GamePull, PullGame, PullMap } from "@/types/pulls";
 
 const withMaps = (maps: Partial<Record<PullGame, PullMap>>) =>
   maps as Record<PullGame, PullMap>;
@@ -446,6 +447,64 @@ describe("pullImport", () => {
       expect(
         parsePullFile(multiFile, withMaps({ hsr: hsrMap }), "wuwa")
       ).toBeNull();
+    });
+  });
+
+  describe("buildManualPull", () => {
+    const base = {
+      game: "hsr" as PullGame,
+      ts: 1700000000000,
+      category: "character",
+      itemId: "1202",
+      name: "Himeko",
+      rarity: 5,
+      unitId: "850001",
+    };
+
+    it("creates a manual pull with a free dedupe id", () => {
+      const pull = buildManualPull({ ...base, existing: [] });
+      expect(pull).toEqual({
+        id: `${base.ts}|character|1202|0`,
+        gameId: "hsr",
+        itemId: "1202",
+        unitId: "850001",
+        name: "Himeko",
+        rarity: 5,
+        ts: base.ts,
+        category: "character",
+        manual: true,
+      });
+      expect(pull.seq).toBeUndefined();
+    });
+
+    it("bumps the occurrence past pulls sharing the base id", () => {
+      const first = buildManualPull({ ...base, existing: [] });
+      const second = buildManualPull({ ...base, existing: [first] });
+      const third = buildManualPull({ ...base, existing: [first, second] });
+      expect(second.id).toBe(`${base.ts}|character|1202|1`);
+      expect(third.id).toBe(`${base.ts}|character|1202|2`);
+    });
+
+    it("skips ids taken by export-derived pulls", () => {
+      const exported: GamePull = {
+        id: `${base.ts}|character|1202|0`,
+        gameId: "hsr",
+        itemId: "1202",
+        unitId: null,
+        name: "Himeko",
+        rarity: 5,
+        ts: base.ts,
+        category: "character",
+        seq: 3,
+      };
+      const pull = buildManualPull({ ...base, existing: [exported] });
+      expect(pull.id).toBe(`${base.ts}|character|1202|1`);
+      expect(pull.manual).toBe(true);
+    });
+
+    it("keeps a provided seq so edits preserve export ordering", () => {
+      const pull = buildManualPull({ ...base, existing: [], seq: 7 });
+      expect(pull.seq).toBe(7);
     });
   });
 });

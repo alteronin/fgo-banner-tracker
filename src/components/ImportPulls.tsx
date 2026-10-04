@@ -1,21 +1,11 @@
 "use client";
 
 import { useRef, useState } from "react";
-import hsrPullMap from "@/data/hsr-pull-map.json";
-import genshinPullMap from "@/data/genshin-pull-map.json";
-import zzzPullMap from "@/data/zzz-pull-map.json";
-import wuwaPullMap from "@/data/wuwa-pull-map.json";
+import { PULL_MAPS } from "@/lib/pullMaps";
 import { parsePullFile } from "@/lib/pullImport";
 import { getPulls, mergePulls, notifyPullsChange } from "@/lib/pullStorage";
 import { fillOwnedUnits, notifyUnitStatusesChange } from "@/lib/unitStorage";
-import type { ParsedPulls, PullGame, PullMap } from "@/types/pulls";
-
-const PULL_MAPS: Record<PullGame, PullMap> = {
-  hsr: hsrPullMap as PullMap,
-  genshin: genshinPullMap as PullMap,
-  zzz: zzzPullMap as PullMap,
-  wuwa: wuwaPullMap as PullMap,
-};
+import type { ParsedPulls, PullGame } from "@/types/pulls";
 
 interface Preview {
   parsed: ParsedPulls;
