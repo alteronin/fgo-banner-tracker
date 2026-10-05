@@ -20,7 +20,7 @@ A web application that helps gacha game players track their pulls and plan their
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: localStorage + React Context (hydration-safe via useSyncExternalStore)
-- **Testing**: Vitest + Testing Library (327 tests)
+- **Testing**: Vitest + Testing Library (399 tests)
 - **Hosting**: Vercel (free tier)
 
 ## Key Features
@@ -35,10 +35,11 @@ A web application that helps gacha game players track their pulls and plan their
 8. Genshin Impact tracker at `/genshin` (216 banners: character/weapon/chronicled)
 9. Honkai: Star Rail tracker at `/hsr` (131 banners: character/light cone, TBA collab ends)
 10. Bucket 10 trackers: `/zzz` (134 agent/W-Engine), `/wuwa` (46 resonator/selector + weapons), `/hi3` (73 GLB versions, ongoing current version), `/shadowverse` (9 permanent sets + collab, official pack art)
-11. Bucket 12: per-game Units rosters at `/{game}/units` (795 units: genshin 127, hsr 263, zzz 60, wuwa 172, hi3 110, shadowverse 63) + Faves lineups at `/{game}/faves` (9 slots) + Banners/Units/Faves tab nav on all games
+11. Bucket 12: per-game Units rosters at `/{game}/units` (868 units: genshin 200, hsr 263, zzz 60, wuwa 172, hi3 110, shadowverse 63) + Faves lineups at `/{game}/faves` (9 slots) + Banners/Units/Faves tab nav on all games
 12. Multi-game backup: Export/Import v3 (`{version, unitStatus, faves, pulls}` covering FGO + all games; legacy v1/v2 files still import)
 13. Bucket 13: taxonomy pill filters on `/servants` + `/{game}/units` — multi-select Element/Weapon/Path/Type/Attribute/Specialty/Damage/Class groups, combinable with search/status, per-group All reset
 14. Bucket 14: pull-history import at `/{game}/pulls` (wuwatracker + stardb exports, offline item maps, fill-only-unset owned merge) with 5★/4★ pity stats, cap-indexed pity histogram, banner attribution, per-category pity tables, per-5★ drop pity (`Pity N` badge + 5★ drops table), and a List/Grid toggle where the grid shows 5★ drops as square ~76px thumbnail tiles (pity-colored number + win/guarantee/loss border); pull order matches stardb exactly (`comparePullOrder`: ts → export-array `seq` → id) (FGO/HI3/SV show an empty state)
+15. Clickable rate-up chips on banner cards + detail modals for all 6 games (owned/planning cycles keyed to roster ids, future banners planning-only until start, alias + inert fallback for off-roster names, GI 5★ weapon roster with Type filter)
 
 ### Roadmap (Buckets 11-14 — all addressed)
 11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
@@ -54,12 +55,12 @@ All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 - Genshin / HSR / ZZZ / WuWa banner data: Game8 archives (cheerio scrapers, static JSON)
 - HI3 banner data: Honkai Impact 3rd fandom MediaWiki API (`Category:Versions` + version pages)
 - Shadowverse WB data: official cards site (set schedules + researched leader maps)
-- Unit rosters: Game8 roster API (`tool_structural_mappings/{id}.json` via widget props) for genshin/hsr/zzz/wuwa (+ Game8 weapons page `archives/452490` for WuWa weapons); fandom API + `Module:Battlesuit/data` for HI3; `Leader/Worlds Beyond` wikitext galleries for Shadowverse
+- Unit rosters: Game8 roster API (`tool_structural_mappings/{id}.json` via widget props) for genshin/hsr/zzz/wuwa (+ Game8 weapons page `archives/452490` for WuWa weapons, `archives/304647` for GI 5★ weapons); fandom API + `Module:Battlesuit/data` for HI3; `Leader/Worlds Beyond` wikitext galleries for Shadowverse
 - Pull history: user exports (`wuwatracker-pulls.json`, `stardb-export.json`) parsed in-browser; rarity/unit bridges baked at build time into `src/data/{game}-pull-map.json` (stardb/GO/yatta/Genshin-DB + WuWa roster — no runtime API calls)
 - Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3/SV, served `unoptimized`), shadowverse-wb.com pack art (SV banners)
 
 ## Testing
-- 380 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view, manual entry add/edit/delete + v2 validation/imported-only stats/chip colors)
+- 399 unit tests covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view, manual entry add/edit/delete + v2 validation/imported-only stats/chip colors, rate-up chip name resolution + status cycles + future planning rules)
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion

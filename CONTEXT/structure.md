@@ -76,7 +76,7 @@ fgo-banner-tracker/
 │   │   ├── GameTabs.tsx      # Banners/Units/Faves/Pulls pill nav (aria-current)
 │   │   ├── GenshinBannerCard.tsx  # Genshin banner card
 │   │   ├── GenshinBannerDetail.tsx # Genshin detail modal
-│   │   ├── GenshinRateUpChip.tsx # Genshin rate-up chip (link mode; aliased as RateUpChip everywhere)
+│   │   ├── GenshinRateUpChip.tsx # Interactive rate-up chip (owned/planning cycles, future planning-only, inert gaps; aliased as RateUpChip everywhere)
 │   │   ├── GenshinTracker.tsx # Genshin page (filters + grid + modal)
 │   │   ├── GenshinTypeFilter.tsx # Character/Weapon/Chronicle pills
 │   │   ├── Hi3BannerCard.tsx  # HI3 version card (Battlesuit badge, no phase)
@@ -115,7 +115,7 @@ fgo-banner-tracker/
 │   ├── contexts/
 │   │   ├── ServantContext.tsx # Servant status context
 │   │   ├── ThemeContext.tsx   # Theme context
-│   │   └── UnitContext.tsx    # Per-game unit status context (UnitProvider game prop)
+│   │   └── UnitContext.tsx    # Per-game unit status context (UnitProvider game + roster props, resolveName)
 │   ├── data/
 │   │   ├── banners.json      # Banner data (742 banners)
 │   │   ├── genshin-banners.json # Genshin banner data (216 banners, Game8)
@@ -124,7 +124,7 @@ fgo-banner-tracker/
 │   │   ├── wuwa-banners.json   # WuWa banner data (46, Game8)
 │   │   ├── hi3-banners.json    # HI3 version banner data (73, fandom)
 │   │   ├── shadowverse-banners.json # Shadowverse set/collab data (10, official site)
-│   │   ├── genshin-units.json # Genshin roster (127, Game8 API)
+│   │   ├── genshin-units.json # Genshin roster (200 = 127 chars + 73 5★ weapons, Game8 API + archives/304647)
 │   │   ├── hsr-units.json     # HSR roster (263 = 93 chars + 170 light cones)
 │   │   ├── zzz-units.json     # ZZZ roster (60 agents)
 │   │   ├── wuwa-units.json    # WuWa roster (172 = 59 resonators + 113 weapons, `type` field)
@@ -148,7 +148,9 @@ fgo-banner-tracker/
 │   │   ├── hi3-data.ts       # HI3 data access (null end → ongoing)
 │   │   ├── shadowverse-data.ts # SV data access (latest-set active rule)
 │   │   ├── storage.ts        # localStorage utilities (FGO)
+│   │   ├── unitAliases.ts    # Per-game banner-name alias map (ZZZ: Jane Doe → Jane, etc.)
 │   │   ├── unitStorage.ts    # Per-game unit-status/faves localStorage + fillOwnedUnits (fill-only-unset)
+│   │   ├── unitResolve.ts    # normalizeUnitName, buildUnitIndex/resolveUnitName (exact → normalized → alias), syntheticStatusKey (`name:` prefix)
 │   │   ├── pullStorage.ts    # `pulls:{game}` GamePull[] storage (merge/dedupe, deletePull, subscribe/snapshot/notify)
 │   │   ├── pullImport.ts     # wuwatracker/stardb detection + parsing → GamePull[] + warnings; CATEGORY_ORDER, buildManualPull
 │   │   ├── pullMaps.ts       # Shared PULL_MAPS (pull-map JSON per game) for ImportPulls + ManualPullForm
@@ -186,18 +188,20 @@ fgo-banner-tracker/
 │       ├── pity.test.ts   # Rarity stats, histogram, pityByDrop (seq order), pityTone, fiftyFifty/guarantee, attribution
 │       ├── PullsPage.test.tsx # Pulls page: pity display, grid view + win/guarantee/loss borders, stardb import, manual entry add/edit/delete + v2 (stats purity, oldest rule, chip colors)
 │       ├── UnitContext.test.tsx # Unit context tests (toggle cycle, persistence, notify)
+│       ├── GenshinRateUpChip.test.tsx # Chip cycles (past/future/unresolved), stopPropagation, persistence
+│       ├── unitResolve.test.ts # Name resolution (exact/normalized/alias/game-scoped, synthetic keys)
 │       └── useBannerFilter.test.tsx # Filter hook + URL state tests
 ├── scripts/
 │   ├── scrape-all.mjs        # Banner scraper (cheerio)
 │   ├── scrape-genshin.mjs    # Genshin banner scraper (Game8, cheerio)
-│   ├── scrape-hsr.mjs        # HSR banner scraper (Game8, cheerio)
+│   ├── scrape-hsr.mjs        # HSR banner scraper (Game8, cheerio; repairs apostrophe-truncated featured alts via lc- ids)
 │   ├── scrape-zzz.mjs        # ZZZ banner scraper (Game8 two-column table)
 │   ├── scrape-wuwa.mjs       # WuWa banner scraper (Game8 detail-text zones)
-│   ├── scrape-hi3.mjs        # HI3 version scraper (fandom MediaWiki API)
+│   ├── scrape-hi3.mjs        # HI3 version scraper (fandom MediaWiki API; FEATURED_JUNK + dedupe)
 │   ├── scrape-shadowverse.mjs # Shadowverse set/collab scraper (official site)
 │   ├── scrape-servants.mjs   # Servant scraper (sitemap + pages)
 │   ├── lib/game8-roster.mjs  # Shared Game8 roster API helper (widget props → collectionItems)
-│   ├── scrape-genshin-units.mjs # Genshin roster (Game8 API →127)
+│   ├── scrape-genshin-units.mjs # Genshin roster (Game8 API 127 chars + archives/304647 5★ weapons →200)
 │   ├── scrape-hsr-units.mjs  # HSR roster (Game8 API chars + LC SSR table →263)
 │   ├── scrape-zzz-units.mjs  # ZZZ roster (Game8 API →60)
 │   ├── scrape-wuwa-units.mjs # WuWa roster (Game8 API resonators + weapons page →172)
@@ -222,14 +226,16 @@ fgo-banner-tracker/
 - `src/data/hi3-banners.json` - 73 HI3 GLB versions from fandom (v1.8-v9.0, null end = ongoing)
 - `src/data/shadowverse-banners.json` - 10 Shadowverse WB entries (9 permanent sets + Frieren collab)
 - `src/data/servants.json` - 487 servants with thumbnail icons
-- `src/data/{game}-units.json` - 795 unit roster entries (genshin 127, hsr 263, zzz 60, wuwa 172, hi3 110, shadowverse 63)
+- `src/data/{game}-units.json` - 868 unit roster entries (genshin 200, hsr 263, zzz 60, wuwa 172, hi3 110, shadowverse 63)
 - `src/data/{game}-pull-map.json` - offline rarity/unit bridges for pull import (hsr/genshin/zzz by item id, wuwa by normalized name)
 - `src/lib/apps.ts` - Multi-game app registry (7 apps, slugs, paths)
 - `src/contexts/ServantContext.tsx` - Global servant status management
-- `src/contexts/UnitContext.tsx` - Per-game unit status (UnitProvider game prop)
+- `src/contexts/UnitContext.tsx` - Per-game unit status (UnitProvider `game` + optional `roster` props, `resolveName` for banner chips)
 - `src/contexts/ThemeContext.tsx` - Dark/light mode management
 - `src/lib/storage.ts` - localStorage persistence (FGO keys)
 - `src/lib/unitStorage.ts` - Per-game `unit-status:{game}` / `faves:{game}` persistence + `fillOwnedUnits` (fill-only-unset)
+- `src/lib/unitResolve.ts` - Roster name resolution for banner chips: exact → normalized → per-game alias; `syntheticStatusKey` for unresolved future names
+- `src/lib/unitAliases.ts` - ZZZ banner-name aliases (Jane Doe → Jane, Astra Yao → Astra, Orphie → Orphie and Magus, Soldier 0 - Anby → Soldier 0 Anby)
 - `src/lib/pullStorage.ts` - `pulls:{game}` GamePull[] persistence (merge-by-id dedupe, `deletePull`, subscribe/snapshot/notify)
 - `src/lib/pullImport.ts` - wuwatracker/stardb detection + parsing into `GamePull[]` with warnings; exported `CATEGORY_ORDER` + `buildManualPull` (shared id scheme, `manual: true`, optional `chipColor`)
 - `src/lib/pullMaps.ts` - Shared `PULL_MAPS` pull-map JSON loaders (ImportPulls + ManualPullForm)
@@ -238,6 +244,7 @@ fgo-banner-tracker/
 - `src/lib/units.ts` - Unit roster access + UnitRow/UnitsConfig mapping
 - `src/lib/data.ts` - Data access (banners, servants, helpers)
 - `src/components/BannerCard.tsx` - Main banner display component
+- `src/components/GenshinRateUpChip.tsx` - Interactive unit chip on all 6 games' banner cards + detail modals (resolved names cycle owned/planning, future banners planning-only, unresolved future = `name:` synthetic key, unresolved past = inert span; `e.stopPropagation()`)
 - `src/components/UnitsPage.tsx` - Per-game units roster page
 - `src/components/FavesPage.tsx` - Per-game 9-slot favorites page
 - `src/components/GameTabs.tsx` - Banners/Units/Faves/Pulls pill navigation
