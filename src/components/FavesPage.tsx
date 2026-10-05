@@ -14,6 +14,7 @@ import {
 } from "@/lib/unitStorage";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { AppSwitcher } from "./AppSwitcher";
+import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 import { GameTabs } from "./GameTabs";
 import type { UnitGame, UnitRow, UnitsConfig } from "@/types/units";
@@ -109,6 +110,7 @@ function FavesView({
             >
               FGO
             </Link>
+            <AccountButton />
             <ThemeToggle />
           </div>
         </div>

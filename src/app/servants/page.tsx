@@ -7,6 +7,7 @@ import { matchesFilterGroups } from "@/lib/units";
 import { useServantStatus } from "@/contexts/ServantContext";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import { AppSwitcher } from "@/components/AppSwitcher";
+import { AccountButton } from "@/components/AccountButton";
 import type { ServantStatus } from "@/types/banner";
 
 type SortOption = "name-asc" | "status" | "class-asc";
@@ -126,12 +127,15 @@ export default function ServantsPage() {
             title="Servant Collection"
             subtitle={`${stats.total} servants total`}
           />
-          <Link
-            href="/"
-            className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
-          >
-            Banners
-          </Link>
+          <div className="flex items-center gap-2">
+            <AccountButton />
+            <Link
+              href="/"
+              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
+            >
+              Banners
+            </Link>
+          </div>
         </div>
       </header>
 

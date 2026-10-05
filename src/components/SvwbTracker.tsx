@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { AppSwitcher } from "./AppSwitcher";
+import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 import { GameTabs } from "./GameTabs";
 import { SearchBar } from "./SearchBar";
@@ -56,6 +57,7 @@ export function SvwbTracker({ app }: { app: TrackedApp }) {
             >
               FGO
             </Link>
+            <AccountButton />
             <ThemeToggle />
           </div>
         </div>

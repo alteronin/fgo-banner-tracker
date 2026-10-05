@@ -1,16 +1,13 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useSyncExternalStore,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useSyncExternalStore, type ReactNode } from "react";
 import type { ServantStatus } from "@/types/banner";
 import {
-  getServantStatuses,
-  getServantStatusesRaw,
+  getServantStatusesServerSnapshot,
+  getServantStatusesSnapshot,
+  notifyServantStatusesChange,
   setServantStatus as saveServantStatus,
+  subscribeServantStatuses,
 } from "@/lib/storage";
 
 interface ServantContextType {
@@ -22,48 +19,18 @@ interface ServantContextType {
 
 const ServantContext = createContext<ServantContextType | null>(null);
 
-const EMPTY_STATUSES: Record<string, ServantStatus> = {};
-
-const listeners = new Set<() => void>();
-let cacheRaw: string | null | undefined;
-let cache: Record<string, ServantStatus> = EMPTY_STATUSES;
-
-function subscribe(onChange: () => void): () => void {
-  listeners.add(onChange);
-  return () => {
-    listeners.delete(onChange);
-  };
-}
-
-function getSnapshot(): Record<string, ServantStatus> {
-  const raw = getServantStatusesRaw();
-  if (raw !== cacheRaw) {
-    cacheRaw = raw;
-    cache = getServantStatuses();
-  }
-  return cache;
-}
-
-function getServerSnapshot(): Record<string, ServantStatus> {
-  return EMPTY_STATUSES;
-}
-
-function notifyChange(): void {
-  listeners.forEach((listener) => listener());
-}
-
 export function ServantProvider({ children }: { children: ReactNode }) {
   const statuses = useSyncExternalStore(
-    subscribe,
-    getSnapshot,
-    getServerSnapshot
+    subscribeServantStatuses,
+    getServantStatusesSnapshot,
+    getServantStatusesServerSnapshot
   );
 
   const getStatus = (slug: string): ServantStatus => statuses[slug] || "none";
 
   const setStatus = (slug: string, status: ServantStatus) => {
     saveServantStatus(slug, status);
-    notifyChange();
+    notifyServantStatusesChange();
   };
 
   const toggleStatus = (slug: string) => {

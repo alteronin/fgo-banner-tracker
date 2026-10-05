@@ -1,4 +1,5 @@
 import { comparePullOrder } from "@/lib/pullOrder";
+import { notifySyncableChange } from "@/lib/syncDirty";
 import type { GamePull, PullGame } from "@/types/pulls";
 
 export function pullsStorageKey(game: string): string {
@@ -156,4 +157,5 @@ export function getPullsServerSnapshot(): GamePull[] {
 
 export function notifyPullsChange(game: string): void {
   pullListeners.get(game)?.forEach((listener) => listener());
+  notifySyncableChange();
 }

@@ -23,9 +23,13 @@ const localStorageMock = (() => {
   };
 })();
 
-Object.defineProperty(window, "localStorage", { value: localStorageMock });
+if (typeof window !== "undefined") {
+  Object.defineProperty(window, "localStorage", { value: localStorageMock });
+}
 
 // Reset before each test
 beforeEach(() => {
-  window.localStorage.clear();
+  if (typeof window !== "undefined") {
+    window.localStorage.clear();
+  }
 });

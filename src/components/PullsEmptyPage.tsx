@@ -4,6 +4,7 @@ import Link from "next/link";
 import { TRACKED_APPS } from "@/lib/apps";
 import { AppSwitcher } from "./AppSwitcher";
 import { GameTabs } from "./GameTabs";
+import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function PullsEmptyPage({ game }: { game: string }) {
@@ -34,6 +35,7 @@ export function PullsEmptyPage({ game }: { game: string }) {
                 >
                   FGO
                 </Link>
+                <AccountButton />
                 <ThemeToggle />
               </>
             )}

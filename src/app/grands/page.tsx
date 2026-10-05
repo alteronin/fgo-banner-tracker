@@ -13,6 +13,7 @@ import {
 } from "@/lib/storage";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import { AppSwitcher } from "@/components/AppSwitcher";
+import { AccountButton } from "@/components/AccountButton";
 
 interface GrandSlot {
   id: string;
@@ -81,12 +82,15 @@ export default function GrandsPage() {
             title="Grand Servant Lineup"
             subtitle={`${selectedCount} of ${GRAND_SLOTS.length} selected`}
           />
-          <Link
-            href="/"
-            className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
-          >
-            Banners
-          </Link>
+          <div className="flex items-center gap-2">
+            <AccountButton />
+            <Link
+              href="/"
+              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
+            >
+              Banners
+            </Link>
+          </div>
         </div>
       </header>
 

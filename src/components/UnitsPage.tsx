@@ -7,6 +7,7 @@ import { getUnitRows, getUnitsConfig, matchesFilterGroups } from "@/lib/units";
 import { UnitProvider, useUnitStatus } from "@/contexts/UnitContext";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { AppSwitcher } from "./AppSwitcher";
+import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 import { GameTabs } from "./GameTabs";
 import type { UnitGame, UnitRow, UnitsConfig, UnitStatus } from "@/types/units";
@@ -158,6 +159,7 @@ function UnitsView({
             >
               FGO
             </Link>
+            <AccountButton />
             <ThemeToggle />
           </div>
         </div>

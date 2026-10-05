@@ -1,4 +1,5 @@
 import type { ServantStatus } from "@/types/banner";
+import { notifySyncableChange } from "@/lib/syncDirty";
 
 const STORAGE_KEY = "fgo-servant-status";
 const GRANDS_KEY = "fgo-grand-servants";
@@ -63,6 +64,26 @@ export function setGrandServant(
   localStorage.setItem(GRANDS_KEY, JSON.stringify(grands));
 }
 
+export function replaceServantStatuses(
+  statuses: Record<string, ServantStatus>
+): void {
+  if (typeof window === "undefined") return;
+  if (Object.keys(statuses).length === 0) {
+    localStorage.removeItem(STORAGE_KEY);
+  } else {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(statuses));
+  }
+}
+
+export function replaceGrandServants(grands: Record<string, string>): void {
+  if (typeof window === "undefined") return;
+  if (Object.keys(grands).length === 0) {
+    localStorage.removeItem(GRANDS_KEY);
+  } else {
+    localStorage.setItem(GRANDS_KEY, JSON.stringify(grands));
+  }
+}
+
 export function getGrandServant(slotId: string): string {
   const grands = getGrandServants();
   return grands[slotId] || "";
@@ -104,4 +125,38 @@ export function getGrandsServerSnapshot(): Record<string, string> {
 
 export function notifyGrandsChange(): void {
   grandsListeners.forEach((listener) => listener());
+  notifySyncableChange();
+}
+
+const servantListeners = new Set<() => void>();
+let servantCacheRaw: string | null | undefined;
+let servantCache: Record<string, ServantStatus> = {};
+const EMPTY_SERVANT_STATUSES: Record<string, ServantStatus> = {};
+
+export function subscribeServantStatuses(onChange: () => void): () => void {
+  servantListeners.add(onChange);
+  return () => {
+    servantListeners.delete(onChange);
+  };
+}
+
+export function getServantStatusesSnapshot(): Record<string, ServantStatus> {
+  const raw = getServantStatusesRaw();
+  if (raw !== servantCacheRaw) {
+    servantCacheRaw = raw;
+    servantCache = getServantStatuses();
+  }
+  return servantCache;
+}
+
+export function getServantStatusesServerSnapshot(): Record<
+  string,
+  ServantStatus
+> {
+  return EMPTY_SERVANT_STATUSES;
+}
+
+export function notifyServantStatusesChange(): void {
+  servantListeners.forEach((listener) => listener());
+  notifySyncableChange();
 }

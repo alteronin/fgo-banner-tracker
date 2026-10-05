@@ -1,4 +1,5 @@
 import type { UnitStatus } from "@/types/units";
+import { notifySyncableChange } from "@/lib/syncDirty";
 
 export function unitStatusKey(game: string): string {
   return `unit-status:${game}`;
@@ -99,6 +100,32 @@ export function setFave(
   }
 }
 
+export function replaceUnitStatuses(
+  game: string,
+  statuses: Record<string, string>
+): void {
+  if (typeof window === "undefined") return;
+  const key = unitStatusKey(game);
+  if (Object.keys(statuses).length === 0) {
+    localStorage.removeItem(key);
+  } else {
+    localStorage.setItem(key, JSON.stringify(statuses));
+  }
+}
+
+export function replaceFaves(
+  game: string,
+  faves: Record<string, string>
+): void {
+  if (typeof window === "undefined") return;
+  const key = favesStorageKey(game);
+  if (Object.keys(faves).length === 0) {
+    localStorage.removeItem(key);
+  } else {
+    localStorage.setItem(key, JSON.stringify(faves));
+  }
+}
+
 const EMPTY_STATUSES: Record<string, UnitStatus> = {};
 const EMPTY_FAVES: Record<string, string> = {};
 
@@ -153,6 +180,7 @@ export function getUnitStatusesServerSnapshot(): Record<string, UnitStatus> {
 
 export function notifyUnitStatusesChange(game: string): void {
   statusListeners.get(game)?.forEach((listener) => listener());
+  notifySyncableChange();
 }
 
 export function subscribeFaves(
@@ -182,4 +210,5 @@ export function getFavesServerSnapshot(): Record<string, string> {
 
 export function notifyFavesChange(game: string): void {
   favesListeners.get(game)?.forEach((listener) => listener());
+  notifySyncableChange();
 }

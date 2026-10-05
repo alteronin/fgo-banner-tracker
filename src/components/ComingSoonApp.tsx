@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { AppSwitcher } from "@/components/AppSwitcher";
+import { AccountButton } from "@/components/AccountButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import type { TrackedApp } from "@/lib/apps";
 
@@ -18,6 +19,7 @@ export function ComingSoonApp({ app }: { app: TrackedApp }) {
             >
               FGO
             </Link>
+            <AccountButton />
             <ThemeToggle />
           </div>
         </div>

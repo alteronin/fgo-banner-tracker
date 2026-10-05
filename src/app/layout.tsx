@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { AccountProvider } from "@/contexts/AccountContext";
 import { ServantProvider } from "@/contexts/ServantContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
@@ -70,7 +71,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-full flex flex-col bg-gray-950 text-white dark:bg-gray-950 dark:text-white light:bg-gray-50 light:text-gray-900">
         <ThemeProvider>
-          <ServantProvider>{children}</ServantProvider>
+          <AccountProvider>
+            <ServantProvider>{children}</ServantProvider>
+          </AccountProvider>
         </ThemeProvider>
       </body>
     </html>

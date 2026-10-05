@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getBanners } from "@/lib/data";
 import { BannerList } from "@/components/BannerList";
 import { AppSwitcher } from "@/components/AppSwitcher";
+import { AccountButton } from "@/components/AccountButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ImportExport } from "@/components/ImportExport";
 import { CollectionStats } from "@/components/CollectionStats";
@@ -42,6 +43,7 @@ export default function Home() {
             </Link>
             <ImportExport />
             <AboutHelp />
+            <AccountButton />
             <ThemeToggle />
           </div>
         </div>
