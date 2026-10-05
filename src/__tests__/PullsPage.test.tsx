@@ -131,6 +131,7 @@ describe("PullsPage", () => {
     expect(
       screen.getAllByText("Character Event Warp").length
     ).toBeGreaterThan(0);
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
     expect(screen.getByText("Showing 3 of 3 pulls (newest first)")).toBeDefined();
     expect(screen.getAllByText("Item")).toHaveLength(4);
     expect(screen.getByText("5★ drops (pity)")).toBeDefined();
@@ -149,6 +150,7 @@ describe("PullsPage", () => {
     ]);
     renderPage();
 
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
     expect(screen.getByText("5★ drops (pity)")).toBeDefined();
     expect(screen.getByText("Showing 3 of 3")).toBeDefined();
     expect(screen.getAllByText("Pity 3").length).toBe(2);
@@ -216,6 +218,59 @@ describe("PullsPage", () => {
     expect(document.querySelectorAll("[data-fifty]")).toHaveLength(0);
   });
 
+  it("shows the 50/50 record with guarantees counted as neither win nor loss", () => {
+    setPulls("hsr", [
+      pull({
+        id: "l1",
+        ts: Date.parse("2024-01-05T12:00:00Z"),
+        rarity: 5,
+        name: "Himeko",
+        category: "character",
+        manual: true,
+        fifty: "loss",
+      }),
+      pull({
+        id: "g1",
+        ts: Date.parse("2024-02-05T12:00:00Z"),
+        rarity: 5,
+        name: "Kafka",
+        category: "character",
+        manual: true,
+        fifty: "guarantee",
+      }),
+      pull({
+        id: "w1",
+        ts: Date.parse("2024-03-05T12:00:00Z"),
+        rarity: 5,
+        name: "Kafka",
+        category: "character",
+        manual: true,
+        fifty: "win",
+      }),
+      pull({
+        id: "l2",
+        ts: Date.parse("2024-04-05T12:00:00Z"),
+        rarity: 5,
+        name: "Himeko",
+        category: "character",
+        manual: true,
+        fifty: "loss",
+      }),
+    ]);
+    renderPage();
+
+    expect(screen.getByText("50/50 record")).toBeDefined();
+    expect(screen.getByText("1W – 2L · 33%")).toBeDefined();
+  });
+
+  it("shows an em dash for the 50/50 record when no rolls exist", () => {
+    setPulls("hsr", [pull({ id: "a", rarity: 3, category: "character" })]);
+    renderPage();
+
+    const label = screen.getByText("50/50 record");
+    expect(label.parentElement!.textContent).toContain("—");
+  });
+
   it("filters rows by search text", () => {
     setPulls("hsr", [
       pull({ id: "a", ts: 1000, name: "Himeko", rarity: 5 }),
@@ -223,6 +278,7 @@ describe("PullsPage", () => {
     ]);
     renderPage();
 
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
     fireEvent.change(screen.getByPlaceholderText("Search pulled items…"), {
       target: { value: "himeko" },
     });
@@ -326,6 +382,7 @@ describe("PullsPage", () => {
 
     expect(screen.getByText("Entry added.")).toBeDefined();
     expect(screen.getByText("2 pulls imported · 1 manual")).toBeDefined();
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
     expect(screen.queryByText("Pity 3")).toBeNull();
     expect(screen.getByText("✱ Manual")).toBeDefined();
     expect(getPulls("hsr")).toHaveLength(3);
@@ -377,6 +434,7 @@ describe("PullsPage", () => {
       }),
     ]);
     renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
     fireEvent.click(screen.getByRole("button", { name: "Edit Old Name" }));
 
     expect(
@@ -414,6 +472,7 @@ describe("PullsPage", () => {
       pull({ id: "b", ts: 2000, name: "Manual Item", manual: true }),
     ]);
     renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
 
     fireEvent.click(
       screen.getByRole("button", { name: "Delete Exported Item" })
@@ -557,11 +616,64 @@ describe("PullsPage", () => {
     expect(document.querySelectorAll("[data-tone]")).toHaveLength(1);
   });
 
+  it("shows logged manual tiles with their declared rate-up borders", () => {
+    setPulls("hsr", [
+      pull({ id: "a", ts: 3000, rarity: 5, name: "Kafka", category: "character" }),
+      pull({
+        id: "w",
+        ts: 2000,
+        rarity: 5,
+        name: "Log Win",
+        category: "character",
+        manual: true,
+        fifty: "win",
+      }),
+      pull({
+        id: "l",
+        ts: 1000,
+        rarity: 5,
+        name: "Log Loss",
+        category: "character",
+        manual: true,
+        fifty: "loss",
+        chipColor: "#38bdf8",
+      }),
+    ]);
+    renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "Grid" }));
+
+    const tiles = document.querySelectorAll('[data-manual="true"]');
+    expect(tiles).toHaveLength(2);
+
+    const winTile = document.querySelector('[data-fifty="win"][data-manual="true"]')!;
+    expect(winTile).not.toBeNull();
+    expect(winTile.className).toContain("border-emerald-500");
+    expect(winTile.getAttribute("title")).toContain("Won 50/50");
+
+    const lossTile = document.querySelector('[data-fifty="loss"][data-manual="true"]')!;
+    expect(lossTile).not.toBeNull();
+    expect(lossTile.className).toContain("border-rose-500");
+    expect(lossTile.getAttribute("title")).toContain("Lost 50/50");
+    expect(lossTile.hasAttribute("data-tone")).toBe(false);
+    const lossChip = lossTile.querySelector(
+      '[aria-label="manual entry"]'
+    ) as HTMLElement;
+    expect(lossChip.style.backgroundColor).toBe("rgb(56, 189, 248)");
+    expect(
+      screen.getByText(/logged entries show your declared rate-up result/)
+    ).toBeDefined();
+
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
+    expect(screen.getByText("✱ Manual · Won")).toBeDefined();
+    expect(screen.getByText("✱ Manual · Lost")).toBeDefined();
+  });
+
   it("keeps export-derived entries export-derived when edited", () => {
     setPulls("hsr", [
       pull({ id: "a", itemId: "zzz-not-in-map", ts: 1000, name: "Exported Item" }),
     ]);
     renderPage();
+    fireEvent.click(screen.getByRole("button", { name: "List" }));
     fireEvent.click(screen.getByRole("button", { name: "Edit Exported Item" }));
 
     expect(
@@ -582,5 +694,74 @@ describe("PullsPage", () => {
     expect(stored.name).toBe("Renamed Export");
     expect(stored.manual).toBeFalsy();
     expect(stored.chipColor).toBeUndefined();
+  });
+
+  it("defaults to the grid view", () => {
+    setPulls("hsr", [
+      pull({
+        id: "a",
+        ts: 1000,
+        rarity: 5,
+        name: "Kafka",
+        category: "character",
+      }),
+    ]);
+    renderPage();
+
+    expect(document.querySelector('[aria-label="5★ drops"]')).not.toBeNull();
+    expect(screen.queryByText(/pulls \(newest first\)/)).toBeNull();
+    expect(
+      screen.getByRole("button", { name: "Grid" }).getAttribute("aria-pressed")
+    ).toBe("true");
+  });
+
+  it("confirms deletion of manual grid tiles", () => {
+    setPulls("hsr", [
+      pull({ id: "a", ts: 3000, rarity: 5, name: "Kafka", category: "character" }),
+      pull({
+        id: "m",
+        ts: 1000,
+        rarity: 5,
+        name: "Manual Item",
+        category: "character",
+        manual: true,
+        fifty: "win",
+      }),
+    ]);
+    renderPage();
+
+    expect(
+      screen.queryByRole("button", { name: "Delete manual entry Kafka" })
+    ).toBeNull();
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "Delete manual entry Manual Item" })
+    );
+    const dialog = screen.getByRole("dialog", { name: "Delete manual entry" });
+    expect(within(dialog).getByText("Delete this entry?")).toBeDefined();
+    expect(within(dialog).getByText(/Manual Item · .* · ✱ Manual · Won/)).toBeDefined();
+
+    fireEvent.click(within(dialog).getByRole("button", { name: "Cancel" }));
+    expect(
+      screen.queryByRole("dialog", { name: "Delete manual entry" })
+    ).toBeNull();
+    expect(getPulls("hsr")).toHaveLength(2);
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "Delete manual entry Manual Item" })
+    );
+    const reopened = screen.getByRole("dialog", {
+      name: "Delete manual entry",
+    });
+    fireEvent.click(within(reopened).getByRole("button", { name: "Delete" }));
+
+    expect(screen.getByText("Entry deleted.")).toBeDefined();
+    expect(
+      screen.queryByRole("dialog", { name: "Delete manual entry" })
+    ).toBeNull();
+    expect(getPulls("hsr").map((entry) => entry.name)).toEqual(["Kafka"]);
+    expect(
+      screen.queryByRole("button", { name: "Delete manual entry Manual Item" })
+    ).toBeNull();
   });
 });

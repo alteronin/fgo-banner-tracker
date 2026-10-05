@@ -123,7 +123,18 @@ export function WuwaBannerDetail({ banner, onClose }: WuwaBannerDetailProps) {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {banner.featured5.map((rateUp) => (
-                  <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
+                  <RateUpChip
+                    key={rateUp.name}
+                    rateUp={rateUp}
+                    bannerStart={banner.startDate} bannerEnd={banner.endDate}
+                    logContext={{
+                      game: "wuwa",
+                      bannerType: banner.type,
+                      bannerTitle: title,
+                      bannerStart: banner.startDate,
+                      bannerEnd: banner.endDate,
+                    }}
+                  />
                 ))}
               </div>
             </div>
@@ -136,7 +147,7 @@ export function WuwaBannerDetail({ banner, onClose }: WuwaBannerDetailProps) {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {banner.featured4.map((rateUp) => (
-                  <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
+                  <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} bannerEnd={banner.endDate} />
                 ))}
               </div>
             </div>
@@ -149,7 +160,19 @@ export function WuwaBannerDetail({ banner, onClose }: WuwaBannerDetailProps) {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {banner.featuredWeapons.map((rateUp) => (
-                  <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
+                  <RateUpChip
+                    key={rateUp.name}
+                    rateUp={rateUp}
+                    bannerStart={banner.startDate} bannerEnd={banner.endDate}
+                    logContext={{
+                      game: "wuwa",
+                      bannerType: banner.type,
+                      category: "2",
+                      bannerTitle: title,
+                      bannerStart: banner.startDate,
+                      bannerEnd: banner.endDate,
+                    }}
+                  />
                 ))}
               </div>
             </div>

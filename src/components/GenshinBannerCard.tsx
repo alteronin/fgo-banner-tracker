@@ -66,7 +66,18 @@ export function GenshinBannerCard({ banner, onClick }: GenshinBannerCardProps) {
         {banner.featured5.length > 0 && (
           <div className="flex flex-wrap gap-1.5">
             {banner.featured5.map((rateUp) => (
-              <GenshinRateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
+              <GenshinRateUpChip
+                key={rateUp.name}
+                rateUp={rateUp}
+                bannerStart={banner.startDate} bannerEnd={banner.endDate}
+                logContext={{
+                  game: "genshin",
+                  bannerType: banner.type,
+                  bannerTitle: title,
+                  bannerStart: banner.startDate,
+                  bannerEnd: banner.endDate,
+                }}
+              />
             ))}
           </div>
         )}

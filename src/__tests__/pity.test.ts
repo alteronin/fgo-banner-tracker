@@ -6,6 +6,7 @@ import {
   fiftyFiftyResults,
   findBannerWindow,
   FOUR_STAR_PITY,
+  guaranteePendingAt,
   indexWindows,
   maxPityFor,
   pityByDrop,
@@ -302,6 +303,79 @@ describe("pity", () => {
       expect(results.get("e")).toBe("loss");
       expect(results.get("f")).toBe("guarantee");
       expect(results.has("c")).toBe(false);
+    });
+
+    it("detects whether a guarantee is still pending at a point in time", () => {
+      const chainIndex = indexWindows(
+        toBannerWindows([
+          {
+            id: "c1",
+            type: "character",
+            banners: [{ name: "January" }],
+            startDate: "2024-01-01",
+            endDate: "2024-01-31",
+            featured5: [{ name: "Kafka" }],
+          },
+          {
+            id: "c2",
+            type: "character",
+            banners: [{ name: "February" }],
+            startDate: "2024-02-01",
+            endDate: "2024-02-29",
+            featured5: [{ name: "Kafka" }],
+          },
+        ])
+      );
+      const chain = [
+        pull({
+          id: "loss",
+          ts: at("2024-01-05T00:00:00Z"),
+          rarity: 5,
+          name: "Himeko",
+        }),
+        pull({
+          id: "grant",
+          ts: at("2024-02-05T00:00:00Z"),
+          rarity: 5,
+          name: "Kafka",
+        }),
+      ];
+      expect(
+        guaranteePendingAt(
+          "hsr",
+          chain,
+          chainIndex,
+          "character",
+          at("2024-01-02T00:00:00Z")
+        )
+      ).toBe(false);
+      expect(
+        guaranteePendingAt(
+          "hsr",
+          chain,
+          chainIndex,
+          "character",
+          at("2024-01-10T00:00:00Z")
+        )
+      ).toBe(true);
+      expect(
+        guaranteePendingAt(
+          "hsr",
+          chain,
+          chainIndex,
+          "character",
+          at("2024-02-10T00:00:00Z")
+        )
+      ).toBe(false);
+      expect(
+        guaranteePendingAt(
+          "hsr",
+          [],
+          chainIndex,
+          "character",
+          at("2024-02-10T00:00:00Z")
+        )
+      ).toBe(false);
     });
 
     it("returns null without rate-up data, outside rate-up categories, or non-5★", () => {
@@ -753,6 +827,36 @@ describe("validateManualPull", () => {
       rarity: 5,
       name: "Kafka",
       manual: true,
+    });
+    expect(validateManualPull("hsr", draft, others, windowIndex)).toBeNull();
+  });
+
+  it("accepts a declared loss, a declared guarantee, then another loss", () => {
+    const others = [
+      pull({
+        id: "first",
+        ts: at("2024-01-03T00:00:00Z"),
+        rarity: 5,
+        name: "Clara",
+        manual: true,
+        fifty: "loss",
+      }),
+      pull({
+        id: "guaranteed",
+        ts: at("2024-01-10T00:00:00Z"),
+        rarity: 5,
+        name: "Kafka",
+        manual: true,
+        fifty: "guarantee",
+      }),
+    ];
+    const draft = pull({
+      id: "draft",
+      ts: at("2024-01-17T00:00:00Z"),
+      rarity: 5,
+      name: "Clara",
+      manual: true,
+      fifty: "loss",
     });
     expect(validateManualPull("hsr", draft, others, windowIndex)).toBeNull();
   });

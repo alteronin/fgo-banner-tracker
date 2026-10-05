@@ -320,13 +320,39 @@ export function fiftyFiftyResults(
   const pending = new Set<string>();
   const results = new Map<string, FiftyFiftyResult>();
   for (const pull of sorted) {
-    const result = fiftyFiftyResult(game, pull, index, pending.has(pull.category));
+    const declared =
+      pull.manual && pull.fifty ? pull.fifty : null;
+    const result =
+      declared ??
+      fiftyFiftyResult(game, pull, index, pending.has(pull.category));
     if (!result) continue;
     results.set(pull.id, result);
     if (result === "loss") pending.add(pull.category);
-    else if (result === "guarantee") pending.delete(pull.category);
+    else pending.delete(pull.category);
   }
   return results;
+}
+
+export function guaranteePendingAt(
+  game: PullGame,
+  pulls: GamePull[],
+  index: Map<string, BannerWindow[]>,
+  category: string,
+  ts: number
+): boolean {
+  const results = fiftyFiftyResults(game, pulls, index);
+  const chain = pulls
+    .filter((pull) => pull.category === category)
+    .slice()
+    .sort(comparePullOrder);
+  let pending = false;
+  for (const pull of chain) {
+    if (pull.ts > ts) break;
+    const result = results.get(pull.id);
+    if (!result) continue;
+    pending = result === "loss";
+  }
+  return pending;
 }
 
 export type ManualPullIssue =
@@ -367,7 +393,8 @@ export function validateManualPull(
   game: PullGame,
   draft: GamePull,
   others: GamePull[],
-  index: Map<string, BannerWindow[]>
+  index: Map<string, BannerWindow[]>,
+  options?: { allowAfterOldest?: boolean }
 ): ManualPullIssue | null {
   if (draft.ts > Date.now()) return { kind: "future" };
 
@@ -376,7 +403,7 @@ export function validateManualPull(
     if (pull.manual) continue;
     if (oldest === null || pull.ts < oldest) oldest = pull.ts;
   }
-  if (oldest !== null && draft.ts >= oldest) {
+  if (!options?.allowAfterOldest && oldest !== null && draft.ts >= oldest) {
     return { kind: "not-oldest", oldestTs: oldest };
   }
 

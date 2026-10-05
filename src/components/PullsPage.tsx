@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { getAppBySlug } from "@/lib/apps";
 import { categoryLabel, CATEGORY_ORDER } from "@/lib/pullImport";
@@ -33,6 +34,7 @@ import { GameTabs } from "./GameTabs";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { ImportPulls } from "./ImportPulls";
 import { ManualPullForm, safeChipColor } from "./ManualPullForm";
+import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 
 const PAGE_SIZE = 100;
@@ -92,7 +94,7 @@ export function PullsPage({
   const [category, setCategory] = useState("all");
   const [search, setSearch] = useState("");
   const [visible, setVisible] = useState(PAGE_SIZE);
-  const [view, setView] = useState<"list" | "grid">("list");
+  const [view, setView] = useState<"list" | "grid">("grid");
   const [adding, setAdding] = useState(false);
   const [editing, setEditing] = useState<GamePull | null>(null);
   const [status, setStatus] = useState<string | null>(null);
@@ -149,8 +151,8 @@ export function PullsPage({
   const pityMap = useMemo(() => pityByDrop(imported, 5), [imported]);
 
   const fiftyMap = useMemo(
-    () => fiftyFiftyResults(game, imported, index),
-    [game, imported, index]
+    () => fiftyFiftyResults(game, pulls, index),
+    [game, pulls, index]
   );
 
   const images = useMemo(() => {
@@ -190,6 +192,17 @@ export function PullsPage({
     }
     return { total: imported.length, five, four };
   }, [imported]);
+
+  const fiftyRecord = useMemo(() => {
+    const results = fiftyFiftyResults(game, pulls, index);
+    let wins = 0;
+    let losses = 0;
+    for (const result of results.values()) {
+      if (result === "win") wins += 1;
+      else if (result === "loss") losses += 1;
+    }
+    return { wins, losses, total: wins + losses };
+  }, [game, pulls, index]);
 
   const selectedStats = useMemo(() => {
     if (category === "all") return null;
@@ -276,6 +289,7 @@ export function PullsPage({
             >
               FGO
             </Link>
+            <AccountButton />
             <ThemeToggle />
           </div>
         </div>
@@ -323,10 +337,21 @@ export function PullsPage({
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
               <StatCard label="Total pulls" value={formatCount(counts.total)} color="gray" />
               <StatCard label="5★ pulled" value={formatCount(counts.five)} color="gold" />
               <StatCard label="4★ pulled" value={formatCount(counts.four)} color="purple" />
+              <StatCard
+                label="50/50 record"
+                value={
+                  fiftyRecord.total === 0
+                    ? "—"
+                    : `${fiftyRecord.wins}W – ${fiftyRecord.losses}L · ${Math.round(
+                        (fiftyRecord.wins / fiftyRecord.total) * 100
+                      )}%`
+                }
+                color="teal"
+              />
               <StatCard
                 label={category === "all" ? "Banners" : "Current 5★ pity"}
                 value={
@@ -518,6 +543,7 @@ export function PullsPage({
                   game={game}
                   images={images}
                   fifty={fiftyMap}
+                  onDelete={deleteEntry}
                 />
               )
             )}
@@ -571,9 +597,23 @@ function PullRow({
           <span
             className="text-xs shrink-0 rounded px-1.5 py-0.5 font-semibold text-gray-950"
             style={{ backgroundColor: safeChipColor(pull.chipColor) }}
-            title="Manual entry — not counted in pity stats"
+            title={
+              pull.fifty
+                ? pull.fifty === "guarantee"
+                  ? "Manual entry — claimed the guaranteed rate-up — not counted in pity stats"
+                  : `Manual entry — ${pull.fifty === "win" ? "won" : "lost"} rate-up — not counted in pity stats`
+                : "Manual entry — not counted in pity stats"
+            }
           >
-            ✱ Manual
+            {pull.fifty
+              ? `✱ Manual · ${
+                  pull.fifty === "win"
+                    ? "Won"
+                    : pull.fifty === "guarantee"
+                      ? "Guaranteed"
+                      : "Lost"
+                }`
+              : "✱ Manual"}
           </span>
         ) : (
           pity !== undefined && (
@@ -635,19 +675,42 @@ function PullRow({
   );
 }
 
+function manualFiftyLabel(fifty: GamePull["fifty"]): string | null {
+  if (fifty === "win") return "Won";
+  if (fifty === "guarantee") return "Guaranteed";
+  if (fifty === "loss") return "Lost";
+  return null;
+}
+
 function PullGrid({
   drops,
   index,
   game,
   images,
   fifty,
+  onDelete,
 }: {
   drops: { pull: GamePull; pity: number | null }[];
   index: Map<string, BannerWindow[]>;
   game: PullGame;
   images: Map<string, string>;
   fifty: Map<string, FiftyFiftyResult>;
+  onDelete: (pull: GamePull) => void;
 }) {
+  const [confirming, setConfirming] = useState<GamePull | null>(null);
+
+  useEffect(() => {
+    if (!confirming) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.stopPropagation();
+        setConfirming(null);
+      }
+    };
+    window.addEventListener("keydown", onKey, true);
+    return () => window.removeEventListener("keydown", onKey, true);
+  }, [confirming]);
+
   if (drops.length === 0) {
     return (
       <div className="text-center py-12 text-gray-500">
@@ -665,7 +728,9 @@ function PullGrid({
         >
           {drops.map(({ pull, pity }) => {
             const manual = pull.manual === true;
-            const result = manual ? null : fifty.get(pull.id) ?? null;
+            const result = manual
+              ? pull.fifty ?? null
+              : (fifty.get(pull.id) ?? null);
             const tone =
               !manual && pity !== null
                 ? pityTone(pity, maxPityFor(game, pull.category))
@@ -681,7 +746,15 @@ function PullGrid({
                 role="listitem"
                 title={
                   manual
-                    ? `${pull.name} · Manual (not counted) · ${attribution.label}`
+                    ? `${pull.name} · Manual (not counted)${
+                        pull.fifty
+                          ? pull.fifty === "win"
+                            ? " · Won 50/50"
+                            : pull.fifty === "guarantee"
+                              ? " · Guaranteed rate-up"
+                              : " · Lost 50/50"
+                          : ""
+                      } · ${attribution.label}`
                     : `${pull.name} · Pity ${pity} · ${attribution.label}`
                 }
                 className={`group relative aspect-square rounded-lg overflow-hidden border-2 bg-gray-900 transition-transform hover:-translate-y-0.5 ${FIFTY_BORDER[result ?? "none"]}`}
@@ -718,6 +791,14 @@ function PullGrid({
                     {pity}
                   </span>
                 )}
+                {manual && (
+                  <button
+                    type="button"
+                    aria-label={`Delete manual entry ${pull.name}`}
+                    onClick={() => setConfirming(pull)}
+                    className="absolute inset-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                  />
+                )}
               </div>
             );
           })}
@@ -727,8 +808,59 @@ function PullGrid({
         Number = pity at the drop (green early → red near hard pity). Border =
         rate-up result (green won 50/50, teal guaranteed after a loss, red
         lost); grey = no rate-up. ✱ = manual entry (your chip color, not
-        counted in stats).
+        counted in stats; logged entries show your declared rate-up result as
+        the border). Click a ✱ tile to delete it.
       </p>
+      {confirming &&
+        createPortal(
+          <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+            <div
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+              onClick={() => setConfirming(null)}
+            />
+            <div
+              role="dialog"
+              aria-label="Delete manual entry"
+              className="relative bg-gray-900 rounded-xl border border-gray-700 p-5 max-w-sm w-full space-y-4"
+            >
+              <div className="space-y-1">
+                <p className="text-sm font-semibold text-white">
+                  Delete this entry?
+                </p>
+                <p className="text-xs text-gray-400">
+                  {confirming.name} · {formatWhen(confirming.ts).date} · ✱
+                  Manual
+                  {manualFiftyLabel(confirming.fifty)
+                    ? ` · ${manualFiftyLabel(confirming.fifty)}`
+                    : ""}
+                </p>
+                <p className="text-xs text-gray-500">
+                  Logged manually — it will be removed from your pull history.
+                </p>
+              </div>
+              <div className="flex justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={() => setConfirming(null)}
+                  className="px-3 py-1.5 text-sm font-medium bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    onDelete(confirming);
+                    setConfirming(null);
+                  }}
+                  className="px-3 py-1.5 text-sm font-medium bg-red-600 hover:bg-red-500 text-white rounded-lg transition-colors"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 }
@@ -834,7 +966,7 @@ function StatCard({
 }: {
   label: string;
   value: string;
-  color: "gray" | "gold" | "purple" | "blue" | "violet";
+  color: "gray" | "gold" | "purple" | "blue" | "violet" | "teal";
   wide?: boolean;
 }) {
   const colorMap = {
@@ -843,6 +975,7 @@ function StatCard({
     purple: "border-purple-700 text-purple-400",
     blue: "border-blue-700 text-blue-400",
     violet: "border-violet-700 text-violet-400",
+    teal: "border-teal-700 text-teal-400",
   };
   return (
     <div

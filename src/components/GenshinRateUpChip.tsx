@@ -1,15 +1,30 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import type { GenshinRateUp } from "@/types/genshin";
 import type { UnitStatus } from "@/types/units";
 import { useUnitStatus } from "@/contexts/UnitContext";
+import {
+  checkLoggable,
+  hasPullInBanner,
+  type LogContext,
+  type LogPrompt,
+} from "@/lib/logPull";
+import {
+  getPullsServerSnapshot,
+  getPullsSnapshot,
+  subscribePulls,
+} from "@/lib/pullStorage";
 import { syntheticStatusKey } from "@/lib/unitResolve";
+import { isPullGame, type GamePull } from "@/types/pulls";
 import { ImageWithFallback } from "./ImageWithFallback";
+import { LogPullDialog } from "./LogPullDialog";
 
 interface GenshinRateUpChipProps {
   rateUp: GenshinRateUp;
   bannerStart?: string | null;
+  bannerEnd?: string | null;
+  logContext?: LogContext;
 }
 
 const STATUS_CONFIG: Record<
@@ -36,30 +51,33 @@ const STATUS_CONFIG: Record<
   },
 };
 
-function StatusIcon({ status }: { status: UnitStatus }) {
-  if (status === "owned") {
-    return (
-      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-        <path
-          fillRule="evenodd"
-          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-          clipRule="evenodd"
-        />
-      </svg>
-    );
-  }
-  if (status === "planning") {
-    return (
-      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-        <path
-          fillRule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-          clipRule="evenodd"
-        />
-      </svg>
-    );
-  }
-  return null;
+function OwnedIcon() {
+  return (
+    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" data-icon="owned">
+      <path
+        fillRule="evenodd"
+        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+function PlanningIcon() {
+  return (
+    <svg
+      className="w-3 h-3"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      data-icon="planning"
+    >
+      <path
+        fillRule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
 }
 
 let cachedNow: number | null = null;
@@ -77,15 +95,43 @@ function getServerNowSnapshot(): number | null {
   return null;
 }
 
+const EMPTY_PULLS: GamePull[] = [];
+
 export function GenshinRateUpChip({
   rateUp,
   bannerStart,
+  bannerEnd,
+  logContext,
 }: GenshinRateUpChipProps) {
-  const { getStatus, setStatus, toggleStatus, resolveName } = useUnitStatus();
+  const { getStatus, setStatus, resolveName, game } = useUnitStatus();
+  const [logPrompt, setLogPrompt] = useState<LogPrompt | null>(null);
+  const [pendingStatus, setPendingStatus] = useState<UnitStatus | null>(null);
   const now = useSyncExternalStore(
     subscribeNow,
     getNowSnapshot,
     getServerNowSnapshot
+  );
+
+  const pullGame = isPullGame(game);
+  const pullStore = useMemo(
+    () =>
+      pullGame
+        ? {
+            subscribe: (onChange: () => void) => subscribePulls(game, onChange),
+            snapshot: () => getPullsSnapshot(game),
+            serverSnapshot: getPullsServerSnapshot,
+          }
+        : {
+            subscribe: () => () => {},
+            snapshot: () => EMPTY_PULLS,
+            serverSnapshot: () => EMPTY_PULLS,
+          },
+    [pullGame, game]
+  );
+  const pulls = useSyncExternalStore(
+    pullStore.subscribe,
+    pullStore.snapshot,
+    pullStore.serverSnapshot
   );
 
   const unitId = resolveName(rateUp.name);
@@ -98,6 +144,21 @@ export function GenshinRateUpChip({
   const config = STATUS_CONFIG[status];
   const interactive = unitId !== null || isFuture;
 
+  const pulledHere = useMemo(() => {
+    if (!pullGame) return null;
+    return hasPullInBanner({
+      game,
+      name: rateUp.name,
+      unitId,
+      bannerStart: bannerStart ?? null,
+      bannerEnd: bannerEnd ?? null,
+      pulls,
+    });
+  }, [pullGame, game, rateUp.name, unitId, bannerStart, bannerEnd, pulls]);
+
+  const showCheck =
+    pulledHere === true || (pulledHere === null && status === "owned");
+
   const content = (
     <>
       {rateUp.image && (
@@ -109,7 +170,11 @@ export function GenshinRateUpChip({
           className="rounded-full object-cover shrink-0"
         />
       )}
-      {status !== "none" && <StatusIcon status={status} />}
+      {showCheck ? (
+        <OwnedIcon />
+      ) : status === "planning" ? (
+        <PlanningIcon />
+      ) : null}
       <span className="truncate">{rateUp.name}</span>
     </>
   );
@@ -125,31 +190,72 @@ export function GenshinRateUpChip({
     );
   }
 
+  const cycleStatus = (current: UnitStatus): UnitStatus =>
+    current === "none" ? "owned" : current === "owned" ? "planning" : "none";
+
+  const closeDialog = () => {
+    setLogPrompt(null);
+    if (unitId && pendingStatus) setStatus(unitId, pendingStatus);
+    setPendingStatus(null);
+  };
+
+  const saveDialog = () => {
+    setLogPrompt(null);
+    if (unitId) setStatus(unitId, "owned");
+    setPendingStatus(null);
+  };
+
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (unitId !== null) {
       if (isFuture) {
         setStatus(unitId, status === "planning" ? "none" : "planning");
-      } else {
-        toggleStatus(unitId);
+        return;
       }
+      if (logContext) {
+        const prompt = checkLoggable({
+          ctx: logContext,
+          name: rateUp.name,
+        });
+        if (prompt) {
+          setPendingStatus(cycleStatus(status));
+          setLogPrompt(prompt);
+          return;
+        }
+      }
+      setStatus(unitId, cycleStatus(status));
       return;
     }
     setStatus(statusKey, status === "planning" ? "none" : "planning");
   };
 
   return (
-    <button
-      type="button"
-      onClick={handleClick}
-      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all duration-200 max-w-full hover:opacity-80 cursor-pointer ${config.bg} ${config.border} ${config.text}`}
-      title={
-        isFuture && unitId === null
-          ? "Future banner: click to plan"
-          : `Click to change: ${config.label}`
-      }
-    >
-      {content}
-    </button>
+    <>
+      <button
+        type="button"
+        onClick={handleClick}
+        className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all duration-200 max-w-full hover:opacity-80 cursor-pointer ${config.bg} ${config.border} ${config.text}`}
+        title={
+          isFuture && unitId === null
+            ? "Future banner: click to plan"
+            : `Click to change: ${config.label}`
+        }
+      >
+        {content}
+      </button>
+      {logPrompt && logContext && (
+        <LogPullDialog
+          game={logContext.game}
+          category={logPrompt.category}
+          bannerTitle={logContext.bannerTitle}
+          bannerStart={logPrompt.bannerStart}
+          bannerEnd={logContext.bannerEnd}
+          unit={logPrompt.item}
+          pulls={pulls}
+          onClose={closeDialog}
+          onSaved={saveDialog}
+        />
+      )}
+    </>
   );
 }

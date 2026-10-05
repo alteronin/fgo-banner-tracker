@@ -18,6 +18,7 @@ export interface GamePull {
   seq?: number;
   manual?: boolean;
   chipColor?: string;
+  fifty?: "win" | "loss" | "guarantee";
 }
 
 export interface PullMapItem {

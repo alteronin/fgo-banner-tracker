@@ -66,7 +66,18 @@ export function HsrBannerCard({ banner, onClick }: HsrBannerCardProps) {
         </div>
         <div className="flex flex-wrap gap-1.5">
           {banner.featured5.map((rateUp) => (
-            <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
+            <RateUpChip
+              key={rateUp.name}
+              rateUp={rateUp}
+              bannerStart={banner.startDate} bannerEnd={banner.endDate}
+              logContext={{
+                game: "hsr",
+                bannerType: banner.type,
+                bannerTitle: title,
+                bannerStart: banner.startDate,
+                bannerEnd: banner.endDate,
+              }}
+            />
           ))}
         </div>
       </div>

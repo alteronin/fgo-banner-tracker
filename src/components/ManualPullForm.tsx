@@ -39,7 +39,7 @@ export function safeChipColor(value: string | null | undefined): string {
   return value && CHIP_HEX.test(value) ? value : DEFAULT_CHIP_COLOR;
 }
 
-function formatIssue(issue: ManualPullIssue): string {
+export function formatIssue(issue: ManualPullIssue): string {
   switch (issue.kind) {
     case "future":
       return "Pick a date in the past — future pulls don't exist.";
@@ -53,8 +53,12 @@ function formatIssue(issue: ManualPullIssue): string {
     case "pity4-cap":
       return "Impossible: this would leave more than 10 pulls without a 4★ (the guarantee would have fired).";
     case "consecutive-loss":
-      return "Impossible: two 50/50 losses in a row — the 5★ after a loss is always guaranteed.";
+      return "Two 50/50 losses in a row — the 5★ after a loss is always guaranteed. If a 5★ between them isn't logged yet, you can still save.";
   }
+}
+
+export function isBlockingIssue(issue: ManualPullIssue): boolean {
+  return issue.kind !== "consecutive-loss";
 }
 
 interface MapChoice {
@@ -73,7 +77,7 @@ function rarityClass(rarity: number | null): string {
 
 const pad2 = (value: number) => String(value).padStart(2, "0");
 
-function toLocalInput(ts: number): string {
+export function toLocalInput(ts: number): string {
   const date = new Date(ts);
   return (
     `${date.getFullYear()}-${pad2(date.getMonth() + 1)}-${pad2(date.getDate())}` +
@@ -81,7 +85,7 @@ function toLocalInput(ts: number): string {
   );
 }
 
-function parseLocalInput(value: string): number | null {
+export function parseLocalInput(value: string): number | null {
   const match =
     /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2})(?:\.\d+)?)?$/.exec(
       value
@@ -98,7 +102,7 @@ function parseLocalInput(value: string): number | null {
   return Number.isNaN(ts) ? null : ts;
 }
 
-const FIELD_CLASS =
+export const FIELD_CLASS =
   "w-full px-3 py-2 rounded-lg bg-gray-950 border border-gray-700 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500";
 
 export function ManualPullForm({
@@ -205,6 +209,7 @@ export function ManualPullForm({
       chipColor: keepManual ? chipColor : undefined,
     });
     if (initial && !initial.manual) return { ...built, manual: false };
+    if (initial?.fifty) return { ...built, fifty: initial.fifty };
     return built;
   }, [
     ts,
@@ -224,6 +229,7 @@ export function ManualPullForm({
     return validateManualPull(game, draft, scope, index);
   }, [draft, game, scope, index]);
 
+  const blockingIssue = issue && isBlockingIssue(issue) ? issue : null;
   const issueMessage = issue ? formatIssue(issue) : null;
 
   const importedOldestTs = useMemo(() => {
@@ -260,7 +266,7 @@ export function ManualPullForm({
       );
       return;
     }
-    if (issue) return;
+    if (blockingIssue) return;
     const next = initial
       ? pulls.map((pull) => (pull.id === initial.id ? draft : pull))
       : [...pulls, draft];
@@ -443,7 +449,9 @@ export function ManualPullForm({
       )}
 
       {preview && <p className="text-xs text-amber-400">{preview}</p>}
-      {issueMessage ? (
+      {issue && !isBlockingIssue(issue) ? (
+        <p className="text-sm text-amber-400">{issueMessage}</p>
+      ) : issueMessage ? (
         <p className="text-sm text-red-400">{issueMessage}</p>
       ) : (
         error && <p className="text-sm text-red-400">{error}</p>
@@ -452,7 +460,7 @@ export function ManualPullForm({
       <div className="flex gap-2">
         <button
           type="submit"
-          disabled={!valid || issue !== null}
+          disabled={!valid || blockingIssue !== null}
           className="px-3 py-1.5 text-sm font-medium bg-blue-600 hover:bg-blue-500 disabled:bg-gray-800 disabled:text-gray-500 text-white rounded-lg transition-colors"
         >
           {initial ? "Save changes" : "Add entry"}
