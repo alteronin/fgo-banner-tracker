@@ -23,6 +23,7 @@ describe("filter group configs", () => {
     expect(getUnitsConfig("genshin").filterGroups.map((g) => g.key)).toEqual([
       "element",
       "weapon",
+      "type",
     ]);
     expect(getUnitsConfig("hsr").filterGroups.map((g) => g.key)).toEqual([
       "element",
@@ -70,6 +71,7 @@ describe("filter group configs", () => {
       "Bow",
       "Catalyst",
     ]);
+    expect(group("genshin", "type")).toEqual(["Character", "Weapon"]);
     expect(group("hsr", "element")).toEqual([
       "Fire",
       "Ice",
@@ -153,12 +155,21 @@ describe("filter group configs", () => {
 });
 
 describe("row filter mapping", () => {
-  it("genshin rows carry element and weapon filters", () => {
+  it("genshin rows carry weapon filters and typed elements", () => {
     const rows = getUnitRows("genshin");
-    for (const row of rows) {
-      expect(row.filters.element).toBeTruthy();
-      expect(row.filters.weapon).toBeTruthy();
-      expect(row.subtitle).toBe(`${row.filters.element} · ${row.filters.weapon}`);
+    const weapons = rows.filter((r) => r.filters.type === "Weapon");
+    const characters = rows.filter((r) => r.filters.type === "Character");
+    expect(weapons.length).toBe(73);
+    expect(characters.length).toBe(127);
+    for (const w of weapons) {
+      expect(w.filters.element ?? null).toBeNull();
+      expect(w.filters.weapon).toBeTruthy();
+      expect(w.subtitle).toBe(`Weapon · ${w.filters.weapon}`);
+    }
+    for (const c of characters) {
+      expect(c.filters.element).toBeTruthy();
+      expect(c.filters.weapon).toBeTruthy();
+      expect(c.subtitle).toBe(`${c.filters.element} · ${c.filters.weapon}`);
     }
   });
 

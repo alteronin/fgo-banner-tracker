@@ -119,7 +119,7 @@ export function GenshinBannerDetail({ banner, onClose }: GenshinBannerDetailProp
               </h3>
               <div className="flex flex-wrap gap-2">
                 {banner.featured5.map((rateUp) => (
-                  <GenshinRateUpChip key={rateUp.name} rateUp={rateUp} linked />
+                  <GenshinRateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
                 ))}
               </div>
             </div>
@@ -132,7 +132,7 @@ export function GenshinBannerDetail({ banner, onClose }: GenshinBannerDetailProp
               </h3>
               <div className="flex flex-wrap gap-2">
                 {banner.featured4.map((rateUp) => (
-                  <GenshinRateUpChip key={rateUp.name} rateUp={rateUp} linked />
+                  <GenshinRateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
                 ))}
               </div>
             </div>

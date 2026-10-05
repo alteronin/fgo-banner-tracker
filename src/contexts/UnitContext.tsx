@@ -9,6 +9,12 @@ import {
 } from "react";
 import type { UnitGame, UnitStatus } from "@/types/units";
 import {
+  buildUnitIndex,
+  resolveUnitName,
+  type UnitIndex,
+  type UnitIndexEntry,
+} from "@/lib/unitResolve";
+import {
   getUnitStatusesServerSnapshot,
   getUnitStatusesSnapshot,
   notifyUnitStatusesChange,
@@ -22,15 +28,18 @@ interface UnitContextType {
   getStatus: (unitId: string) => UnitStatus;
   toggleStatus: (unitId: string) => void;
   setStatus: (unitId: string, status: UnitStatus) => void;
+  resolveName: (name: string) => string | null;
 }
 
 const UnitContext = createContext<UnitContextType | null>(null);
 
 export function UnitProvider({
   game,
+  roster,
   children,
 }: {
   game: UnitGame;
+  roster?: readonly UnitIndexEntry[];
   children: ReactNode;
 }) {
   const store = useMemo(
@@ -40,6 +49,11 @@ export function UnitProvider({
       getServerSnapshot: getUnitStatusesServerSnapshot,
     }),
     [game]
+  );
+
+  const index = useMemo<UnitIndex | null>(
+    () => (roster ? buildUnitIndex(roster, game) : null),
+    [roster, game]
   );
 
   const statuses = useSyncExternalStore(
@@ -63,9 +77,19 @@ export function UnitProvider({
     setStatus(unitId, next);
   };
 
+  const resolveName = (name: string): string | null =>
+    index ? resolveUnitName(name, index) : null;
+
   return (
     <UnitContext.Provider
-      value={{ game, statuses, getStatus, toggleStatus, setStatus }}
+      value={{
+        game,
+        statuses,
+        getStatus,
+        toggleStatus,
+        setStatus,
+        resolveName,
+      }}
     >
       {children}
     </UnitContext.Provider>

@@ -14,8 +14,9 @@ export interface GenshinUnit {
   imageUrl: string;
   url: string;
   rarity: string;
-  element: string;
+  element: string | null;
   weapon: string;
+  type: "character" | "weapon";
 }
 
 export interface HsrUnit {

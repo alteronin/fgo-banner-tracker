@@ -6,7 +6,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297538",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "610137",
@@ -15,7 +16,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297537",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "610138",
@@ -24,7 +26,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297536",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "610139",
@@ -33,7 +36,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297535",
     "rarity": "4",
     "element": "Pyro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "610140",
@@ -42,7 +46,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Lisa-Best-Builds",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "610141",
@@ -51,7 +56,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297516",
     "rarity": "4",
     "element": "Cryo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "610142",
@@ -60,7 +66,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297517",
     "rarity": "4",
     "element": "Hydro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "610143",
@@ -69,7 +76,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297518",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "610144",
@@ -78,7 +86,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297519",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "610145",
@@ -87,7 +96,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Venti-Best-Builds",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "610146",
@@ -96,7 +106,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297521",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "610147",
@@ -105,7 +116,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Bennett-Best-Builds",
     "rarity": "4",
     "element": "Pyro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "610148",
@@ -114,7 +126,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297523",
     "rarity": "4",
     "element": "Geo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "610149",
@@ -123,7 +136,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297524",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "610150",
@@ -132,7 +146,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297525",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "610151",
@@ -141,7 +156,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Mona-Best-Builds",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "610152",
@@ -150,7 +166,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297527",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "610153",
@@ -159,7 +176,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297528",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "610154",
@@ -168,7 +186,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297529",
     "rarity": "4",
     "element": "Geo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "610155",
@@ -177,7 +196,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297530",
     "rarity": "4",
     "element": "Pyro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "610156",
@@ -186,7 +206,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297531",
     "rarity": "4",
     "element": "Hydro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "610157",
@@ -195,7 +216,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297532",
     "rarity": "4",
     "element": "Cryo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "610158",
@@ -204,7 +226,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/297533",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "610177",
@@ -213,7 +236,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Keqing-Best-Builds",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "620194",
@@ -222,7 +246,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/305862",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "620195",
@@ -231,7 +256,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/305858",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "620200",
@@ -240,7 +266,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/305872",
     "rarity": "4",
     "element": "Cryo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "620201",
@@ -249,7 +276,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/305873",
     "rarity": "4",
     "element": "Pyro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "626689",
@@ -258,7 +286,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/309656",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "627173",
@@ -267,7 +296,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/312173",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "629258",
@@ -276,7 +306,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/312182",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "630615",
@@ -285,7 +316,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/314347",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "630616",
@@ -294,7 +326,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/314177",
     "rarity": "4",
     "element": "Cryo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "630618",
@@ -303,7 +336,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/315215",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "643212",
@@ -312,7 +346,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/315233",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "653205",
@@ -321,7 +356,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/314346",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "665102",
@@ -330,7 +366,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/328765",
     "rarity": "4",
     "element": "Pyro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "665103",
@@ -339,7 +376,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/328764",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "665402",
@@ -348,7 +386,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/327533",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "674795",
@@ -357,7 +396,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/332826",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "674886",
@@ -366,7 +406,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/333140",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "675760",
@@ -375,7 +416,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/333497",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "675761",
@@ -384,7 +426,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/333496",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "680595",
@@ -393,7 +436,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/336727",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "680596",
@@ -402,7 +446,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/336726",
     "rarity": "4",
     "element": "Geo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "681542",
@@ -411,7 +456,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/337141",
     "rarity": "4",
     "element": "Pyro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "681543",
@@ -420,7 +466,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/337161",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "681544",
@@ -429,7 +476,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/336865",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "681545",
@@ -438,7 +486,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/337140",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "684070",
@@ -447,7 +496,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/337957",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "699211",
@@ -456,7 +506,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/345461",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "699406",
@@ -465,7 +516,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/345881",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "699407",
@@ -474,7 +526,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/345879",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "699408",
@@ -483,7 +536,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/345540",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "699409",
@@ -492,7 +546,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/345516",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "699410",
@@ -501,7 +556,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/345514",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "700114",
@@ -510,7 +566,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/346199",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "700639",
@@ -519,7 +576,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/346620",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "700640",
@@ -528,7 +586,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/314345",
     "rarity": "4",
     "element": "Geo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "725552",
@@ -537,7 +596,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/314348",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "755854",
@@ -546,7 +606,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/372781",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "782946",
@@ -555,7 +616,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/381807",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "783134",
@@ -564,7 +626,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/382082",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "783135",
@@ -573,7 +636,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/382079",
     "rarity": "4",
     "element": "Dendro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "783136",
@@ -582,7 +646,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/380569",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "783199",
@@ -591,7 +656,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/382107",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "783200",
@@ -600,7 +666,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/382103",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "787841",
@@ -609,7 +676,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/383712",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "787842",
@@ -618,7 +686,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Dehya-Best-Builds",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "787843",
@@ -627,7 +696,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/383715",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "787844",
@@ -636,7 +706,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Nahida-Best-Builds",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "787873",
@@ -645,7 +716,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/382106",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "794432",
@@ -654,7 +726,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/386384",
     "rarity": "4",
     "element": "Hydro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "794723",
@@ -663,7 +736,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Kaveh-Best-Builds",
     "rarity": "4",
     "element": "Dendro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "794724",
@@ -672,7 +746,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/386486",
     "rarity": "4",
     "element": "Cryo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "806033",
@@ -681,7 +756,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/390096",
     "rarity": "4",
     "element": "Cryo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "808162",
@@ -690,7 +766,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/391897",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "833441",
@@ -699,7 +776,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/314174",
     "rarity": "4",
     "element": "Dendro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "861000",
@@ -708,7 +786,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/409556",
     "rarity": "4",
     "element": "Dendro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "875167",
@@ -717,7 +796,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/412428",
     "rarity": "4",
     "element": "Cryo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "883583",
@@ -726,7 +806,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/416602",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "885130",
@@ -735,7 +816,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/417194",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "885132",
@@ -744,7 +826,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Wriothesley-Best-Builds",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "885148",
@@ -753,7 +836,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/417207",
     "rarity": "4",
     "element": "Cryo",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "885151",
@@ -762,7 +846,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/352956",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "885165",
@@ -771,7 +856,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Furina-Best-Builds",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "885178",
@@ -780,7 +866,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/417218",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "885202",
@@ -789,7 +876,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Neuvillette-Best-Builds",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "896998",
@@ -798,7 +886,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/382793",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "896999",
@@ -807,7 +896,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/422493",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "905963",
@@ -816,7 +906,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/426201",
     "rarity": "4",
     "element": "Pyro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "920175",
@@ -825,7 +916,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/Xianyun-Best-Builds",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "933253",
@@ -834,7 +926,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/437446",
     "rarity": "4",
     "element": "Pyro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "986179",
@@ -843,7 +936,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/451024",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "1028270",
@@ -852,7 +946,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/461994",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1028271",
@@ -861,7 +956,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/462004",
     "rarity": "4",
     "element": "Geo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "1028272",
@@ -870,7 +966,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/461991",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "1028273",
@@ -879,7 +976,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/461989",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1028274",
@@ -888,7 +986,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/461997",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "1028275",
@@ -897,7 +996,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/462001",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "1028276",
@@ -906,7 +1006,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/461999",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "1028277",
@@ -915,7 +1016,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/461993",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "1068845",
@@ -924,7 +1026,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/470309",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "1074234",
@@ -933,7 +1036,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/472693",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1124559",
@@ -942,7 +1046,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/486709",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1140650",
@@ -951,7 +1056,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/492414",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1166395",
@@ -960,7 +1066,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/500244",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1189992",
@@ -969,7 +1076,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/385307",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "1208504",
@@ -978,7 +1086,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/516026",
     "rarity": "4",
     "element": "Hydro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "1245581",
@@ -987,7 +1096,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/531360",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "1268826",
@@ -996,7 +1106,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/537903",
     "rarity": "4",
     "element": "Hydro",
-    "weapon": "Claymore"
+    "weapon": "Claymore",
+    "type": "character"
   },
   {
     "id": "1268827",
@@ -1005,7 +1116,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/538066",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1269383",
@@ -1014,7 +1126,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/538446",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "1269384",
@@ -1023,7 +1136,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/538448",
     "rarity": "5",
     "element": "Dendro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1269385",
@@ -1032,7 +1146,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/538451",
     "rarity": "5",
     "element": "Electro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "1269386",
@@ -1041,7 +1156,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/406932",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1269387",
@@ -1050,7 +1166,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/462478",
     "rarity": "5",
     "element": "Pyro",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "1305625",
@@ -1059,7 +1176,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/551088",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Bow"
+    "weapon": "Bow",
+    "type": "character"
   },
   {
     "id": "1317284",
@@ -1068,7 +1186,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/555902",
     "rarity": "4",
     "element": "Geo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "1360140",
@@ -1077,7 +1196,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/570263",
     "rarity": "5",
     "element": "Geo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "1395335",
@@ -1086,7 +1206,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/580697",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "1436477",
@@ -1095,7 +1216,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/590328",
     "rarity": "4",
     "element": "Anemo",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1487768",
@@ -1104,7 +1226,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/606400",
     "rarity": "5",
     "element": "Hydro",
-    "weapon": "Catalyst"
+    "weapon": "Catalyst",
+    "type": "character"
   },
   {
     "id": "1491476",
@@ -1113,7 +1236,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/606884",
     "rarity": "4",
     "element": "Electro",
-    "weapon": "Polearm"
+    "weapon": "Polearm",
+    "type": "character"
   },
   {
     "id": "1491477",
@@ -1122,7 +1246,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/606893",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "1491479",
@@ -1131,7 +1256,8 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/606901",
     "rarity": "5",
     "element": "Anemo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
   },
   {
     "id": "1548515",
@@ -1140,6 +1266,737 @@
     "url": "https://game8.co/games/Genshin-Impact/archives/613906",
     "rarity": "5",
     "element": "Cryo",
-    "weapon": "Sword"
+    "weapon": "Sword",
+    "type": "character"
+  },
+  {
+    "id": "w-301955",
+    "name": "Amos' Bow",
+    "imageUrl": "https://img.game8.co/3314370/6ffcc5b665c0c0cdcfc6a5307efb50fc.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/301955",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-377477",
+    "name": "Aqua Simulacra",
+    "imageUrl": "https://img.game8.co/3528570/002bacc1da7d27ed47513dcddf5664a3.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/377477",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-484205",
+    "name": "Astral Vulture's Crimson Plumage",
+    "imageUrl": "https://img.game8.co/4046434/9f7e0a64f51c937dde809d2c34b99802.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/484205",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-322046",
+    "name": "Elegy for the End",
+    "imageUrl": "https://img.game8.co/3337676/5fa2d6425740a96a905eeb98b5989af2.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/322046",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-590317",
+    "name": "Golden Frostbound Oath",
+    "imageUrl": "https://img.game8.co/4462437/4e5be0597ed8f3a37951fd04a3cc93b7.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/590317",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-385300",
+    "name": "Hunter's Path",
+    "imageUrl": "https://img.game8.co/3581031/e6635c46104684f58db0aaecada0b8fe.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/385300",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-345326",
+    "name": "Polar Star",
+    "imageUrl": "https://img.game8.co/3441955/4d6e9bd57053a0002ee39fd2c79a5ded.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/345326",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-456137",
+    "name": "Silvershower Heartstrings",
+    "imageUrl": "https://img.game8.co/3916965/3cbfb14f722e9d110d1c4cf56d16bc08.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/456137",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-304615",
+    "name": "Skyward Harp",
+    "imageUrl": "https://img.game8.co/3346261/9c2f66fddbb0cbe55f2e79b8ac8c25a0.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/304615",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-567341",
+    "name": "The Daybreak Chronicles",
+    "imageUrl": "https://img.game8.co/4355223/bcf17c479f791e44456e3e33a338532a.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/567341",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-420283",
+    "name": "The First Great Magic",
+    "imageUrl": "https://img.game8.co/3754180/4e617a22bfe01becfe6d504bdecaa615.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/420283",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-337151",
+    "name": "Thundering Pulse",
+    "imageUrl": "https://img.game8.co/3441958/f896203efe9ce4f6598fa5ac23c3a196.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/337151",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "w-394332",
+    "name": "A Thousand Floating Dreams",
+    "imageUrl": "https://img.game8.co/3604186/0a10f4aac949038c4850e9f1f320689b.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/394332",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-598987",
+    "name": "Angelos' Heptades",
+    "imageUrl": "https://img.game8.co/4506198/43f6b0e159dc10378c6b9ec8b37eb46a.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/598987",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-408469",
+    "name": "Cashflow Supervision",
+    "imageUrl": "https://img.game8.co/3781893/72317ddd3c9ce107d805492df509480f.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/408469",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-440058",
+    "name": "Crane's Echoing Call",
+    "imageUrl": "https://img.game8.co/3833292/9ff5cf76c0c2694c96510fc10b28eae5.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/440058",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-336730",
+    "name": "Everlasting Moonglow",
+    "imageUrl": "https://img.game8.co/3406916/f058c984d344ac944f12a5e62c655414.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/336730",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-409302",
+    "name": "Jadefall's Splendor",
+    "imageUrl": "https://img.game8.co/3685384/2f035d2cfcb6b8afb407cb15dee9e3fa.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/409302",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-356453",
+    "name": "Kagura's Verity",
+    "imageUrl": "https://img.game8.co/3487589/f131eb7f0d3c359c363298bb403c522b.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/356453",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-304619",
+    "name": "Lost Prayer to the Sacred Winds",
+    "imageUrl": "https://img.game8.co/3346264/0e392bb85512e2abb709aa844b46eb77.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/304619",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-306213",
+    "name": "Memory of Dust",
+    "imageUrl": "https://img.game8.co/3314350/d958ab07423e73c246b074d4e8aa0e31.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/306213",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-546786",
+    "name": "Nightweaver's Looking Glass",
+    "imageUrl": "https://img.game8.co/4275215/7cb822b3f1524fa3375a2ba8a6f6c499.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/546786",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-572615",
+    "name": "Nocturne's Curtain Call",
+    "imageUrl": "https://img.game8.co/4384814/caaf08b6646e64a4f23641d709be2545.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/572615",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-557054",
+    "name": "Reliquary of Truth",
+    "imageUrl": "https://img.game8.co/4314482/ccf185eaca879dfa0e8f199dc4a85d06.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/557054",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-304620",
+    "name": "Skyward Atlas",
+    "imageUrl": "https://img.game8.co/3301806/a6095a397ed72ce54a8dd128b4e7089b.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/304620",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-491934",
+    "name": "Starcaller's Watch",
+    "imageUrl": "https://img.game8.co/4076476/85864cf9c00d1d301383029265443fb2.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/491934",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-409223",
+    "name": "Sunny Morning Sleep-In",
+    "imageUrl": "https://img.game8.co/4106050/1dd4dd0abc644feac5dd2695b74dc71b.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/409223",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-468286",
+    "name": "Surf's Up",
+    "imageUrl": "https://img.game8.co/3977895/54f374186fff6d49b9975e474ae169a8.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/468286",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-426289",
+    "name": "Tome of the Eternal Flow",
+    "imageUrl": "https://img.game8.co/3773949/ba0eff1937f21da8af99e49327f3ca21.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/426289",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-397860",
+    "name": "Tulaytullah's Remembrance",
+    "imageUrl": "https://img.game8.co/3616456/db1de5f246453058c1444c1c199bac13.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/397860",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-504846",
+    "name": "Vivid Notions",
+    "imageUrl": "https://img.game8.co/4142614/5308878a1c4a01221f51fccc57fa67c7.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/504846",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Catalyst",
+    "type": "weapon"
+  },
+  {
+    "id": "w-605434",
+    "name": "A Teaspoon of Transcendence",
+    "imageUrl": "https://img.game8.co/4547863/0ac03203c8d4d264ea6b743dd720138e.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/605434",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-491933",
+    "name": "A Thousand Blazing Suns",
+    "imageUrl": "https://img.game8.co/4076477/8609c141ca1946463e2f2324b703d9f8.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/491933",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-405238",
+    "name": "Beacon of the Reed Sea",
+    "imageUrl": "https://img.game8.co/3660160/2623f4f3b7a7a6b15f3c11c97bb6371c.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/405238",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-468281",
+    "name": "Fang of the Mountain King",
+    "imageUrl": "https://img.game8.co/3992358/770e84f35b959025c058b8a52030e32e.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/468281",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-580687",
+    "name": "Gest of the Mighty Wolf",
+    "imageUrl": "https://img.game8.co/4424813/e1cf47c04f24fd0963fb4be3ed0bd44c.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/580687",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-349600",
+    "name": "Redhorn Stonethresher",
+    "imageUrl": "https://img.game8.co/3459955/1d2415e1d932c703b8f39d30358a2ee0.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/349600",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-304632",
+    "name": "Skyward Pride",
+    "imageUrl": "https://img.game8.co/3301809/49d0e32b13e22df7a2787f9e7ed24089.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/304632",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-328777",
+    "name": "Song of Broken Pines",
+    "imageUrl": "https://img.game8.co/3360767/8f5b86dccec3b47d032dc259dfcebb2e.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/328777",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-306214",
+    "name": "The Unforged",
+    "imageUrl": "https://img.game8.co/3301791/2983bb1c36edb32b5e936f15973c82ab.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/306214",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-436072",
+    "name": "Verdict",
+    "imageUrl": "https://img.game8.co/3812096/ce10ffdb02ddaf2cb964b93269c03408.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/436072",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-304631",
+    "name": "Wolf's Gravestone",
+    "imageUrl": "https://img.game8.co/3508899/bd5cea463de5add38a8d508d2da17070.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/304631",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Claymore",
+    "type": "weapon"
+  },
+  {
+    "id": "w-546785",
+    "name": "Bloodsoaked Ruins",
+    "imageUrl": "https://img.game8.co/4292635/7964faaea6d24f430b5b50e3024a0ca0.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/546785",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-353110",
+    "name": "Calamity Queller",
+    "imageUrl": "https://img.game8.co/3466467/ce3773137658045cf6fb9be54efeddfc.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/353110",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-451025",
+    "name": "Crimson Moon's Semblance",
+    "imageUrl": "https://img.game8.co/3872861/38528afd4ec060d4f675d09e74bd7582.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/451025",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-598991",
+    "name": "Disaster and Remorse",
+    "imageUrl": "https://img.game8.co/4530436/f161fc9e8e3c8c89ce3dfc2b1c8a2d91.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/598991",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-336755",
+    "name": "Engulfing Lightning",
+    "imageUrl": "https://img.game8.co/3406917/3b47d214c8da2606eaafa91926da532d.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/336755",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-538082",
+    "name": "Fractured Halo",
+    "imageUrl": "https://img.game8.co/4235462/64e34fff82210953fcec5f99eab1cf32.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/538082",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-460346",
+    "name": "Lumidouce Elegy",
+    "imageUrl": "https://img.game8.co/3948993/75a265b1595c2e664cdaa818883d6cf7.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/460346",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-304637",
+    "name": "Primordial Jade Winged-Spear",
+    "imageUrl": "https://img.game8.co/3314371/b69ff07b01658994f8567f638e6173a1.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/304637",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-304629",
+    "name": "Skyward Spine",
+    "imageUrl": "https://img.game8.co/3314372/9f2e6c60062269c38316327b39c7f16f.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/304629",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-317257",
+    "name": "Staff of Homa",
+    "imageUrl": "https://img.game8.co/3331190/b98501cae978bb4735562626f192b3fb.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/317257",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-342759",
+    "name": "Staff of the Scarlet Sands",
+    "imageUrl": "https://img.game8.co/3583010/03d67e2baf1b297b7fbd0c24440d95d2.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/342759",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-516101",
+    "name": "Symphonist of Scents",
+    "imageUrl": "https://img.game8.co/4166634/9efdd6238c8bb346c1057004c6f57270.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/516101",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-306211",
+    "name": "Vortex Vanquisher",
+    "imageUrl": "https://img.game8.co/3522993/4ef7dfbd19f7ecf4656af9756c25d12c.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/306211",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Polearm",
+    "type": "weapon"
+  },
+  {
+    "id": "w-456138",
+    "name": "Absolution",
+    "imageUrl": "https://img.game8.co/3907935/9aee7293b262fde8336a9b48f2c02fd2.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/456138",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-301917",
+    "name": "Aquila Favonia",
+    "imageUrl": "https://img.game8.co/3301808/a675f0895d38c5442d6619f737a57dc4.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/301917",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-567340",
+    "name": "Athame Artis",
+    "imageUrl": "https://img.game8.co/4355224/bbb4d643aa49e13b8d7e911d00a472c9.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/567340",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-527284",
+    "name": "Azurelight",
+    "imageUrl": "https://img.game8.co/4199037/798ad5d9723a3fc83d31db5bd27294bc.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/527284",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-615195",
+    "name": "Exaiphanes Blade",
+    "imageUrl": "https://img.game8.co/4587511/a4c2e61e2534cca0c978b83dd23cc3ea.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/615195",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-332846",
+    "name": "Freedom-Sworn",
+    "imageUrl": "https://img.game8.co/3456283/700b83638b99dba8908463aa92f6b3d6.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/332846",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-371800",
+    "name": "Haran Geppaku Futsu",
+    "imageUrl": "https://img.game8.co/3511222/2310c3f7ed9c13a4249fccdc256199bb.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/371800",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-348292",
+    "name": "Key of Khaj-Nisut",
+    "imageUrl": "https://img.game8.co/3596782/77719f703169b3aa39f6060ae55dc40b.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/348292",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-401825",
+    "name": "Light of Foliar Incision",
+    "imageUrl": "https://img.game8.co/3635987/a22eb6f7a3fb484222553f7a0772a052.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/401825",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-572616",
+    "name": "Lightbearing Moonshard",
+    "imageUrl": "https://img.game8.co/4420111/8e54b06783a6f365709958b4b0564994.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/572616",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-337150",
+    "name": "Mistsplitter Reforged",
+    "imageUrl": "https://img.game8.co/3385777/e37e18f22714bbafe297e8a4beb96749.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/337150",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-475521",
+    "name": "Peak Patrol Song",
+    "imageUrl": "https://img.game8.co/4024765/be15053411a1e193ae2811120318c14a.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/475521",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-317146",
+    "name": "Primordial Jade Cutter",
+    "imageUrl": "https://img.game8.co/3324722/757eafc03c9cb40182204cd8af8e4163.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/317146",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-304643",
+    "name": "Skyward Blade",
+    "imageUrl": "https://img.game8.co/3314375/be522987f46d874d5a1f1e0e45dfd43b.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/304643",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-431866",
+    "name": "Splendor of Tranquil Waters",
+    "imageUrl": "https://img.game8.co/3793198/8b2ef7f3d4fc9346af58eff789ad3975.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/431866",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-314765",
+    "name": "Summit Shaper",
+    "imageUrl": "https://img.game8.co/3311113/3b0e2ee76a9d421e3f7e4a640f7a9b99.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/314765",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-446621",
+    "name": "Uraku Misugiri",
+    "imageUrl": "https://img.game8.co/3855357/0f1bee0c48888db48a19113a1a682e1f.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/446621",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
+  },
+  {
+    "id": "w-613892",
+    "name": "Whitelake Frostfeather",
+    "imageUrl": "https://img.game8.co/4589646/e659e25e5346f50cb89c86062b7d0ed2.png/show",
+    "url": "https://game8.co/games/Genshin-Impact/archives/613892",
+    "rarity": "5",
+    "element": null,
+    "weapon": "Sword",
+    "type": "weapon"
   }
 ]

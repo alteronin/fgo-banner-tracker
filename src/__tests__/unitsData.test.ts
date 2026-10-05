@@ -9,7 +9,7 @@ import {
 import type { UnitGame } from "@/types/units";
 
 const COUNTS: Record<UnitGame, number> = {
-  genshin: 127,
+  genshin: 200,
   hsr: 263,
   zzz: 60,
   wuwa: 172,
@@ -78,6 +78,23 @@ describe("units data", () => {
     expect(rows.length - lightCones.length).toBe(93);
     for (const cone of lightCones) {
       expect(cone.id).toMatch(/^lc-/);
+    }
+  });
+
+  it("splits genshin into characters and weapons", () => {
+    const rows = getUnitRows("genshin");
+    const weapons = rows.filter((r) => r.filters.type === "Weapon");
+    const characters = rows.filter((r) => r.filters.type === "Character");
+    expect(weapons).toHaveLength(73);
+    expect(characters).toHaveLength(127);
+    for (const w of weapons) {
+      expect(w.id).toMatch(/^w-/);
+      expect(w.filters.element ?? null).toBeNull();
+      expect(w.subtitle).toBe(`Weapon · ${w.filters.weapon}`);
+    }
+    for (const c of characters) {
+      expect(c.filters.element).toBeTruthy();
+      expect(c.subtitle).toBe(`${c.filters.element} · ${c.filters.weapon}`);
     }
   });
 

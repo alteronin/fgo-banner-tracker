@@ -1,4 +1,4 @@
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import * as cheerio from "cheerio";
 
 const PAGE_URL = "https://game8.co/games/Honkai-Star-Rail/archives/474951";
@@ -284,6 +284,35 @@ async function main() {
     const order = { character: 0, lightcone: 1 };
     return order[a.type] - order[b.type];
   });
+
+  const roster = JSON.parse(
+    readFileSync(new URL("../src/data/hsr-units.json", import.meta.url), "utf8")
+  );
+  const rosterNames = new Set(roster.map((u) => u.name));
+  const rosterById = new Map(roster.map((u) => [u.id, u]));
+  let repaired = 0;
+  for (const e of withIds) {
+    for (const arr of [e.featured5, e.featured4]) {
+      for (const item of arr) {
+        if (rosterNames.has(item.name)) continue;
+        const archiveId = (item.url || "").match(/\/archives\/(\d+)/)?.[1];
+        const byId = archiveId ? rosterById.get(`lc-${archiveId}`) : undefined;
+        if (byId) {
+          item.name = byId.name;
+          repaired += 1;
+          continue;
+        }
+        const candidates = roster.filter((u) =>
+          u.name.startsWith(`${item.name}'`)
+        );
+        if (candidates.length === 1) {
+          item.name = candidates[0].name;
+          repaired += 1;
+        }
+      }
+    }
+  }
+  if (repaired) console.error(`  repaired ${repaired} truncated names`);
 
   const noImage = withIds.filter((e) => !e.banners[0].image);
   const noStart = withIds.filter((e) => !e.startDate);

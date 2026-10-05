@@ -76,16 +76,23 @@ function parseDebut(value) {
   return `${m[3]}-${String(mo).padStart(2, "0")}-${dd}`;
 }
 
+const FEATURED_JUNK = new Set(["war treasury"]);
+
 function summaryFeatured(summary) {
   const s = stripWikiNoise(summary || "");
   const out = [];
+  const seen = new Set();
   for (const line of s.split("\n")) {
     if (!/debut/i.test(line)) continue;
     const re = /\{\{currency\|([^|}]+)(?:\|[^}]*)?\}\}/gi;
     let m;
     while ((m = re.exec(line)) !== null) {
       const name = m[1].replace(/\s+/g, " ").trim();
-      if (name) out.push(name);
+      if (!name) continue;
+      const key = name.toLowerCase();
+      if (FEATURED_JUNK.has(key) || seen.has(key)) continue;
+      seen.add(key);
+      out.push(name);
     }
   }
   return out;

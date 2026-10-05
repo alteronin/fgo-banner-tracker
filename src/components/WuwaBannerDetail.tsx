@@ -123,7 +123,7 @@ export function WuwaBannerDetail({ banner, onClose }: WuwaBannerDetailProps) {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {banner.featured5.map((rateUp) => (
-                  <RateUpChip key={rateUp.name} rateUp={rateUp} linked />
+                  <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
                 ))}
               </div>
             </div>
@@ -136,7 +136,7 @@ export function WuwaBannerDetail({ banner, onClose }: WuwaBannerDetailProps) {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {banner.featured4.map((rateUp) => (
-                  <RateUpChip key={rateUp.name} rateUp={rateUp} linked />
+                  <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
                 ))}
               </div>
             </div>
@@ -149,7 +149,7 @@ export function WuwaBannerDetail({ banner, onClose }: WuwaBannerDetailProps) {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {banner.featuredWeapons.map((rateUp) => (
-                  <RateUpChip key={rateUp.name} rateUp={rateUp} linked />
+                  <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
                 ))}
               </div>
             </div>

@@ -49,13 +49,19 @@ const GENSHIN_TAXONOMY: TaxonomySpec<GenshinUnit>[] = [
     key: "element",
     label: "Element",
     order: ["Pyro", "Hydro", "Anemo", "Electro", "Dendro", "Cryo", "Geo"],
-    get: (u) => u.element,
+    get: (u) => u.element ?? null,
   },
   {
     key: "weapon",
     label: "Weapon",
     order: ["Sword", "Claymore", "Polearm", "Bow", "Catalyst"],
     get: (u) => u.weapon,
+  },
+  {
+    key: "type",
+    label: "Type",
+    order: ["Character", "Weapon"],
+    get: (u) => (u.type === "weapon" ? "Weapon" : "Character"),
   },
 ];
 
@@ -239,8 +245,10 @@ const ROWS: Record<UnitGame, UnitRow[]> = {
   genshin: GENSHIN_UNITS.map((u) =>
     toRow(
       u,
-      u.element,
-      `${u.element} · ${u.weapon}`,
+      u.element ?? "Weapon",
+      u.type === "weapon"
+        ? `Weapon · ${u.weapon}`
+        : `${u.element ?? ""} · ${u.weapon}`,
       rarityNumber(u.rarity),
       filtersFor(GENSHIN_TAXONOMY, u)
     )
@@ -308,8 +316,8 @@ const GROUPS: Record<UnitGame, UnitFilterGroup[]> = {
 const CONFIGS: Record<UnitGame, UnitsConfig> = {
   genshin: {
     game: "genshin",
-    noun: "characters",
-    searchPlaceholder: "Search characters...",
+    noun: "characters and weapons",
+    searchPlaceholder: "Search characters or weapons...",
     categoryLabel: "Element",
     rarityLabel: "Rarity",
     filterGroups: GROUPS.genshin,

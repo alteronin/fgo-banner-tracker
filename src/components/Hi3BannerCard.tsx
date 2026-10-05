@@ -57,7 +57,7 @@ export function Hi3BannerCard({ banner, onClick }: Hi3BannerCardProps) {
         </div>
         <div className="flex flex-wrap gap-1.5">
           {banner.featured5.map((rateUp) => (
-            <RateUpChip key={rateUp.name} rateUp={rateUp} />
+            <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
           ))}
         </div>
       </div>

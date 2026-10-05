@@ -106,7 +106,7 @@ export function SvwbBannerDetail({ banner, onClose }: SvwbBannerDetailProps) {
             </h3>
             <div className="flex flex-wrap gap-2">
               {banner.featured5.map((rateUp) => (
-                <RateUpChip key={rateUp.name} rateUp={rateUp} linked />
+                <RateUpChip key={rateUp.name} rateUp={rateUp} bannerStart={banner.startDate} />
               ))}
             </div>
           </div>
