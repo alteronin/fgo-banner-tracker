@@ -7,6 +7,7 @@ import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 import { GameTabs } from "./GameTabs";
 import { SearchBar } from "./SearchBar";
+import { useSearchParam } from "@/hooks/useSearchParam";
 import { YearFilter } from "./YearFilter";
 import { GenshinTypeFilter, type GenshinTypeFilterValue } from "./GenshinTypeFilter";
 import { GenshinBannerCard } from "./GenshinBannerCard";
@@ -22,7 +23,9 @@ import type { TrackedApp } from "@/lib/apps";
 export function GenshinTracker({ app }: { app: TrackedApp }) {
   const banners = getGenshinBanners();
   const years = getGenshinYears();
-  const [query, setQuery] = useState("");
+  const urlSearch = useSearchParam("search");
+  const [queryOverride, setQueryOverride] = useState<string | null>(null);
+  const query = queryOverride ?? urlSearch ?? "";
   const [typeFilter, setTypeFilter] = useState<GenshinTypeFilterValue>("all");
   const [year, setYear] = useState("all");
   const [selectedBanner, setSelectedBanner] = useState<GenshinBanner | null>(null);
@@ -68,7 +71,7 @@ export function GenshinTracker({ app }: { app: TrackedApp }) {
         <div className="mb-6 space-y-4">
           <SearchBar
             value={query}
-            onSearch={setQuery}
+            onSearch={setQueryOverride}
             placeholder="Search banners or characters..."
           />
           <div className="flex flex-wrap items-center gap-3">

@@ -1,6 +1,12 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import { useServantStatus } from "@/contexts/ServantContext";
+import {
+  getGrandsSnapshot,
+  getGrandsServerSnapshot,
+  subscribeGrands,
+} from "@/lib/storage";
 import type { ServantStatus } from "@/types/banner";
 
 interface ServantChipProps {
@@ -34,6 +40,12 @@ const STATUS_CONFIG: Record<
 
 export function ServantChip({ name, slug }: ServantChipProps) {
   const { getStatus, toggleStatus } = useServantStatus();
+  const grands = useSyncExternalStore(
+    subscribeGrands,
+    getGrandsSnapshot,
+    getGrandsServerSnapshot
+  );
+  const inGrands = Object.values(grands).includes(slug);
   const status = getStatus(slug);
   const config = STATUS_CONFIG[status];
 
@@ -49,8 +61,17 @@ export function ServantChip({ name, slug }: ServantChipProps) {
         ${config.bg} ${config.border} ${config.text}
         hover:opacity-80 cursor-pointer
       `}
-      title={`Click to change: ${config.label}`}
+      title={
+        inGrands
+          ? `★ In your Grand lineup · Click to change: ${config.label}`
+          : `Click to change: ${config.label}`
+      }
     >
+      {inGrands && (
+        <span className="text-yellow-500" aria-label="In your Grand lineup">
+          ★
+        </span>
+      )}
       {status === "owned" && (
         <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
           <path

@@ -343,4 +343,18 @@ describe("GenshinRateUpChip", () => {
 
     expect(document.querySelector('[data-icon="owned"]')).not.toBeNull();
   });
+
+  it("stars the chip when the unit is in the game's favorites", () => {
+    window.localStorage.setItem(
+      "faves:zzz",
+      JSON.stringify({ "1": "1028278" })
+    );
+    renderChip("Jane");
+    expect(screen.getByLabelText("In your favorites")).toBeInTheDocument();
+
+    cleanup();
+    window.localStorage.clear();
+    renderChip("Jane");
+    expect(screen.queryByLabelText("In your favorites")).toBeNull();
+  });
 });

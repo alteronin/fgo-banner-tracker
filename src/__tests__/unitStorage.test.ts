@@ -1,7 +1,11 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import {
+  faveNotesStorageKey,
   favesStorageKey,
   fillOwnedUnits,
+  getFaveNotes,
+  getFaveNotesServerSnapshot,
+  getFaveNotesSnapshot,
   getFaves,
   getFavesServerSnapshot,
   getFavesSnapshot,
@@ -9,10 +13,14 @@ import {
   getUnitStatuses,
   getUnitStatusesServerSnapshot,
   getUnitStatusesSnapshot,
+  notifyFaveNotesChange,
   notifyFavesChange,
   notifyUnitStatusesChange,
+  replaceFaveNotes,
   setFave,
+  setFaveNote,
   setUnitStatus,
+  subscribeFaveNotes,
   subscribeFaves,
   subscribeUnitStatuses,
   unitStatusKey,
@@ -27,6 +35,7 @@ describe("unitStorage", () => {
     it("builds namespaced keys", () => {
       expect(unitStatusKey("zzz")).toBe("unit-status:zzz");
       expect(favesStorageKey("zzz")).toBe("faves:zzz");
+      expect(faveNotesStorageKey("fgo")).toBe("fave-notes:fgo");
     });
   });
 
@@ -91,6 +100,58 @@ describe("unitStorage", () => {
     });
   });
 
+  describe("fave notes", () => {
+    it("returns empty object when no data", () => {
+      expect(getFaveNotes("genshin")).toEqual({});
+    });
+
+    it("sets, merges, and clears slot meta field by field", () => {
+      setFaveNote("genshin", "1", { label: "Main" });
+      setFaveNote("genshin", "1", { note: "save for anni" });
+      expect(getFaveNotes("genshin")).toEqual({
+        "1": { label: "Main", note: "save for anni" },
+      });
+
+      setFaveNote("genshin", "1", { label: "" });
+      expect(getFaveNotes("genshin")).toEqual({
+        "1": { note: "save for anni" },
+      });
+
+      setFaveNote("genshin", "1", { note: "" });
+      expect(getFaveNotes("genshin")).toEqual({});
+      expect(window.localStorage.getItem("fave-notes:genshin")).toBeNull();
+    });
+
+    it("trims whitespace and drops blank meta", () => {
+      setFaveNote("hsr", "2", { label: "  spare  " });
+      setFaveNote("hsr", "3", { label: "   ", note: " " });
+      expect(getFaveNotes("hsr")).toEqual({ "2": { label: "spare" } });
+    });
+
+    it("keeps scopes isolated", () => {
+      setFaveNote("genshin", "1", { label: "GI" });
+      setFaveNote("fgo", "saber", { label: "FGO" });
+      expect(getFaveNotes("fgo")).toEqual({ saber: { label: "FGO" } });
+      expect(Object.keys(getFaveNotes("genshin"))).toEqual(["1"]);
+    });
+
+    it("replaceFaveNotes sanitizes and removes empty stores", () => {
+      replaceFaveNotes("zzz", {
+        "1": { label: "ok" },
+        "2": { label: " " },
+        "3": undefined as unknown as { label: string },
+      });
+      expect(getFaveNotes("zzz")).toEqual({ "1": { label: "ok" } });
+      replaceFaveNotes("zzz", {});
+      expect(window.localStorage.getItem("fave-notes:zzz")).toBeNull();
+    });
+
+    it("ignores corrupt stored JSON", () => {
+      window.localStorage.setItem("fave-notes:hi3", "not-json");
+      expect(getFaveNotes("hi3")).toEqual({});
+    });
+  });
+
   describe("fillOwnedUnits", () => {
     it("marks unset units as owned and reports the count", () => {
       expect(fillOwnedUnits("genshin", ["nahida", "kazuha"])).toBe(2);
@@ -141,6 +202,17 @@ describe("unitStorage", () => {
         getUnitStatusesServerSnapshot()
       );
       expect(getFavesServerSnapshot()).toBe(getFavesServerSnapshot());
+      expect(getFaveNotesServerSnapshot()).toBe(getFaveNotesServerSnapshot());
+    });
+
+    it("returns a stable reference until fave notes change", () => {
+      const before = getFaveNotesSnapshot("hi3");
+      expect(getFaveNotesSnapshot("hi3")).toBe(before);
+
+      setFaveNote("hi3", "1", { label: "Main" });
+      const after = getFaveNotesSnapshot("hi3");
+      expect(after).not.toBe(before);
+      expect(after).toEqual({ "1": { label: "Main" } });
     });
   });
 
@@ -173,6 +245,23 @@ describe("unitStorage", () => {
       notifyUnitStatusesChange("genshin");
       expect(calls).toBe(0);
       unsubscribe();
+    });
+
+    it("notifies fave-notes listeners for the scope only", () => {
+      let calls = 0;
+      let otherCalls = 0;
+      const unsubscribe = subscribeFaveNotes("fgo", () => calls++);
+      const unsubscribeOther = subscribeFaveNotes("genshin", () => otherCalls++);
+      setFaveNote("fgo", "saber", { label: "ok" });
+      notifyFaveNotesChange("fgo");
+      expect(calls).toBe(1);
+      notifyFaveNotesChange("genshin");
+      expect(otherCalls).toBe(1);
+      expect(calls).toBe(1);
+      unsubscribe();
+      unsubscribeOther();
+      notifyFaveNotesChange("fgo");
+      expect(calls).toBe(1);
     });
   });
 });

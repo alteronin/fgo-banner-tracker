@@ -28,7 +28,11 @@ function getServerUrlSearch(): string {
   return "";
 }
 
-function parseUrlState(search: string): { filter: FilterOption; year: string } {
+function parseUrlState(search: string): {
+  filter: FilterOption;
+  year: string;
+  search: string;
+} {
   const params = new URLSearchParams(search);
   const rawFilter = params.get("filter");
   const filter =
@@ -37,18 +41,20 @@ function parseUrlState(search: string): { filter: FilterOption; year: string } {
       : "all";
   const rawYear = params.get("year");
   const year = rawYear && /^\d{4}$/.test(rawYear) ? rawYear : "all";
-  return { filter, year };
+  const searchQuery = params.get("search") || "";
+  return { filter, year, search: searchQuery };
 }
 
 export function useBannerFilter(banners: Banner[]) {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchOverride, setSearchOverride] = useState<string | null>(null);
   const [sort, setSort] = useState<SortOption>("date-desc");
   const urlSearch = useSyncExternalStore(
     subscribeUrl,
     getUrlSearch,
     getServerUrlSearch
   );
-  const { filter, year } = parseUrlState(urlSearch);
+  const { filter, year, search: urlSearchQuery } = parseUrlState(urlSearch);
+  const searchQuery = searchOverride ?? urlSearchQuery;
   const { getStatus } = useServantStatus();
 
   const availableYears = useMemo(() => {
@@ -79,7 +85,7 @@ export function useBannerFilter(banners: Banner[]) {
   }, []);
 
   const handleSearch = useCallback((query: string) => {
-    setSearchQuery(query);
+    setSearchOverride(query);
   }, []);
 
   const filteredBanners = useMemo(() => {

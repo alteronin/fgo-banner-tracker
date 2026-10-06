@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { TRACKED_APPS } from "@/lib/apps";
 import { AppSwitcher } from "./AppSwitcher";
-import { GameTabs } from "./GameTabs";
+import { GameTabs, FgoTabs } from "./GameTabs";
 import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -20,12 +20,11 @@ export function PullsEmptyPage({ game }: { game: string }) {
           <AppSwitcher title={`${app.name} Pulls`} subtitle="No pull history" />
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             {isFgo ? (
-              <Link
-                href="/"
-                className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
-              >
-                Banners
-              </Link>
+              <>
+                <FgoTabs active="pulls" />
+                <AccountButton />
+                <ThemeToggle />
+              </>
             ) : (
               <>
                 <GameTabs game={app.slug} active="pulls" />

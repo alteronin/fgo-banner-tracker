@@ -3,7 +3,7 @@ project_name: Multi-Game Gacha Banner Tracker
 status: active
 current_bucket: 14
 current_feature: faves-grands-improvements
-current_phase: planned
+current_phase: complete
 buckets_completed: 14
 total_buckets: 14
 features_completed:
@@ -48,9 +48,9 @@ features_completed:
   - rate-up-chips
   - log-pull
   - google-auth-cloud-sync
+  - faves-grands-improvements
 features_remaining:
   - events-tab
-  - faves-grands-improvements
 issues_found:
   - broken-image-urls-2017-2018
   - hydration-error-418
@@ -76,17 +76,17 @@ tech_stack:
   state: localStorage + React Context (useSyncExternalStore)
   auth: hand-rolled Google OAuth (jose JWT session cookie) + Upstash Redis blob sync
   hosting: Vercel
-  testing: Vitest + Testing Library (517 tests)
+  testing: Vitest + Testing Library (551 tests)
 deploy_provider: vercel
 deploy_url: https://fgo-banner-tracker.vercel.app
-last_checkpoint: 2026-10-05
-context_version: 15
+last_checkpoint: 2026-10-06
+context_version: 16
 ---
 
 # Project State
 
 ## Active Context
-**NEXT — faves/grands tab/page improvements (user intent, 2026-10-05).** The user wants to work on improvements to the faves/grands tab/page next: FGO `/grands` (9-slot grand servant lineup) and the per-game Faves pages (`/{game}/faves` ×6 via shared `FavesPage`, "Faves" pill in `GameTabs`). Scope is not yet defined — decide with the user (candidates: slot/reassign UX, drag-and-drop or quick-move, per-slot notes/tags, showing more unit context in slots, cross-linking with Units/Faves pools, unifying FGO `/grands`+`/servants` nav with the per-game GameTabs pattern, mobile layout). Captured in buckets.md § Backlog (`faves-grands-improvements`).
+**Feature BUILT (2026-10-06) — faves/grands tab/page improvements — all five candidates; UNCOMMITTED, awaiting user commit request.** Working tree holds the full feature (24 modified + 4 new files, plus CONTEXT docs to be committed with it). Delivered: (1) **slot UX** — `FavesPage` + `/grands` rewritten with card-framed slots (inline label edit ✎, ◀▶ swap arrows, clear ×, empty/1-unit pills, aria-labels everywhere), owned-pool scrollers with HTML5 drag-and-drop; slot→slot = **swap**, pool-chip tap = **move/replace** (qa-faves semantics preserved). (2) **richer content** — featured cards (art, name, subtitle, ★ rarity, category pill) + per-slot **notes** (`FaveSlotMeta {label?, note?}` in `unitStorage.ts`, key `fave-notes:{game|"fgo"}`, field `undefined`=keep / whitespace=clear / both-empty=delete slot; `notifyFaveNotesChange` separate from faves, both trigger `notifySyncableChange`). (3) **cross-links** — `src/hooks/useSearchParam.ts` (hydration-safe useSyncExternalStore, popstate, null server snapshot) feeds 6 trackers + `useBannerFilter` `searchOverride ?? urlSearch ?? ""` so user edits win; featured cards link Banners (`?search=<name>`) + Wiki; ServantsPage init reads URL too. (4) **FGO nav** — `FgoTabs` exported from `GameTabs.tsx` (Banners/Servants/Grands/Pulls) on `/`, `/servants`, `/grands` header, `/pulls` empty state. (5) **stars/polish** — ★ Faves filter (UnitsPage), ★ Grands filter (ServantsPage), fave star on `GenshinRateUpChip` + `ServantChip`, grands badge on `BannerIndicators`; responsive paddings, flex-wrap headers, `overscroll-x-contain` pools; mobile overflow verified 0. **Backup v4**: `{version:4, unitStatus, faves, pulls, faveNotes}`; `isBackupShape` accepts 3 AND 4; union/apply output v4; `SyncBackup.faveNotes?` optional (`?? {}` for consumers) — safe (no synced users exist; auth env still user-side pending). QA bugs fixed en route: faves maps slot→unitId (star lookups must use `Object.values`), test chip titles change when selected. Gates: tsc ✓, eslint ✓, `npm test -- --run` **551/551** (36 files), build ✓. Live QA: **qa-faves-v2 28/28 + qa-chip-star 3/3**, 0 console errors, label/note persistence + swap + `?search=` prefill + FgoTabs active states all verified. Next: user decides commit/deploy.
 
 **Session WRAP-UP (2026-10-05) — CONTEXT updated; both session features committed.** log-pull = `21ef7e1` (20 files, +2271/−80), Google auth/sync = `b044495` (41 files, +2589/−57), CONTEXT docs = the accompanying docs commit; pushed to `main` (session started at `801b29c`). Prod runs this tree via `npx vercel --prod`. Gates green: tsc ✓, eslint ✓, `npm test` **517/517** (33 files). Auth envs (Google OAuth client + Upstash) are user-side pending — until added, the sign-in button shows the graceful "not configured" notice.
 
@@ -133,6 +133,7 @@ context_version: 15
 - Follow-up: Clickable rate-up chips on all 6 games (owned/planning cycles, future planning-only, alias + inert gaps, GI 5★ weapon roster 127→200, HSR/HI3 scraper fixes) (**COMPLETE 2026-10-05** — `2f12013`, deployed, live QA green: qa-chips 77/77 + regressions qa-units/qa-pity/qa-pulls/qa-backup; 399 unit tests)
 - Follow-up: Log-pull dialog (log 5★ pulls from rate-up chips: date/time + 50/50 outcome + standard-unit picker, always-re-prompt dupe logging, per-banner checkmark, 50/50 record StatCard, guarantee labels, grid default + grid delete) (**COMPLETE 2026-10-05** — `21ef7e1`, gates green, 447 tests at this round)
 - Google sign-in + cloud sync (hand-rolled Google OAuth with jose JWT cookie, Upstash Redis blob store, v3-backup sync with fingerprint decision, AccountButton on 14 headers, debounced push from all 5 notifiers, graceful not-configured path) (**COMPLETE 2026-10-05** — `b044495`, 517 tests, live QA 13/13, deployed; Google/Upstash env setup pending user-side)
+- Faves/grands improvements (all five candidates: card slots with swap/label/notes/DnD, richer featured cards with ★ + links, `useSearchParam` `?search=` cross-links on 6 trackers, FgoTabs FGO nav unification, ★ star badges/filters, backup v4 with faveNotes) (**BUILT 2026-10-06 — uncommitted pending user request** — 551 tests, live QA 31/31)
 
 ## Roadmap (Buckets 11-14)
 - Bucket 10: Remaining game trackers — **COMPLETE (2026-10-03)**: committed `95771ca`, deployed, live QA green; SV image fix `ce29b7f`
@@ -140,7 +141,7 @@ context_version: 15
 - Bucket 12: Cross-game Units & Faves — **COMPLETE (2026-10-03)**: committed `ef75305`, deployed, live QA green (qa-units 168/168, qa-faves 174/174, qa-backup 18/18)
 - Bucket 13: Class/element button filters — **COMPLETE (2026-10-04)**: committed `9109c9c`, deployed, live QA green (qa-filters 134/134, qa-units 168/168, qa-backup 18/18)
 - Bucket 14: Pull-history import + pity — **COMPLETE (2026-10-04)**: committed `5817fde`/`98c16cf`, deployed, live QA green (qa-pulls 75/75 + regressions qa-units 168/168, qa-filters 140/140, qa-faves 174/174, qa-backup 21/21)
-- Next (user intent 2026-10-05): **faves/grands tab/page improvements** — FGO `/grands` + per-game `/{game}/faves` (Faves tab); scope TBD with user
+- Next (user intent 2026-10-05): **faves/grands tab/page improvements** — **BUILT 2026-10-06** (all five candidates, gates + live QA green); uncommitted, awaiting user commit request
 
 ## Data
 - 742 banners scraped from GamePress (2017-2026)
@@ -208,9 +209,10 @@ context_version: 15
 28. Clickable rate-up chips (all 6 games): banner unit names resolve to roster ids via exact → normalized (`/[^\p{L}\p{N}]+/gu` → space, lowercase) → per-game alias map (`lib/unitAliases.ts`, ZZZ 4 aliases; aliases never override real roster names) → null; `UnitProvider` takes optional `roster` + `resolveName` and is wrapped at the **page level** (6 server `page.tsx` files, not Trackers); chip cycle rules: resolved+started = full `none→owned→planning→none` (`toggleStatus`), resolved+future = planning-only until `startDate`, unresolved+future = planning-only under synthetic `name:<normalized>` key (banner-visible only — never on Units/Faves, `syntheticStatusKey`), unresolved+past = inert span; all clicks `e.stopPropagation()`; future-ness read via `useSyncExternalStore` clock with null server snapshot (hydration-safe on static pages, passes `react-hooks/set-state-in-effect`; `bannerStart` passed from `banner.startDate` at 12 call sites); GI roster extended to 5★ weapons (73 from Game8 `archives/304647`, `GenshinUnit.type` + Type filter group); scraper repairs: HSR `alt` truncation at apostrophe (Game8 malformed single-quoted HTML, fixed by `lc-<archiveId>` id match — re-scrape, not data hack), HI3 "war treasury" junk + order-preserving dedupe
 29. Log-pull (record pulls as they happen): a logged pull is an ordinary `manual: true` `GamePull` **stamped with `fifty: "win"|"loss"|"guarantee"`** — the outcome is recorded at log time instead of being inferred, because the 50/50 machine can't know what the player actually pulled; entries share the `${ts}|${category}|${itemId}|${occ}` scheme (occ bumped) so re-import still dedupes; stats/pity stay **imported-only** so logged copies never move pity. Chip click on a loggable banner opens `LogPullDialog` instead of cycling status (pendingStatus: Skip/close applies the cycle, "Log pull" saves + sets owned); chips **always re-prompt** — duplicate copies of the same 5★ are intentional (user-approved), each save bumps `occ`. `STANDARD_POOLS` are hardcoded per game/category (loss picker fallback; pull maps only contain rate-up items). `hasPullInBanner` (day-window match) drives the chip checkmark, falling back to `owned` status when the banner/unit can't be resolved. 50/50 record StatCard counts only win+loss (guarantees excluded — they're forced outcomes, not coin flips). Logged rows/tiles show `Won`/`Lost`/`Guaranteed` with an explicit "not counted in pity stats" tooltip
 30. Google sign-in + cloud sync (minimal hand-rolled, **no Auth.js/Clerk**): routes `api/auth/{login,callback,logout,me}` + `api/sync`; session = jose HS256 JWT cookie `fbtn-session` (30d) with `SESSION_SECRET`; OAuth state cookie `fbtn-oauth` parsed raw-first (Next's cookie serializer percent-encodes — `decodeURIComponent` fallback) and compared timing-safe; `email_verified` required; `safeNextPath` blocks open redirects; `/​?auth=not-configured|error` notices consumed at module scope (`INITIAL_NOTICE`, hydration-safe). Storage = Upstash Redis free tier (`@upstash/redis`, auto-JSON): `fbtn:user:{sub}`, `fbtn:sync:{sub}`; sync blob = ImportExport **v3** BackupFile so the server never interprets data (privacy + no schema coupling); 4MB body cap → 413, Redis failure → 502 with `{error:"sync-unavailable"}` vs missing → null. Client: `decideSyncAction` (noop/push/adopt/merge/initial-push) over snapshot vs stored fingerprint (djb2 over stableStringify) with local-wins union merge and a localStorage `fbtn-sync-mark`; 2s debounced push (`syncDirty.ts`) fired by all 5 storage notifiers so every mutation path syncs; new `replace*` writers in storage.ts/unitStorage.ts for adopt/merge application; `ServantContext` converted to a storage-owned listener registry so it emits like the others. **v1 accepted limits:** no tombstones (cross-device deletes resurrect via union), same-browser localStorage is shared across accounts signed in there, signed-out behavior unchanged (identical to pre-auth). Hand-rolled because the app needs only "sign in with Google + one blob", no profiles/roles/RBAC — Auth.js would add a dependency surface for one provider
+31. Faves/grands improvements (five candidates): slot→slot interactions **swap** while pool-chip taps keep the documented **move/replace** semantics; grands cross-class swaps show a foreign-slot badge (pools are class-disjoint, featured via global `getServantBySlug`); per-slot `FaveSlotMeta {label?, note?}` under `fave-notes:{game|"fgo"}` in unitStorage (grands included so one store/notifier/sync path; `storage.ts` stays grands-selection-only) with `setFaveNote` trim semantics (undefined = keep, whitespace = clear, both empty = delete slot) and `notifyFaveNotesChange` alongside faves; `?search=` prefill via new `useSearchParam` (decision 11 hydration pattern, popstate) with `queryOverride ?? urlSearch ?? ""` so search typing beats the URL; backup **v4** adds `faveNotes` (`isBackupShape` accepts 3|4, v3 consumers `?? {}`; safe — no synced users yet); stars/filters must read `Object.values(faves)` (slot→unitId map) — keying by unitId was a live-QA bug; FgoTabs (Banners/Servants/Grands/Pulls) unifies FGO nav on `/`, `/servants`, `/grands`, `/pulls`
 
 ## Remaining Work
-1. **faves/grands tab/page improvements** — user's declared next target (2026-10-05), scope approved across **all five candidates** (better slot UX, richer slot content, cross-links, FGO nav unification, mobile/layout polish — user answered the scoping question); details in buckets.md § Backlog `faves-grands-improvements`
+1. **Commit + deploy faves/grands improvements** — built 2026-10-06 (all five candidates, 551 tests, live QA 31/31); working tree uncommitted **by design** (commit only on explicit user request)
 2. **User-side auth env setup** (one-time, checklist delivered): Google Cloud OAuth client (redirect URIs `https://fgo-banner-tracker.vercel.app/api/auth/callback` + `http://localhost:3000/api/auth/callback`), Upstash Redis free-tier DB, then `npx vercel env add {GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,SESSION_SECRET,UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN} production` ×5 + `npx vercel --prod --yes`; until then the site shows the "not configured" notice (by design)
 3. **Bucket 11 (events tab)** — still deferred by user
 

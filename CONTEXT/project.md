@@ -20,8 +20,8 @@ A web application that helps gacha game players track their pulls and plan their
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: localStorage + React Context (hydration-safe via useSyncExternalStore)
-- **Auth/Sync**: hand-rolled Google OAuth (jose JWT session cookie) + Upstash Redis blob sync (backup-v3 shaped)
-- **Testing**: Vitest + Testing Library (517 tests)
+- **Auth/Sync**: hand-rolled Google OAuth (jose JWT session cookie) + Upstash Redis blob sync (backup-v4 shaped)
+- **Testing**: Vitest + Testing Library (551 tests)
 - **Hosting**: Vercel (free tier)
 
 ## Key Features
@@ -42,7 +42,8 @@ A web application that helps gacha game players track their pulls and plan their
 14. Bucket 14: pull-history import at `/{game}/pulls` (wuwatracker + stardb exports, offline item maps, fill-only-unset owned merge) with 5★/4★ pity stats, cap-indexed pity histogram, banner attribution, per-category pity tables, per-5★ drop pity (`Pity N` badge + 5★ drops table), and a List/Grid toggle where the grid shows 5★ drops as square ~76px thumbnail tiles (pity-colored number + win/guarantee/loss border); pull order matches stardb exactly (`comparePullOrder`: ts → export-array `seq` → id) (FGO/HI3/SV show an empty state)
 15. Clickable rate-up chips on banner cards + detail modals for all 6 games (owned/planning cycles keyed to roster ids, future banners planning-only until start, alias + inert fallback for off-roster names, GI 5★ weapon roster with Type filter)
 16. Log-pull: click a 5★ rate-up chip on an active banner to log the pull (date/time + 50/50 win/loss outcome + standard-unit picker on a loss) — saved as a manual entry stamped `fifty`, never affects pity stats; 50/50 record stat card, Won/Lost/Guaranteed labels, per-banner checkmarks, grid default view
-17. Google sign-in + cloud sync (2026-10-05, `b044495`): sign in with Google, collection/pulls/faves sync as the v3 backup blob to Upstash Redis with local-wins merge + debounced push; graceful "not configured" state until envs are added
+17. Google sign-in + cloud sync (2026-10-05, `b044495`): sign in with Google, collection/pulls/faves sync as the backup blob to Upstash Redis with local-wins merge + debounced push; graceful "not configured" state until envs are added
+18. Faves/grands improvements (2026-10-06, uncommitted): card-framed slots with inline labels, ◀▶ swap, per-slot notes, drag-and-drop + owned-pool scrollers, ★ rarity + Banners/Wiki cross-links, `?search=` URL prefill on all trackers, FgoTabs FGO nav unification, ★ faves/grands stars + filters, backup v4 with `faveNotes`
 
 ### Roadmap (Buckets 11-14 — all addressed)
 11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
@@ -53,7 +54,7 @@ A web application that helps gacha game players track their pulls and plan their
 All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 
 ## Next Up
-- **Faves/grands tab/page improvements** (user intent 2026-10-05, scope approved — all five candidates): better slot UX, richer slot content, cross-links, FGO nav unification, mobile/layout polish
+- **Commit + deploy faves/grands improvements** (built 2026-10-06, all five candidates, 551 tests + live QA 31/31 green; awaiting user's explicit commit request)
 - User-side env setup for auth (Google OAuth client + Upstash + `vercel env add` ×5)
 
 ## Data Sources
@@ -67,7 +68,7 @@ All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 - Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3/SV, served `unoptimized`), shadowverse-wb.com pack art (SV banners)
 
 ## Testing
-- 517 unit tests (33 files) covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view, manual entry add/edit/delete + v2 validation/imported-only stats/chip colors, rate-up chip name resolution + status cycles + future planning rules, log-pull gates/dialog, sync backup decision logic, JWT/OAuth/session routes, AccountButton/AccountProvider)
+- 551 unit tests (36 files) covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view, manual entry add/edit/delete + v2 validation/imported-only stats/chip colors, rate-up chip name resolution + status cycles + future planning rules, log-pull gates/dialog, sync backup decision logic, JWT/OAuth/session routes, AccountButton/AccountProvider, faves/grands slot flows incl. swap/labels/notes/links, fave-notes storage, backup v4 faveNotes, useSearchParam)
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion

@@ -11,6 +11,11 @@ import {
   type LogPrompt,
 } from "@/lib/logPull";
 import {
+  getFavesServerSnapshot,
+  getFavesSnapshot,
+  subscribeFaves,
+} from "@/lib/unitStorage";
+import {
   getPullsServerSnapshot,
   getPullsSnapshot,
   subscribePulls,
@@ -134,7 +139,23 @@ export function GenshinRateUpChip({
     pullStore.serverSnapshot
   );
 
+  const faveStore = useMemo(
+    () => ({
+      subscribe: (onChange: () => void) => subscribeFaves(game, onChange),
+      snapshot: () => getFavesSnapshot(game),
+      serverSnapshot: getFavesServerSnapshot,
+    }),
+    [game]
+  );
+  const faves = useSyncExternalStore(
+    faveStore.subscribe,
+    faveStore.snapshot,
+    faveStore.serverSnapshot
+  );
+
   const unitId = resolveName(rateUp.name);
+  const isFaved =
+    unitId !== null && Object.values(faves).includes(unitId);
   const isFuture =
     now !== null &&
     bannerStart != null &&
@@ -175,6 +196,11 @@ export function GenshinRateUpChip({
       ) : status === "planning" ? (
         <PlanningIcon />
       ) : null}
+      {isFaved && (
+        <span className="text-yellow-500" aria-label="In your favorites">
+          ★
+        </span>
+      )}
       <span className="truncate">{rateUp.name}</span>
     </>
   );

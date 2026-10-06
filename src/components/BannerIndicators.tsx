@@ -1,7 +1,13 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import type { Banner } from "@/types/banner";
 import { useServantStatus } from "@/contexts/ServantContext";
+import {
+  getGrandsSnapshot,
+  getGrandsServerSnapshot,
+  subscribeGrands,
+} from "@/lib/storage";
 
 interface BannerIndicatorsProps {
   banner: Banner;
@@ -9,6 +15,11 @@ interface BannerIndicatorsProps {
 
 export function BannerIndicators({ banner }: BannerIndicatorsProps) {
   const { getStatus } = useServantStatus();
+  const grands = useSyncExternalStore(
+    subscribeGrands,
+    getGrandsSnapshot,
+    getGrandsServerSnapshot
+  );
 
   const ownedCount = banner.servants.filter(
     (s) => getStatus(s.slug) === "owned"
@@ -18,10 +29,25 @@ export function BannerIndicators({ banner }: BannerIndicatorsProps) {
     (s) => getStatus(s.slug) === "planning"
   ).length;
 
-  if (ownedCount === 0 && planningCount === 0) return null;
+  const grandSlugs = new Set(Object.values(grands).filter(Boolean));
+  const grandCount = banner.servants.filter((s) =>
+    grandSlugs.has(s.slug)
+  ).length;
+
+  if (ownedCount === 0 && planningCount === 0 && grandCount === 0) {
+    return null;
+  }
 
   return (
     <div className="absolute top-2 left-2 flex items-center gap-1.5">
+      {grandCount > 0 && (
+        <div
+          className="flex items-center gap-1 bg-yellow-600 text-white text-xs font-bold px-2 py-1 rounded"
+          title={`${grandCount} of your Grand picks on this banner`}
+        >
+          ★ {grandCount}
+        </div>
+      )}
       {ownedCount > 0 && (
         <div className="flex items-center gap-1 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">
           <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">

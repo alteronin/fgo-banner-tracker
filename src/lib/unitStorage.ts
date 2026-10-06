@@ -9,6 +9,15 @@ export function favesStorageKey(game: string): string {
   return `faves:${game}`;
 }
 
+export function faveNotesStorageKey(scope: string): string {
+  return `fave-notes:${scope}`;
+}
+
+export interface FaveSlotMeta {
+  label?: string;
+  note?: string;
+}
+
 function readRaw(key: string): string | null {
   if (typeof window === "undefined") return null;
   try {
@@ -126,8 +135,93 @@ export function replaceFaves(
   }
 }
 
+function sanitizeMeta(value: unknown): FaveSlotMeta | null {
+  if (typeof value !== "object" || value === null) return null;
+  const raw = value as Record<string, unknown>;
+  const meta: FaveSlotMeta = {};
+  if (typeof raw.label === "string" && raw.label.trim()) {
+    meta.label = raw.label.trim();
+  }
+  if (typeof raw.note === "string" && raw.note.trim()) {
+    meta.note = raw.note.trim();
+  }
+  return meta.label || meta.note ? meta : null;
+}
+
+function readMetaObject(key: string): Record<string, FaveSlotMeta> {
+  const raw = readRaw(key);
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw);
+    if (typeof parsed !== "object" || parsed === null) return {};
+    const out: Record<string, FaveSlotMeta> = {};
+    for (const [slotId, value] of Object.entries(parsed)) {
+      const meta = sanitizeMeta(value);
+      if (meta) out[slotId] = meta;
+    }
+    return out;
+  } catch {
+    return {};
+  }
+}
+
+export function getFaveNotes(scope: string): Record<string, FaveSlotMeta> {
+  return readMetaObject(faveNotesStorageKey(scope));
+}
+
+export function getFaveNotesRaw(scope: string): string | null {
+  return readRaw(faveNotesStorageKey(scope));
+}
+
+export function setFaveNote(
+  scope: string,
+  slotId: string,
+  meta: FaveSlotMeta
+): void {
+  if (typeof window === "undefined") return;
+  const key = faveNotesStorageKey(scope);
+  const notes = readMetaObject(key);
+  const next: FaveSlotMeta = { ...notes[slotId] };
+  if (meta.label !== undefined) {
+    const label = meta.label.trim();
+    if (label) next.label = label;
+    else delete next.label;
+  }
+  if (meta.note !== undefined) {
+    const note = meta.note.trim();
+    if (note) next.note = note;
+    else delete next.note;
+  }
+  if (next.label || next.note) notes[slotId] = next;
+  else delete notes[slotId];
+  if (Object.keys(notes).length === 0) {
+    localStorage.removeItem(key);
+  } else {
+    localStorage.setItem(key, JSON.stringify(notes));
+  }
+}
+
+export function replaceFaveNotes(
+  scope: string,
+  notes: Record<string, FaveSlotMeta>
+): void {
+  if (typeof window === "undefined") return;
+  const key = faveNotesStorageKey(scope);
+  const clean: Record<string, FaveSlotMeta> = {};
+  for (const [slotId, value] of Object.entries(notes)) {
+    const meta = sanitizeMeta(value);
+    if (meta) clean[slotId] = meta;
+  }
+  if (Object.keys(clean).length === 0) {
+    localStorage.removeItem(key);
+  } else {
+    localStorage.setItem(key, JSON.stringify(clean));
+  }
+}
+
 const EMPTY_STATUSES: Record<string, UnitStatus> = {};
 const EMPTY_FAVES: Record<string, string> = {};
+const EMPTY_FAVE_NOTES: Record<string, FaveSlotMeta> = {};
 
 interface Cache<T> {
   raw: string | null | undefined;
@@ -138,6 +232,11 @@ const statusListeners = new Map<string, Set<() => void>>();
 const statusCaches = new Map<string, Cache<Record<string, UnitStatus>>>();
 const favesListeners = new Map<string, Set<() => void>>();
 const favesCaches = new Map<string, Cache<Record<string, string>>>();
+const faveNotesListeners = new Map<string, Set<() => void>>();
+const faveNotesCaches = new Map<
+  string,
+  Cache<Record<string, FaveSlotMeta>>
+>();
 
 function listenerSet(
   registry: Map<string, Set<() => void>>,
@@ -210,5 +309,37 @@ export function getFavesServerSnapshot(): Record<string, string> {
 
 export function notifyFavesChange(game: string): void {
   favesListeners.get(game)?.forEach((listener) => listener());
+  notifySyncableChange();
+}
+
+export function subscribeFaveNotes(
+  scope: string,
+  onChange: () => void
+): () => void {
+  const listeners = listenerSet(faveNotesListeners, scope);
+  listeners.add(onChange);
+  return () => {
+    listeners.delete(onChange);
+  };
+}
+
+export function getFaveNotesSnapshot(
+  scope: string
+): Record<string, FaveSlotMeta> {
+  const raw = readRaw(faveNotesStorageKey(scope));
+  let cache = faveNotesCaches.get(scope);
+  if (!cache || cache.raw !== raw) {
+    cache = { raw, value: getFaveNotes(scope) };
+    faveNotesCaches.set(scope, cache);
+  }
+  return cache.value;
+}
+
+export function getFaveNotesServerSnapshot(): Record<string, FaveSlotMeta> {
+  return EMPTY_FAVE_NOTES;
+}
+
+export function notifyFaveNotesChange(scope: string): void {
+  faveNotesListeners.get(scope)?.forEach((listener) => listener());
   notifySyncableChange();
 }

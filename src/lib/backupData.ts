@@ -8,11 +8,15 @@ import {
 } from "@/lib/storage";
 import {
   getFaves,
+  getFaveNotes,
   getUnitStatuses,
   notifyFavesChange,
+  notifyFaveNotesChange,
   notifyUnitStatusesChange,
   replaceFaves,
+  replaceFaveNotes,
   replaceUnitStatuses,
+  type FaveSlotMeta,
 } from "@/lib/unitStorage";
 import {
   getPulls,
@@ -26,10 +30,11 @@ import { PULL_GAMES, isPullGame, type GamePull } from "@/types/pulls";
 import type { ServantStatus } from "@/types/banner";
 
 export interface SyncBackup {
-  version: 3;
+  version: 3 | 4;
   unitStatus: Record<string, Record<string, string>>;
   faves: Record<string, Record<string, string>>;
   pulls: Record<string, GamePull[]>;
+  faveNotes?: Record<string, Record<string, FaveSlotMeta>>;
 }
 
 export interface SyncMark {
@@ -47,10 +52,11 @@ function isPlainObject(value: unknown): value is Record<string, unknown> {
 
 export function isBackupShape(value: unknown): value is SyncBackup {
   if (!isPlainObject(value)) return false;
-  if (value.version !== 3) return false;
+  if (value.version !== 3 && value.version !== 4) return false;
   if (!isPlainObject(value.unitStatus)) return false;
   if (!isPlainObject(value.faves)) return false;
   if (!isPlainObject(value.pulls)) return false;
+  if (value.version === 4 && !isPlainObject(value.faveNotes)) return false;
   return true;
 }
 
@@ -71,7 +77,13 @@ export function buildSnapshot(): SyncBackup {
   for (const game of PULL_GAMES) {
     pulls[game] = getPulls(game);
   }
-  return { version: 3, unitStatus, faves, pulls };
+  const faveNotes: Record<string, Record<string, FaveSlotMeta>> = {
+    fgo: getFaveNotes("fgo"),
+  };
+  for (const game of UNIT_GAMES) {
+    faveNotes[game] = getFaveNotes(game);
+  }
+  return { version: 4, unitStatus, faves, pulls, faveNotes };
 }
 
 function unionStringMaps(
@@ -103,6 +115,35 @@ function unionPulls(local: GamePull[], remote: GamePull[]): GamePull[] {
   return sortPulls(out);
 }
 
+function sanitizeSlotMeta(value: unknown): FaveSlotMeta | null {
+  if (!isPlainObject(value)) return null;
+  const meta: FaveSlotMeta = {};
+  if (typeof value.label === "string" && value.label) meta.label = value.label;
+  if (typeof value.note === "string" && value.note) meta.note = value.note;
+  return meta.label || meta.note ? meta : null;
+}
+
+function unionMetaMaps(
+  local: Record<string, FaveSlotMeta> | undefined,
+  remote: Record<string, FaveSlotMeta> | undefined
+): Record<string, FaveSlotMeta> {
+  const out: Record<string, FaveSlotMeta> = {};
+  if (remote && isPlainObject(remote)) {
+    for (const [key, value] of Object.entries(remote)) {
+      const meta = sanitizeSlotMeta(value);
+      if (meta) out[key] = meta;
+    }
+  }
+  if (local && isPlainObject(local)) {
+    for (const [key, value] of Object.entries(local)) {
+      const meta = sanitizeSlotMeta(value);
+      if (meta) out[key] = meta;
+      else delete out[key];
+    }
+  }
+  return out;
+}
+
 export function unionBackups(local: SyncBackup, remote: SyncBackup): SyncBackup {
   const unitStatus: Record<string, Record<string, string>> = {};
   const keys = new Set([
@@ -128,7 +169,16 @@ export function unionBackups(local: SyncBackup, remote: SyncBackup): SyncBackup 
       toPulls(remote.pulls[key])
     );
   }
-  return { version: 3, unitStatus, faves, pulls };
+  const faveNotes: Record<string, Record<string, FaveSlotMeta>> = {};
+  const metaKeys = new Set([
+    ...Object.keys(local.faveNotes ?? {}),
+    ...Object.keys(remote.faveNotes ?? {}),
+  ]);
+  for (const key of metaKeys) {
+    const merged = unionMetaMaps(local.faveNotes?.[key], remote.faveNotes?.[key]);
+    if (Object.keys(merged).length > 0) faveNotes[key] = merged;
+  }
+  return { version: 4, unitStatus, faves, pulls, faveNotes };
 }
 
 function stableStringify(value: unknown): string {
@@ -173,6 +223,13 @@ export function applyBackup(backup: SyncBackup): void {
     } else if (isUnitGame(key)) {
       replaceFaves(key, slots as Record<string, string>);
       notifyFavesChange(key);
+    }
+  }
+  for (const [scope, notes] of Object.entries(backup.faveNotes ?? {})) {
+    if (!isPlainObject(notes)) continue;
+    if (scope === "fgo" || isUnitGame(scope)) {
+      replaceFaveNotes(scope, notes as Record<string, FaveSlotMeta>);
+      notifyFaveNotesChange(scope);
     }
   }
   for (const [game, pulls] of Object.entries(backup.pulls)) {

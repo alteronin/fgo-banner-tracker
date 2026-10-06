@@ -176,3 +176,30 @@ describe("UnitsPage taxonomy filters", () => {
     expect(showing()).toBe(`Showing ${GI_TOTAL} of ${GI_TOTAL} ${GI_NOUN}`);
   });
 });
+
+describe("UnitsPage favorites", () => {
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+  });
+
+  it("stars faved rows and filters by the ★ Faves pill", () => {
+    const faveUnit =
+      genshinUnits.find((u) => u.type === "character" && u.rarity === "5") ??
+      genshinUnits.find((u) => u.type === "character")!;
+    localStorage.setItem(
+      "faves:genshin",
+      JSON.stringify({ "1": faveUnit.id })
+    );
+
+    renderUnits("genshin");
+    expect(screen.getByLabelText("In your favorites")).toBeInTheDocument();
+    expect(screen.getByText(faveUnit.name)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "★ Faves" }));
+    expect(showing()).toBe(`Showing 1 of ${GI_TOTAL} ${GI_NOUN}`);
+
+    fireEvent.click(screen.getByRole("button", { name: "★ Faves" }));
+    expect(showing()).toBe(`Showing ${GI_TOTAL} of ${GI_TOTAL} ${GI_NOUN}`);
+  });
+});

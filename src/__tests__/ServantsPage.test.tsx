@@ -2,6 +2,8 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent, cleanup, within } from "@testing-library/react";
 import ServantsPage from "@/app/servants/page";
 import { ServantProvider } from "@/contexts/ServantContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import servants from "@/data/servants.json";
 
 vi.mock("next/image", () => ({
   default: (props: { alt: string }) => <span role="img" aria-label={props.alt} />,
@@ -28,9 +30,11 @@ vi.mock("next/link", () => ({
 
 function renderServants() {
   return render(
-    <ServantProvider>
-      <ServantsPage />
-    </ServantProvider>
+    <ThemeProvider>
+      <ServantProvider>
+        <ServantsPage />
+      </ServantProvider>
+    </ThemeProvider>
   );
 }
 
@@ -108,5 +112,29 @@ describe("ServantsPage class filter", () => {
     expect(expected.startsWith("Showing ")).toBe(true);
     expect(expected.endsWith(" of 487 servants")).toBe(true);
     expect(expected).not.toBe("Showing 0 of 487 servants");
+  });
+});
+
+describe("ServantsPage grand picks", () => {
+  beforeEach(() => {
+    cleanup();
+    localStorage.clear();
+  });
+
+  it("stars grand servants and filters by the ★ Grands pill", () => {
+    const pick = servants.find((s) => s.className === "Saber")!;
+    localStorage.setItem(
+      "fgo-grand-servants",
+      JSON.stringify({ saber: pick.slug })
+    );
+
+    renderServants();
+    expect(screen.getByLabelText("In your Grand lineup")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "★ Grands" }));
+    expect(showing()).toBe("Showing 1 of 487 servants");
+
+    fireEvent.click(screen.getByRole("button", { name: "★ Grands" }));
+    expect(showing()).toBe("Showing 487 of 487 servants");
   });
 });

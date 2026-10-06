@@ -1,13 +1,20 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import Link from "next/link";
+import { useState, useMemo, useSyncExternalStore } from "react";
 import { getServants } from "@/lib/data";
 import { matchesFilterGroups } from "@/lib/units";
 import { useServantStatus } from "@/contexts/ServantContext";
+import { useSearchParam } from "@/hooks/useSearchParam";
+import {
+  getGrandsSnapshot,
+  getGrandsServerSnapshot,
+  subscribeGrands,
+} from "@/lib/storage";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import { AppSwitcher } from "@/components/AppSwitcher";
 import { AccountButton } from "@/components/AccountButton";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { FgoTabs } from "@/components/GameTabs";
 import type { ServantStatus } from "@/types/banner";
 
 type SortOption = "name-asc" | "status" | "class-asc";
@@ -51,9 +58,21 @@ const STATUS_COLORS: Record<ServantStatus, { bg: string; border: string; text: s
 export default function ServantsPage() {
   const allServants = useMemo(() => getServants(), []);
   const { getStatus, toggleStatus } = useServantStatus();
+  const grands = useSyncExternalStore(
+    subscribeGrands,
+    getGrandsSnapshot,
+    getGrandsServerSnapshot
+  );
+  const grandSlugs = useMemo(
+    () => new Set(Object.values(grands).filter(Boolean)),
+    [grands]
+  );
 
-  const [search, setSearch] = useState("");
+  const urlSearch = useSearchParam("search");
+  const [searchOverride, setSearchOverride] = useState<string | null>(null);
+  const search = searchOverride ?? urlSearch ?? "";
   const [filter, setFilter] = useState<FilterOption>("all");
+  const [grandsOnly, setGrandsOnly] = useState(false);
   const [sort, setSort] = useState<SortOption>("name-asc");
   const [selectedClasses, setSelectedClasses] = useState<string[]>([]);
 
@@ -71,6 +90,10 @@ export default function ServantsPage() {
     // Filter by status
     if (filter !== "all") {
       result = result.filter((s) => getStatus(s.slug) === filter);
+    }
+
+    if (grandsOnly) {
+      result = result.filter((s) => grandSlugs.has(s.slug));
     }
 
     result = result.filter((s) =>
@@ -105,7 +128,7 @@ export default function ServantsPage() {
     }
 
     return result;
-  }, [allServants, filter, search, sort, selectedClasses, getStatus]);
+  }, [allServants, filter, grandsOnly, grandSlugs, search, sort, selectedClasses, getStatus]);
 
   const stats = useMemo(() => {
     const total = allServants.length;
@@ -127,14 +150,10 @@ export default function ServantsPage() {
             title="Servant Collection"
             subtitle={`${stats.total} servants total`}
           />
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <FgoTabs active="servants" />
             <AccountButton />
-            <Link
-              href="/"
-              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
-            >
-              Banners
-            </Link>
+            <ThemeToggle />
           </div>
         </div>
       </header>
@@ -154,7 +173,7 @@ export default function ServantsPage() {
             type="text"
             placeholder="Search servants..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(event) => setSearchOverride(event.target.value)}
             className="flex-1 px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-gray-500"
           />
           <div className="flex gap-2">
@@ -169,6 +188,9 @@ export default function ServantsPage() {
             </FilterButton>
             <FilterButton active={filter === "none"} onClick={() => setFilter("none")}>
               Unmarked
+            </FilterButton>
+            <FilterButton active={grandsOnly} onClick={() => setGrandsOnly((value) => !value)}>
+              ★ Grands
             </FilterButton>
           </div>
           <select
@@ -229,9 +251,20 @@ export default function ServantsPage() {
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className={`text-sm font-medium truncate ${colors.text}`}>
-                    {servant.name}
-                  </p>
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <p className={`text-sm font-medium truncate ${colors.text}`}>
+                      {servant.name}
+                    </p>
+                    {grandSlugs.has(servant.slug) && (
+                      <span
+                        className="text-yellow-500 text-xs flex-shrink-0"
+                        aria-label="In your Grand lineup"
+                        title="In your Grand lineup"
+                      >
+                        ★
+                      </span>
+                    )}
+                  </div>
                   <p className="text-xs text-gray-500">{servant.className}</p>
                 </div>
                 <button

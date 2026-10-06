@@ -11,11 +11,15 @@ import {
 import {
   fillOwnedUnits,
   getFaves,
+  getFaveNotes,
   getUnitStatuses,
   notifyFavesChange,
+  notifyFaveNotesChange,
   notifyUnitStatusesChange,
   setFave,
+  setFaveNote,
   setUnitStatus,
+  type FaveSlotMeta,
 } from "@/lib/unitStorage";
 import { getPulls, notifyPullsChange, setPulls, toPulls } from "@/lib/pullStorage";
 import { UNIT_GAMES, isUnitGame } from "@/lib/units";
@@ -25,7 +29,15 @@ import type { UnitStatus } from "@/types/units";
 
 const VALID_STATUSES = ["owned", "planning"];
 
-interface BackupFile {
+interface BackupFileV4 {
+  version: 4;
+  unitStatus: Record<string, Record<string, string>>;
+  faves: Record<string, Record<string, string>>;
+  pulls: Record<string, GamePull[]>;
+  faveNotes: Record<string, Record<string, FaveSlotMeta>>;
+}
+
+interface BackupFileV3 {
   version: 3;
   unitStatus: Record<string, Record<string, string>>;
   faves: Record<string, Record<string, string>>;
@@ -38,11 +50,13 @@ interface LegacyBackupFile {
   faves: Record<string, Record<string, string>>;
 }
 
-function isBackupFile(data: unknown): data is BackupFile | LegacyBackupFile {
+function isBackupFile(
+  data: unknown
+): data is BackupFileV4 | BackupFileV3 | LegacyBackupFile {
   if (typeof data !== "object" || data === null) return false;
-  const backup = data as Partial<BackupFile>;
+  const backup = data as Partial<BackupFileV4>;
   if (
-    (backup.version !== 3 && backup.version !== 2) ||
+    (backup.version !== 4 && backup.version !== 3 && backup.version !== 2) ||
     typeof backup.unitStatus !== "object" ||
     backup.unitStatus === null ||
     typeof backup.faves !== "object" ||
@@ -50,8 +64,13 @@ function isBackupFile(data: unknown): data is BackupFile | LegacyBackupFile {
   ) {
     return false;
   }
-  if (backup.version === 3) {
-    return typeof backup.pulls === "object" && backup.pulls !== null;
+  if (backup.version === 4 || backup.version === 3) {
+    if (typeof backup.pulls !== "object" || backup.pulls === null) return false;
+  }
+  if (backup.version === 4) {
+    if (typeof backup.faveNotes !== "object" || backup.faveNotes === null) {
+      return false;
+    }
   }
   return true;
 }
@@ -77,7 +96,19 @@ export function ImportExport() {
     for (const game of PULL_GAMES) {
       pulls[game] = getPulls(game);
     }
-    const backup: BackupFile = { version: 3, unitStatus, faves, pulls };
+    const faveNotes: Record<string, Record<string, FaveSlotMeta>> = {
+      fgo: getFaveNotes("fgo"),
+    };
+    for (const game of UNIT_GAMES) {
+      faveNotes[game] = getFaveNotes(game);
+    }
+    const backup: BackupFileV4 = {
+      version: 4,
+      unitStatus,
+      faves,
+      pulls,
+      faveNotes,
+    };
     const data = JSON.stringify(backup, null, 2);
     const blob = new Blob([data], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -88,7 +119,9 @@ export function ImportExport() {
     URL.revokeObjectURL(url);
   };
 
-  const importBackup = (backup: BackupFile | LegacyBackupFile) => {
+  const importBackup = (
+    backup: BackupFileV4 | BackupFileV3 | LegacyBackupFile
+  ) => {
     for (const [key, statuses] of Object.entries(backup.unitStatus)) {
       if (typeof statuses !== "object" || statuses === null) continue;
       for (const [id, status] of Object.entries(statuses)) {
@@ -119,8 +152,19 @@ export function ImportExport() {
         notifyFavesChange(key);
       }
     }
+    if (backup.version === 4) {
+      for (const [scope, notes] of Object.entries(backup.faveNotes)) {
+        if (typeof notes !== "object" || notes === null) continue;
+        if (scope !== "fgo" && !isUnitGame(scope)) continue;
+        for (const [slotId, meta] of Object.entries(notes)) {
+          if (typeof meta !== "object" || meta === null) continue;
+          setFaveNote(scope, slotId, meta as FaveSlotMeta);
+        }
+        notifyFaveNotesChange(scope);
+      }
+    }
 
-    const pulls = backup.version === 3 ? backup.pulls : null;
+    const pulls = backup.version === 4 || backup.version === 3 ? backup.pulls : null;
     if (pulls) {
       for (const game of PULL_GAMES) {
         const restored = toPulls(pulls[game]);

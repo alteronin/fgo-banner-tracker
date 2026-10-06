@@ -7,6 +7,7 @@ import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 import { GameTabs } from "./GameTabs";
 import { SearchBar } from "./SearchBar";
+import { useSearchParam } from "@/hooks/useSearchParam";
 import { YearFilter } from "./YearFilter";
 import { HsrTypeFilter, type HsrTypeFilterValue } from "./HsrTypeFilter";
 import { HsrBannerCard } from "./HsrBannerCard";
@@ -22,7 +23,9 @@ import type { TrackedApp } from "@/lib/apps";
 export function HsrTracker({ app }: { app: TrackedApp }) {
   const banners = getHsrBanners();
   const years = getHsrYears();
-  const [query, setQuery] = useState("");
+  const urlSearch = useSearchParam("search");
+  const [queryOverride, setQueryOverride] = useState<string | null>(null);
+  const query = queryOverride ?? urlSearch ?? "";
   const [typeFilter, setTypeFilter] = useState<HsrTypeFilterValue>("all");
   const [year, setYear] = useState("all");
   const [selectedBanner, setSelectedBanner] = useState<HsrBanner | null>(null);
@@ -68,7 +71,7 @@ export function HsrTracker({ app }: { app: TrackedApp }) {
         <div className="mb-6 space-y-4">
           <SearchBar
             value={query}
-            onSearch={setQuery}
+            onSearch={setQueryOverride}
             placeholder="Search banners or characters..."
           />
           <div className="flex flex-wrap items-center gap-3">

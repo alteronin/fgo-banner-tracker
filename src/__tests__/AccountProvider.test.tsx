@@ -99,7 +99,7 @@ describe("AccountProvider", () => {
     expect(await screen.findByText("Synced")).toBeInTheDocument();
     expect(puts).toHaveLength(1);
     const first = puts[0].data as { version: number };
-    expect(first.version).toBe(3);
+    expect(first.version).toBe(4);
   });
 
   it("pushes local edits after the debounce window", async () => {

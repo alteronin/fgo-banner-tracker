@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { getBanners } from "@/lib/data";
 import { BannerList } from "@/components/BannerList";
 import { AppSwitcher } from "@/components/AppSwitcher";
 import { AccountButton } from "@/components/AccountButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { FgoTabs } from "@/components/GameTabs";
 import { ImportExport } from "@/components/ImportExport";
 import { CollectionStats } from "@/components/CollectionStats";
 import { AboutHelp } from "@/components/AboutHelp";
@@ -23,24 +23,7 @@ export default function Home() {
           />
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <CollectionStats />
-            <Link
-              href="/servants"
-              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
-            >
-              Servants
-            </Link>
-            <Link
-              href="/grands"
-              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
-            >
-              Grands
-            </Link>
-            <Link
-              href="/pulls"
-              className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all"
-            >
-              Pulls
-            </Link>
+            <FgoTabs active="banners" />
             <ImportExport />
             <AboutHelp />
             <AccountButton />

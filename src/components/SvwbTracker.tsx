@@ -7,6 +7,7 @@ import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 import { GameTabs } from "./GameTabs";
 import { SearchBar } from "./SearchBar";
+import { useSearchParam } from "@/hooks/useSearchParam";
 import { YearFilter } from "./YearFilter";
 import { SvwbTypeFilter, type SvwbTypeFilterValue } from "./SvwbTypeFilter";
 import { SvwbBannerCard } from "./SvwbBannerCard";
@@ -22,7 +23,9 @@ import type { TrackedApp } from "@/lib/apps";
 export function SvwbTracker({ app }: { app: TrackedApp }) {
   const banners = getSvwbBanners();
   const years = getSvwbYears();
-  const [query, setQuery] = useState("");
+  const urlSearch = useSearchParam("search");
+  const [queryOverride, setQueryOverride] = useState<string | null>(null);
+  const query = queryOverride ?? urlSearch ?? "";
   const [typeFilter, setTypeFilter] = useState<SvwbTypeFilterValue>("all");
   const [year, setYear] = useState("all");
   const [selectedBanner, setSelectedBanner] = useState<SvwbBanner | null>(null);
@@ -66,7 +69,7 @@ export function SvwbTracker({ app }: { app: TrackedApp }) {
         <div className="mb-6 space-y-4">
           <SearchBar
             value={query}
-            onSearch={setQuery}
+            onSearch={setQueryOverride}
             placeholder="Search banners or leaders..."
           />
           <div className="flex flex-wrap items-center gap-3">

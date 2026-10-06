@@ -1,10 +1,15 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { getAppBySlug, type TrackedApp } from "@/lib/apps";
 import { getUnitRows, getUnitsConfig, matchesFilterGroups } from "@/lib/units";
 import { UnitProvider, useUnitStatus } from "@/contexts/UnitContext";
+import {
+  getFavesServerSnapshot,
+  getFavesSnapshot,
+  subscribeFaves,
+} from "@/lib/unitStorage";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { AppSwitcher } from "./AppSwitcher";
 import { AccountButton } from "./AccountButton";
@@ -70,8 +75,24 @@ function UnitsView({
 }) {
   const { getStatus, toggleStatus } = useUnitStatus();
 
+  const faveStore = useMemo(
+    () => ({
+      subscribe: (onChange: () => void) => subscribeFaves(app.slug, onChange),
+      getSnapshot: () => getFavesSnapshot(app.slug),
+      getServerSnapshot: getFavesServerSnapshot,
+    }),
+    [app.slug]
+  );
+  const faves = useSyncExternalStore(
+    faveStore.subscribe,
+    faveStore.getSnapshot,
+    faveStore.getServerSnapshot
+  );
+  const faveIds = useMemo(() => new Set(Object.values(faves)), [faves]);
+
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<FilterOption>("all");
+  const [favesOnly, setFavesOnly] = useState(false);
   const [sort, setSort] = useState<SortOption>("name-asc");
   const [taxo, setTaxo] = useState<Record<string, string[]>>({});
 
@@ -94,6 +115,10 @@ function UnitsView({
 
     if (filter !== "all") {
       result = result.filter((r) => getStatus(r.id) === filter);
+    }
+
+    if (favesOnly) {
+      result = result.filter((r) => faveIds.has(r.id));
     }
 
     result = result.filter((r) => matchesFilterGroups(r.filters, taxo));
@@ -129,7 +154,7 @@ function UnitsView({
     }
 
     return result;
-  }, [rows, filter, search, sort, taxo, getStatus]);
+  }, [rows, filter, favesOnly, faveIds, search, sort, taxo, getStatus]);
 
   const stats = useMemo(() => {
     const total = rows.length;
@@ -203,6 +228,12 @@ function UnitsView({
             >
               Unmarked
             </FilterButton>
+            <FilterButton
+              active={favesOnly}
+              onClick={() => setFavesOnly((value) => !value)}
+            >
+              ★ Faves
+            </FilterButton>
           </div>
           <select
             value={sort}
@@ -274,9 +305,20 @@ function UnitsView({
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className={`text-sm font-medium truncate ${colors.text}`}>
-                    {row.name}
-                  </p>
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <p className={`text-sm font-medium truncate ${colors.text}`}>
+                      {row.name}
+                    </p>
+                    {faveIds.has(row.id) && (
+                      <span
+                        className="text-yellow-500 text-xs flex-shrink-0"
+                        aria-label="In your favorites"
+                        title="In your favorites"
+                      >
+                        ★
+                      </span>
+                    )}
+                  </div>
                   <p className="text-xs text-gray-500 truncate">{row.subtitle}</p>
                 </div>
                 <button

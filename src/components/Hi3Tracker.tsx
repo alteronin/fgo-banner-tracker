@@ -7,6 +7,7 @@ import { AccountButton } from "./AccountButton";
 import { ThemeToggle } from "./ThemeToggle";
 import { GameTabs } from "./GameTabs";
 import { SearchBar } from "./SearchBar";
+import { useSearchParam } from "@/hooks/useSearchParam";
 import { YearFilter } from "./YearFilter";
 import { Hi3BannerCard } from "./Hi3BannerCard";
 import { Hi3BannerDetail } from "./Hi3BannerDetail";
@@ -21,7 +22,9 @@ import type { TrackedApp } from "@/lib/apps";
 export function Hi3Tracker({ app }: { app: TrackedApp }) {
   const banners = getHi3Banners();
   const years = getHi3Years();
-  const [query, setQuery] = useState("");
+  const urlSearch = useSearchParam("search");
+  const [queryOverride, setQueryOverride] = useState<string | null>(null);
+  const query = queryOverride ?? urlSearch ?? "";
   const [year, setYear] = useState("all");
   const [selectedBanner, setSelectedBanner] = useState<Hi3Banner | null>(null);
 
@@ -64,7 +67,7 @@ export function Hi3Tracker({ app }: { app: TrackedApp }) {
         <div className="mb-6 space-y-4">
           <SearchBar
             value={query}
-            onSearch={setQuery}
+            onSearch={setQueryOverride}
             placeholder="Search banners or versions..."
           />
           <div className="flex flex-wrap items-center gap-3">

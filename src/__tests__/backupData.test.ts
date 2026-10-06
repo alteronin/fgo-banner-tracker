@@ -11,7 +11,13 @@ import {
 } from "@/lib/backupData";
 import { subscribeSyncableChange } from "@/lib/syncDirty";
 import { getPulls, setPulls } from "@/lib/pullStorage";
-import { getUnitStatuses, setUnitStatus } from "@/lib/unitStorage";
+import {
+  getFaveNotes,
+  getUnitStatuses,
+  setFaveNote,
+  setUnitStatus,
+  subscribeFaveNotes,
+} from "@/lib/unitStorage";
 import { getGrandServants, getServantStatuses, setServantStatus } from "@/lib/storage";
 import type { GamePull } from "@/types/pulls";
 
@@ -44,9 +50,24 @@ describe("isBackupShape", () => {
     ).toBe(true);
   });
 
+  it("accepts a v4 backup with faveNotes", () => {
+    expect(
+      isBackupShape({
+        version: 4,
+        unitStatus: {},
+        faves: {},
+        pulls: {},
+        faveNotes: { genshin: { "1": { label: "Main" } } },
+      })
+    ).toBe(true);
+  });
+
   it("rejects legacy versions and garbage", () => {
     expect(isBackupShape({ version: 2, unitStatus: {}, faves: {} })).toBe(false);
     expect(isBackupShape({ version: 3, unitStatus: {}, faves: {} })).toBe(false);
+    expect(
+      isBackupShape({ version: 4, unitStatus: {}, faves: {}, pulls: {} })
+    ).toBe(false);
     expect(isBackupShape(null)).toBe(false);
     expect(isBackupShape([])).toBe(false);
     expect(isBackupShape("backup")).toBe(false);
@@ -57,13 +78,16 @@ describe("isBackupShape", () => {
 describe("buildSnapshot", () => {
   it("covers fgo, unit games, and pull games", () => {
     const snapshot = buildSnapshot();
-    expect(snapshot.version).toBe(3);
+    expect(snapshot.version).toBe(4);
     expect(Object.keys(snapshot.unitStatus)).toEqual(
       expect.arrayContaining(["fgo", "genshin", "hsr", "zzz", "wuwa", "hi3", "shadowverse"])
     );
     expect(Object.keys(snapshot.faves)).toEqual(expect.arrayContaining(["fgo", "genshin"]));
     expect(Object.keys(snapshot.pulls)).toEqual(
       expect.arrayContaining(["genshin", "hsr", "zzz", "wuwa"])
+    );
+    expect(Object.keys(snapshot.faveNotes ?? {})).toEqual(
+      expect.arrayContaining(["fgo", "genshin", "hsr"])
     );
   });
 });
@@ -103,6 +127,25 @@ describe("unionBackups", () => {
     expect(merged.unitStatus.genshin).toEqual({ "1": "owned", "2": "planning" });
     expect(merged.unitStatus.fgo).toEqual({ kevin: "owned" });
     expect(merged.faves.hsr).toEqual({ main: "unit-local", alt: "unit-remote-alt" });
+  });
+
+  it("unions faveNotes with local slot meta winning conflicts", () => {
+    const local = {
+      ...EMPTY_BACKUP,
+      faveNotes: { genshin: { "1": { label: "Local label" } } },
+    };
+    const remote = {
+      ...EMPTY_BACKUP,
+      faveNotes: {
+        genshin: { "1": { label: "Remote label" }, "2": { note: "Remote note" } },
+      },
+    };
+    const merged = unionBackups(local, remote);
+    expect(merged.version).toBe(4);
+    expect(merged.faveNotes?.genshin).toEqual({
+      "1": { label: "Local label" },
+      "2": { note: "Remote note" },
+    });
   });
 });
 
@@ -200,6 +243,26 @@ describe("applyBackup", () => {
     expect(getUnitStatuses("hsr")).toEqual({ "1001": "planning" });
     expect(getServantStatuses()).toEqual({ merlin: "owned" });
     expect(getGrandServants()).toEqual({ c1: "merlin" });
+  });
+
+  it("replaces faveNotes and notifies fave-notes subscribers", () => {
+    setFaveNote("genshin", "1", { label: "stale" });
+    let notified = 0;
+    const unsubscribe = subscribeFaveNotes("genshin", () => {
+      notified += 1;
+    });
+    applyBackup({
+      version: 4,
+      unitStatus: {},
+      faves: {},
+      pulls: {},
+      faveNotes: { genshin: { "1": { label: "Main", note: "save for anni" } } },
+    });
+    unsubscribe();
+    expect(getFaveNotes("genshin")).toEqual({
+      "1": { label: "Main", note: "save for anni" },
+    });
+    expect(notified).toBe(1);
   });
 
   it("emits syncable-change notifications", () => {

@@ -147,6 +147,7 @@ fgo-banner-tracker/
 │   │   └── servants.json     # Servant data (487 servants)
 │   ├── hooks/
 │   │   ├── useBannerFilter.ts # Banner filtering hook
+│   │   ├── useSearchParam.ts  # Hydration-safe `?param=` URL reader (useSyncExternalStore + popstate, null server snapshot)
 │   │   └── useKeyboardNavigation.ts # Keyboard navigation hook
 │   ├── lib/
 │   │   ├── apps.ts           # Multi-game app registry (7 apps)
@@ -159,7 +160,7 @@ fgo-banner-tracker/
 │   │   ├── shadowverse-data.ts # SV data access (latest-set active rule)
 │   │   ├── storage.ts        # localStorage utilities (FGO)
 │   │   ├── unitAliases.ts    # Per-game banner-name alias map (ZZZ: Jane Doe → Jane, etc.)
-│   │   ├── unitStorage.ts    # Per-game unit-status/faves localStorage + fillOwnedUnits (fill-only-unset)
+│   │   ├── unitStorage.ts    # Per-game unit-status/faves/fave-notes localStorage + fillOwnedUnits (fill-only-unset)
 │   │   ├── unitResolve.ts    # normalizeUnitName, buildUnitIndex/resolveUnitName (exact → normalized → alias), syntheticStatusKey (`name:` prefix)
 │   │   ├── pullStorage.ts    # `pulls:{game}` GamePull[] storage (merge/dedupe, deletePull, subscribe/snapshot/notify)
 │   │   ├── pullImport.ts     # wuwatracker/stardb detection + parsing → GamePull[] + warnings; CATEGORY_ORDER, buildManualPull
@@ -215,7 +216,10 @@ fgo-banner-tracker/
 │       ├── googleOAuth.test.ts # Authorization URL, code exchange, email_verified rejection
 │       ├── authRoutes.test.ts # login/callback/logout/me/sync route handlers (401/403/413/502 paths)
 │       ├── AccountButton.test.tsx # Sign-in button, dropdown, sync states, notice display
-│       └── AccountProvider.test.tsx # Bootstrap decision, debounced push, retrySync, notice consumption
+│       ├── AccountProvider.test.tsx # Bootstrap decision, debounced push, retrySync, notice consumption
+│       ├── FavesPage.test.tsx # Faves slot flows (assign/deselect, swap, label, note, links, rarity, empty pool)
+│       ├── GrandsPage.test.tsx # Grands slot flows (nav tabs, assign, toggle-off, swap + foreign badge, links, label/note)
+│       └── useSearchParam.test.ts # URL param read (initial, popstate, missing param)
 ├── scripts/
 │   ├── scrape-all.mjs        # Banner scraper (cheerio)
 │   ├── scrape-genshin.mjs    # Genshin banner scraper (Game8, cheerio)
@@ -272,19 +276,20 @@ fgo-banner-tracker/
 - `src/components/BannerCard.tsx` - Main banner display component
 - `src/components/GenshinRateUpChip.tsx` - Interactive unit chip on all 6 games' banner cards + detail modals (resolved names cycle owned/planning, future banners planning-only, unresolved future = `name:` synthetic key, unresolved past = inert span; `e.stopPropagation()`)
 - `src/components/UnitsPage.tsx` - Per-game units roster page
-- `src/components/FavesPage.tsx` - Per-game 9-slot favorites page
-- `src/components/GameTabs.tsx` - Banners/Units/Faves/Pulls pill navigation
+- `src/components/FavesPage.tsx` - Per-game 9-slot favorites page (card slots: label edit, ◀▶ swap, clear, notes, HTML5 DnD, owned-pool scroller, Banners/Wiki links)
+- `src/components/GameTabs.tsx` - Banners/Units/Faves/Pulls pill navigation (`GameTabs` + `FgoTabs` for FGO pages)
 - `src/components/PullsPage.tsx` - Pull history: stat cards over **imported pulls only** + 5th Manual card, pity histogram, category pills, drops table, List/Grid toggle with square ~76px 5★ tiles (thumbnail + pity chip + win/guarantee/loss border; manual tiles = user chip color + ✱, `data-manual`), `N pulls imported · M manual` subtitle, Add Entry wiring + row Edit/Delete (two-step confirm, export-row re-import warning; manual rows show ✱ badge instead of pity)
 - `src/components/ImportPulls.tsx` - Pull-history import (detect format → preview → merge + owned fill)
 - `src/components/ManualPullForm.tsx` - Manual pull entry form (datetime-local seconds, banner select, searchable map combobox + custom name/3-4-5★ fallback, live pity preview; `validateManualPull` gating with issue message/disabled submit/date hint, 8-swatch `CHIP_COLORS` + `safeChipColor`; atomic `setPulls` save/edit, quota error display)
 - `src/app/{game}/pulls/page.tsx` - Static pull routes (4 full pages + 3 empty states incl. `/pulls`)
 - `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback; empty src → fallback UI (no request); optimization globally disabled via `next.config.ts` `images.unoptimized: true` (Vercel optimizer quota 402)
-- `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore)
+- `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore; `?search=` override)
+- `src/hooks/useSearchParam.ts` - Hydration-safe URL query-param reader used by the 6 trackers' `?search=` prefill
 - `src/app/servants/page.tsx` - Servants summary page
-- `src/app/grands/page.tsx` - Grand servant lineup page
+- `src/app/grands/page.tsx` - Grand servant lineup page (card slots + notes + FgoTabs header)
 - `src/app/api/auth/{login,callback,logout,me}/route.ts` + `src/app/api/sync/route.ts` - Auth + sync API routes (see tree above)
 - `src/lib/server/{session,google,store}.ts` - JWT session cookies, Google code exchange, Upstash Redis blobs
-- `src/lib/backupData.ts` - Sync blob semantics: snapshot, local-wins union, djb2 fingerprint, `decideSyncAction` (noop/push/adopt/merge/initial-push)
+- `src/lib/backupData.ts` - Sync blob semantics (backup **v4** + `faveNotes`, v3 accepted): snapshot, local-wins union, djb2 fingerprint, `decideSyncAction` (noop/push/adopt/merge/initial-push)
 - `src/lib/syncDirty.ts` - 2s-debounced push registered by all 5 storage notifiers
 - `src/lib/logPull.ts` - Log-pull gates + `STANDARD_POOLS` + `buildLoggedPull` (manual pull with `fifty` stamp)
 - `src/contexts/AccountContext.tsx` - Session fetch → bootstrap sync decision → debounced push; `signIn/signOut/retrySync`; notice consumption
