@@ -23,6 +23,13 @@ fgo-banner-tracker/
 │   │   ├── page.tsx          # Main page with banner list
 │   │   ├── loading.tsx       # Route-level loading skeleton
 │   │   ├── globals.css       # Global styles + light:/dark: custom variants
+│   │   ├── api/
+│   │   │   ├── auth/
+│   │   │   │   ├── login/route.ts    # OAuth redirect start (state cookie, safeNextPath)
+│   │   │   │   ├── callback/route.ts # code exchange → session cookie, email_verified gate
+│   │   │   │   ├── logout/route.ts   # clear session cookie
+│   │   │   │   └── me/route.ts       # session probe (null when signed out)
+│   │   │   └── sync/route.ts         # GET/PUT sync blob (413 >4MB, 502 Redis down vs null missing)
 │   │   ├── [game]/
 │   │   │   └── page.tsx      # Dynamic route: empty generateStaticParams (all slugs own pages; unknown 404)
 │   │   ├── genshin/
@@ -63,6 +70,7 @@ fgo-banner-tracker/
 │   │       └── page.tsx      # Grand servant lineup page (9 slots)
 │   ├── components/
 │   │   ├── AboutHelp.tsx     # About/help modal
+│   │   ├── AccountButton.tsx # Google sign-in / avatar dropdown / sync state (14 header sites)
 │   │   ├── AdvancedSearch.tsx # Advanced search panel
 │   │   ├── AppSwitcher.tsx   # Multi-game dropdown switcher
 │   │   ├── BannerCard.tsx    # Banner card component
@@ -89,6 +97,7 @@ fgo-banner-tracker/
 │   │   ├── ImageWithFallback.tsx # Image with error fallback; empty src → fallback UI, wikia → unoptimized
 │   │   ├── ImportExport.tsx  # JSON import/export (v3 backup incl. `pulls`, legacy v1/v2 accepted)
 │   │   ├── ImportPulls.tsx   # Pull-history file import (detect format → preview → merge + owned fill)
+│   │   ├── LogPullDialog.tsx # Log-a-pull dialog (date/time, 50/50 outcome, standard-unit picker on loss)
 │   │   ├── ManualPullForm.tsx # Manual pull entry form (datetime/combobox/custom fallback, validation + chip swatches, pity preview, atomic save/edit)
 │   │   ├── PullsPage.tsx     # Pull stats (imported-only + Manual card), histogram, pills, drops table, List/Grid (5★ + ✱ manual tiles), Add Entry + row Edit/Delete
 │   │   ├── PullsEmptyPage.tsx # Empty pulls shell for FGO/HI3/SV
@@ -113,7 +122,8 @@ fgo-banner-tracker/
 │   │   ├── ZzzTracker.tsx     # ZZZ page (filters + grid + modal)
 │   │   └── ZzzTypeFilter.tsx  # Agent/W-Engine pills
 │   ├── contexts/
-│   │   ├── ServantContext.tsx # Servant status context
+│   │   ├── AccountContext.tsx # Session + cloud-sync orchestration (bootstrap decision, debounced push, notices)
+│   │   ├── ServantContext.tsx # Servant status context (storage-owned listener registry, notifyServantStatusesChange)
 │   │   ├── ThemeContext.tsx   # Theme context
 │   │   └── UnitContext.tsx    # Per-game unit status context (UnitProvider game + roster props, resolveName)
 │   ├── data/
@@ -156,6 +166,13 @@ fgo-banner-tracker/
 │   │   ├── pullMaps.ts       # Shared PULL_MAPS (pull-map JSON per game) for ImportPulls + ManualPullForm
 │   │   ├── pullOrder.ts      # comparePullOrder (ts → seq → id): stardb-parity pull order
 │   │   ├── pity.ts           # computeRarityStats, pityByDrop, pityTone, fiftyFiftyResult/Results, banner windows
+│   │   ├── logPull.ts        # log-pull gates: checkLoggable, STANDARD_POOLS, hasPullInBanner, findMapItemByName, buildLoggedPull
+│   │   ├── backupData.ts     # sync blob: snapshot / union (local-wins) / fingerprint (djb2) / replace-apply + decideSyncAction
+│   │   ├── syncDirty.ts      # 2s-debounced cloud push wired into all 5 storage notifiers
+│   │   ├── server/
+│   │   │   ├── session.ts    # jose HS256 JWT cookie `fbtn-session` + OAuth state cookie (timing-safe, raw-first parse)
+│   │   │   ├── google.ts     # Google code exchange, email_verified gate, avatar/name fetch
+│   │   │   └── store.ts      # Upstash Redis `fbtn:user|sync:{sub}` (4MB cap, throw=502 vs null=missing)
 │   │   └── units.ts          # Unit roster loaders, UnitRow mapping, UnitsConfig, UNIT_GAMES, taxonomy specs
 │   ├── types/
 │   │   ├── banner.ts         # TypeScript types
@@ -190,7 +207,15 @@ fgo-banner-tracker/
 │       ├── UnitContext.test.tsx # Unit context tests (toggle cycle, persistence, notify)
 │       ├── GenshinRateUpChip.test.tsx # Chip cycles (past/future/unresolved), stopPropagation, persistence
 │       ├── unitResolve.test.ts # Name resolution (exact/normalized/alias/game-scoped, synthetic keys)
-│       └── useBannerFilter.test.tsx # Filter hook + URL state tests
+│       ├── useBannerFilter.test.tsx # Filter hook + URL state tests
+│       ├── logPull.test.ts   # Log-pull gates (checkLoggable, STANDARD_POOLS, findMapItemByName, hasPullInBanner, buildLoggedPull)
+│       ├── LogPullDialog.test.tsx # Dialog flows (outcome, standard picker, save/skip, dupe occ bump)
+│       ├── backupData.test.ts # Sync snapshot/union/fingerprint/decideSyncAction
+│       ├── serverSession.test.ts # JWT sign/verify/expiry, state cookie round-trip, safeNextPath
+│       ├── googleOAuth.test.ts # Authorization URL, code exchange, email_verified rejection
+│       ├── authRoutes.test.ts # login/callback/logout/me/sync route handlers (401/403/413/502 paths)
+│       ├── AccountButton.test.tsx # Sign-in button, dropdown, sync states, notice display
+│       └── AccountProvider.test.tsx # Bootstrap decision, debounced push, retrySync, notice consumption
 ├── scripts/
 │   ├── scrape-all.mjs        # Banner scraper (cheerio)
 │   ├── scrape-genshin.mjs    # Genshin banner scraper (Game8, cheerio)
@@ -210,6 +235,7 @@ fgo-banner-tracker/
 │   ├── build-pull-maps.mjs   # Pull import maps (stardb/yatta/GO + wuwa roster → 4 JSONs)
 │   └── extract-banners.mjs   # Banner list extraction (dedupes servants)
 ├── public/                   # Static assets
+├── .env.local                # GOOGLE_CLIENT_ID/SECRET, SESSION_SECRET, UPSTASH_REDIS_REST_URL/TOKEN (gitignored)
 ├── vitest.config.ts          # Vitest configuration
 ├── package.json              # Dependencies
 ├── tsconfig.json             # TypeScript config
@@ -256,3 +282,12 @@ fgo-banner-tracker/
 - `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore)
 - `src/app/servants/page.tsx` - Servants summary page
 - `src/app/grands/page.tsx` - Grand servant lineup page
+- `src/app/api/auth/{login,callback,logout,me}/route.ts` + `src/app/api/sync/route.ts` - Auth + sync API routes (see tree above)
+- `src/lib/server/{session,google,store}.ts` - JWT session cookies, Google code exchange, Upstash Redis blobs
+- `src/lib/backupData.ts` - Sync blob semantics: snapshot, local-wins union, djb2 fingerprint, `decideSyncAction` (noop/push/adopt/merge/initial-push)
+- `src/lib/syncDirty.ts` - 2s-debounced push registered by all 5 storage notifiers
+- `src/lib/logPull.ts` - Log-pull gates + `STANDARD_POOLS` + `buildLoggedPull` (manual pull with `fifty` stamp)
+- `src/contexts/AccountContext.tsx` - Session fetch → bootstrap sync decision → debounced push; `signIn/signOut/retrySync`; notice consumption
+- `src/components/AccountButton.tsx` - Header account UI (Google sign-in button, avatar dropdown, sync state + Retry) at all 14 ThemeToggle sites
+- `src/components/LogPullDialog.tsx` - Log-a-pull dialog launched from rate-up chips (9 `logContext` sites)
+- `src/components/GenshinRateUpChip.tsx` - Interactive unit chip on all 6 games' banner cards + detail modals (resolved names cycle owned/planning, future banners planning-only, unresolved future = `name:` synthetic key, unresolved past = inert span; `e.stopPropagation()`; on loggable started banners click opens LogPullDialog with pendingStatus; `hasPullInBanner` checkmark)
