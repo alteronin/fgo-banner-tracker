@@ -43,7 +43,7 @@ A web application that helps gacha game players track their pulls and plan their
 15. Clickable rate-up chips on banner cards + detail modals for all 6 games (owned/planning cycles keyed to roster ids, future banners planning-only until start, alias + inert fallback for off-roster names, GI 5★ weapon roster with Type filter)
 16. Log-pull: click a 5★ rate-up chip on an active banner to log the pull (date/time + 50/50 win/loss outcome + standard-unit picker on a loss) — saved as a manual entry stamped `fifty`, never affects pity stats; 50/50 record stat card, Won/Lost/Guaranteed labels, per-banner checkmarks, grid default view
 17. Google sign-in + cloud sync (2026-10-05, `b044495`): sign in with Google, collection/pulls/faves sync as the backup blob to Upstash Redis with local-wins merge + debounced push; graceful "not configured" state until envs are added
-18. Faves/grands improvements (2026-10-06, uncommitted): card-framed slots with inline labels, ◀▶ swap, per-slot notes, drag-and-drop + owned-pool scrollers, ★ rarity + Banners/Wiki cross-links, `?search=` URL prefill on all trackers, FgoTabs FGO nav unification, ★ faves/grands stars + filters, backup v4 with `faveNotes`
+18. Faves/grands improvements (2026-10-06, `dcceb4b`): card-framed slots with inline labels, ◀▶ swap, per-slot notes, drag-and-drop + owned-pool scrollers, ★ rarity + Banners/Wiki cross-links, `?search=` URL prefill on all trackers, FgoTabs FGO nav unification, ★ faves/grands stars + filters, backup v4 with `faveNotes`
 
 ### Roadmap (Buckets 11-14 — all addressed)
 11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
@@ -54,7 +54,6 @@ A web application that helps gacha game players track their pulls and plan their
 All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 
 ## Next Up
-- **Commit + deploy faves/grands improvements** (built 2026-10-06, all five candidates, 551 tests + live QA 31/31 green; awaiting user's explicit commit request)
 - User-side env setup for auth (Google OAuth client + Upstash + `vercel env add` ×5)
 
 ## Data Sources
