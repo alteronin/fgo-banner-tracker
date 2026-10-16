@@ -316,8 +316,8 @@ Import the user's gacha pull-history exports (`wuwatracker-pulls.json` for WuWa,
 
 ---
 
-## Bucket 15: Servant Buff Finder (Built + Local QA)
-**Status**: Built + locally QA'd (2026-10-16) — local QA 42/42, 589 unit tests, gates green; commit/deploy/prod-QA pending
+## Bucket 15: Servant Buff Finder (Complete)
+**Status**: Complete (2026-10-16) — committed `c3e4971` (feat, 17 files, +24174/−17), pushed, deployed to production, live QA green (local 42/42 + prod 42/42, 589 unit tests)
 
 Filter servants by their buff kit (which categories they buff, whom they buff, NP shape) for support/team-building searches.
 
@@ -350,6 +350,6 @@ Filter servants by their buff kit (which categories they buff, whom they buff, N
 ### Completion Checklist
 - [x] gates: tsc/eslint/`npm test` (589)/`npm run build` clean (`/servants/buffs` = `ƒ Dynamic`)
 - [x] local QA 42/42
-- [ ] commit + push + `npx vercel --prod`
-- [ ] prod QA (`QA_BASE=https://fgo-banner-tracker.vercel.app`)
-- [ ] CONTEXT docs update (this bucket + state/structure/decisions/project)
+- [x] commit + push (`c3e4971`) + `npx vercel --prod` (deployed 2026-10-16, Vercel CLI re-authed via device flow)
+- [x] prod QA (`QA_BASE=https://fgo-banner-tracker.vercel.app`) — 42/42, 0 console errors
+- [x] CONTEXT docs update (state/buckets/structure/decisions/project)

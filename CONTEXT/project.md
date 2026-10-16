@@ -51,9 +51,9 @@ A web application that helps gacha game players track their pulls and plan their
 12. Cross-game Units & Faves — **COMPLETE (2026-10-03)**
 13. Class/element button filters — **COMPLETE (2026-10-04)**
 14. Pull-history import + pity — **COMPLETE (2026-10-04)** (deployed, live QA green; follow-ups `cbdef13` per-5★ drop pity, `978f769` 5★ grid view with 50/50 borders, `ecdba38` stardb-parity order + Guarantee state + square tiles, `d691e3e` unoptimized images after Vercel 402, `b00f440` multi-game export import, qa-pity 41/41 + qa-multi 3/3)
-15. Servant buff finder — **BUILT + LOCAL QA 42/42 (2026-10-16)** (589 tests; commit/deploy pending)
+15. Servant buff finder — **COMPLETE (2026-10-16)** (`c3e4971`, deployed, local + prod QA 42/42)
 
-All 15 buckets built; Bucket 11 (events tab) is the only deferred item.
+All 15 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 
 ## Next Up
 - User-side env setup for auth (Google OAuth client + Upstash + `vercel env add` ×5)
