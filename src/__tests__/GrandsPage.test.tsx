@@ -84,16 +84,18 @@ describe("GrandsPage", () => {
     expect(links.map((l) => l.textContent)).toEqual([
       "Banners",
       "Servants",
+      "Buffs",
       "Grands",
       "Pulls",
     ]);
     expect(links.map((l) => l.getAttribute("href"))).toEqual([
       "/",
       "/servants",
+      "/servants/buffs",
       "/grands",
       "/pulls",
     ]);
-    expect(links[2].getAttribute("aria-current")).toBe("page");
+    expect(links[3].getAttribute("aria-current")).toBe("page");
     expect(
       within(slot("saber")).getByText("Empty — pick a Saber below")
     ).toBeInTheDocument();

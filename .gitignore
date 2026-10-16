@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# scraper caches
+.atlas-cache/
+src/data/servants-cache.json
+
 # debug
 npm-debug.log*
 yarn-debug.log*

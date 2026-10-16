@@ -32,12 +32,13 @@ export function GameTabs({ game, active }: { game: string; active: GameTab }) {
   );
 }
 
-export type FgoTab = "banners" | "servants" | "grands" | "pulls";
+export type FgoTab = "banners" | "servants" | "buffs" | "grands" | "pulls";
 
 export function FgoTabs({ active }: { active: FgoTab }) {
   const tabs: { key: FgoTab; label: string; href: string }[] = [
     { key: "banners", label: "Banners", href: "/" },
     { key: "servants", label: "Servants", href: "/servants" },
+    { key: "buffs", label: "Buffs", href: "/servants/buffs" },
     { key: "grands", label: "Grands", href: "/grands" },
     { key: "pulls", label: "Pulls", href: "/pulls" },
   ];

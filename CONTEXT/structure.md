@@ -65,7 +65,8 @@ fgo-banner-tracker/
 │   │   ├── pulls/
 │   │   │   └── page.tsx      # FGO empty pulls state (Banners link back to /)
 │   │   ├── servants/
-│   │   │   └── page.tsx      # Servants summary page
+│   │   │   ├── page.tsx      # Servants summary page
+│   │   │   └── buffs/page.tsx # Buff finder (async: awaits searchParams → initialSearch; ƒ Dynamic)
 │   │   └── grands/
 │   │       └── page.tsx      # Grand servant lineup page (9 slots)
 │   ├── components/
@@ -81,7 +82,7 @@ fgo-banner-tracker/
 │   │   ├── ComingSoonApp.tsx # Placeholder app shell
 │   │   ├── FilterBar.tsx     # Filter bar component
 │   │   ├── FavesPage.tsx     # Per-game 9-slot favorites page (owned pool, move-on-reassign)
-│   │   ├── GameTabs.tsx      # Banners/Units/Faves/Pulls pill nav (aria-current)
+│   │   ├── GameTabs.tsx      # Banners/Units/Faves/Pulls pill nav (aria-current); FgoTabs = Banners/Servants/Buffs/Grands/Pulls
 │   │   ├── GenshinBannerCard.tsx  # Genshin banner card
 │   │   ├── GenshinBannerDetail.tsx # Genshin detail modal
 │   │   ├── GenshinRateUpChip.tsx # Interactive rate-up chip (owned/planning cycles, future planning-only, inert gaps; aliased as RateUpChip everywhere)
@@ -104,6 +105,7 @@ fgo-banner-tracker/
 │   │   ├── RateUpIndicator.tsx # Rate-up type badges
 │   │   ├── SearchBar.tsx     # Search bar component (optional placeholder)
 │   │   ├── ServantChip.tsx   # Servant status chip
+│   │   ├── ServantBuffPage.tsx # Buff finder page (buff/target/NP-type/class pills, Any/All mode, expandable kit details)
 │   │   ├── Skeleton.tsx      # Loading skeletons
 │   │   ├── SortBar.tsx       # Sort dropdown
 │   │   ├── SvwbBannerCard.tsx # Shadowverse set/collab card (Permanent range, no version overlay)
@@ -144,6 +146,7 @@ fgo-banner-tracker/
 │   │   ├── genshin-pull-map.json # item_id → {unit, rarity, name} for GI import
 │   │   ├── zzz-pull-map.json  # item_id → {unit, rarity, name} for ZZZ import
 │   │   ├── wuwa-pull-map.json # normalized name → {unit, rarity, kind} for WuWa import
+│   │   ├── servant-effects.json # Atlas Academy skill/NP effects (483 entries, 1,668 rows; JP + NA names)
 │   │   └── servants.json     # Servant data (487 servants)
 │   ├── hooks/
 │   │   ├── useBannerFilter.ts # Banner filtering hook
@@ -168,6 +171,7 @@ fgo-banner-tracker/
 │   │   ├── pullOrder.ts      # comparePullOrder (ts → seq → id): stardb-parity pull order
 │   │   ├── pity.ts           # computeRarityStats, pityByDrop, pityTone, fiftyFiftyResult/Results, banner windows
 │   │   ├── logPull.ts        # log-pull gates: checkLoggable, STANDARD_POOLS, hasPullInBanner, findMapItemByName, buildLoggedPull
+│   │   ├── servantEffects.ts # Buff category/target/NP-type constants + labels + pure filter helpers (matchesEffectFilters, matchingEffectRows)
 │   │   ├── backupData.ts     # sync blob: snapshot / union (local-wins) / fingerprint (djb2) / replace-apply + decideSyncAction
 │   │   ├── syncDirty.ts      # 2s-debounced cloud push wired into all 5 storage notifiers
 │   │   ├── server/
@@ -184,6 +188,7 @@ fgo-banner-tracker/
 │   │   ├── wuwa.ts           # WuWa types (nullable dates, featuredWeapons)
 │   │   ├── hi3.ts            # HI3 types (nullable endDate)
 │   │   ├── shadowverse.ts    # SV types (set/collab)
+│   │   ├── servantEffects.ts # EffectRow, ServantEffectEntry, BuffCategoryKey, EffectTarget, NpType, EffectFilterCriteria
 │   │   └── units.ts          # Unit roster types (UnitStatus, UnitGame, UnitRow, per-game units)
 │   └── __tests__/
 │       ├── setup.ts          # Test setup (jest-dom + RTL cleanup)
@@ -219,6 +224,9 @@ fgo-banner-tracker/
 │       ├── AccountProvider.test.tsx # Bootstrap decision, debounced push, retrySync, notice consumption
 │       ├── FavesPage.test.tsx # Faves slot flows (assign/deselect, swap, label, note, links, rarity, empty pool)
 │       ├── GrandsPage.test.tsx # Grands slot flows (nav tabs, assign, toggle-off, swap + foreign badge, links, label/note)
+│       ├── servantEffectsData.test.ts # Buff effects data integrity (counts, categories, NP types, dex join)
+│       ├── servantBuffFilter.test.ts # matchesEffectFilters / matchingEffectRows semantics
+│       ├── ServantBuffPage.test.tsx # Buff page: pills, filters, Any/All, targets, NP types, class, status, expand, route page
 │       └── useSearchParam.test.ts # URL param read (initial, popstate, missing param)
 ├── scripts/
 │   ├── scrape-all.mjs        # Banner scraper (cheerio)
@@ -229,6 +237,7 @@ fgo-banner-tracker/
 │   ├── scrape-hi3.mjs        # HI3 version scraper (fandom MediaWiki API; FEATURED_JUNK + dedupe)
 │   ├── scrape-shadowverse.mjs # Shadowverse set/collab scraper (official site)
 │   ├── scrape-servants.mjs   # Servant scraper (sitemap + pages)
+│   ├── scrape-servant-effects.mjs # Atlas Academy skill/NP effects scraper (JP + NA, dex join, .atlas-cache/)
 │   ├── lib/game8-roster.mjs  # Shared Game8 roster API helper (widget props → collectionItems)
 │   ├── scrape-genshin-units.mjs # Genshin roster (Game8 API 127 chars + archives/304647 5★ weapons →200)
 │   ├── scrape-hsr-units.mjs  # HSR roster (Game8 API chars + LC SSR table →263)

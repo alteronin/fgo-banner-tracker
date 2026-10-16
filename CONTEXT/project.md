@@ -21,7 +21,7 @@ A web application that helps gacha game players track their pulls and plan their
 - **Styling**: Tailwind CSS
 - **State Management**: localStorage + React Context (hydration-safe via useSyncExternalStore)
 - **Auth/Sync**: hand-rolled Google OAuth (jose JWT session cookie) + Upstash Redis blob sync (backup-v4 shaped)
-- **Testing**: Vitest + Testing Library (551 tests)
+- **Testing**: Vitest + Testing Library (589 tests)
 - **Hosting**: Vercel (free tier)
 
 ## Key Features
@@ -44,14 +44,16 @@ A web application that helps gacha game players track their pulls and plan their
 16. Log-pull: click a 5★ rate-up chip on an active banner to log the pull (date/time + 50/50 win/loss outcome + standard-unit picker on a loss) — saved as a manual entry stamped `fifty`, never affects pity stats; 50/50 record stat card, Won/Lost/Guaranteed labels, per-banner checkmarks, grid default view
 17. Google sign-in + cloud sync (2026-10-05, `b044495`): sign in with Google, collection/pulls/faves sync as the backup blob to Upstash Redis with local-wins merge + debounced push; graceful "not configured" state until envs are added
 18. Faves/grands improvements (2026-10-06, `dcceb4b`): card-framed slots with inline labels, ◀▶ swap, per-slot notes, drag-and-drop + owned-pool scrollers, ★ rarity + Banners/Wiki cross-links, `?search=` URL prefill on all trackers, FgoTabs FGO nav unification, ★ faves/grands stars + filters, backup v4 with `faveNotes`
+19. Servant buff finder at `/servants/buffs` (2026-10-16): filter servants by 15 buff categories × target (self/one/all allies) × NP type (ST/AoE/Support) × class × owned status, Any/All match mode, expandable kit details, Atlas Academy data (483 servants, 1,668 skill/NP rows); "Buffs" pill in FGO nav; `?search=` prefill rendered server-side (Next 16 `searchParams`) to fix a streaming-SSR hydration duplication bug
 
-### Roadmap (Buckets 11-14 — all addressed)
+### Roadmap (Buckets 11-15 — all addressed except deferred 11)
 11. Events tab: unified events feed (now/upcoming/past) across games — **deferred by user**
 12. Cross-game Units & Faves — **COMPLETE (2026-10-03)**
 13. Class/element button filters — **COMPLETE (2026-10-04)**
 14. Pull-history import + pity — **COMPLETE (2026-10-04)** (deployed, live QA green; follow-ups `cbdef13` per-5★ drop pity, `978f769` 5★ grid view with 50/50 borders, `ecdba38` stardb-parity order + Guarantee state + square tiles, `d691e3e` unoptimized images after Vercel 402, `b00f440` multi-game export import, qa-pity 41/41 + qa-multi 3/3)
+15. Servant buff finder — **BUILT + LOCAL QA 42/42 (2026-10-16)** (589 tests; commit/deploy pending)
 
-All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
+All 15 buckets built; Bucket 11 (events tab) is the only deferred item.
 
 ## Next Up
 - User-side env setup for auth (Google OAuth client + Upstash + `vercel env add` ×5)
@@ -59,6 +61,7 @@ All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 ## Data Sources
 - FGO banner data: GamePress FGO Wiki (https://grandorder.gamepress.gg/summon-banner-list)
 - FGO servant data: GamePress sitemap + individual pages
+- FGO servant effects (buffs/NPs): Atlas Academy API (`nice_servant` JP + NA; `scripts/scrape-servant-effects.mjs` → `servant-effects.json`, dex join via mana.wiki icon URLs)
 - Genshin / HSR / ZZZ / WuWa banner data: Game8 archives (cheerio scrapers, static JSON)
 - HI3 banner data: Honkai Impact 3rd fandom MediaWiki API (`Category:Versions` + version pages)
 - Shadowverse WB data: official cards site (set schedules + researched leader maps)
@@ -67,7 +70,7 @@ All 14 buckets shipped; Bucket 11 (events tab) is the only deferred item.
 - Images: static.mana.wiki (FGO), img.game8.co (Game8 games), static.wikia.nocookie.net (HI3/SV, served `unoptimized`), shadowverse-wb.com pack art (SV banners)
 
 ## Testing
-- 551 unit tests (36 files) covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view, manual entry add/edit/delete + v2 validation/imported-only stats/chip colors, rate-up chip name resolution + status cycles + future planning rules, log-pull gates/dialog, sync backup decision logic, JWT/OAuth/session routes, AccountButton/AccountProvider, faves/grands slot flows incl. swap/labels/notes/links, fave-notes storage, backup v4 faveNotes, useSearchParam)
+- 589 unit tests (39 files) covering data integrity, helpers, storage, contexts, hooks, components (incl. taxonomy filter groups + multi-select semantics, pull import/pity, per-5★ drop pity + 50/50/guarantee scoring, canonical pull order, multi-game export detection, pulls page grid view, manual entry add/edit/delete + v2 validation/imported-only stats/chip colors, rate-up chip name resolution + status cycles + future planning rules, log-pull gates/dialog, sync backup decision logic, JWT/OAuth/session routes, AccountButton/AccountProvider, faves/grands slot flows incl. swap/labels/notes/links, fave-notes storage, backup v4 faveNotes, useSearchParam, servant buff effects data/filter/page incl. server-side searchParams prefill)
 - Playwright QA scripts (local + production), run ad-hoc (not committed deps)
 
 ## Future Expansion

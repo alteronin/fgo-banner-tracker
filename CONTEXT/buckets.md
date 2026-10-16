@@ -313,3 +313,43 @@ Import the user's gacha pull-history exports (`wuwatracker-pulls.json` for WuWa,
 - [x] **google-auth-cloud-sync**: Google sign-in + cloud sync (2026-10-05) — committed `b044495` (41 files, +2589/−57) — hand-rolled OAuth (`api/auth/{login,callback,logout,me}` + `api/sync`, jose JWT session cookie, Upstash Redis `fbtn:user|sync:{sub}`), AccountButton on all 14 headers, sync blob = backup v3 with fingerprint decision (`decideSyncAction`: noop/push/adopt/merge/initial-push) + 2s debounced push from all 5 storage notifiers; graceful "not configured" path when envs are missing; 6 new test suites → **517 tests**; live QA auth-test 13/13; user-side env setup (Google OAuth client + Upstash + `vercel env add` ×5) still pending
 - [x] **faves-grands-improvements** (user intent 2026-10-05; **scope approved 2026-10-05 — all five candidates selected**): improvements on the **faves/grands tab/page** — FGO `/grands` (9-slot grand lineup) + per-game `/{game}/faves` (shared `FavesPage`, "Faves" GameTabs pill). Scope: (1) **better slot UX** (drag/quick-move reassign, keyboard, clearer empty/selected states), (2) **richer slot content** (prominent art, rarity/class badges, per-slot notes/custom labels), (3) **cross-links** (slot → unit's banners/status; Faves ↔ Units ↔ Banners filtering), (4) **FGO nav unification** (`/grands` + `/servants` under the GameTabs pill pattern), (5) **mobile/layout polish** (responsive grid, overflow, visual refresh)
 - [x] follow-up (2026-10-06): faves/grands improvements **shipped** — committed `dcceb4b` (feat, 35 files, +1975/−152) pushed + deployed (Vercel CLI re-authed via device flow) — all five candidates delivered: card-framed slots (label edit, ◀▶ swap arrows, clear, owned-pool scroller, HTML5 DnD) + featured cards (art, ★ rarity, Banners/Wiki links) + per-slot notes (`FaveSlotMeta` in `unitStorage.ts`, scope `fave-notes:{game|fgo}`, notifications registry), FgoTabs nav on `/` + `/servants` + `/grands` + `/pulls`, `useSearchParam` `?search=` prefill (6 trackers + ServantsPage via `queryOverride ?? urlSearch ?? ""`), ★ stars/filters (UnitsPage ★ Faves, ServantsPage ★ Grands, GenshinRateUpChip, ServantChip, BannerIndicators grands badge), backup **v4** `{version:4, unitStatus, faves, pulls, faveNotes}` (v3 still accepted); gates tsc/eslint/**551 tests**/build green; live QA **qa-faves-v2 28/28 + qa-chip-star 3/3**, 0 console errors, mobile overflow 0; prod smoke home/grands 200 + FgoTabs in SSR HTML
+
+---
+
+## Bucket 15: Servant Buff Finder (Built + Local QA)
+**Status**: Built + locally QA'd (2026-10-16) — local QA 42/42, 589 unit tests, gates green; commit/deploy/prod-QA pending
+
+Filter servants by their buff kit (which categories they buff, whom they buff, NP shape) for support/team-building searches.
+
+### Scope (user-confirmed via Q&A)
+1. Route `/servants/buffs` + "Buffs" pill in `FgoTabs` (Banners/Servants/Buffs/Grands/Pulls)
+2. Data source: **Atlas Academy API** (skills + NPs only, no passives)
+3. Targets: self / one ally / all allies (no enemy debuffs)
+4. Core 15 buff categories (Buster/Arts/Quick Up, NP Strength Up, NP Gauge Up, Star Gen, Crit Damage, Defence Up, Heal, Debuff/Crit/AoE/Buster Card Res Up, Instant Death Res Up, Special Attack Up)
+5. Any/All match toggle (default Any), shown only when ≥2 categories selected
+6. Card grid + expandable per-servant match details
+7. Class pills + ★ rarity display + owned-status filter (ServantContext)
+
+### Architecture
+- `scripts/scrape-servant-effects.mjs` → `src/data/servant-effects.json` (409KB; 483 entries, 1,668 rows; JP primary, NA English names 1,427/1,668; JP/NA `nice_servant` caches in gitignored `.atlas-cache/`)
+- Roster↔Atlas join: dex number from mana.wiki icon URLs (`/(\d+)_/` zero-padded) = Atlas `collectionNo` — 483/487; skipped: Mr. Hyde, Mysterious Heroine Z, The Black Grail (Enemy), U-Olga Marie (NPC Version)
+- Atlas quirks: `upCommandall` split by buff-name prefix; instant NP charge = `funcType: "gainNp"` (≠ `regainNp` NP/turn); heal = `gainHp`; `np.card` stringified FGO id → `CARD_MAP`; `noblePhantasms` multi-version merge by `npNum` + slot renumber; target map (self / ptOne|ptOneOther|ptRandom|ptOneHpLowestRate→one / ptAll|ptOther|ptFull|ptOtherFull|ptSelfAnotherFirst→all / else skipped); NP type from damage func (`enemyAll`→aoe, `enemy`→st, none→support, slot 1); 12 `svtChange` servants show one skill set (accepted); `???`/`？？？` hidden names filtered
+- `src/types/servantEffects.ts` — `EffectRow`, `ServantEffectEntry`, `BuffCategoryKey`, `EffectFilterCriteria`
+- `src/lib/servantEffects.ts` — `BUFF_CATEGORIES`/`EFFECT_TARGETS`/`NP_TYPES` + label maps + pure `matchesEffectFilters`/`matchingEffectRows`/`getServantEffectIndex`
+- `src/components/ServantBuffPage.tsx` (~527 lines) — buff/target/NP-type/class pill groups, Any/All toggle, sort (Name/Rarity/Class), stat cards, status pills, expandable kit details (matching rows scoped to filters; full kit unfiltered), "N matches" chip, NP badge (`NP {card} · {type}`), ★ rarity, owned toggle buttons
+- `src/app/servants/buffs/page.tsx` — **async server component**: `searchParams: Promise<{search?}>` awaited per Next 16 API → `initialSearch` prop (route is `ƒ Dynamic`); this **fixes a hydration bug** — client-only `useSearchParam` prefill mismatched server HTML (487 cards vs 1) under the app-wide root-`loading.tsx` streaming and intermittently left duplicate page trees (`S:0` slot + orphaned server main); server-rendered prefill makes hydration match (verified mains=1, 0 console errors)
+
+### Features
+- [x] **atlas-scraper**: `scripts/scrape-servant-effects.mjs` (JP + NA fetch, card map, NP version merge, target/func filters, English names) → `servant-effects.json`
+- [x] **effects-types-lib**: `src/types/servantEffects.ts` + `src/lib/servantEffects.ts` (category/target/NP-type constants + pure filter helpers)
+- [x] **buff-page**: `ServantBuffPage` + route page + FgoTabs "Buffs" pill (GrandsPage test updated for tab order)
+- [x] **hydration-fix**: server-side `searchParams` prefill (decision 32)
+- [x] **tests**: `servantEffectsData.test.ts`, `servantBuffFilter.test.ts`, `ServantBuffPage.test.tsx` (15 tests) → **589 total**
+- [x] **local-qa**: `qa-buffs.mjs` **42/42** (shell/tabs/pills/narrowing/badges/match-chip/scoped panel/collapse/target/Any-All/NP-type/class/owned/search prefill+filter/sort/full-kit/empty state/nav regressions/tab order/link navigation/0 console errors)
+
+### Completion Checklist
+- [x] gates: tsc/eslint/`npm test` (589)/`npm run build` clean (`/servants/buffs` = `ƒ Dynamic`)
+- [x] local QA 42/42
+- [ ] commit + push + `npx vercel --prod`
+- [ ] prod QA (`QA_BASE=https://fgo-banner-tracker.vercel.app`)
+- [ ] CONTEXT docs update (this bucket + state/structure/decisions/project)

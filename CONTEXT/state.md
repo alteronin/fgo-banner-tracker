@@ -1,11 +1,11 @@
 ---
 project_name: Multi-Game Gacha Banner Tracker
 status: active
-current_bucket: 14
-current_feature: faves-grands-improvements
-current_phase: complete
-buckets_completed: 14
-total_buckets: 14
+current_bucket: 15
+current_feature: servant-buff-finder
+current_phase: qa-complete-pending-deploy
+buckets_completed: 15
+total_buckets: 15
 features_completed:
   - seed-data
   - banner-list
@@ -49,6 +49,7 @@ features_completed:
   - log-pull
   - google-auth-cloud-sync
   - faves-grands-improvements
+  - servant-buff-finder
 features_remaining:
   - events-tab
 issues_found:
@@ -60,6 +61,7 @@ issues_found:
   - mobile-horizontal-overflow
   - fandom-image-optimizer-403
   - shadowverse-banner-missing-images
+  - buffs-searchparam-hydration-duplication
 issues_resolved:
   - broken-image-urls-2017-2018
   - hydration-error-418
@@ -69,6 +71,7 @@ issues_resolved:
   - mobile-horizontal-overflow
   - fandom-image-optimizer-403
   - shadowverse-banner-missing-images
+  - buffs-searchparam-hydration-duplication
 tech_stack:
   framework: Next.js 16.3.3
   language: TypeScript
@@ -76,16 +79,18 @@ tech_stack:
   state: localStorage + React Context (useSyncExternalStore)
   auth: hand-rolled Google OAuth (jose JWT session cookie) + Upstash Redis blob sync
   hosting: Vercel
-  testing: Vitest + Testing Library (551 tests)
+  testing: Vitest + Testing Library (589 tests)
 deploy_provider: vercel
 deploy_url: https://fgo-banner-tracker.vercel.app
-last_checkpoint: 2026-10-06
-context_version: 16
+last_checkpoint: 2026-10-16
+context_version: 17
 ---
 
 # Project State
 
 ## Active Context
+**Feature BUILT + LOCALLY QA'd (2026-10-16) — servant buff finder at `/servants/buffs` — gates green, local QA 42/42, commit/deploy/prod-QA pending.** New FGO page filtering servants by buff kit: 15 buff categories (Buster/Arts/Quick Up, NP Strength Up, NP Gauge Up, Star Gen/Crit Damage/Defence/Heal/Debuff Res/Crit Res/Arts & Buster Card Res Up, Instant Death Res Up, Special Attack Up), effect target (Self / One ally / All allies), NP type (ST / AoE / Support), class pills, ★ rarity, owned-status (ServantContext), search, sort (Name/Rarity/Class), expandable per-servant kit details (rows scoped to active filters; full kit when unfiltered), "N matches" chip, Any/All match-mode toggle (default Any, shown only when ≥2 categories selected). **Data**: Atlas Academy API — `scripts/scrape-servant-effects.mjs` → `src/data/servant-effects.json` (409KB; 483 entries, 1,668 rows; JP primary + NA English names 1,427/1,668; caches in gitignored `.atlas-cache/`); roster↔Atlas join = dex number parsed from mana.wiki icon URLs (`/(\d+)_/` zero-padded) = Atlas `collectionNo` — 483/487 match, 4 skipped (Mr. Hyde, Mysterious Heroine Z, The Black Grail (Enemy), U-Olga Marie (NPC)). Atlas quirks handled: `upCommandall` split by buff-name prefix (Buster/Arts/Quick); instant NP charge = `funcType: "gainNp"` (≠ `regainNp` NP/turn); heal = `gainHp`; `np.card` stringified FGO id ("1"=arts/"2"=buster/"3"=quick → `CARD_MAP`); `noblePhantasms` multi-version merge by `npNum` + slot renumber; target map self→self, `ptOne|ptOneOther|ptRandom|ptOneHpLowestRate`→one, `ptAll|ptOther|ptFull|ptOtherFull|ptSelfAnotherFirst`→all, else skipped; NP classification via damage func (`/^damageNp/`): `enemyAll`→aoe, `enemy`→st, none→support (slot 1); 12 `svtChange` servants show one skill set (accepted). **Files**: `src/types/servantEffects.ts`, `src/lib/servantEffects.ts` (BUFF_CATEGORIES/EFFECT_TARGETS/NP_TYPES + labels + `matchesEffectFilters`/`matchingEffectRows`/`getServantEffectIndex`), `src/components/ServantBuffPage.tsx` (~527 lines), `src/app/servants/buffs/page.tsx` (**async server component — reads `searchParams` Promise per Next 16 API, passes `initialSearch` prop**), `FgoTabs` gains "Buffs" pill (Banners/Servants/Buffs/Grands/Pulls). **Hydration fix (QA-discovered bug)**: client-only `useSearchParam` prefill made server HTML (487 cards, value="") mismatch the client first render (1 card, value="zhuge") — under the app-wide root-`loading.tsx` streaming this intermittently left TWO `<main>`s + duplicate inputs in the DOM (server tree orphaned + client tree mounted in an `S:0` slot; reproduced deterministically after buff-pill clicks; Playwright strict-mode violation). Fix: route page awaits `searchParams` server-side → server HTML renders the prefilled state → hydration matches → duplicate gone (verified: raw HTML value="zhuge", browser mains=1, inputs=1, 0 console errors). Same latent pattern exists on `/servants` + 6 trackers (client `useSearchParam` on statically prerendered routes) — pre-existing, not addressed this bucket; cold loads appear clean, only same-tab hard-nav to `?search=` URLs race. **Tests**: `servantEffectsData.test.ts` (data integrity), `servantBuffFilter.test.ts` (filter logic), `ServantBuffPage.test.tsx` (15: pills/filters/mode/target/NP/class/status/expand/empty + route-page via direct async invocation + `initialSearch` prop) → **589 total**; GrandsPage tab assertions updated for new tab order. **Gates**: tsc ✓, eslint ✓, 589/589 ✓, build ✓ (`/servants/buffs` now `ƒ Dynamic`). **Local QA**: `qa-buffs.mjs` 42/42 (route/title/tabs/pills/narrowing/badges/chips/scoped-panel/collapse/target/mode/NP/class/owned/search-prefill+filter/sort/full-kit expansion/empty state/nav regressions/tab order/link navigation/0 console errors; Playwright in temp dir, `waitUntil: "domcontentloaded"` — `networkidle`/`load` hang on 483 icons). **Next**: commit → `npx vercel --prod` → prod QA (`QA_BASE=https://fgo-banner-tracker.vercel.app`).
+
 **Feature SHIPPED (2026-10-06) — faves/grands tab/page improvements — all five candidates.** Committed `dcceb4b` (feat, 35 files, +1975/−152 incl. CONTEXT docs), pushed to `main`, deployed via `npx vercel --prod` (alias https://fgo-banner-tracker.vercel.app; Vercel CLI re-authed via device flow). Delivered: (1) **slot UX** — `FavesPage` + `/grands` rewritten with card-framed slots (inline label edit ✎, ◀▶ swap arrows, clear ×, empty/1-unit pills, aria-labels everywhere), owned-pool scrollers with HTML5 drag-and-drop; slot→slot = **swap**, pool-chip tap = **move/replace** (qa-faves semantics preserved). (2) **richer content** — featured cards (art, name, subtitle, ★ rarity, category pill) + per-slot **notes** (`FaveSlotMeta {label?, note?}` in `unitStorage.ts`, key `fave-notes:{game|"fgo"}`, field `undefined`=keep / whitespace=clear / both-empty=delete slot; `notifyFaveNotesChange` separate from faves, both trigger `notifySyncableChange`). (3) **cross-links** — `src/hooks/useSearchParam.ts` (hydration-safe useSyncExternalStore, popstate, null server snapshot) feeds 6 trackers + `useBannerFilter` `searchOverride ?? urlSearch ?? ""` so user edits win; featured cards link Banners (`?search=<name>`) + Wiki; ServantsPage init reads URL too. (4) **FGO nav** — `FgoTabs` exported from `GameTabs.tsx` (Banners/Servants/Grands/Pulls) on `/`, `/servants`, `/grands` header, `/pulls` empty state. (5) **stars/polish** — ★ Faves filter (UnitsPage), ★ Grands filter (ServantsPage), fave star on `GenshinRateUpChip` + `ServantChip`, grands badge on `BannerIndicators`; responsive paddings, flex-wrap headers, `overscroll-x-contain` pools; mobile overflow verified 0. **Backup v4**: `{version:4, unitStatus, faves, pulls, faveNotes}`; `isBackupShape` accepts 3 AND 4; union/apply output v4; `SyncBackup.faveNotes?` optional (`?? {}` for consumers) — safe (no synced users exist; auth env still user-side pending). QA bugs fixed en route: faves maps slot→unitId (star lookups must use `Object.values`), test chip titles change when selected. Gates: tsc ✓, eslint ✓, `npm test -- --run` **551/551** (36 files), build ✓. Live QA: **qa-faves-v2 28/28 + qa-chip-star 3/3**, 0 console errors, label/note persistence + swap + `?search=` prefill + FgoTabs active states all verified. Prod smoke: home/grands 200, FgoTabs in SSR HTML. Next: await user direction.
 
 **Session WRAP-UP (2026-10-05) — CONTEXT updated; both session features committed.** log-pull = `21ef7e1` (20 files, +2271/−80), Google auth/sync = `b044495` (41 files, +2589/−57), CONTEXT docs = the accompanying docs commit; pushed to `main` (session started at `801b29c`). Prod runs this tree via `npx vercel --prod`. Gates green: tsc ✓, eslint ✓, `npm test` **517/517** (33 files). Auth envs (Google OAuth client + Upstash) are user-side pending — until added, the sign-in button shows the graceful "not configured" notice.
@@ -134,18 +139,21 @@ context_version: 16
 - Follow-up: Log-pull dialog (log 5★ pulls from rate-up chips: date/time + 50/50 outcome + standard-unit picker, always-re-prompt dupe logging, per-banner checkmark, 50/50 record StatCard, guarantee labels, grid default + grid delete) (**COMPLETE 2026-10-05** — `21ef7e1`, gates green, 447 tests at this round)
 - Google sign-in + cloud sync (hand-rolled Google OAuth with jose JWT cookie, Upstash Redis blob store, v3-backup sync with fingerprint decision, AccountButton on 14 headers, debounced push from all 5 notifiers, graceful not-configured path) (**COMPLETE 2026-10-05** — `b044495`, 517 tests, live QA 13/13, deployed; Google/Upstash env setup pending user-side)
 - Faves/grands improvements (all five candidates: card slots with swap/label/notes/DnD, richer featured cards with ★ + links, `useSearchParam` `?search=` cross-links on 6 trackers, FgoTabs FGO nav unification, ★ star badges/filters, backup v4 with faveNotes) (**COMPLETE 2026-10-06** — `dcceb4b`, 551 tests, live QA 31/31, deployed)
+- Servant buff finder (Atlas Academy data: 15 buff categories × target × NP type × class × owned filters, Any/All match mode, expandable kit details, FgoTabs Buffs pill, server-side `?search=` prefill hydration fix) (**BUILT + LOCAL QA 42/42 (2026-10-16)** — 589 tests, commit/deploy pending)
 
-## Roadmap (Buckets 11-14)
+## Roadmap (Buckets 11-15)
 - Bucket 10: Remaining game trackers — **COMPLETE (2026-10-03)**: committed `95771ca`, deployed, live QA green; SV image fix `ce29b7f`
 - Bucket 11: Events tab — **DEFERRED by user (2026-10-03)**; `/events` route + nav tab; unified event feed (now/upcoming/past) with game + year filters, sources TBD
 - Bucket 12: Cross-game Units & Faves — **COMPLETE (2026-10-03)**: committed `ef75305`, deployed, live QA green (qa-units 168/168, qa-faves 174/174, qa-backup 18/18)
 - Bucket 13: Class/element button filters — **COMPLETE (2026-10-04)**: committed `9109c9c`, deployed, live QA green (qa-filters 134/134, qa-units 168/168, qa-backup 18/18)
 - Bucket 14: Pull-history import + pity — **COMPLETE (2026-10-04)**: committed `5817fde`/`98c16cf`, deployed, live QA green (qa-pulls 75/75 + regressions qa-units 168/168, qa-filters 140/140, qa-faves 174/174, qa-backup 21/21)
 - Next (user intent 2026-10-05): **faves/grands tab/page improvements** — **COMPLETE (2026-10-06)**: committed `dcceb4b`, deployed, live QA green (qa-faves-v2 28/28, qa-chip-star 3/3; 551 unit tests)
+- Next (user intent 2026-10-16): **servant buff finder** — **BUILT + LOCAL QA 42/42 (2026-10-16)**: 589 unit tests, commit/deploy/prod-QA pending
 
 ## Data
 - 742 banners scraped from GamePress (2017-2026)
 - 487 servants scraped with thumbnail icons; all classes populated (incl. 23 Avenger, 14 Beast)
+- 483 servant effect entries from Atlas Academy API (`servant-effects.json`, 1,668 skill/NP rows; JP + NA English names; dex join via mana.wiki icon URLs; 4 roster entries skipped)
 - 216 Genshin banners scraped from Game8 (versions 1.0-7.0: 105 character, 104 weapon, 7 chronicled)
 - 131 HSR banners scraped from Game8 (versions 1.0-4.7: 66 character, 65 light cone; 4 Fate-collab entries with null version/end)
 - 134 ZZZ banners scraped from Game8 (versions 1.0-3.2: 67 agent, 67 W-Engine; 8 without phase; 2 "Exclusive Rescreening" agent entries intentionally have no featured list)
@@ -166,6 +174,7 @@ context_version: 16
 ## Routes
 - `/` — Banner list (main page)
 - `/servants` — Servant collection browser
+- `/servants/buffs` — Servant buff finder (dynamic: reads `searchParams` server-side for `?search=` prefill)
 - `/grands` — Grand servant lineup (9 slots)
 - `/genshin` — Genshin Impact banner tracker (static)
 - `/hsr` — Honkai: Star Rail banner tracker (static)
@@ -210,6 +219,7 @@ context_version: 16
 29. Log-pull (record pulls as they happen): a logged pull is an ordinary `manual: true` `GamePull` **stamped with `fifty: "win"|"loss"|"guarantee"`** — the outcome is recorded at log time instead of being inferred, because the 50/50 machine can't know what the player actually pulled; entries share the `${ts}|${category}|${itemId}|${occ}` scheme (occ bumped) so re-import still dedupes; stats/pity stay **imported-only** so logged copies never move pity. Chip click on a loggable banner opens `LogPullDialog` instead of cycling status (pendingStatus: Skip/close applies the cycle, "Log pull" saves + sets owned); chips **always re-prompt** — duplicate copies of the same 5★ are intentional (user-approved), each save bumps `occ`. `STANDARD_POOLS` are hardcoded per game/category (loss picker fallback; pull maps only contain rate-up items). `hasPullInBanner` (day-window match) drives the chip checkmark, falling back to `owned` status when the banner/unit can't be resolved. 50/50 record StatCard counts only win+loss (guarantees excluded — they're forced outcomes, not coin flips). Logged rows/tiles show `Won`/`Lost`/`Guaranteed` with an explicit "not counted in pity stats" tooltip
 30. Google sign-in + cloud sync (minimal hand-rolled, **no Auth.js/Clerk**): routes `api/auth/{login,callback,logout,me}` + `api/sync`; session = jose HS256 JWT cookie `fbtn-session` (30d) with `SESSION_SECRET`; OAuth state cookie `fbtn-oauth` parsed raw-first (Next's cookie serializer percent-encodes — `decodeURIComponent` fallback) and compared timing-safe; `email_verified` required; `safeNextPath` blocks open redirects; `/​?auth=not-configured|error` notices consumed at module scope (`INITIAL_NOTICE`, hydration-safe). Storage = Upstash Redis free tier (`@upstash/redis`, auto-JSON): `fbtn:user:{sub}`, `fbtn:sync:{sub}`; sync blob = ImportExport **v3** BackupFile so the server never interprets data (privacy + no schema coupling); 4MB body cap → 413, Redis failure → 502 with `{error:"sync-unavailable"}` vs missing → null. Client: `decideSyncAction` (noop/push/adopt/merge/initial-push) over snapshot vs stored fingerprint (djb2 over stableStringify) with local-wins union merge and a localStorage `fbtn-sync-mark`; 2s debounced push (`syncDirty.ts`) fired by all 5 storage notifiers so every mutation path syncs; new `replace*` writers in storage.ts/unitStorage.ts for adopt/merge application; `ServantContext` converted to a storage-owned listener registry so it emits like the others. **v1 accepted limits:** no tombstones (cross-device deletes resurrect via union), same-browser localStorage is shared across accounts signed in there, signed-out behavior unchanged (identical to pre-auth). Hand-rolled because the app needs only "sign in with Google + one blob", no profiles/roles/RBAC — Auth.js would add a dependency surface for one provider
 31. Faves/grands improvements (five candidates): slot→slot interactions **swap** while pool-chip taps keep the documented **move/replace** semantics; grands cross-class swaps show a foreign-slot badge (pools are class-disjoint, featured via global `getServantBySlug`); per-slot `FaveSlotMeta {label?, note?}` under `fave-notes:{game|"fgo"}` in unitStorage (grands included so one store/notifier/sync path; `storage.ts` stays grands-selection-only) with `setFaveNote` trim semantics (undefined = keep, whitespace = clear, both empty = delete slot) and `notifyFaveNotesChange` alongside faves; `?search=` prefill via new `useSearchParam` (decision 11 hydration pattern, popstate) with `queryOverride ?? urlSearch ?? ""` so search typing beats the URL; backup **v4** adds `faveNotes` (`isBackupShape` accepts 3|4, v3 consumers `?? {}`; safe — no synced users yet); stars/filters must read `Object.values(faves)` (slot→unitId map) — keying by unitId was a live-QA bug; FgoTabs (Banners/Servants/Grands/Pulls) unifies FGO nav on `/`, `/servants`, `/grands`, `/pulls`
+32. Servant buff finder: Atlas Academy API is the effects source (JP primary, NA for English names — Atlas NA export lags JP, dex ≤432); roster↔Atlas join is the **dex number parsed from mana.wiki icon URLs** (`/(\d+)_/`, zero-padded) = Atlas `collectionNo` (483/487; 4 non-standard-icon servants skipped); `?search=` prefill for this route is read **server-side** via the Next 16 async `searchParams` prop (→ `initialSearch` client prop, `searchOverride ?? initialSearch ?? urlSearch ?? ""`) because the client-only hook on the app's streaming SSR intermittently left duplicate page trees after hydration mismatch — the route is `ƒ Dynamic`; `/servants` + 6 trackers still use the client-only pattern (pre-existing, cold loads clean)
 
 ## Remaining Work
 1. **User-side auth env setup** (one-time, checklist delivered): Google Cloud OAuth client (redirect URIs `https://fgo-banner-tracker.vercel.app/api/auth/callback` + `http://localhost:3000/api/auth/callback`), Upstash Redis free-tier DB, then `npx vercel env add {GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,SESSION_SECRET,UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN} production` ×5 + `npx vercel --prod --yes`; until then the site shows the "not configured" notice (by design)
