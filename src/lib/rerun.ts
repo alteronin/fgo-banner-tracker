@@ -7,13 +7,14 @@ export interface RerunAccessors<T> {
 }
 
 /**
- * Classifies banners as reruns: an item is a rerun when any of its units
- * already appeared on a strictly earlier-dated item.
+ * Classifies banners as reruns: an item is a rerun only when **every**
+ * featured unit already appeared on a strictly earlier-dated item
+ * (any never-seen unit keeps the banner visible).
  *
  * - Items are walked in (date asc, id asc) order; null/missing dates sort last.
  * - Items sharing the same date never flag each other — a date-group's units
  *   are merged into the seen-set only after the whole group is processed.
- * - Empty unit lists never flag and never seed the seen-set.
+ * - Empty unit lists never flag and never seed.
  */
 export function computeRerunIds<T>(
   items: readonly T[],
@@ -52,8 +53,8 @@ export function computeRerunIds<T>(
     groupDate = entry.date;
 
     if (entry.units.length > 0) {
-      const isRerun = entry.units.some((unit) => seen.has(unit));
-      if (isRerun) rerunIds.add(entry.id);
+      const hasNewUnit = entry.units.some((unit) => !seen.has(unit));
+      if (!hasNewUnit) rerunIds.add(entry.id);
       pendingUnits.push(...entry.units);
     }
   }

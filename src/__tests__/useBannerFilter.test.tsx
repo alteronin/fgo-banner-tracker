@@ -6,7 +6,9 @@ import { useBannerFilter } from "@/hooks/useBannerFilter";
 import { setShowReruns } from "@/hooks/useShowReruns";
 import type { Banner } from "@/types/banner";
 
-// Test banners
+// Test banners — chronological: banner-3 → banner-2 → banner-1
+// banner-1 repeats Artoria+Morgan (both first seen on banner-2) → pure rerun.
+// A banner with any never-seen unit stays visible under the new-unit rule.
 const testBanners: Banner[] = [
   {
     id: "banner-1",
@@ -16,7 +18,7 @@ const testBanners: Banner[] = [
     endDate: "2026-08-15",
     servants: [
       { name: "Artoria", slug: "artoria", rateUpType: "single" },
-      { name: "Merlin", slug: "merlin", rateUpType: "shared" },
+      { name: "Morgan", slug: "morgan", rateUpType: "shared" },
     ],
   },
   {
@@ -195,10 +197,9 @@ describe("useBannerFilter rerun filter", () => {
     window.history.replaceState({}, "", "/");
   });
 
-  // banner-2 (2026-01-01) shares Artoria with banner-1 (2026-08-01)?
-  // No — banner-1 starts LATER. banner-1 has Artoria first on 2026-08-01,
-  // but banner-2 (2026-01-01) also has Artoria. Chronologically banner-2 is
-  // earlier, so banner-1 is the rerun (Artoria seen on 2026-01-01).
+  // banner-1 (2026-08-01) repeats Artoria+Morgan, both first seen on
+  // banner-2 (2026-01-01) → all units seen → pure rerun.
+  // banner-2 and banner-3 each introduce units → never flagged.
   it("exposes rerunCount and shows all banners by default", () => {
     const { result } = renderHook(() => useBannerFilter(testBanners), {
       wrapper,
@@ -209,7 +210,7 @@ describe("useBannerFilter rerun filter", () => {
     expect(result.current.filteredBanners).toHaveLength(3);
   });
 
-  it("hides rerun banners when showReruns is false", () => {
+  it("hides pure-rerun banners when showReruns is false", () => {
     const { result } = renderHook(() => useBannerFilter(testBanners), {
       wrapper,
     });

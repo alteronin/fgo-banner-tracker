@@ -14,7 +14,7 @@ const accessors = {
 };
 
 describe("computeRerunIds", () => {
-  it("flags a later banner whose unit appeared on an earlier date", () => {
+  it("flags a later banner only when all its units were seen earlier", () => {
     const items: Item[] = [
       { id: "b2", date: "2026-02-01", units: ["alice"] },
       { id: "b1", date: "2026-01-01", units: ["alice"] },
@@ -33,13 +33,25 @@ describe("computeRerunIds", () => {
     expect(computeRerunIds(items, accessors).size).toBe(0);
   });
 
-  it("flags when any unit was seen earlier (not all)", () => {
+  it("does NOT flag when the banner has any new unit (even if others repeat)", () => {
     const items: Item[] = [
       { id: "b1", date: "2026-01-01", units: ["alice"] },
       { id: "b2", date: "2026-02-01", units: ["alice", "bob"] },
     ];
     const result = computeRerunIds(items, accessors);
-    expect(result.has("b2")).toBe(true);
+    expect(result.has("b2")).toBe(false);
+  });
+
+  it("flags when a mixed banner's units are all previously seen", () => {
+    const items: Item[] = [
+      { id: "seed-a", date: "2026-01-01", units: ["alice"] },
+      { id: "seed-b", date: "2026-01-02", units: ["bob"] },
+      { id: "all-seen", date: "2026-02-01", units: ["alice", "bob"] },
+      { id: "one-new", date: "2026-02-02", units: ["alice", "carol"] },
+    ];
+    const result = computeRerunIds(items, accessors);
+    expect(result.has("all-seen")).toBe(true);
+    expect(result.has("one-new")).toBe(false);
   });
 
   it("never cross-flags banners sharing the same date", () => {
@@ -61,6 +73,17 @@ describe("computeRerunIds", () => {
     expect(result.has("day1-a")).toBe(false);
     expect(result.has("day1-b")).toBe(false);
     expect(result.has("day2-a")).toBe(true);
+  });
+
+  it("same-day banner with a new unit is not flagged even if a twin repeats", () => {
+    const items: Item[] = [
+      { id: "seed", date: "2026-01-01", units: ["alice"] },
+      { id: "day2-repeat", date: "2026-01-02", units: ["alice"] },
+      { id: "day2-mixed", date: "2026-01-02", units: ["alice", "bob"] },
+    ];
+    const result = computeRerunIds(items, accessors);
+    expect(result.has("day2-repeat")).toBe(true);
+    expect(result.has("day2-mixed")).toBe(false);
   });
 
   it("empty unit lists never flag and never seed", () => {
