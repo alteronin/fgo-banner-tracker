@@ -103,6 +103,7 @@ fgo-banner-tracker/
 │   │   ├── PullsPage.tsx     # Pull stats (imported-only + Manual card), histogram, pills, drops table, List/Grid (5★ + ✱ manual tiles), Add Entry + row Edit/Delete
 │   │   ├── PullsEmptyPage.tsx # Empty pulls shell for FGO/HI3/SV
 │   │   ├── RateUpIndicator.tsx # Rate-up type badges
+│   │   ├── RerunToggle.tsx    # Global rerun show/hide pill (aria-pressed, Reruns: On/Off)
 │   │   ├── SearchBar.tsx     # Search bar component (optional placeholder)
 │   │   ├── ServantChip.tsx   # Servant status chip
 │   │   ├── ServantBuffPage.tsx # Buff finder page (buff/target/NP-type/class pills, Any/All mode, expandable kit details)
@@ -113,6 +114,7 @@ fgo-banner-tracker/
 │   │   ├── SvwbTracker.tsx    # Shadowverse page (filters + grid + modal)
 │   │   ├── SvwbTypeFilter.tsx # Card Set/Collab pills
 │   │   ├── ThemeToggle.tsx   # Dark/light mode toggle
+│   │   ├── TrackerSort.tsx   # Shared 6-option banner sort select (aria-label "Sort banners") for the 6 game trackers
 │   │   ├── UnitsPage.tsx     # Per-game unit roster page (stats/search/filters/sort/toggle)
 │   │   ├── WuwaBannerCard.tsx # WuWa resonator/selector card (nullable dates)
 │   │   ├── WuwaBannerDetail.tsx # WuWa detail (Featured Weapons section, Not listed dates)
@@ -149,8 +151,9 @@ fgo-banner-tracker/
 │   │   ├── servant-effects.json # Atlas Academy skill/NP effects (483 entries, 1,668 rows; JP + NA names)
 │   │   └── servants.json     # Servant data (487 servants)
 │   ├── hooks/
-│   │   ├── useBannerFilter.ts # Banner filtering hook
+│   │   ├── useBannerFilter.ts # Banner filtering hook (incl. rerun filter + showReruns/setShowReruns/rerunCount)
 │   │   ├── useSearchParam.ts  # Hydration-safe `?param=` URL reader (useSyncExternalStore + popstate, null server snapshot)
+│   │   ├── useShowReruns.ts  # Global rerun visibility (useSyncExternalStore, server snapshot true, key `fbtn-show-reruns`)
 │   │   └── useKeyboardNavigation.ts # Keyboard navigation hook
 │   ├── lib/
 │   │   ├── apps.ts           # Multi-game app registry (7 apps)
@@ -161,6 +164,8 @@ fgo-banner-tracker/
 │   │   ├── wuwa-data.ts      # WuWa data access (nullable dates, weapons)
 │   │   ├── hi3-data.ts       # HI3 data access (null end → ongoing)
 │   │   ├── shadowverse-data.ts # SV data access (latest-set active rule)
+│   │   ├── rerun.ts          # computeRerunIds (any-unit, strictly-earlier, group-then-seed)
+│   │   ├── trackerSort.ts    # TrackerSortOption + compareTrackerBanners (date/name/featured, nulls-last, id tiebreak)
 │   │   ├── storage.ts        # localStorage utilities (FGO)
 │   │   ├── unitAliases.ts    # Per-game banner-name alias map (ZZZ: Jane Doe → Jane, etc.)
 │   │   ├── unitStorage.ts    # Per-game unit-status/faves/fave-notes localStorage + fillOwnedUnits (fill-only-unset)
@@ -227,6 +232,10 @@ fgo-banner-tracker/
 │       ├── servantEffectsData.test.ts # Buff effects data integrity (counts, categories, NP types, dex join)
 │       ├── servantBuffFilter.test.ts # matchesEffectFilters / matchingEffectRows semantics
 │       ├── ServantBuffPage.test.tsx # Buff page: pills, filters, Any/All, targets, NP types, class, status, expand, route page
+│       ├── rerun.test.ts      # computeRerunIds (any-unit, strictly-earlier, same-date groups, empty/null cases)
+│       ├── trackerSort.test.ts # compareTrackerBanners (6 options, nulls-last dates, id tiebreak)
+│       ├── RerunToggle.test.tsx # Pill label/aria-pressed/onChange flip
+│       ├── useShowReruns.test.tsx # Default On, '0'/'1' storage, notify subscribers, key removal
 │       └── useSearchParam.test.ts # URL param read (initial, popstate, missing param)
 ├── scripts/
 │   ├── scrape-all.mjs        # Banner scraper (cheerio)
@@ -292,8 +301,13 @@ fgo-banner-tracker/
 - `src/components/ManualPullForm.tsx` - Manual pull entry form (datetime-local seconds, banner select, searchable map combobox + custom name/3-4-5★ fallback, live pity preview; `validateManualPull` gating with issue message/disabled submit/date hint, 8-swatch `CHIP_COLORS` + `safeChipColor`; atomic `setPulls` save/edit, quota error display)
 - `src/app/{game}/pulls/page.tsx` - Static pull routes (4 full pages + 3 empty states incl. `/pulls`)
 - `src/components/ImageWithFallback.tsx` - Image with loading skeleton + error fallback; empty src → fallback UI (no request); optimization globally disabled via `next.config.ts` `images.unoptimized: true` (Vercel optimizer quota 402)
-- `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore; `?search=` override)
+- `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore; `?search=` override; rerun filter + `showReruns`/`setShowReruns`/`rerunCount`)
 - `src/hooks/useSearchParam.ts` - Hydration-safe URL query-param reader used by the 6 trackers' `?search=` prefill
+- `src/hooks/useShowReruns.ts` - Global rerun visibility (`fbtn-show-reruns`, useSyncExternalStore, server snapshot `true`)
+- `src/lib/rerun.ts` - `computeRerunIds` any-unit rerun rule (strictly-earlier dates, group-then-seed, empty/null safety)
+- `src/lib/trackerSort.ts` - `TrackerSortOption` + `compareTrackerBanners` (date/name/featured asc+desc, nulls-last, id tiebreak)
+- `src/components/TrackerSort.tsx` - Shared 6-option sort select for the 6 game trackers (`aria-label="Sort banners"`)
+- `src/components/RerunToggle.tsx` - `Reruns: On/Off` pill (`aria-pressed`)
 - `src/app/servants/page.tsx` - Servants summary page
 - `src/app/grands/page.tsx` - Grand servant lineup page (card slots + notes + FgoTabs header)
 - `src/app/api/auth/{login,callback,logout,me}/route.ts` + `src/app/api/sync/route.ts` - Auth + sync API routes (see tree above)
