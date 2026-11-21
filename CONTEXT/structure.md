@@ -164,7 +164,7 @@ fgo-banner-tracker/
 │   │   ├── wuwa-data.ts      # WuWa data access (nullable dates, weapons)
 │   │   ├── hi3-data.ts       # HI3 data access (null end → ongoing)
 │   │   ├── shadowverse-data.ts # SV data access (latest-set active rule)
-│   │   ├── rerun.ts          # computeRerunIds (any-unit, strictly-earlier, group-then-seed)
+│   │   ├── rerun.ts          # computeRerunIds (all-seen rule: any new unit keeps banner; strictly-earlier, group-then-seed)
 │   │   ├── trackerSort.ts    # TrackerSortOption + compareTrackerBanners (date/name/featured, nulls-last, id tiebreak)
 │   │   ├── storage.ts        # localStorage utilities (FGO)
 │   │   ├── unitAliases.ts    # Per-game banner-name alias map (ZZZ: Jane Doe → Jane, etc.)
@@ -232,7 +232,7 @@ fgo-banner-tracker/
 │       ├── servantEffectsData.test.ts # Buff effects data integrity (counts, categories, NP types, dex join)
 │       ├── servantBuffFilter.test.ts # matchesEffectFilters / matchingEffectRows semantics
 │       ├── ServantBuffPage.test.tsx # Buff page: pills, filters, Any/All, targets, NP types, class, status, expand, route page
-│       ├── rerun.test.ts      # computeRerunIds (any-unit, strictly-earlier, same-date groups, empty/null cases)
+│       ├── rerun.test.ts      # computeRerunIds (all-seen rule, strictly-earlier, same-date groups, empty/null cases)
 │       ├── trackerSort.test.ts # compareTrackerBanners (6 options, nulls-last dates, id tiebreak)
 │       ├── RerunToggle.test.tsx # Pill label/aria-pressed/onChange flip
 │       ├── useShowReruns.test.tsx # Default On, '0'/'1' storage, notify subscribers, key removal
@@ -304,7 +304,7 @@ fgo-banner-tracker/
 - `src/hooks/useBannerFilter.ts` - Filtering, search, and sorting logic (URL state via useSyncExternalStore; `?search=` override; rerun filter + `showReruns`/`setShowReruns`/`rerunCount`)
 - `src/hooks/useSearchParam.ts` - Hydration-safe URL query-param reader used by the 6 trackers' `?search=` prefill
 - `src/hooks/useShowReruns.ts` - Global rerun visibility (`fbtn-show-reruns`, useSyncExternalStore, server snapshot `true`)
-- `src/lib/rerun.ts` - `computeRerunIds` any-unit rerun rule (strictly-earlier dates, group-then-seed, empty/null safety)
+- `src/lib/rerun.ts` - `computeRerunIds` all-seen rerun rule (any new unit keeps banner; strictly-earlier dates, group-then-seed, empty/null safety)
 - `src/lib/trackerSort.ts` - `TrackerSortOption` + `compareTrackerBanners` (date/name/featured asc+desc, nulls-last, id tiebreak)
 - `src/components/TrackerSort.tsx` - Shared 6-option sort select for the 6 game trackers (`aria-label="Sort banners"`)
 - `src/components/RerunToggle.tsx` - `Reruns: On/Off` pill (`aria-pressed`)
