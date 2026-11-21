@@ -4,6 +4,8 @@ import { useState, useMemo, useCallback, useSyncExternalStore } from "react";
 import type { Banner, FilterOption } from "@/types/banner";
 import type { SortOption } from "@/components/SortBar";
 import { useServantStatus } from "@/contexts/ServantContext";
+import { computeRerunIds } from "@/lib/rerun";
+import { setShowReruns, useShowReruns } from "@/hooks/useShowReruns";
 
 const urlListeners = new Set<() => void>();
 
@@ -56,6 +58,17 @@ export function useBannerFilter(banners: Banner[]) {
   const { filter, year, search: urlSearchQuery } = parseUrlState(urlSearch);
   const searchQuery = searchOverride ?? urlSearchQuery;
   const { getStatus } = useServantStatus();
+  const showReruns = useShowReruns();
+
+  const rerunIds = useMemo(
+    () =>
+      computeRerunIds(banners, {
+        idOf: (banner) => banner.id,
+        dateOf: (banner) => banner.startDate,
+        unitsOf: (banner) => banner.servants.map((servant) => servant.slug),
+      }),
+    [banners]
+  );
 
   const availableYears = useMemo(() => {
     const years = [...new Set(banners.map((b) => b.startDate.slice(0, 4)))].sort();
@@ -125,6 +138,11 @@ export function useBannerFilter(banners: Banner[]) {
       });
     }
 
+    // Rerun filter
+    if (!showReruns) {
+      result = result.filter((banner) => !rerunIds.has(banner.id));
+    }
+
     // Sort
     result = [...result].sort((a, b) => {
       switch (sort) {
@@ -146,7 +164,7 @@ export function useBannerFilter(banners: Banner[]) {
     });
 
     return result;
-  }, [banners, filter, searchQuery, sort, year, getStatus]);
+  }, [banners, filter, searchQuery, sort, year, getStatus, showReruns, rerunIds]);
 
   return {
     filter,
@@ -159,5 +177,8 @@ export function useBannerFilter(banners: Banner[]) {
     setYear,
     availableYears,
     filteredBanners,
+    showReruns,
+    setShowReruns,
+    rerunCount: rerunIds.size,
   };
 }

@@ -8,10 +8,15 @@ import { ThemeToggle } from "./ThemeToggle";
 import { GameTabs } from "./GameTabs";
 import { SearchBar } from "./SearchBar";
 import { useSearchParam } from "@/hooks/useSearchParam";
+import { setShowReruns, useShowReruns } from "@/hooks/useShowReruns";
 import { YearFilter } from "./YearFilter";
 import { GenshinTypeFilter, type GenshinTypeFilterValue } from "./GenshinTypeFilter";
 import { GenshinBannerCard } from "./GenshinBannerCard";
 import { GenshinBannerDetail } from "./GenshinBannerDetail";
+import { RerunToggle } from "./RerunToggle";
+import { TrackerSort } from "./TrackerSort";
+import { computeRerunIds } from "@/lib/rerun";
+import { compareTrackerBanners, type TrackerSortOption } from "@/lib/trackerSort";
 import {
   getGenshinBannerTitle,
   getGenshinBanners,
@@ -28,13 +33,29 @@ export function GenshinTracker({ app }: { app: TrackedApp }) {
   const query = queryOverride ?? urlSearch ?? "";
   const [typeFilter, setTypeFilter] = useState<GenshinTypeFilterValue>("all");
   const [year, setYear] = useState("all");
+  const [sort, setSort] = useState<TrackerSortOption>("date-desc");
+  const showReruns = useShowReruns();
   const [selectedBanner, setSelectedBanner] = useState<GenshinBanner | null>(null);
+
+  const rerunIds = useMemo(
+    () =>
+      computeRerunIds(banners, {
+        idOf: (banner) => banner.id,
+        dateOf: (banner) => banner.startDate,
+        unitsOf: (banner) => [
+          ...banner.featured5.map((f) => f.name),
+          ...banner.featured4.map((f) => f.name),
+        ],
+      }),
+    [banners]
+  );
 
   const filteredBanners = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return banners.filter((banner) => {
+    const filtered = banners.filter((banner) => {
       if (typeFilter !== "all" && banner.type !== typeFilter) return false;
       if (year !== "all" && !banner.startDate.startsWith(year)) return false;
+      if (!showReruns && rerunIds.has(banner.id)) return false;
       if (!q) return true;
       const haystack = [
         getGenshinBannerTitle(banner),
@@ -47,7 +68,16 @@ export function GenshinTracker({ app }: { app: TrackedApp }) {
         .toLowerCase();
       return haystack.includes(q);
     });
-  }, [banners, query, typeFilter, year]);
+    return filtered.sort((a, b) =>
+      compareTrackerBanners(a, b, sort, {
+        dateOf: (banner) => banner.startDate,
+        titleOf: getGenshinBannerTitle,
+        featuredCountOf: (banner) =>
+          banner.featured5.length + banner.featured4.length,
+        idOf: (banner) => banner.id,
+      })
+    );
+  }, [banners, query, typeFilter, year, showReruns, rerunIds, sort]);
 
   return (
     <div className="min-h-screen bg-gray-950 dark:bg-gray-950 light:bg-gray-50">
@@ -77,6 +107,10 @@ export function GenshinTracker({ app }: { app: TrackedApp }) {
           <div className="flex flex-wrap items-center gap-3">
             <GenshinTypeFilter active={typeFilter} onChange={setTypeFilter} />
             <YearFilter years={years} selectedYear={year} onYearChange={setYear} />
+            <TrackerSort value={sort} onChange={setSort} />
+            {rerunIds.size > 0 && (
+              <RerunToggle show={showReruns} onChange={setShowReruns} />
+            )}
           </div>
         </div>
         {filteredBanners.length === 0 ? (

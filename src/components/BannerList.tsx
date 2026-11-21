@@ -5,6 +5,7 @@ import type { Banner } from "@/types/banner";
 import { BannerCard } from "./BannerCard";
 import { BannerDetail } from "./BannerDetail";
 import { FilterBar } from "./FilterBar";
+import { RerunToggle } from "./RerunToggle";
 import { SearchBar } from "./SearchBar";
 import { SortBar } from "./SortBar";
 import { YearFilter } from "./YearFilter";
@@ -27,6 +28,9 @@ export function BannerList({ banners }: BannerListProps) {
     setYear,
     availableYears,
     filteredBanners,
+    showReruns,
+    setShowReruns,
+    rerunCount,
   } = useBannerFilter(banners);
   const [selectedBanner, setSelectedBanner] = useState<Banner | null>(null);
 
@@ -42,6 +46,9 @@ export function BannerList({ banners }: BannerListProps) {
             onYearChange={setYear}
           />
           <SortBar activeSort={sort} onSortChange={setSort} />
+          {rerunCount > 0 && (
+            <RerunToggle show={showReruns} onChange={setShowReruns} />
+          )}
           <AdvancedSearch
             filter={filter}
             onFilterChange={setFilter}

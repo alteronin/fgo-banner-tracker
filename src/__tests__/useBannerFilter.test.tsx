@@ -3,6 +3,7 @@ import { renderHook, act } from "@testing-library/react";
 import { ReactNode } from "react";
 import { ServantProvider } from "@/contexts/ServantContext";
 import { useBannerFilter } from "@/hooks/useBannerFilter";
+import { setShowReruns } from "@/hooks/useShowReruns";
 import type { Banner } from "@/types/banner";
 
 // Test banners
@@ -185,6 +186,59 @@ describe("useBannerFilter", () => {
     });
 
     expect(result.current.filter).toBe("owned");
+  });
+});
+
+describe("useBannerFilter rerun filter", () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+    window.history.replaceState({}, "", "/");
+  });
+
+  // banner-2 (2026-01-01) shares Artoria with banner-1 (2026-08-01)?
+  // No — banner-1 starts LATER. banner-1 has Artoria first on 2026-08-01,
+  // but banner-2 (2026-01-01) also has Artoria. Chronologically banner-2 is
+  // earlier, so banner-1 is the rerun (Artoria seen on 2026-01-01).
+  it("exposes rerunCount and shows all banners by default", () => {
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    expect(result.current.showReruns).toBe(true);
+    expect(result.current.rerunCount).toBe(1);
+    expect(result.current.filteredBanners).toHaveLength(3);
+  });
+
+  it("hides rerun banners when showReruns is false", () => {
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    act(() => {
+      setShowReruns(false);
+    });
+
+    expect(result.current.showReruns).toBe(false);
+    expect(result.current.filteredBanners).toHaveLength(2);
+    const ids = result.current.filteredBanners.map((b) => b.id);
+    expect(ids).not.toContain("banner-1");
+    expect(ids).toContain("banner-2");
+    expect(ids).toContain("banner-3");
+  });
+
+  it("restores rerun banners when showReruns is true again", () => {
+    const { result } = renderHook(() => useBannerFilter(testBanners), {
+      wrapper,
+    });
+
+    act(() => {
+      setShowReruns(false);
+    });
+    act(() => {
+      setShowReruns(true);
+    });
+
+    expect(result.current.filteredBanners).toHaveLength(3);
   });
 });
 
